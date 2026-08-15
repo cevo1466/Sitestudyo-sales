@@ -10,15 +10,25 @@ import { z } from 'zod';
  */
 const boolFromString = z.enum(['true', 'false']).transform((v) => v === 'true');
 
+/**
+ * Sorgu dizesinde TEK elemanli dizi skaler olarak gelir:
+ *   ?websiteStatus=NO_WEBSITE           -> "NO_WEBSITE"   (metin)
+ *   ?websiteStatus=NO_WEBSITE&websiteStatus=BROKEN -> [...]  (dizi)
+ * Sarmalanmazsa tek secimli filtreler 400 verir — kullanicinin en cok
+ * kullandigi durum tam olarak budur.
+ */
+const asArray = <T extends z.ZodTypeAny>(item: T) =>
+  z.preprocess((v) => (v === undefined || Array.isArray(v) ? v : [v]), z.array(item).min(1));
+
 export const companyFilterSchema = z
   .object({
     q: z.string().trim().min(1).max(120).optional(),
     city: z.string().trim().max(80).optional(),
     district: z.string().trim().max(80).optional(),
     sector: z.string().trim().max(60).optional(),
-    websiteStatus: z.array(z.nativeEnum(WebsiteStatus)).min(1).optional(),
-    leadGrade: z.array(z.nativeEnum(LeadGrade)).min(1).optional(),
-    tags: z.array(z.string().trim().max(60)).min(1).max(10).optional(),
+    websiteStatus: asArray(z.nativeEnum(WebsiteStatus)).optional(),
+    leadGrade: asArray(z.nativeEnum(LeadGrade)).optional(),
+    tags: asArray(z.string().trim().max(60)).optional(),
     minScore: z.coerce.number().int().min(0).max(100).optional(),
     maxScore: z.coerce.number().int().min(0).max(100).optional(),
     hasPhone: boolFromString.optional(),
