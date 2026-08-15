@@ -1,0 +1,80 @@
+# Masaustu installer'lari BURADA uretilir, VDS'te degil.
+#
+# Neden: VDS'te Rust toolchain yok ve Linux'tan Windows'a Tauri capraz
+# derlemesi pratikte calismiyor. Her isletim sistemi kendi runner'inda
+# kendi installer'ini uretir — kullanicinin bilgisayarinda Node veya Rust
+# kurulu olmasi gerekmez, tek dosya indirip kurar.
+#
+# Yayinlamak icin:  git tag desktop-v0.1.0 && git push --tags
+
+name: Desktop Release
+
+on:
+  push:
+    tags: ['desktop-v*']
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            target: ''
+            label: windows
+          - os: macos-latest
+            target: '--target universal-apple-darwin'
+            label: macos
+          - os: ubuntu-22.04
+            target: ''
+            label: linux
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: desktop-client/package-lock.json
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.os == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
+
+      - uses: swatinem/rust-cache@v2
+        with:
+          workspaces: desktop-client/src-tauri -> target
+
+      # Tauri'nin Linux'ta ihtiyac duydugu sistem kutuphaneleri
+      - name: Linux bagimliliklari
+        if: matrix.os == 'ubuntu-22.04'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev \
+            librsvg2-dev patchelf libssl-dev
+
+      - run: npm ci --no-audit --no-fund
+        working-directory: desktop-client
+
+      - uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          projectPath: desktop-client
+          tagName: ${{ github.ref_name }}
+          releaseName: 'SiteStudyo Sales OS ${{ github.ref_name }}'
+          releaseBody: |
+            Kurulum dosyasini indir ve calistir.
+
+            Ilk acilista **Sunucu Adresi** sorulur:
+            `https://api.sitestudyo.com`
+
+            Adresi girip "Baglantiyi Test Et" dedikten sonra hesabinla giris yap.
+            Adres bilgisayarina kaydedilir; bir daha sorulmaz.
+          releaseDraft: true
+          prerelease: false
+          args: ${{ matrix.target }}

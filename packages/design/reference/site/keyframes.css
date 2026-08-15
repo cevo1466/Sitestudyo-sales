@@ -1,0 +1,85 @@
+/* Kaynak sitenin GERÇEKTEN kullandığı @keyframes kuralları.
+   Sayfada tanımlı olup hiç tetiklenmeyenler alınmadı.
+   Bu dosya birebir kopyalanabilir — yorumlanmış değil, ölçülmüş. */
+
+@keyframes spin { 
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes enter { 
+  0% { opacity: var(--tw-enter-opacity,1); transform: translate3d(var(--tw-enter-translate-x,0), var(--tw-enter-translate-y,0), var(--tw-enter-translate-z,0)) scale3d(var(--tw-enter-scale,1), var(--tw-enter-scale,1), var(--tw-enter-scale,1)) rotateX(var(--tw-enter-rotate-x,0)) rotateY(var(--tw-enter-rotate-y,0)) rotate(var(--tw-enter-rotate,0)); }
+}
+
+@keyframes infra-reveal-to-right { 
+  0% { clip-path: inset(0px 100% 0px 0px); }
+  100% { clip-path: inset(0px); }
+}
+
+@keyframes infra-fade-in { 
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes pipeline-radar-ring-inner { 
+  0% { opacity: 0.11; }
+  16% { opacity: 0.22; }
+  50% { opacity: 0.07; }
+  68% { opacity: 0.11; }
+  100% { opacity: 0.11; }
+}
+
+@keyframes pipeline-radar-ring-outer { 
+  0% { opacity: 0.067; }
+  16% { opacity: 0.135; }
+  50% { opacity: 0.045; }
+  68% { opacity: 0.067; }
+  100% { opacity: 0.067; }
+}
+
+@keyframes pipeline-radar-bob { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes signal-roller-roll { 
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes rotate { 
+  0% { --workflows-card-gradient-angle: 0deg; }
+  18% { --workflows-card-gradient-angle: 76deg; }
+  27% { --workflows-card-gradient-angle: 104deg; }
+  63% { --workflows-card-gradient-angle: 256deg; }
+  72% { --workflows-card-gradient-angle: 284deg; }
+  100% { --workflows-card-gradient-angle: 360deg; }
+}
+
+@keyframes connection { 
+  100% { opacity: 1; }
+}
+
+@keyframes running { 
+  0% { opacity: 0; top: 0px; }
+  15%, 85% { opacity: 1; top: -28px; }
+  100% { opacity: 0; top: 0px; }
+}
+
+@keyframes completed { 
+  0%, 85% { opacity: 0; top: 0px; }
+  100% { opacity: 1; top: -28px; }
+}
+
+@keyframes pricing-cards-grid-line-appear { 
+  100% { --pricing-cards-grid-line-position-start: 100%; --pricing-cards-grid-line-position-end: 130%; }
+}
+
+@keyframes slideUp { 
+  0% { height: var(--radix-accordion-content-height); }
+  100% { height: 0px; }
+}
+
+@keyframes ai-hero-box-gradient-spin { 
+  0% { --ai-hero-box-gradient-angle: 0deg; }
+  100% { --ai-hero-box-gradient-angle: 360deg; }
+}

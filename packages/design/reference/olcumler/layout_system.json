@@ -1,0 +1,93 @@
+{
+  "area": "layout_system",
+  "container": {
+    "max_width": null,
+    "side_padding": null,
+    "content_left": null,
+    "content_right": null,
+    "centered": null,
+    "evidence": null,
+    "confident": false
+  },
+  "gutters": {
+    "dominant": null,
+    "base_unit": null,
+    "scale": [],
+    "column_gap": null,
+    "row_gap": null,
+    "samples": 0
+  },
+  "grid_templates": [
+    {
+      "template": "115.828px 115.828px 115.828px 115.828px 115.828px 115.828px 115.828px 115.828px 115.828px 115.828px 115.828px 115.844px",
+      "columns": 12,
+      "count": 3,
+      "authored": null
+    },
+    {
+      "template": "32px 1114.33px",
+      "columns": 2,
+      "count": 1,
+      "authored": null
+    },
+    {
+      "template": "115.828px 115.828px 115.828px 115.828px 115.828px 115.828px 115.828px 115.828px 115.844px 115.828px 115.828px 115.828px",
+      "columns": 12,
+      "count": 1,
+      "authored": null
+    },
+    {
+      "template": "67.5625px 67.5625px 67.5625px 67.5625px 67.5625px 67.5625px 67.5625px 67.5625px 67.5625px 67.5625px 67.5625px 67.5625px",
+      "columns": 12,
+      "count": 1,
+      "authored": null
+    },
+    {
+      "template": "22.9531px 22.9531px 22.9531px 22.9531px 22.9531px 22.9531px 22.9531px 22.9531px 22.9531px 22.9531px 22.9531px 22.9688px",
+      "columns": 12,
+      "count": 1,
+      "authored": null
+    },
+    {
+      "template": "57.9062px 57.9062px 57.9062px 57.9062px 57.9062px 57.9062px 57.9062px 57.9062px 57.9062px 57.9062px 57.9062px 57.9062px ",
+      "columns": 12,
+      "count": 1,
+      "authored": null
+    },
+    {
+      "template": "24.5px 24.5px 24.5px 24.5px 24.5156px 24.5px 24.5px 24.5px 24.5156px 24.5px 24.5px 24.5px 24.5px 24.5156px 24.5px 24.5px",
+      "columns": 16,
+      "count": 1,
+      "authored": "repeat(52, minmax(0px, 1fr))"
+    },
+    {
+      "template": "115.828px 115.828px 115.828px 115.828px 115.828px 115.828px 115.828px 115.828px 115.828px 115.828px 115.828px 115.828px",
+      "columns": 12,
+      "count": 1,
+      "authored": null
+    }
+  ],
+  "columns": {
+    "dominant": null,
+    "base_grid": 12,
+    "observed": [
+      12
+    ],
+    "grid_containers": 0,
+    "flex_containers": 0
+  },
+  "vertical_rhythm": {
+    "dominant": null,
+    "base_step": null,
+    "scale": [],
+    "samples": 0
+  },
+  "coverage": {
+    "status": "partial",
+    "samples": 96,
+    "container_confident": false,
+    "reason": "hiçbir bölümde içerik kenarı ölçülemedi (tüm bölümler tam genişlik olabilir)",
+    "pages_measured": 8,
+    "pages_attempted": 8
+  }
+}

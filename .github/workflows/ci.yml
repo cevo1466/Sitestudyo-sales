@@ -1,0 +1,76 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+
+    services:
+      mariadb:
+        image: mariadb:10.11
+        env:
+          MARIADB_ROOT_PASSWORD: ci
+          MARIADB_DATABASE: salesos_test
+        ports: ['3306:3306']
+        options: >-
+          --health-cmd="healthcheck.sh --connect --innodb_initialized"
+          --health-interval=10s --health-timeout=5s --health-retries=10
+      redis:
+        image: redis:7-alpine
+        ports: ['6379:6379']
+        options: >-
+          --health-cmd="redis-cli ping"
+          --health-interval=10s --health-timeout=3s --health-retries=10
+
+    env:
+      DATABASE_URL: mysql://root:ci@127.0.0.1:3306/salesos_test
+      REDIS_URL: redis://127.0.0.1:6379
+      JWT_SECRET: ci-test-secret-en-az-otuziki-karakter-uzunlugunda
+      JWT_REFRESH_SECRET: ci-test-refresh-secret-en-az-otuziki-karakter
+      ENCRYPTION_KEY: '0000000000000000000000000000000000000000000000000000000000000000'
+      INBOUND_HMAC_SECRET: ci-inbound-secret-16
+      IP_HASH_SALT: ci-ip-salt-16-karakter
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: backend/package-lock.json
+
+      - run: npm ci --no-audit --no-fund
+        working-directory: backend
+
+      - name: Prisma semasini dogrula
+        run: npx prisma validate
+        working-directory: backend
+
+      - name: Semayi test veritabanina uygula
+        run: npx prisma migrate deploy
+        working-directory: backend
+
+      - run: npm run lint
+        working-directory: backend
+
+      - run: npm test
+        working-directory: backend
+
+      - run: npm run test:e2e
+        working-directory: backend
+
+  # Sirlarin depoya sizmadigini her push'ta dogrula.
+  secrets-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - name: gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

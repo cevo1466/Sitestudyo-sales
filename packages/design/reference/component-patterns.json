@@ -1,0 +1,2127 @@
+{
+  "buttons": [
+    {
+      "pattern": "action_controls",
+      "count": 320,
+      "common_font_sizes": [
+        {
+          "value": "14px",
+          "count": 181,
+          "share": 0.566
+        },
+        {
+          "value": "16px",
+          "count": 92,
+          "share": 0.287
+        },
+        {
+          "value": "15px",
+          "count": 32,
+          "share": 0.1
+        },
+        {
+          "value": "12px",
+          "count": 10,
+          "share": 0.031
+        },
+        {
+          "value": "18px",
+          "count": 5,
+          "share": 0.016
+        }
+      ],
+      "common_radius": [
+        {
+          "value": "8px",
+          "count": 123,
+          "share": 0.384
+        },
+        {
+          "value": "10px",
+          "count": 105,
+          "share": 0.328
+        },
+        {
+          "value": "0px",
+          "count": 75,
+          "share": 0.234
+        },
+        {
+          "value": "12px",
+          "count": 9,
+          "share": 0.028
+        },
+        {
+          "value": "6px",
+          "count": 4,
+          "share": 0.013
+        },
+        {
+          "value": "4px",
+          "count": 3,
+          "share": 0.009
+        },
+        {
+          "value": "13px",
+          "count": 1,
+          "share": 0.003
+        }
+      ],
+      "common_text_colors": [
+        {
+          "value": "lab(76.2541 -1.09726 -7.09252)",
+          "count": 116,
+          "share": 0.362
+        },
+        {
+          "value": "lab(10.7201 -0.0959039 -1.54182)",
+          "count": 75,
+          "share": 0.234
+        },
+        {
+          "value": "lab(20.5697 -0.638425 -4.44436)",
+          "count": 51,
+          "share": 0.159
+        },
+        {
+          "value": "lab(94.3726 -0.157326 -2.23036)",
+          "count": 24,
+          "share": 0.075
+        },
+        {
+          "value": "lab(96.1596 -0.0828803 -1.13571)",
+          "count": 16,
+          "share": 0.05
+        },
+        {
+          "value": "lab(99.9987 0.0337958 0.000309944)",
+          "count": 11,
+          "share": 0.034
+        },
+        {
+          "value": "lab(37.426 -1.09151 -9.33263)",
+          "count": 10,
+          "share": 0.031
+        },
+        {
+          "value": "lab(91.5182 -0.365466 -2.84777)",
+          "count": 5,
+          "share": 0.016
+        }
+      ],
+      "common_backgrounds": [
+        {
+          "value": "rgba(0, 0, 0, 0)",
+          "count": 231,
+          "share": 0.722
+        },
+        {
+          "value": "lab(99.9987 0.0337958 0.000309944)",
+          "count": 51,
+          "share": 0.159
+        },
+        {
+          "value": "lab(12.7212 0.103362 -2.22102)",
+          "count": 16,
+          "share": 0.05
+        },
+        {
+          "value": "lab(4.67701 0 0)",
+          "count": 9,
+          "share": 0.028
+        },
+        {
+          "value": "lab(20.5697 -0.638425 -4.44436)",
+          "count": 6,
+          "share": 0.019
+        },
+        {
+          "value": "lab(98.2947 0.128329 -0.513124)",
+          "count": 4,
+          "share": 0.013
+        },
+        {
+          "value": "lab(96.1596 -0.0828803 -1.13571)",
+          "count": 3,
+          "share": 0.009
+        }
+      ],
+      "confidence": 0.78
+    }
+  ],
+  "cards": [
+    {
+      "pattern": "surface_blocks",
+      "common_radius": [
+        {
+          "value": "0px",
+          "count": 726,
+          "share": 0.807
+        },
+        {
+          "value": "3.35544e+07px",
+          "count": 49,
+          "share": 0.054
+        },
+        {
+          "value": "8px",
+          "count": 24,
+          "share": 0.027
+        },
+        {
+          "value": "9px",
+          "count": 17,
+          "share": 0.019
+        },
+        {
+          "value": "6px",
+          "count": 16,
+          "share": 0.018
+        },
+        {
+          "value": "10px",
+          "count": 15,
+          "share": 0.017
+        },
+        {
+          "value": "5px",
+          "count": 11,
+          "share": 0.012
+        },
+        {
+          "value": "7px",
+          "count": 10,
+          "share": 0.011
+        }
+      ],
+      "common_backgrounds": [
+        {
+          "value": "#e0fced",
+          "count": 9,
+          "share": 0.273
+        },
+        {
+          "value": "#266df0",
+          "count": 7,
+          "share": 0.212
+        },
+        {
+          "value": "#fbfbfb",
+          "count": 4,
+          "share": 0.121
+        },
+        {
+          "value": "#eeeff1",
+          "count": 2,
+          "share": 0.061
+        },
+        {
+          "value": "#d1d3d6",
+          "count": 2,
+          "share": 0.061
+        },
+        {
+          "value": "#00d17e",
+          "count": 2,
+          "share": 0.061
+        },
+        {
+          "value": "#f5a300",
+          "count": 2,
+          "share": 0.061
+        },
+        {
+          "value": "#f8f9fa",
+          "count": 2,
+          "share": 0.061
+        }
+      ],
+      "confidence": 0.68
+    }
+  ],
+  "forms": [
+    {
+      "pattern": "input_groups",
+      "confidence": 0.62
+    }
+  ],
+  "navigation": [
+    {
+      "pattern": "top_or_footer_navigation",
+      "confidence": 0.62
+    }
+  ],
+  "badges": [],
+  "media_blocks": [],
+  "grids": [
+    {
+      "pattern": "layout_rhythm",
+      "font_size_distribution": [
+        {
+          "value": "16px",
+          "count": 671,
+          "share": 0.746
+        },
+        {
+          "value": "14px",
+          "count": 89,
+          "share": 0.099
+        },
+        {
+          "value": "10px",
+          "count": 47,
+          "share": 0.052
+        },
+        {
+          "value": "11px",
+          "count": 20,
+          "share": 0.022
+        },
+        {
+          "value": "18px",
+          "count": 13,
+          "share": 0.014
+        },
+        {
+          "value": "12px",
+          "count": 13,
+          "share": 0.014
+        },
+        {
+          "value": "9px",
+          "count": 13,
+          "share": 0.014
+        },
+        {
+          "value": "15px",
+          "count": 10,
+          "share": 0.011
+        },
+        {
+          "value": "13px",
+          "count": 9,
+          "share": 0.01
+        },
+        {
+          "value": "6px",
+          "count": 7,
+          "share": 0.008
+        }
+      ],
+      "heading_style_distribution": [
+        {
+          "level": "h1",
+          "fontFamily": "interDisplay, \"interDisplay Fallback\"",
+          "fontSize": "64px",
+          "fontWeight": "600",
+          "color": "lab(10.7201 -0.0959039 -1.54182)"
+        },
+        {
+          "level": "h2",
+          "fontFamily": "interDisplay, \"interDisplay Fallback\"",
+          "fontSize": "40px",
+          "fontWeight": "500",
+          "color": "lab(10.7201 -0.0959039 -1.54182)"
+        },
+        {
+          "level": "h3",
+          "fontFamily": "interDisplay, \"interDisplay Fallback\"",
+          "fontSize": "24px",
+          "fontWeight": "500",
+          "color": "lab(10.7201 -0.0959039 -1.54182)"
+        },
+        {
+          "level": "h4",
+          "fontFamily": "inter, \"inter Fallback\"",
+          "fontSize": "18px",
+          "fontWeight": "500",
+          "color": "lab(10.7201 -0.0959039 -1.54182)"
+        },
+        {
+          "level": "h4",
+          "fontFamily": "inter, \"inter Fallback\"",
+          "fontSize": "18px",
+          "fontWeight": "500",
+          "color": "lab(10.7201 -0.0959039 -1.54182)"
+        },
+        {
+          "level": "h3",
+          "fontFamily": "interDisplay, \"interDisplay Fallback\"",
+          "fontSize": "24px",
+          "fontWeight": "500",
+          "color": "lab(10.7201 -0.0959039 -1.54182)"
+        },
+        {
+          "level": "h3",
+          "fontFamily": "interDisplay, \"interDisplay Fallback\"",
+          "fontSize": "24px",
+          "fontWeight": "500",
+          "color": "lab(10.7201 -0.0959039 -1.54182)"
+        },
+        {
+          "level": "h4",
+          "fontFamily": "inter, \"inter Fallback\"",
+          "fontSize": "18px",
+          "fontWeight": "500",
+          "color": "lab(10.7201 -0.0959039 -1.54182)"
+        },
+        {
+          "level": "h4",
+          "fontFamily": "inter, \"inter Fallback\"",
+          "fontSize": "18px",
+          "fontWeight": "500",
+          "color": "lab(10.7201 -0.0959039 -1.54182)"
+        },
+        {
+          "level": "h3",
+          "fontFamily": "interDisplay, \"interDisplay Fallback\"",
+          "fontSize": "24px",
+          "fontWeight": "500",
+          "color": "lab(10.7201 -0.0959039 -1.54182)"
+        }
+      ],
+      "display_distribution": [
+        {
+          "value": "block",
+          "count": 425,
+          "share": 0.472
+        },
+        {
+          "value": "flex",
+          "count": 332,
+          "share": 0.369
+        },
+        {
+          "value": "inline",
+          "count": 110,
+          "share": 0.122
+        },
+        {
+          "value": "grid",
+          "count": 17,
+          "share": 0.019
+        },
+        {
+          "value": "list-item",
+          "count": 9,
+          "share": 0.01
+        },
+        {
+          "value": "inline-flex",
+          "count": 6,
+          "share": 0.007
+        },
+        {
+          "value": "inline-block",
+          "count": 1,
+          "share": 0.001
+        },
+        {
+          "value": "block",
+          "count": 561,
+          "share": 0.623
+        },
+        {
+          "value": "flex",
+          "count": 209,
+          "share": 0.232
+        },
+        {
+          "value": "inline",
+          "count": 81,
+          "share": 0.09
+        }
+      ],
+      "container_widths": [
+        {
+          "value": "280px",
+          "count": 85,
+          "share": 0.351
+        },
+        {
+          "value": "240px",
+          "count": 24,
+          "share": 0.099
+        },
+        {
+          "value": "1440px",
+          "count": 21,
+          "share": 0.087
+        },
+        {
+          "value": "320px",
+          "count": 16,
+          "share": 0.066
+        },
+        {
+          "value": "1080px",
+          "count": 16,
+          "share": 0.066
+        },
+        {
+          "value": "600px",
+          "count": 15,
+          "share": 0.062
+        },
+        {
+          "value": "640px",
+          "count": 14,
+          "share": 0.058
+        },
+        {
+          "value": "1400px",
+          "count": 8,
+          "share": 0.033
+        },
+        {
+          "value": "800px",
+          "count": 7,
+          "share": 0.029
+        },
+        {
+          "value": "1040px",
+          "count": 7,
+          "share": 0.029
+        }
+      ],
+      "confidence": 0.74
+    }
+  ],
+  "color_usage": {
+    "text": [
+      {
+        "value": "#242629",
+        "count": 71,
+        "share": 0.455
+      },
+      {
+        "value": "#000000",
+        "count": 47,
+        "share": 0.301
+      },
+      {
+        "value": "#505155",
+        "count": 24,
+        "share": 0.154
+      },
+      {
+        "value": "#007d53",
+        "count": 9,
+        "share": 0.058
+      },
+      {
+        "value": "#d97757",
+        "count": 3,
+        "share": 0.019
+      },
+      {
+        "value": "#00d17e",
+        "count": 2,
+        "share": 0.013
+      },
+      {
+        "value": "#242629",
+        "count": 30,
+        "share": 0.254
+      },
+      {
+        "value": "#000000",
+        "count": 30,
+        "share": 0.254
+      },
+      {
+        "value": "#505155",
+        "count": 30,
+        "share": 0.254
+      },
+      {
+        "value": "#056c87",
+        "count": 8,
+        "share": 0.068
+      }
+    ],
+    "backgrounds": [
+      {
+        "value": "#e0fced",
+        "count": 9,
+        "share": 0.273
+      },
+      {
+        "value": "#266df0",
+        "count": 7,
+        "share": 0.212
+      },
+      {
+        "value": "#fbfbfb",
+        "count": 4,
+        "share": 0.121
+      },
+      {
+        "value": "#eeeff1",
+        "count": 2,
+        "share": 0.061
+      },
+      {
+        "value": "#d1d3d6",
+        "count": 2,
+        "share": 0.061
+      },
+      {
+        "value": "#00d17e",
+        "count": 2,
+        "share": 0.061
+      },
+      {
+        "value": "#f5a300",
+        "count": 2,
+        "share": 0.061
+      },
+      {
+        "value": "#f8f9fa",
+        "count": 2,
+        "share": 0.061
+      },
+      {
+        "value": "#f97514",
+        "count": 1,
+        "share": 0.03
+      },
+      {
+        "value": "#cdced2",
+        "count": 1,
+        "share": 0.03
+      }
+    ]
+  },
+  "isolated_components": [
+    {
+      "type": "nav-item",
+      "className": "-mx-1",
+      "occurrence_count": 39,
+      "dominant_tag": "A",
+      "structure_patterns": [
+        "svg",
+        "span>div",
+        "span"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(76.2541 -1.09726 -7.09252)",
+        "border_radius": "8px",
+        "padding": "4px 4px 4px 4px",
+        "font_size": "14px",
+        "font_weight": "400",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "77",
+        "height": "28"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "container",
+      "occurrence_count": 19,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "div",
+        "nav"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 24px 0px 24px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "1440",
+        "height": "48"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "button",
+      "className": "text-[15px]",
+      "occurrence_count": 9,
+      "dominant_tag": "BUTTON",
+      "structure_patterns": [
+        "span>svg",
+        "span>span"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "10px",
+        "padding": "4px 20px 4px 0px",
+        "font_size": "15px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "1px",
+        "width": "289",
+        "height": "30"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "nav-item",
+      "className": "max-lg:h-11.5",
+      "occurrence_count": 6,
+      "dominant_tag": "A",
+      "structure_patterns": [],
+      "extracted_styles": {
+        "background": "lab(99.9987 0.0337958 0.000309944)",
+        "text_color": "lab(20.5697 -0.638425 -4.44436)",
+        "border_radius": "10px",
+        "padding": "0px 12px 0px 12px",
+        "font_size": "14px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "1px",
+        "width": "68",
+        "height": "36"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "button",
+      "className": "button-ghost",
+      "occurrence_count": 4,
+      "dominant_tag": "BUTTON",
+      "structure_patterns": [
+        "span>svg"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(20.5697 -0.638425 -4.44436)",
+        "border_radius": "10px",
+        "padding": "0px 8px 0px 12px",
+        "font_size": "15px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "1px",
+        "width": "76",
+        "height": "36"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "top-(--site-header-height)",
+      "occurrence_count": 4,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "div>div>div",
+        "div>p>div",
+        "div>ol"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "1440",
+        "height": "784"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "nav-item",
+      "className": "group",
+      "occurrence_count": 42,
+      "dominant_tag": "A",
+      "structure_patterns": [
+        "span>svg",
+        "span>div",
+        "span"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(76.2541 -1.09726 -7.09252)",
+        "border_radius": "8px",
+        "padding": "4px 4px 4px 4px",
+        "font_size": "14px",
+        "font_weight": "400",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "77",
+        "height": "28"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "attio-group-hover-underline",
+      "occurrence_count": 38,
+      "dominant_tag": "SPAN",
+      "structure_patterns": [],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(76.2541 -1.09726 -7.09252)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "14px",
+        "font_weight": "400",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "53",
+        "height": "20"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "nav-item",
+      "className": "rounded-xl",
+      "occurrence_count": 36,
+      "dominant_tag": "A",
+      "structure_patterns": [
+        "svg",
+        "div>div>div>svg>div",
+        "div>div>div>svg"
+      ],
+      "extracted_styles": {
+        "background": "lab(94.3726 -0.157326 -2.23036)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "12px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+        "border_width": "0px",
+        "width": "281",
+        "height": "80"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "button",
+      "className": "-translate-y-1/2",
+      "occurrence_count": 21,
+      "dominant_tag": "BUTTON",
+      "structure_patterns": [
+        "svg"
+      ],
+      "extracted_styles": {
+        "background": "lab(50.3787 -1.31875 -9.56043)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "4",
+        "height": "4"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "container",
+      "occurrence_count": 18,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "div",
+        "nav",
+        "header>header>div"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 24px 0px 24px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "1440",
+        "height": "1"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "button",
+      "className": "right-0",
+      "occurrence_count": 13,
+      "dominant_tag": "BUTTON",
+      "structure_patterns": [
+        "svg",
+        "div",
+        "svg>span"
+      ],
+      "extracted_styles": {
+        "background": "lab(96.1596 -0.0828803 -1.13571)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "8px",
+        "padding": "1px 5px 1px 5px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "1px",
+        "width": "74",
+        "height": "22"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "feature-card",
+      "className": "pb-[7px]",
+      "occurrence_count": 6,
+      "dominant_tag": "NAV",
+      "structure_patterns": [
+        "div",
+        "div>span"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 0px 7px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "253",
+        "height": "31"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "-z-1",
+      "occurrence_count": 5,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "svg"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "199",
+        "height": "130"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "button",
+      "className": "button-outline",
+      "occurrence_count": 5,
+      "dominant_tag": "BUTTON",
+      "structure_patterns": [
+        "svg"
+      ],
+      "extracted_styles": {
+        "background": "lab(99.9987 0.0337958 0.000309944)",
+        "text_color": "lab(20.5697 -0.638425 -4.44436)",
+        "border_radius": "10px",
+        "padding": "0px 12px 0px 12px",
+        "font_size": "14px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "1px",
+        "width": "110",
+        "height": "36"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "lg:flex",
+      "occurrence_count": 3,
+      "dominant_tag": "UL",
+      "structure_patterns": [
+        "li>li>li>li",
+        "a>a",
+        "div>div>div>svg"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "191",
+        "height": "36"
+      },
+      "example_count": 3
+    },
+    {
+      "type": "nav-item",
+      "className": "group",
+      "occurrence_count": 43,
+      "dominant_tag": "A",
+      "structure_patterns": [
+        "span>svg",
+        "span>div"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(76.2541 -1.09726 -7.09252)",
+        "border_radius": "8px",
+        "padding": "4px 4px 4px 4px",
+        "font_size": "14px",
+        "font_weight": "400",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "77",
+        "height": "28"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "attio-group-hover-underline",
+      "occurrence_count": 36,
+      "dominant_tag": "SPAN",
+      "structure_patterns": [],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(76.2541 -1.09726 -7.09252)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "14px",
+        "font_weight": "400",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "53",
+        "height": "20"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "container",
+      "occurrence_count": 5,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "div",
+        "nav"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(99.9987 0.0337958 0.000309944)",
+        "border_radius": "0px",
+        "padding": "0px 24px 0px 24px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "1440",
+        "height": "48"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "nav-item",
+      "className": "text-primary-foreground",
+      "occurrence_count": 5,
+      "dominant_tag": "A",
+      "structure_patterns": [
+        "span>svg"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(99.9987 0.0337958 0.000309944)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "24px",
+        "font_weight": "700",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "811",
+        "height": "30"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "product-card",
+      "className": "flex-1",
+      "occurrence_count": 4,
+      "dominant_tag": "MAIN",
+      "structure_patterns": [
+        "div",
+        "article>svg>div"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(99.9987 0.0337958 0.000309944)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "1440",
+        "height": "5824"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "button",
+      "className": "button-outline",
+      "occurrence_count": 3,
+      "dominant_tag": "BUTTON",
+      "structure_patterns": [
+        "svg"
+      ],
+      "extracted_styles": {
+        "background": "lab(4.67701 0 0)",
+        "text_color": "lab(94.3726 -0.157326 -2.23036)",
+        "border_radius": "10px",
+        "padding": "0px 12px 0px 12px",
+        "font_size": "14px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "1px",
+        "width": "32",
+        "height": "36"
+      },
+      "example_count": 3
+    },
+    {
+      "type": "nav-item",
+      "className": "-mx-1",
+      "occurrence_count": 39,
+      "dominant_tag": "A",
+      "structure_patterns": [
+        "svg",
+        "span>div",
+        "span"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(76.2541 -1.09726 -7.09252)",
+        "border_radius": "8px",
+        "padding": "4px 4px 4px 4px",
+        "font_size": "14px",
+        "font_weight": "400",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "77",
+        "height": "28"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "attio-group-hover-underline",
+      "occurrence_count": 36,
+      "dominant_tag": "SPAN",
+      "structure_patterns": [],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(76.2541 -1.09726 -7.09252)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "14px",
+        "font_weight": "400",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "53",
+        "height": "20"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "feature-card",
+      "className": "border-subtle-stroke",
+      "occurrence_count": 11,
+      "dominant_tag": "HEADER",
+      "structure_patterns": [
+        "div>div>div",
+        "svg>div",
+        "div"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px 1px",
+        "width": "1392",
+        "height": "462"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "container",
+      "occurrence_count": 11,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "div",
+        "nav",
+        "svg"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 24px 0px 24px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "1440",
+        "height": "1"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "lg:flex",
+      "occurrence_count": 5,
+      "dominant_tag": "UL",
+      "structure_patterns": [
+        "li>li>li>li",
+        "a>a",
+        "svg>svg>div"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "64px 0px 64px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "578",
+        "height": "460"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "text-card",
+      "className": "border-x",
+      "occurrence_count": 5,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "svg>div",
+        "div",
+        "svg>div>div>div>div>div"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px 1px",
+        "width": "1392",
+        "height": "496"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "input-group",
+      "className": "justify-between",
+      "occurrence_count": 4,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "div>main>footer",
+        "div>button>div",
+        "svg>div>div"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "1392",
+        "height": "36"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "button",
+      "className": "button-outline",
+      "occurrence_count": 4,
+      "dominant_tag": "BUTTON",
+      "structure_patterns": [
+        "svg"
+      ],
+      "extracted_styles": {
+        "background": "lab(99.9987 0.0337958 0.000309944)",
+        "text_color": "lab(20.5697 -0.638425 -4.44436)",
+        "border_radius": "10px",
+        "padding": "0px 12px 0px 12px",
+        "font_size": "14px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "1px",
+        "width": "32",
+        "height": "36"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "nav-item",
+      "className": "rounded-xl",
+      "occurrence_count": 4,
+      "dominant_tag": "A",
+      "structure_patterns": [
+        "svg",
+        "div"
+      ],
+      "extracted_styles": {
+        "background": "lab(99.9987 0.0337958 0.000309944)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "12px",
+        "padding": "8px 8px 8px 8px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "rgba(28, 40, 64, 0.08) 0px 6px 20px -2px, rgba(28, 40, 64, 0.06) 0px 2px 6px 0px",
+        "border_width": "1px",
+        "width": "579",
+        "height": "332"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "text-center",
+      "occurrence_count": 3,
+      "dominant_tag": "H2",
+      "structure_patterns": [
+        "span>span"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "56px",
+        "font_weight": "600",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "452",
+        "height": "52"
+      },
+      "example_count": 3
+    },
+    {
+      "type": "nav-item",
+      "className": "-mx-1",
+      "occurrence_count": 39,
+      "dominant_tag": "A",
+      "structure_patterns": [
+        "svg",
+        "span>div",
+        "span"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(76.2541 -1.09726 -7.09252)",
+        "border_radius": "8px",
+        "padding": "4px 4px 4px 4px",
+        "font_size": "14px",
+        "font_weight": "400",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "77",
+        "height": "28"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "attio-group-hover-underline",
+      "occurrence_count": 36,
+      "dominant_tag": "SPAN",
+      "structure_patterns": [],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(76.2541 -1.09726 -7.09252)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "14px",
+        "font_weight": "400",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "53",
+        "height": "20"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "button",
+      "className": "text-base",
+      "occurrence_count": 13,
+      "dominant_tag": "BUTTON",
+      "structure_patterns": [
+        "svg",
+        "h3>div"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "28px 0px 28px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px 0px 1px",
+        "width": "672",
+        "height": "79"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "container",
+      "occurrence_count": 9,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "div",
+        "nav",
+        "div>div"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 24px 0px 24px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "1440",
+        "height": "48"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "feature-card",
+      "className": "z-1",
+      "occurrence_count": 9,
+      "dominant_tag": "NAV",
+      "structure_patterns": [
+        "ul>div"
+      ],
+      "extracted_styles": {
+        "background": "lab(99.9987 0.0337958 0.000309944)",
+        "text_color": "lab(14.599 -0.159428 -2.99254)",
+        "border_radius": "0px",
+        "padding": "16px 0px 16px 0px",
+        "font_size": "18px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px 0px 1px",
+        "width": "1116",
+        "height": "57"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "nav-item",
+      "className": "py-2",
+      "occurrence_count": 5,
+      "dominant_tag": "A",
+      "structure_patterns": [
+        "svg"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(50.3787 -1.31875 -9.56043)",
+        "border_radius": "10px",
+        "padding": "8px 20px 8px 20px",
+        "font_size": "14px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "94",
+        "height": "36"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "button",
+      "className": "-translate-y-1/2",
+      "occurrence_count": 4,
+      "dominant_tag": "BUTTON",
+      "structure_patterns": [
+        "svg",
+        "div"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "7",
+        "height": "7"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "-top-3",
+      "occurrence_count": 3,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "div"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "7",
+        "height": "7"
+      },
+      "example_count": 3
+    },
+    {
+      "type": "nav-item",
+      "className": "group",
+      "occurrence_count": 42,
+      "dominant_tag": "A",
+      "structure_patterns": [
+        "span>svg",
+        "span>div",
+        "span"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(76.2541 -1.09726 -7.09252)",
+        "border_radius": "8px",
+        "padding": "4px 4px 4px 4px",
+        "font_size": "14px",
+        "font_weight": "400",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "77",
+        "height": "28"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "attio-group-hover-underline",
+      "occurrence_count": 36,
+      "dominant_tag": "SPAN",
+      "structure_patterns": [],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(76.2541 -1.09726 -7.09252)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "14px",
+        "font_weight": "400",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "53",
+        "height": "20"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "product-card",
+      "className": "grid-cols-12",
+      "occurrence_count": 25,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "div"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "1390",
+        "height": "88"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "button",
+      "className": "-translate-y-1/2",
+      "occurrence_count": 21,
+      "dominant_tag": "BUTTON",
+      "structure_patterns": [
+        "svg"
+      ],
+      "extracted_styles": {
+        "background": "lab(50.3787 -1.31875 -9.56043)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "4",
+        "height": "4"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "container",
+      "occurrence_count": 12,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "div",
+        "nav"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 24px 0px 24px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "1440",
+        "height": "48"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "text-lg",
+      "occurrence_count": 6,
+      "dominant_tag": "P",
+      "structure_patterns": [],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(14.599 -0.159428 -2.99254)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "18px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "415",
+        "height": "24"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "button",
+      "className": "button-outline",
+      "occurrence_count": 5,
+      "dominant_tag": "BUTTON",
+      "structure_patterns": [
+        "svg"
+      ],
+      "extracted_styles": {
+        "background": "lab(99.9987 0.0337958 0.000309944)",
+        "text_color": "lab(20.5697 -0.638425 -4.44436)",
+        "border_radius": "10px",
+        "padding": "0px 12px 0px 12px",
+        "font_size": "14px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "1px",
+        "width": "110",
+        "height": "36"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "nav-item",
+      "className": "button-primary",
+      "occurrence_count": 4,
+      "dominant_tag": "A",
+      "structure_patterns": [],
+      "extracted_styles": {
+        "background": "lab(12.7212 0.103362 -2.22102)",
+        "text_color": "lab(96.1596 -0.0828803 -1.13571)",
+        "border_radius": "10px",
+        "padding": "0px 12px 0px 12px",
+        "font_size": "14px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "1px",
+        "width": "109",
+        "height": "36"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "gap-x-2.5",
+      "occurrence_count": 3,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "a>a",
+        "button>button>a>form",
+        "a>form>button>button"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "191",
+        "height": "36"
+      },
+      "example_count": 3
+    },
+    {
+      "type": "nav-item",
+      "className": "group",
+      "occurrence_count": 50,
+      "dominant_tag": "A",
+      "structure_patterns": [
+        "span>svg",
+        "div>p>div"
+      ],
+      "extracted_styles": {
+        "background": "lab(99.9987 0.0337958 0.000309944)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "20px 20px 20px 20px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "288",
+        "height": "120"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "nav-item",
+      "className": "-mx-1",
+      "occurrence_count": 39,
+      "dominant_tag": "A",
+      "structure_patterns": [
+        "svg",
+        "span>div",
+        "span"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(76.2541 -1.09726 -7.09252)",
+        "border_radius": "8px",
+        "padding": "4px 4px 4px 4px",
+        "font_size": "14px",
+        "font_weight": "400",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "77",
+        "height": "28"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "attio-group-hover-underline",
+      "occurrence_count": 38,
+      "dominant_tag": "SPAN",
+      "structure_patterns": [],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(76.2541 -1.09726 -7.09252)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "14px",
+        "font_weight": "400",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "53",
+        "height": "20"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "container",
+      "occurrence_count": 12,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "div",
+        "nav"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 24px 0px 24px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "1440",
+        "height": "48"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "nav-item",
+      "className": "max-lg:h-11.5",
+      "occurrence_count": 10,
+      "dominant_tag": "A",
+      "structure_patterns": [],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(20.5697 -0.638425 -4.44436)",
+        "border_radius": "10px",
+        "padding": "0px 12px 0px 12px",
+        "font_size": "14px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "1px",
+        "width": "109",
+        "height": "36"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "button",
+      "className": "button-outline",
+      "occurrence_count": 5,
+      "dominant_tag": "BUTTON",
+      "structure_patterns": [
+        "svg"
+      ],
+      "extracted_styles": {
+        "background": "lab(99.9987 0.0337958 0.000309944)",
+        "text_color": "lab(20.5697 -0.638425 -4.44436)",
+        "border_radius": "10px",
+        "padding": "0px 12px 0px 12px",
+        "font_size": "14px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "1px",
+        "width": "110",
+        "height": "36"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "h-full",
+      "occurrence_count": 4,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "div"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "576",
+        "height": "48"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "truncate",
+      "occurrence_count": 3,
+      "dominant_tag": "SPAN",
+      "structure_patterns": [],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(99.9987 0.0337958 0.000309944)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "13px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "89",
+        "height": "19"
+      },
+      "example_count": 3
+    },
+    {
+      "type": "nav-item",
+      "className": "-mx-1",
+      "occurrence_count": 39,
+      "dominant_tag": "A",
+      "structure_patterns": [
+        "svg",
+        "span>div",
+        "span"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(76.2541 -1.09726 -7.09252)",
+        "border_radius": "8px",
+        "padding": "4px 4px 4px 4px",
+        "font_size": "14px",
+        "font_weight": "400",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "77",
+        "height": "28"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "attio-group-hover-underline",
+      "occurrence_count": 38,
+      "dominant_tag": "SPAN",
+      "structure_patterns": [],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(76.2541 -1.09726 -7.09252)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "14px",
+        "font_weight": "400",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "53",
+        "height": "20"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "input-group",
+      "className": "col-[2/-2]",
+      "occurrence_count": 35,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "header",
+        "h2>p",
+        "svg>svg"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "481",
+        "height": "523"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "container",
+      "occurrence_count": 16,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "div",
+        "nav",
+        "svg"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 24px 0px 24px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "1440",
+        "height": "1"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "text-lg",
+      "occurrence_count": 14,
+      "dominant_tag": "P",
+      "structure_patterns": [],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(14.599 -0.159428 -2.99254)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "18px",
+        "font_weight": "600",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "481",
+        "height": "24"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "text-card",
+      "className": "font-medium",
+      "occurrence_count": 11,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "h1",
+        "svg>span"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(70.311 -1.30147 -7.86561)",
+        "border_radius": "0px",
+        "padding": "6px 12px 0px 12px",
+        "font_size": "11px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "236",
+        "height": "22"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "button",
+      "className": "button-outline",
+      "occurrence_count": 8,
+      "dominant_tag": "BUTTON",
+      "structure_patterns": [
+        "svg",
+        "span"
+      ],
+      "extracted_styles": {
+        "background": "lab(99.9987 0.0337958 0.000309944)",
+        "text_color": "lab(20.5697 -0.638425 -4.44436)",
+        "border_radius": "10px",
+        "padding": "0px 12px 0px 12px",
+        "font_size": "14px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "1px",
+        "width": "110",
+        "height": "32"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "nav-item",
+      "className": "button-primary",
+      "occurrence_count": 4,
+      "dominant_tag": "A",
+      "structure_patterns": [],
+      "extracted_styles": {
+        "background": "lab(12.7212 0.103362 -2.22102)",
+        "text_color": "lab(96.1596 -0.0828803 -1.13571)",
+        "border_radius": "10px",
+        "padding": "0px 12px 0px 12px",
+        "font_size": "14px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "1px",
+        "width": "109",
+        "height": "36"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "text-card",
+      "className": "mb-6",
+      "occurrence_count": 4,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "h1",
+        "svg>img"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "321",
+        "height": "321"
+      },
+      "example_count": 4
+    },
+    {
+      "type": "card",
+      "className": "lg:flex",
+      "occurrence_count": 3,
+      "dominant_tag": "UL",
+      "structure_patterns": [
+        "li>li>li>li",
+        "a>a",
+        "div"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "191",
+        "height": "36"
+      },
+      "example_count": 3
+    },
+    {
+      "type": "card",
+      "className": "gap-x-2.5",
+      "occurrence_count": 3,
+      "dominant_tag": "DIV",
+      "structure_patterns": [
+        "a>a",
+        "a>form>button>button"
+      ],
+      "extracted_styles": {
+        "background": "rgba(0, 0, 0, 0)",
+        "text_color": "lab(10.7201 -0.0959039 -1.54182)",
+        "border_radius": "0px",
+        "padding": "0px 0px 0px 0px",
+        "font_size": "16px",
+        "font_weight": "500",
+        "box_shadow": "none",
+        "border_width": "0px",
+        "width": "191",
+        "height": "36"
+      },
+      "example_count": 3
+    }
+  ],
+  "isolated_count": 68
+}

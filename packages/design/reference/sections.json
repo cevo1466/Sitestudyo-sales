@@ -1,0 +1,2161 @@
+{
+  "pages": [
+    {
+      "page_id": 1,
+      "page_type": "home",
+      "url": "https://attio.com/",
+      "sections": [
+        {
+          "section_type": "generic-block",
+          "position": 1,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.54,
+          "evidence": {
+            "top": 116,
+            "height": 1176,
+            "headings": 0,
+            "ctas": 0,
+            "cards": 0,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": ""
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 2,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 1766,
+            "height": 180,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "The intelligent system that never sleeps. Picks up leads at 2am. Catches renewal"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 3,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 2027,
+            "height": 275,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Your team, amplified. Agents prospect and reach out when buyers are looking, bui"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 4,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 3438,
+            "height": 275,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Speed to lead, every time. New leads get enriched, scored, and routed to the rig"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 5,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 4369,
+            "height": 275,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Run every motion, your way. Pipeline built for how you sell, while agents brief "
+          }
+        },
+        {
+          "section_type": "card-grid",
+          "position": 6,
+          "layout": "flex-row",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "cards",
+            "icons_or_images"
+          ],
+          "confidence": 0.74,
+          "evidence": {
+            "top": 4717,
+            "height": 581,
+            "headings": 0,
+            "ctas": 0,
+            "cards": 4,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": ""
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 7,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 5780,
+            "height": 275,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "For the people who own the number. Ask any revenue question. From the weekly for"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 8,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 6711,
+            "height": 247,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Keep more. Grow more. Agents track the whole book, so you save what's slipping a"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 9,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.6,
+          "evidence": {
+            "top": 8375,
+            "height": 180,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Live from day one. Connect your inbox and calendar. Attio learns your business a"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 10,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.66,
+          "evidence": {
+            "top": 9338,
+            "height": 704,
+            "headings": 0,
+            "ctas": 0,
+            "cards": 2,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": ""
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 11,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 9472,
+            "height": 538,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Universal Context™"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 12,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.54,
+          "evidence": {
+            "top": 9578,
+            "height": 1887,
+            "headings": 0,
+            "ctas": 0,
+            "cards": 0,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": ""
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 13,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.68,
+          "evidence": {
+            "top": 10441,
+            "height": 200,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "All of the signals, none of the noise. Ready to act on."
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 14,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.86,
+          "evidence": {
+            "top": 11249,
+            "height": 212,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Your whole stack, connected."
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 15,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.68,
+          "evidence": {
+            "top": 11824,
+            "height": 348,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "SDK. API. MCP.Build anything on Attio."
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 16,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.6,
+          "evidence": {
+            "top": 13862,
+            "height": 180,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Run at any scale. Production-grade for your team and agents."
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 17,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 14623,
+            "height": 192,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Trusted by 30,000+ customers. From first agent to enterprise scale."
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 18,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 15688,
+            "height": 192,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Better as you grow. New features every week to keep pace with you."
+          }
+        },
+        {
+          "section_type": "card-grid",
+          "position": 19,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "cards",
+            "icons_or_images",
+            "cta_button"
+          ],
+          "confidence": 0.92,
+          "evidence": {
+            "top": 15960,
+            "height": 312,
+            "headings": 4,
+            "ctas": 4,
+            "cards": 4,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Formula attributes are here"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 20,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 16595,
+            "height": 416,
+            "headings": 1,
+            "ctas": 2,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Agentic revenue runs on Attio."
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 21,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 17012,
+            "height": 548,
+            "headings": 6,
+            "ctas": 8,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Platform"
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 22,
+          "layout": "grid-or-repeated",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.88,
+          "evidence": {
+            "top": 17092,
+            "height": 420,
+            "headings": 6,
+            "ctas": 8,
+            "cards": 6,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Platform"
+          }
+        }
+      ],
+      "source": "dom"
+    },
+    {
+      "page_id": 2,
+      "page_type": "unknown",
+      "url": "https://attio.com/platform/workflows",
+      "sections": [
+        {
+          "section_type": "navbar",
+          "position": 1,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.82,
+          "evidence": {
+            "top": 234,
+            "height": 572,
+            "headings": 2,
+            "ctas": 2,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Workflows"
+          }
+        },
+        {
+          "section_type": "navbar",
+          "position": 2,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 1222,
+            "height": 352,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Cue the agents."
+          }
+        },
+        {
+          "section_type": "gallery",
+          "position": 3,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "images",
+            "media"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 1638,
+            "height": 284,
+            "headings": 0,
+            "ctas": 0,
+            "cards": 2,
+            "images": 60,
+            "inputs": 0,
+            "top_heading": ""
+          }
+        },
+        {
+          "section_type": "navbar",
+          "position": 4,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 2147,
+            "height": 348,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Hire the best rep. Again. Again. And again."
+          }
+        },
+        {
+          "section_type": "card-grid",
+          "position": 5,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "cards",
+            "icons_or_images"
+          ],
+          "confidence": 0.84,
+          "evidence": {
+            "top": 2495,
+            "height": 256,
+            "headings": 5,
+            "ctas": 0,
+            "cards": 5,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Enrichment Agent"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 6,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.6,
+          "evidence": {
+            "top": 3621,
+            "height": 540,
+            "headings": 4,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "From idea to live agent, before your next meeting."
+          }
+        },
+        {
+          "section_type": "navbar",
+          "position": 7,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 7215,
+            "height": 312,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Built for the long run."
+          }
+        },
+        {
+          "section_type": "card-grid",
+          "position": 8,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "cards",
+            "icons_or_images"
+          ],
+          "confidence": 0.9,
+          "evidence": {
+            "top": 7527,
+            "height": 477,
+            "headings": 3,
+            "ctas": 0,
+            "cards": 3,
+            "images": 3,
+            "inputs": 0,
+            "top_heading": "Trigger from any signal."
+          }
+        },
+        {
+          "section_type": "navbar",
+          "position": 9,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 8165,
+            "height": 312,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Trust by default."
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 10,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.68,
+          "evidence": {
+            "top": 8802,
+            "height": 398,
+            "headings": 1,
+            "ctas": 2,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Ask more from CRM. Ask Attio."
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 11,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 9234,
+            "height": 548,
+            "headings": 6,
+            "ctas": 8,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Platform"
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 12,
+          "layout": "grid-or-repeated",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.88,
+          "evidence": {
+            "top": 9314,
+            "height": 420,
+            "headings": 6,
+            "ctas": 8,
+            "cards": 6,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Platform"
+          }
+        }
+      ],
+      "source": "dom"
+    },
+    {
+      "page_id": 3,
+      "page_type": "content/blog",
+      "url": "https://attio.com/engineering/blog/introducing-universal-context",
+      "sections": [
+        {
+          "section_type": "generic-block",
+          "position": 1,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 229,
+            "height": 200,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Introducing Universal Context"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 2,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.8,
+          "evidence": {
+            "top": 494,
+            "height": 4794,
+            "headings": 5,
+            "ctas": 8,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "New ways of thinking about data"
+          }
+        },
+        {
+          "section_type": "card-grid",
+          "position": 3,
+          "layout": "grid-or-repeated",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "cards",
+            "icons_or_images",
+            "cta_button"
+          ],
+          "confidence": 0.94,
+          "evidence": {
+            "top": 590,
+            "height": 4538,
+            "headings": 4,
+            "ctas": 4,
+            "cards": 22,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "New ways of thinking about data"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 4,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.8,
+          "evidence": {
+            "top": 5449,
+            "height": 392,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Ready to redefine the world’s largest software category?"
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 5,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 5941,
+            "height": 548,
+            "headings": 6,
+            "ctas": 8,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Platform"
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 6,
+          "layout": "grid-or-repeated",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.88,
+          "evidence": {
+            "top": 6021,
+            "height": 420,
+            "headings": 6,
+            "ctas": 8,
+            "cards": 6,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Platform"
+          }
+        }
+      ],
+      "source": "dom"
+    },
+    {
+      "page_id": 4,
+      "page_type": "unknown",
+      "url": "https://attio.com/customers",
+      "sections": [
+        {
+          "section_type": "navbar",
+          "position": 1,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.78,
+          "evidence": {
+            "top": 116,
+            "height": 492,
+            "headings": 2,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Customers"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 2,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.74,
+          "evidence": {
+            "top": 924,
+            "height": 460,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "83% faster lead triage. How Granola turns product signals into revenue at scale."
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 3,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.74,
+          "evidence": {
+            "top": 1385,
+            "height": 460,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Workflow automation at scale. How Modal uses Attio to accelerate product-led gro"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 4,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.74,
+          "evidence": {
+            "top": 1846,
+            "height": 460,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Cloud infrastructure magic. How Railway turned usage data into revenue with Atti"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 5,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.74,
+          "evidence": {
+            "top": 2307,
+            "height": 460,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "From fragmented to unified. How USV turned siloed data into a source of truth wi"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 6,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.74,
+          "evidence": {
+            "top": 2768,
+            "height": 460,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "25% revenue boost. How Passionfroot built a creator-first CRM which scales."
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 7,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 4136,
+            "height": 150,
+            "headings": 1,
+            "ctas": 2,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "The CRM behindthousands of companies."
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 8,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 4447,
+            "height": 548,
+            "headings": 6,
+            "ctas": 8,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Platform"
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 9,
+          "layout": "grid-or-repeated",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.88,
+          "evidence": {
+            "top": 4527,
+            "height": 420,
+            "headings": 6,
+            "ctas": 8,
+            "cards": 6,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Platform"
+          }
+        }
+      ],
+      "source": "dom"
+    },
+    {
+      "page_id": 5,
+      "page_type": "pricing/catalog",
+      "url": "https://attio.com/pricing",
+      "sections": [
+        {
+          "section_type": "generic-block",
+          "position": 1,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 116,
+            "height": 244,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "From zero to IPO."
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 2,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 1332,
+            "height": 5510,
+            "headings": 12,
+            "ctas": 8,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Free"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 3,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 6842,
+            "height": 1344,
+            "headings": 13,
+            "ctas": 8,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Frequently asked questions."
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 4,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.68,
+          "evidence": {
+            "top": 7018,
+            "height": 1016,
+            "headings": 13,
+            "ctas": 8,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Frequently asked questions."
+          }
+        },
+        {
+          "section_type": "card-grid",
+          "position": 5,
+          "layout": "grid-or-repeated",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "cards",
+            "icons_or_images",
+            "cta_button"
+          ],
+          "confidence": 0.88,
+          "evidence": {
+            "top": 7086,
+            "height": 948,
+            "headings": 12,
+            "ctas": 8,
+            "cards": 12,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Which plan is right for me?"
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 6,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 8187,
+            "height": 548,
+            "headings": 6,
+            "ctas": 8,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Platform"
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 7,
+          "layout": "grid-or-repeated",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.88,
+          "evidence": {
+            "top": 8267,
+            "height": 420,
+            "headings": 6,
+            "ctas": 8,
+            "cards": 6,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Platform"
+          }
+        }
+      ],
+      "source": "dom"
+    },
+    {
+      "page_id": 6,
+      "page_type": "unknown",
+      "url": "https://attio.com/platform/ask",
+      "sections": [
+        {
+          "section_type": "navbar",
+          "position": 1,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.6,
+          "evidence": {
+            "top": 116,
+            "height": 308,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Ask Attio."
+          }
+        },
+        {
+          "section_type": "navbar",
+          "position": 2,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 1100,
+            "height": 276,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Simply powerful customer intelligence."
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 3,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.6,
+          "evidence": {
+            "top": 1466,
+            "height": 576,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Win faster when every call is perfectly prepped."
+          }
+        },
+        {
+          "section_type": "navbar",
+          "position": 4,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 3383,
+            "height": 312,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Intelligence built for how you work and what you do."
+          }
+        },
+        {
+          "section_type": "gallery",
+          "position": 5,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "images",
+            "media"
+          ],
+          "confidence": 0.8,
+          "evidence": {
+            "top": 4404,
+            "height": 538,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 5,
+            "inputs": 0,
+            "top_heading": "Real information, not AI invention."
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 6,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 5264,
+            "height": 156,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 2,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "From one expert to everyone."
+          }
+        },
+        {
+          "section_type": "gallery",
+          "position": 7,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "images",
+            "media"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 5564,
+            "height": 284,
+            "headings": 0,
+            "ctas": 0,
+            "cards": 2,
+            "images": 60,
+            "inputs": 0,
+            "top_heading": ""
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 8,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.68,
+          "evidence": {
+            "top": 6736,
+            "height": 398,
+            "headings": 1,
+            "ctas": 2,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Ask more from CRM. Ask Attio."
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 9,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 7168,
+            "height": 548,
+            "headings": 6,
+            "ctas": 8,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Platform"
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 10,
+          "layout": "grid-or-repeated",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.88,
+          "evidence": {
+            "top": 7248,
+            "height": 420,
+            "headings": 6,
+            "ctas": 8,
+            "cards": 6,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Platform"
+          }
+        }
+      ],
+      "source": "dom"
+    },
+    {
+      "page_id": 7,
+      "page_type": "unknown",
+      "url": "https://attio.com/platform/ai",
+      "sections": [
+        {
+          "section_type": "hero",
+          "position": 1,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "high",
+          "components": [
+            "heading_system",
+            "cta_button"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 116,
+            "height": 746,
+            "headings": 2,
+            "ctas": 2,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Embedded intelligence"
+          }
+        },
+        {
+          "section_type": "navbar",
+          "position": 2,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.82,
+          "evidence": {
+            "top": 247,
+            "height": 484,
+            "headings": 2,
+            "ctas": 2,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Embedded intelligence"
+          }
+        },
+        {
+          "section_type": "navbar",
+          "position": 3,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 1177,
+            "height": 276,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Ask Attio."
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 4,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.74,
+          "evidence": {
+            "top": 1454,
+            "height": 545,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Start every day ready."
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 5,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.74,
+          "evidence": {
+            "top": 2450,
+            "height": 545,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Context on demand."
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 6,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.6,
+          "evidence": {
+            "top": 3279,
+            "height": 540,
+            "headings": 4,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Autonomous work in action."
+          }
+        },
+        {
+          "section_type": "navbar",
+          "position": 7,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 5858,
+            "height": 348,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Smarter calls, from kickoff to close."
+          }
+        },
+        {
+          "section_type": "card-grid",
+          "position": 8,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "cards",
+            "icons_or_images"
+          ],
+          "confidence": 0.9,
+          "evidence": {
+            "top": 6206,
+            "height": 477,
+            "headings": 3,
+            "ctas": 0,
+            "cards": 3,
+            "images": 3,
+            "inputs": 0,
+            "top_heading": "Every conversation, noted and filed."
+          }
+        },
+        {
+          "section_type": "navbar",
+          "position": 9,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 6844,
+            "height": 312,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "CRM, meet MCP."
+          }
+        },
+        {
+          "section_type": "navbar",
+          "position": 10,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 7449,
+            "height": 326,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Attio plugs in. You take off."
+          }
+        },
+        {
+          "section_type": "card-grid",
+          "position": 11,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "cards",
+            "icons_or_images",
+            "cta_button"
+          ],
+          "confidence": 0.92,
+          "evidence": {
+            "top": 7775,
+            "height": 243,
+            "headings": 8,
+            "ctas": 8,
+            "cards": 8,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Ask Attio"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 12,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.68,
+          "evidence": {
+            "top": 8171,
+            "height": 398,
+            "headings": 1,
+            "ctas": 2,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Start with a 14-day free trial of Pro."
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 13,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 8603,
+            "height": 548,
+            "headings": 6,
+            "ctas": 8,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Platform"
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 14,
+          "layout": "grid-or-repeated",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.88,
+          "evidence": {
+            "top": 8683,
+            "height": 420,
+            "headings": 6,
+            "ctas": 8,
+            "cards": 6,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Platform"
+          }
+        }
+      ],
+      "source": "dom"
+    },
+    {
+      "page_id": 8,
+      "page_type": "unknown",
+      "url": "https://attio.com/platform/data",
+      "sections": [
+        {
+          "section_type": "navbar",
+          "position": 1,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.86,
+          "evidence": {
+            "top": 116,
+            "height": 364,
+            "headings": 2,
+            "ctas": 2,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Data model"
+          }
+        },
+        {
+          "section_type": "navbar",
+          "position": 2,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 1627,
+            "height": 348,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Blazingly fast, amazingly flexible."
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 3,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.74,
+          "evidence": {
+            "top": 1976,
+            "height": 523,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Build for any business model."
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 4,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.74,
+          "evidence": {
+            "top": 2950,
+            "height": 523,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Fine-tune to your data structure."
+          }
+        },
+        {
+          "section_type": "navbar",
+          "position": 5,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 3634,
+            "height": 348,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Context that stays current."
+          }
+        },
+        {
+          "section_type": "navbar",
+          "position": 6,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 4275,
+            "height": 384,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Automatic enrichment, automatic advantage."
+          }
+        },
+        {
+          "section_type": "card-grid",
+          "position": 7,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "cards",
+            "icons_or_images"
+          ],
+          "confidence": 0.9,
+          "evidence": {
+            "top": 4659,
+            "height": 499,
+            "headings": 3,
+            "ctas": 0,
+            "cards": 3,
+            "images": 3,
+            "inputs": 0,
+            "top_heading": "Every record, enriched."
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 8,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.6,
+          "evidence": {
+            "top": 5441,
+            "height": 540,
+            "headings": 4,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Unify your data sources."
+          }
+        },
+        {
+          "section_type": "navbar",
+          "position": 9,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 8020,
+            "height": 348,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "From data to decisions, instantly."
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 10,
+          "layout": "flex-row",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.76,
+          "evidence": {
+            "top": 8440,
+            "height": 502,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 2,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Sales pipeline"
+          }
+        },
+        {
+          "section_type": "navbar",
+          "position": 11,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "links",
+            "logo"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 9103,
+            "height": 326,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Attio plugs in. You take off."
+          }
+        },
+        {
+          "section_type": "card-grid",
+          "position": 12,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "cards",
+            "icons_or_images",
+            "cta_button"
+          ],
+          "confidence": 0.92,
+          "evidence": {
+            "top": 9429,
+            "height": 243,
+            "headings": 8,
+            "ctas": 8,
+            "cards": 8,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Ask Attio"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 13,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.68,
+          "evidence": {
+            "top": 9825,
+            "height": 398,
+            "headings": 1,
+            "ctas": 2,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Start with a 14-day free trial of Pro."
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 14,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 10257,
+            "height": 548,
+            "headings": 6,
+            "ctas": 8,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Platform"
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 15,
+          "layout": "grid-or-repeated",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.88,
+          "evidence": {
+            "top": 10337,
+            "height": 420,
+            "headings": 6,
+            "ctas": 8,
+            "cards": 6,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Platform"
+          }
+        }
+      ],
+      "source": "dom"
+    }
+  ]
+}

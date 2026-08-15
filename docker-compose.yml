@@ -1,0 +1,117 @@
+# SiteStudyo Sales OS — VDS dagitim yapilandirmasi
+#
+# TASARIM KURALI 1 — 80/443'e DOKUNMAZ.
+# Bu sunucuda 80/443'u mevcut `hosting_nginx` konteyneri tutuyor ve sunucudaki
+# tum siteler (sitestudyo, designstudyo, gpartysus, webmail...) oradan geciyor.
+# Disariya acilis `deploy/nginx/api.sitestudyo.com.conf` vhost'u ile yapilir;
+# o vhost backend'e `hostingpanel_hosting-network` agi uzerinden konteyner
+# adiyla (`salesos_backend:5080`) ulasir. Yayinlanan portlar yalnizca
+# 127.0.0.1'e bagli, yani internetten dogrudan erisilemez.
+#
+# TASARIM KURALI 2 — kendi veritabani konteyneri YOK.
+# Sunucuda zaten MariaDB 10.11 (`hosting_mysql`) calisiyor. Ayri bir Postgres
+# konteyneri ~384 MB RAM ve ~250 MB disk yerdi; bu VDS'te 3.9 GB RAM var ve
+# swap zaten dolu. Bunun yerine ayni sunucuda ayri bir `salesos` veritabani ve
+# yalnizca ona yetkili `salesos` kullanicisi kullaniliyor — panelin
+# `hosting_panel` veritabanina erisim yok.
+# ! Yedek: `make backup` gunluk mysqldump alir (bkz. Makefile).
+
+name: salesos
+
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: salesos_redis
+    restart: unless-stopped
+    # Host'ta 6379 (hosting_redis) ve 6380 dolu -> 6381
+    ports:
+      - "127.0.0.1:${REDIS_PORT:-6381}:6379"
+    command:
+      - "redis-server"
+      - "--appendonly"
+      - "yes"
+      - "--maxmemory"
+      - "64mb"
+      # BullMQ kuyrugu: is kaybetmektense hata verelim
+      - "--maxmemory-policy"
+      - "noeviction"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+    mem_limit: 96m
+    logging: *default-logging
+    networks: [salesos]
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: runtime
+    container_name: salesos_backend
+    restart: unless-stopped
+    env_file: [./backend/.env]
+    environment:
+      NODE_ENV: production
+      ROLE: api
+      REDIS_URL: redis://redis:6379
+      # DATABASE_URL backend/.env'den gelir; konteyner icinden MariaDB'ye
+      # `hosting_mysql:3306` adiyla ulasilir (ayni docker agindayiz).
+    ports:
+      # Yalnizca localhost: `curl http://127.0.0.1:5080/api/v1/health` icin.
+      # Internete acilis nginx vhost'u uzerinden.
+      - "127.0.0.1:${API_PORT:-5080}:5080"
+    depends_on:
+      redis: {condition: service_healthy}
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:5080/api/v1/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
+    mem_limit: 320m
+    logging: *default-logging
+    networks:
+      - salesos
+      - hosting # nginx VE MariaDB bu agda
+
+  worker:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: runtime
+    container_name: salesos_worker
+    restart: unless-stopped
+    env_file: [./backend/.env]
+    environment:
+      NODE_ENV: production
+      # main.ts bu degeri gorunce HTTP sunucusu acmaz, sadece kuyrugu tuketir
+      ROLE: worker
+      REDIS_URL: redis://redis:6379
+    depends_on:
+      redis: {condition: service_healthy}
+    # Site analizoru (Faz 4) Playwright/Chromium kullanacak; pay simdiden birakildi.
+    mem_limit: 448m
+    logging: *default-logging
+    networks:
+      - salesos
+      - hosting
+
+volumes:
+  redis-data:
+
+networks:
+  salesos:
+    driver: bridge
+  hosting:
+    external: true
+    name: hostingpanel_hosting-network

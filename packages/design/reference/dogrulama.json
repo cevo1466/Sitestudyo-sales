@@ -1,0 +1,86 @@
+{
+  "overall": "KISMEN DOĞRULANDI",
+  "counts": {
+    "measured": 7,
+    "partial": 5,
+    "not-measured": 0
+  },
+  "total_areas": 12,
+  "areas": {
+    "colors": {
+      "status": "measured",
+      "samples": 16,
+      "reason": null
+    },
+    "typography": {
+      "status": "measured",
+      "samples": 12,
+      "reason": null
+    },
+    "components": {
+      "status": "measured",
+      "samples": 10,
+      "reason": null
+    },
+    "sections": {
+      "status": "measured",
+      "samples": 8,
+      "reason": null
+    },
+    "responsive": {
+      "status": "measured",
+      "samples": 3,
+      "reason": null
+    },
+    "motion": {
+      "status": "measured",
+      "samples": 24,
+      "reason": null
+    },
+    "tech_stack": {
+      "status": "measured",
+      "samples": 8,
+      "reason": null
+    },
+    "layout_system": {
+      "status": "partial",
+      "samples": 96,
+      "reason": "hiçbir bölümde içerik kenarı ölçülemedi (tüm bölümler tam genişlik olabilir)",
+      "container_confident": false,
+      "pages_measured": 8,
+      "pages_attempted": 8
+    },
+    "surfaces": {
+      "status": "partial",
+      "samples": 1386,
+      "reason": "tema kurallari CSS'te var ama prefers-color-scheme render'i degistirmedi (sinif tabanli tema olabilir)",
+      "blocked_stylesheets": 0
+    },
+    "theme_variants": {
+      "status": "partial",
+      "samples": 1,
+      "reason": "tema kurallari CSS'te var ama prefers-color-scheme render'i degistirmedi (sinif tabanli tema olabilir)",
+      "blocked_stylesheets": 0
+    },
+    "interaction_states": {
+      "status": "partial",
+      "samples": 7,
+      "reason": "10 elemandan 7 tanesi ölçülebildi (kalanı hover almadı)",
+      "elements_attempted": 10,
+      "blocked_stylesheets": 0
+    },
+    "assets": {
+      "status": "partial",
+      "samples": 80,
+      "reason": null,
+      "downloaded": 40,
+      "attempted": 41,
+      "skipped_reasons": {
+        "file_limit": 1
+      },
+      "bytes": 546673,
+      "inline_written": 40
+    }
+  },
+  "unmeasured": []
+}

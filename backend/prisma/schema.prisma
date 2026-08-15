@@ -1,0 +1,673 @@
+// SiteStudyo Sales OS — veri modeli
+//
+// Hedef: MariaDB 10.11 (sunucudaki mevcut ornek, ayri `salesos` veritabani).
+// MySQL'e ozgu iki uyarlama var, ikisi de bilincli:
+//   1. Kismi (partial) unique index yok -> mukerrer isletme engeli icin
+//      `dedupeKey` adinda tureyen bir sutun tutuyoruz (bkz. Company).
+//   2. utf8mb4'te index anahtari 3072 bayt ile sinirli -> indekslenen her
+//      metin sutunu VarChar(191) veya daha kisa.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+  // Prisma yeni migration URETIRKEN semayi bos bir veritabaninda deneyerek
+  // dogrular. Varsayilan davranisi bunu kendisi CREATE DATABASE ile acmaktir;
+  // `salesos` kullanicisina bu yetkiyi vermek istemiyoruz (panelin ayni
+  // MariaDB'sindeyiz). Onun yerine sadece bu is icin ayrilmis, bos kalan
+  // bir veritabani gosteriyoruz. Uretimde (`migrate deploy`) kullanilmaz.
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+// ═══════════════════════════════════════════════════════════ Enum'lar
+
+enum UserRole {
+  ADMIN
+  SALES
+  VIEWER
+}
+
+/// Isletmenin web varligi. Lead puanlamasinin en agirlikli girdisi.
+enum WebsiteStatus {
+  NO_WEBSITE // Hic site yok  -> en sicak lead
+  SOCIAL_ONLY // Instagram/Facebook/Linktree vb.
+  BROKEN // 5xx / timeout / DNS yok
+  OUTDATED // Calisiyor ama eski (responsive degil, eski teknoloji)
+  ACTIVE_WEAK // Calisiyor, zayif (SEO/performans/SSL sorunlu)
+  ACTIVE_GOOD // Iyi durumda -> dusuk oncelik
+  UNKNOWN // Henuz analiz edilmedi veya olculemedi
+}
+
+enum LeadGrade {
+  VERY_HOT // 90-100
+  HOT // 70-89
+  WARM // 50-69
+  LOW // 0-49
+}
+
+enum ActivityType {
+  CALL
+  MEETING
+  EMAIL_OUT
+  EMAIL_IN
+  NOTE
+  STAGE_CHANGE
+  SYSTEM
+}
+
+enum DncType {
+  EMAIL
+  DOMAIN
+  PHONE
+}
+
+enum JobStatus {
+  QUEUED
+  RUNNING
+  SUCCEEDED
+  FAILED
+  PARTIAL
+  CANCELLED
+}
+
+enum ContactConfidence {
+  VERIFIED // Sitede acikca yaziyordu / dogrulandi
+  GUESSED // Kalip uretimi (info@domain) — gonderim oncesi dikkat
+}
+
+enum EmailDirection {
+  OUTBOUND
+  INBOUND
+}
+
+enum InboundStatus {
+  NEW
+  REVIEWED
+  CONVERTED
+  SPAM
+}
+
+// ═══════════════════════════════════════════════════════ Kimlik & denetim
+
+model User {
+  id           String   @id @default(uuid()) @db.VarChar(36)
+  email        String   @unique @db.VarChar(191)
+  passwordHash String   @db.VarChar(255) // argon2id
+  name         String   @db.VarChar(120)
+  role         UserRole @default(SALES)
+  isActive     Boolean  @default(true)
+  lastLoginAt  DateTime?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  refreshTokens RefreshToken[]
+  auditLogs     AuditLog[]
+  ownedLeads    Lead[]
+  activities    Activity[]
+  notes         Note[]
+  savedSearches SavedSearch[]
+  mailAccounts  MailAccount[]
+  discoveryRuns DiscoveryRun[]
+
+  @@map("users")
+}
+
+/// Rotasyonlu refresh token.
+/// `familyId` bir oturum zinciridir: ayni token ikinci kez kullanilirsa
+/// (calinmis demektir) o ailenin TAMAMI iptal edilir.
+model RefreshToken {
+  id        String    @id @default(uuid()) @db.VarChar(36)
+  userId    String    @db.VarChar(36)
+  tokenHash String    @unique @db.VarChar(128) // sha256, duz token saklanmaz
+  familyId  String    @db.VarChar(36)
+  expiresAt DateTime
+  revokedAt DateTime?
+  /// Bu token kullanildiginda uretilen yeni token — reuse tespitinde iz surmek icin
+  replacedById String? @db.VarChar(36)
+  userAgent String?   @db.VarChar(255)
+  ipHash    String?   @db.VarChar(64)
+  createdAt DateTime  @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([familyId])
+  @@index([expiresAt])
+  @@map("refresh_tokens")
+}
+
+model AuditLog {
+  id        String   @id @default(uuid()) @db.VarChar(36)
+  userId    String?  @db.VarChar(36)
+  action    String   @db.VarChar(80) // "company.update", "auth.login"
+  entity    String?  @db.VarChar(60)
+  entityId  String?  @db.VarChar(36)
+  meta      Json?
+  ipHash    String?  @db.VarChar(64)
+  createdAt DateTime @default(now())
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([userId, createdAt])
+  @@index([entity, entityId])
+  @@map("audit_logs")
+}
+
+// ═══════════════════════════════════════════════════════════════ CRM
+
+model Company {
+  id     String @id @default(uuid()) @db.VarChar(36)
+  /// Google Place ID — birincil mukerrer engeli. Apify ve Places API ayni degeri verir.
+  placeId String? @unique @db.VarChar(191)
+  /// "apify" | "google" | "manual" | "inbound"
+  source String @default("manual") @db.VarChar(24)
+
+  name String @db.VarChar(255)
+  /// Kucuk harf + Turkce karakter sadelestirmesi + noktalama temizligi.
+  /// placeId olmayan kayitlarda mukerrer engeli bunun uzerinden kurulur.
+  nameNormalized String @db.VarChar(191)
+  /// Ikincil mukerrer anahtari: sha256(nameNormalized + "|" + phoneE164).
+  /// MySQL'de kismi unique index olmadigi icin, telefonu olmayan kayitlarda
+  /// bu alan NULL birakilir — MySQL NULL'lari unique saymaz, tam istedigimiz.
+  dedupeKey String? @unique @db.VarChar(64)
+
+  categoryRaw String? @db.VarChar(160) // Google'in verdigi ham kategori
+  /// Ust seviye sektor (kuafor, restoran, klinik, avukat...). Normalizasyon
+  /// tablosu `sector_mappings` uzerinden yurur.
+  sector String? @db.VarChar(60)
+
+  address      String? @db.VarChar(500)
+  street       String? @db.VarChar(255)
+  city         String? @db.VarChar(80)
+  district     String? @db.VarChar(80)
+  neighborhood String? @db.VarChar(120)
+  postalCode   String? @db.VarChar(20)
+  countryCode  String? @db.VarChar(2)
+  lat          Decimal? @db.Decimal(10, 7)
+  lng          Decimal? @db.Decimal(10, 7)
+
+  phone     String? @db.VarChar(40) // gosterim bicimi
+  phoneE164 String? @db.VarChar(20) // +905551234567
+
+  websiteUrl    String? @db.VarChar(500)
+  /// Kayitli alan adi (www ve sema atilmis). Ayni siteyi paylasan iki
+  /// isletmeyi yakalamak icin indeksli — ama UNIQUE degil: zincir isletmeler
+  /// mesru sekilde ayni siteyi paylasabilir.
+  websiteDomain String? @db.VarChar(191)
+
+  googleRating       Decimal? @db.Decimal(2, 1)
+  googleReviewsCount Int?
+  googleUrl          String?  @db.VarChar(500)
+  /// "OPERATIONAL" | "TEMPORARILY_CLOSED" | "PERMANENTLY_CLOSED"
+  businessStatus String? @db.VarChar(30)
+
+  websiteStatus WebsiteStatus @default(UNKNOWN)
+  websiteScore  Int? // 0-100, son analizden
+  leadScore     Int           @default(0) // 0-100
+  leadGrade     LeadGrade     @default(LOW)
+
+  firstSeenAt    DateTime  @default(now())
+  lastAnalyzedAt DateTime?
+  lastScoredAt   DateTime?
+  /// Saglayicidan gelen ham kayit — sema degisirse geriye donuk yeniden isleyebilelim.
+  raw Json?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  contacts  Contact[]
+  analyses  WebsiteAnalysis[]
+  leads     Lead[]
+  activities Activity[]
+  notes     Note[]
+  tags      CompanyTag[]
+  threads   EmailThread[]
+  inbound   InboundLead[]
+
+  @@index([websiteStatus, leadScore])
+  @@index([leadGrade, leadScore])
+  @@index([city, district])
+  @@index([sector])
+  @@index([websiteDomain])
+  @@index([nameNormalized])
+  @@fulltext([name, address])
+  @@map("companies")
+}
+
+model Contact {
+  id        String  @id @default(uuid()) @db.VarChar(36)
+  companyId String  @db.VarChar(36)
+  name      String? @db.VarChar(160)
+  role      String? @db.VarChar(120)
+  email     String? @db.VarChar(191)
+  phone     String? @db.VarChar(40)
+  /// "google" | "crawler" | "manual" | "inbound"
+  source     String?           @db.VarChar(24)
+  sourceUrl  String?           @db.VarChar(500)
+  confidence ContactConfidence @default(GUESSED)
+  isPrimary  Boolean           @default(false)
+  verifiedAt DateTime?
+  createdAt  DateTime          @default(now())
+  updatedAt  DateTime          @updatedAt
+
+  company  Company        @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  messages EmailMessage[]
+  threads  EmailThread[]
+
+  @@unique([companyId, email])
+  @@index([email])
+  @@map("contacts")
+}
+
+/// Her analiz YENI satir acar — site zamanla duzeldi mi gorebilelim.
+/// `companies` uzerindeki ozet alanlar en son analizle guncellenir.
+model WebsiteAnalysis {
+  id        String   @id @default(uuid()) @db.VarChar(36)
+  companyId String   @db.VarChar(36)
+  checkedAt DateTime @default(now())
+
+  requestedUrl String  @db.VarChar(500)
+  finalUrl     String? @db.VarChar(500)
+  httpStatus   Int?
+  redirectChain Json?
+
+  sslValid       Boolean?
+  sslExpiresAt   DateTime?
+  httpsRedirect  Boolean? // http -> https otomatik yonlendirme var mi
+  ttfbMs         Int?
+  loadMs         Int?
+
+  hasTitle    Boolean?
+  title       String?  @db.VarChar(500)
+  hasMetaDesc Boolean?
+  metaDesc    String?  @db.Text
+  hasViewport Boolean?
+  hasCanonical Boolean?
+  hasRobotsTxt Boolean?
+  hasSitemap   Boolean?
+  isResponsive Boolean?
+
+  cms       String? @db.VarChar(60) // WordPress, Webflow, Wix...
+  generator String? @db.VarChar(160)
+  /// {"frameworks":["React"],"analytics":["GA4"],"server":"nginx"}
+  techStack Json?
+  /// {"emails":[...],"phones":[...],"hasContactForm":true,"whatsapp":"...","social":{...}}
+  contactSignals Json?
+
+  websiteScore  Int?
+  websiteStatus WebsiteStatus @default(UNKNOWN)
+  /// "DNS_FAIL" | "TIMEOUT" | "SSL_ERROR" | "BLOCKED" — neden olculemedi
+  errorCode String? @db.VarChar(40)
+  raw       Json?
+
+  company Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId, checkedAt])
+  @@map("website_analyses")
+}
+
+/// Puanlama agirliklari KOD icinde degil burada. Admin ekranindan
+/// degistirilebilir olmasi sarttti (Faz 0 §2.3).
+model LeadScoreRule {
+  id        String   @id @default(uuid()) @db.VarChar(36)
+  key       String   @unique @db.VarChar(60) // "no_website", "ssl_problem"
+  label     String   @db.VarChar(160)
+  weight    Int
+  enabled   Boolean  @default(true)
+  sortOrder Int      @default(0)
+  updatedAt DateTime @updatedAt
+
+  @@map("lead_score_rules")
+}
+
+/// Google kategorisi -> ust seviye sektor esleme tablosu.
+/// "Kuaför", "Berber Dükkanı", "Güzellik Salonu" -> "guzellik"
+model SectorMapping {
+  id          String @id @default(uuid()) @db.VarChar(36)
+  categoryRaw String @unique @db.VarChar(160)
+  sector      String @db.VarChar(60)
+
+  @@index([sector])
+  @@map("sector_mappings")
+}
+
+// ═══════════════════════════════════════════════════════ Satis hunisi
+
+model Pipeline {
+  id        String   @id @default(uuid()) @db.VarChar(36)
+  name      String   @db.VarChar(120)
+  isDefault Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  stages PipelineStage[]
+  leads  Lead[]
+
+  @@map("pipelines")
+}
+
+model PipelineStage {
+  id         String  @id @default(uuid()) @db.VarChar(36)
+  pipelineId String  @db.VarChar(36)
+  key        String  @db.VarChar(40) // "contacted", "proposal_sent"
+  name       String  @db.VarChar(120)
+  sortOrder  Int
+  isWon      Boolean @default(false)
+  isLost     Boolean @default(false)
+  color      String? @db.VarChar(9) // #RRGGBB
+
+  pipeline Pipeline @relation(fields: [pipelineId], references: [id], onDelete: Cascade)
+  leads    Lead[]
+
+  @@unique([pipelineId, key])
+  @@index([pipelineId, sortOrder])
+  @@map("pipeline_stages")
+}
+
+model Lead {
+  id         String  @id @default(uuid()) @db.VarChar(36)
+  companyId  String  @db.VarChar(36)
+  pipelineId String  @db.VarChar(36)
+  stageId    String  @db.VarChar(36)
+  ownerId    String? @db.VarChar(36)
+
+  title    String   @db.VarChar(255)
+  value    Decimal? @db.Decimal(12, 2)
+  currency String   @default("TRY") @db.VarChar(3)
+
+  stageEnteredAt DateTime  @default(now())
+  closedAt       DateTime?
+  lostReason     String?   @db.VarChar(500)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  company  Company       @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  pipeline Pipeline      @relation(fields: [pipelineId], references: [id])
+  stage    PipelineStage @relation(fields: [stageId], references: [id])
+  owner    User?         @relation(fields: [ownerId], references: [id], onDelete: SetNull)
+
+  activities Activity[]
+  notes      Note[]
+
+  @@index([stageId, stageEnteredAt])
+  @@index([ownerId])
+  @@index([companyId])
+  @@map("leads")
+}
+
+model Activity {
+  id        String       @id @default(uuid()) @db.VarChar(36)
+  companyId String?      @db.VarChar(36)
+  leadId    String?      @db.VarChar(36)
+  userId    String?      @db.VarChar(36)
+  type      ActivityType
+  subject   String?      @db.VarChar(255)
+  body      String?      @db.Text
+  occurredAt DateTime    @default(now())
+  meta      Json?
+  createdAt DateTime     @default(now())
+
+  company Company? @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  lead    Lead?    @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  user    User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([companyId, occurredAt])
+  @@index([leadId, occurredAt])
+  @@map("activities")
+}
+
+model Note {
+  id        String   @id @default(uuid()) @db.VarChar(36)
+  companyId String?  @db.VarChar(36)
+  leadId    String?  @db.VarChar(36)
+  userId    String   @db.VarChar(36)
+  body      String   @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  company Company? @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  lead    Lead?    @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  user    User     @relation(fields: [userId], references: [id])
+
+  @@index([companyId, createdAt])
+  @@map("notes")
+}
+
+model Tag {
+  id        String   @id @default(uuid()) @db.VarChar(36)
+  slug      String   @unique @db.VarChar(60)
+  name      String   @db.VarChar(80)
+  color     String?  @db.VarChar(9)
+  createdAt DateTime @default(now())
+
+  companies CompanyTag[]
+
+  @@map("tags")
+}
+
+model CompanyTag {
+  companyId String   @db.VarChar(36)
+  tagId     String   @db.VarChar(36)
+  createdAt DateTime @default(now())
+
+  company Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  tag     Tag     @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([companyId, tagId])
+  @@index([tagId])
+  @@map("company_tags")
+}
+
+/// "Ankara - Sitesi Yok" gibi sik kullanilan filtreler.
+model SavedSearch {
+  id        String   @id @default(uuid()) @db.VarChar(36)
+  userId    String   @db.VarChar(36)
+  name      String   @db.VarChar(120)
+  /// /companies sorgu parametrelerinin aynisi
+  params    Json
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, name])
+  @@map("saved_searches")
+}
+
+// ═══════════════════════════════════════════════════════════ E-posta
+
+model MailAccount {
+  id          String @id @default(uuid()) @db.VarChar(36)
+  userId      String @db.VarChar(36)
+  email       String @db.VarChar(191)
+  displayName String @db.VarChar(120)
+
+  smtpHost   String  @db.VarChar(191)
+  smtpPort   Int
+  smtpSecure Boolean @default(true)
+  smtpUser   String  @db.VarChar(191)
+
+  imapHost   String  @db.VarChar(191)
+  imapPort   Int
+  imapSecure Boolean @default(true)
+  imapUser   String  @db.VarChar(191)
+
+  /// SMTP+IMAP sifreleri AES-256-GCM ile sifreli JSON.
+  /// Anahtar .env'deki ENCRYPTION_KEY. DUZ METIN ASLA YAZILMAZ.
+  secretEnc Bytes @db.Blob
+
+  /// Gunluk gonderim tavani — spam korumasi
+  dailySendLimit Int       @default(50)
+  lastSyncAt     DateTime?
+  lastSyncUid    Int? // IMAP UIDNEXT takibi
+  status         String    @default("unverified") @db.VarChar(20)
+  lastError      String?   @db.VarChar(500)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user     User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  threads  EmailThread[]
+  messages EmailMessage[]
+
+  @@unique([userId, email])
+  @@map("mail_accounts")
+}
+
+model EmailThread {
+  id            String  @id @default(uuid()) @db.VarChar(36)
+  companyId     String? @db.VarChar(36)
+  contactId     String? @db.VarChar(36)
+  mailAccountId String  @db.VarChar(36)
+
+  subject String @db.VarChar(500)
+  /// Zincirin ilk RFC5322 Message-ID'si; gelen cevaplar In-Reply-To ile buna baglanir
+  messageIdRoot String   @db.VarChar(255)
+  lastMessageAt DateTime @default(now())
+  createdAt     DateTime @default(now())
+
+  company     Company?     @relation(fields: [companyId], references: [id], onDelete: SetNull)
+  contact     Contact?     @relation(fields: [contactId], references: [id], onDelete: SetNull)
+  mailAccount MailAccount  @relation(fields: [mailAccountId], references: [id], onDelete: Cascade)
+  messages    EmailMessage[]
+
+  @@index([companyId, lastMessageAt])
+  @@index([messageIdRoot])
+  @@map("email_threads")
+}
+
+model EmailMessage {
+  id            String         @id @default(uuid()) @db.VarChar(36)
+  threadId      String         @db.VarChar(36)
+  mailAccountId String         @db.VarChar(36)
+  contactId     String?        @db.VarChar(36)
+  direction     EmailDirection
+
+  messageId String  @db.VarChar(255)
+  inReplyTo String? @db.VarChar(255)
+  fromAddr  String  @db.VarChar(191)
+  toAddrs   Json
+  ccAddrs   Json?
+  subject   String  @db.VarChar(500)
+  bodyText  String? @db.Text
+  bodyHtml  String? @db.LongText
+
+  sentAt     DateTime?
+  receivedAt DateTime?
+  imapUid    Int?
+  /// "queued" | "sent" | "failed" | "bounced"
+  status    String   @default("queued") @db.VarChar(20)
+  error     String?  @db.VarChar(500)
+  createdAt DateTime @default(now())
+
+  thread      EmailThread @relation(fields: [threadId], references: [id], onDelete: Cascade)
+  mailAccount MailAccount @relation(fields: [mailAccountId], references: [id], onDelete: Cascade)
+  contact     Contact?    @relation(fields: [contactId], references: [id], onDelete: SetNull)
+
+  @@unique([mailAccountId, messageId])
+  @@index([threadId, createdAt])
+  @@map("email_messages")
+}
+
+/// Gonderim oncesi ZORUNLU kontrol edilir. Tek satir bile eslesirse gonderim iptal.
+model DoNotContact {
+  id        String   @id @default(uuid()) @db.VarChar(36)
+  type      DncType
+  /// e-posta adresi, alan adi veya E.164 telefon — hepsi kucuk harfe normalize
+  value     String   @db.VarChar(191)
+  reason    String?  @db.VarChar(255)
+  createdBy String?  @db.VarChar(36)
+  createdAt DateTime @default(now())
+
+  @@unique([type, value])
+  @@map("do_not_contact")
+}
+
+// ═══════════════════════════════════════════════════ sitestudyo.com ucu
+
+model InboundLead {
+  id      String @id @default(uuid()) @db.VarChar(36)
+  /// "contact_form" | "price_calculator" | "callback"
+  source  String @db.VarChar(40)
+  payload Json
+
+  name    String? @db.VarChar(160)
+  email   String? @db.VarChar(191)
+  phone   String? @db.VarChar(40)
+  message String? @db.Text
+  pageUrl String? @db.VarChar(500)
+  utm     Json?
+
+  /// Anonim ziyaretci cerezi — form gelince gecmis olaylar buna baglanir
+  visitorId String? @db.VarChar(64)
+  /// KVKK: ham IP saklanmaz, IP_HASH_SALT ile hash'lenir
+  ipHash    String? @db.VarChar(64)
+
+  status    InboundStatus @default(NEW)
+  companyId String?       @db.VarChar(36)
+  createdAt DateTime      @default(now())
+
+  company Company? @relation(fields: [companyId], references: [id], onDelete: SetNull)
+
+  @@index([status, createdAt])
+  @@index([visitorId])
+  @@map("inbound_leads")
+}
+
+model VisitorEvent {
+  id        String   @id @default(uuid()) @db.VarChar(36)
+  visitorId String   @db.VarChar(64)
+  sessionId String?  @db.VarChar(64)
+  /// "page_view" | "portfolio_view" | "price_calc" | "cta_click"
+  type       String   @db.VarChar(40)
+  pageUrl    String?  @db.VarChar(500)
+  meta       Json?
+  ipHash     String?  @db.VarChar(64)
+  occurredAt DateTime @default(now())
+
+  @@index([visitorId, occurredAt])
+  @@index([occurredAt])
+  @@map("visitor_events")
+}
+
+// ═══════════════════════════════════════════════════════ Kesif & ayarlar
+
+/// Her isletme arama calismasi izlenebilir ve tekrar calistirilabilir olmali —
+/// hem maliyet takibi hem "bu 384 kaydin nereden geldigi" sorusu icin.
+model DiscoveryRun {
+  id       String    @id @default(uuid()) @db.VarChar(36)
+  userId   String?   @db.VarChar(36)
+  provider String    @db.VarChar(20) // "apify" | "google"
+  params   Json
+  status   JobStatus @default(QUEUED)
+
+  foundCount Int @default(0)
+  newCount   Int @default(0)
+  dupCount   Int @default(0)
+
+  /// Apify tarafindaki iz — dataset sonradan tekrar cekilebilsin
+  apifyRunId String? @db.VarChar(60)
+  datasetId  String? @db.VarChar(60)
+  costUsd    Decimal? @db.Decimal(8, 4)
+
+  startedAt  DateTime?
+  finishedAt DateTime?
+  error      String?   @db.VarChar(1000)
+  createdAt  DateTime  @default(now())
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([status, createdAt])
+  @@map("discovery_runs")
+}
+
+/// Oran sinirlari, gunluk mail kotasi gibi calisma zamani ayarlari.
+model Setting {
+  key       String   @id @db.VarChar(80)
+  value     Json
+  updatedAt DateTime @updatedAt
+
+  @@map("settings")
+}

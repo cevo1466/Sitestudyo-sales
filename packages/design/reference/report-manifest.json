@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-08-15T22:40:57",
+  "start_url": "https://attio.com",
+  "coverage": {
+    "pages_crawled": 8,
+    "pages_with_screenshot": 8,
+    "pages_scroll_captured": 4,
+    "pages_vision_analyzed": 8,
+    "technologies_detected": 8
+  },
+  "sections": [
+    {
+      "section": "crawl",
+      "status": "tam",
+      "detail": "8 sayfa gezildi, 8 ekran görüntüsü alındı"
+    },
+    {
+      "section": "scroll_capture",
+      "status": "uygulandı",
+      "detail": "4/8 sayfada kaydırma ile tam yakalama yapıldı"
+    },
+    {
+      "section": "teknoloji_tespiti",
+      "status": "tam",
+      "detail": "8 teknoloji tespit edildi, 8/8 sayfada runtime probe çalıştı"
+    },
+    {
+      "section": "computed_css_tokens",
+      "status": "tam",
+      "detail": "Renk/tipografi/spacing token'ları gerçek computed CSS'ten çıkarıldı"
+    },
+    {
+      "section": "gorsel_analiz_vision",
+      "status": "tam",
+      "detail": "8/8 sayfa görsel olarak analiz edildi"
+    }
+  ],
+  "warnings": [],
+  "complete": true
+}

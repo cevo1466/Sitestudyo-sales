@@ -1,0 +1,362 @@
+{
+  "area": "surface_system",
+  "gradients": {
+    "dominant": [
+      {
+        "type": "linear",
+        "repeating": false,
+        "angle": null,
+        "angle_raw": null,
+        "stops": [
+          {
+            "color": "lab(76.2541 -1.09726 -7.09252)",
+            "position": null
+          },
+          {
+            "color": "lab(76.2541 -1.09726 -7.09252)",
+            "position": null
+          }
+        ],
+        "color_count": 2,
+        "raw": "linear-gradient(lab(76.2541 -1.09726 -7.09252), lab(76.2541 -1.09726 -7.09252))",
+        "count": 35,
+        "area_ratio": 0.036,
+        "token": "gradient-linear-1",
+        "css_var": "--gradient-linear-1"
+      },
+      {
+        "type": "conic",
+        "repeating": false,
+        "angle": null,
+        "angle_raw": null,
+        "stops": [
+          {
+            "color": "rgb(15, 194, 123)",
+            "position": "360deg"
+          },
+          {
+            "color": "rgba(0, 0, 0, 0)",
+            "position": "0deg"
+          }
+        ],
+        "color_count": 2,
+        "raw": "conic-gradient(rgb(15, 194, 123) 360deg, rgba(0, 0, 0, 0) 0deg)",
+        "count": 4,
+        "area_ratio": 0.069,
+        "token": "gradient-conic-2",
+        "css_var": "--gradient-conic-2"
+      },
+      {
+        "type": "radial",
+        "repeating": false,
+        "angle": null,
+        "angle_raw": "at 50% -10%",
+        "stops": [
+          {
+            "color": "lab(12.7212 0.103362 -2.22102)",
+            "position": "0%"
+          },
+          {
+            "color": "lab(12.7212 0.103362 -2.22102)",
+            "position": "100%"
+          }
+        ],
+        "color_count": 2,
+        "raw": "radial-gradient(at 50% -10%, lab(12.7212 0.103362 -2.22102) 0%, lab(12.7212 0.103362 -2.22102) 100%)",
+        "count": 3,
+        "area_ratio": 0.008,
+        "token": "gradient-radial-3",
+        "css_var": "--gradient-radial-3"
+      },
+      {
+        "type": "linear",
+        "repeating": true,
+        "angle": 125.0,
+        "angle_raw": "125deg",
+        "stops": [
+          {
+            "color": "rgba(0, 0, 0, 0)",
+            "position": null
+          },
+          {
+            "color": "rgba(0, 0, 0, 0)",
+            "position": "6px"
+          },
+          {
+            "color": "lab(96.1596 -0.0828803 -1.13571)",
+            "position": "6px"
+          },
+          {
+            "color": "lab(96.1596 -0.0828803 -1.13571)",
+            "position": "7px"
+          }
+        ],
+        "color_count": 4,
+        "raw": "repeating-linear-gradient(125deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 6px, lab(96.1596 -0.0828803 -1.13571) 6px, lab(96.1596 -0.0828803 -1.13571) 7px)",
+        "count": 2,
+        "area_ratio": 0.653,
+        "token": "gradient-linear-4",
+        "css_var": "--gradient-linear-4"
+      },
+      {
+        "type": "linear",
+        "repeating": false,
+        "angle": null,
+        "angle_raw": null,
+        "stops": [
+          {
+            "color": "lab(14.599 -0.159428 -2.99254)",
+            "position": null
+          },
+          {
+            "color": "lab(14.599 -0.159428 -2.99254)",
+            "position": null
+          }
+        ],
+        "color_count": 2,
+        "raw": "linear-gradient(lab(14.599 -0.159428 -2.99254), lab(14.599 -0.159428 -2.99254))",
+        "count": 2,
+        "area_ratio": 0.008,
+        "token": "gradient-linear-5",
+        "css_var": "--gradient-linear-5"
+      }
+    ],
+    "incidental_count": 4,
+    "types": {
+      "linear": 42,
+      "conic": 4,
+      "radial": 4
+    }
+  },
+  "effects": {
+    "profile": {
+      "mix_blend_mode": 42,
+      "backdrop_filter": 32,
+      "filter": 3,
+      "clip_path": 5,
+      "mask_image": 4,
+      "opacity": 11,
+      "flat": false
+    },
+    "signatures": [
+      "cam-efekti (backdrop blur)",
+      "karisim-modu (screen)",
+      "kirpilmis (clip-path) yuzeyler",
+      "maskeli yuzeyler",
+      "5 baskin gradyan"
+    ],
+    "top": {
+      "mix_blend_mode": [
+        {
+          "value": "screen",
+          "count": 36,
+          "area": 53437
+        },
+        {
+          "value": "multiply",
+          "count": 6,
+          "area": 228796
+        }
+      ],
+      "backdrop_filter": [
+        {
+          "value": "blur(4px)",
+          "count": 31,
+          "area": 1067660
+        },
+        {
+          "value": "blur(12px)",
+          "count": 1,
+          "area": 167040
+        }
+      ],
+      "filter": [
+        {
+          "value": "blur(0px)",
+          "count": 3,
+          "area": 408196
+        }
+      ],
+      "clip_path": [
+        {
+          "value": "url(\"#clip0_19835_2260\")",
+          "count": 2,
+          "area": 392
+        },
+        {
+          "value": "inset(calc(100% - 88px) 0px 0px)",
+          "count": 1,
+          "area": 199850
+        },
+        {
+          "value": "url(\"#clip0_19835_2147\")",
+          "count": 1,
+          "area": 169
+        },
+        {
+          "value": "url(\"#clip0_3133_6554\")",
+          "count": 1,
+          "area": 160
+        }
+      ],
+      "mask_image": [
+        {
+          "value": "linear-gradient(to left, rgb(0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, rgb(0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%), linea",
+          "count": 2,
+          "area": 2880
+        },
+        {
+          "value": "linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)), linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)), linear-gradient(rgb(255, 2",
+          "count": 1,
+          "area": 1284360
+        },
+        {
+          "value": "url(\"#mask0_1251_129449\")",
+          "count": 1,
+          "area": 158836
+        }
+      ],
+      "opacity": [
+        {
+          "value": "0",
+          "count": 10,
+          "area": 106583
+        },
+        {
+          "value": "0.08",
+          "count": 1,
+          "area": 1414080
+        }
+      ]
+    }
+  },
+  "backgrounds": {
+    "images": [
+      {
+        "url": "https://attio.com/_next/static/media/dot.0q5s-8vl-18tj.png?dpl=dpl_XAPe1oesVWdf2uKy6XYwgKmMzax7",
+        "size": "16px 16px",
+        "position": "0px 0px",
+        "repeat": "repeat",
+        "attachment": "scroll",
+        "count": 1,
+        "area_ratio": 1.091,
+        "parallax_hint": false
+      }
+    ],
+    "count": 1
+  },
+  "media": {
+    "aspect_scale": [
+      {
+        "ratio": "1:1",
+        "count": 71,
+        "share": 0.845
+      },
+      {
+        "ratio": "ozel",
+        "count": 13,
+        "share": 0.155
+      }
+    ],
+    "dominant_ratio": "1:1",
+    "object_fit": [
+      {
+        "value": "contain",
+        "count": 54
+      },
+      {
+        "value": "cover",
+        "count": 30
+      }
+    ],
+    "radius": [],
+    "sample_count": 84,
+    "avg_density": 3.64
+  },
+  "theme": {
+    "has_dark_variant": true,
+    "mechanism": ".dark sinifi",
+    "changed_var_count": 0,
+    "changed_surfaces": {},
+    "dark_vars": {
+      "--button-primary-bg-from": "var(--color-black-400)",
+      "--button-primary-bg-to": "var(--color-black-400)",
+      "--button-primary-bg-fallback": "var(--color-black-400)",
+      "--button-primary-border": "#50596780",
+      "--button-primary-text": "var(--color-white-400)",
+      "--button-primary-bg-hover-from": "var(--color-black-500)",
+      "--button-primary-bg-hover-to": "var(--color-black-400)",
+      "--button-primary-bg-hover-fallback": "var(--color-black-600)",
+      "--button-primary-border-hover": "var(--color-black-600)",
+      "--button-primary-text-hover": "var(--color-white-100)",
+      "--button-primary-bg-focus-from": "var(--color-black-600)",
+      "--button-primary-bg-focus-to": "var(--color-black-500)",
+      "--button-primary-bg-focus-fallback": "var(--color-black-600)",
+      "--button-primary-border-focus": "var(--color-black-600)",
+      "--button-primary-text-focus": "var(--color-white-100)",
+      "--button-primary-bg-active-from": "var(--color-black-600)",
+      "--button-primary-bg-active-to": "var(--color-black-600)",
+      "--button-primary-bg-active-fallback": "var(--color-black-600)",
+      "--button-primary-border-active": "var(--color-black-700)",
+      "--button-primary-text-active": "var(--color-white-100)",
+      "--button-primary-bg-disabled-from": "var(--color-black-500)",
+      "--button-primary-bg-disabled-to": "var(--color-black-500)",
+      "--button-primary-bg-disabled-fallback": "var(--color-black-500)",
+      "--button-primary-border-disabled": "#50596780",
+      "--button-primary-text-disabled-foreground": "var(--color-black-200)",
+      "--button-outline-bg": "var(--color-black-50)",
+      "--button-outline-border": "var(--color-black-400)",
+      "--button-outline-text": "var(--color-white-400)",
+      "--button-outline-bg-hover": "var(--color-black-100)",
+      "--button-outline-border-hover": "var(--color-black-500)",
+      "--button-outline-text-hover": "var(--color-white-400)",
+      "--button-outline-bg-focus": "var(--color-black-200)",
+      "--button-outline-border-focus": "var(--color-black-600)",
+      "--button-outline-text-focus": "var(--color-white-400)",
+      "--button-outline-bg-active": "var(--color-black-350)",
+      "--button-outline-border-active": "var(--color-white-100)",
+      "--button-outline-text-active": "var(--color-white-100)",
+      "--button-outline-bg-disabled": "var(--color-black-200)",
+      "--button-outline-border-disabled": "var(--color-black-400)",
+      "--button-outline-text-disabled-foreground": "var(--color-black-500)",
+      "--button-ghost-bg": "transparent",
+      "--button-ghost-text": "var(--color-white-500)",
+      "--button-ghost-bg-hover": "var(--color-black-400)",
+      "--button-ghost-text-hover": "var(--color-white-100)",
+      "--button-ghost-bg-focus": "var(--color-black-400)",
+      "--button-ghost-text-focus": "var(--color-white-100)",
+      "--button-ghost-bg-active": "var(--color-black-500)",
+      "--button-ghost-text-active": "var(--color-white-100)",
+      "--button-ghost-bg-disabled": "transparent",
+      "--button-ghost-text-disabled-foreground": "var(--color-black-600)",
+      "--internal-color-primary-background": "var(--color-black-50)",
+      "--internal-color-secondary-background": "var(--color-black-100)",
+      "--internal-color-surface-subtle": "var(--color-black-300)",
+      "--internal-color-surface": "var(--color-black-400)",
+      "--internal-color-muted-background": "var(--color-black-300)",
+      "--internal-color-muted-strong-background": "var(--color-black-400)",
+      "--internal-color-weak-stroke": "var(--color-black-300)",
+      "--internal-color-subtle-stroke": "var(--color-black-400)",
+      "--internal-color-default-stroke": "var(--color-black-700)",
+      "--internal-color-strong-stroke": "var(--color-black-800)",
+      "--internal-color-accent-stroke": "var(--color-blue-400)",
+      "--internal-color-primary-foreground": "var(--color-white-100)",
+      "--internal-color-secondary-foreground": "var(--color-white-400)",
+      "--internal-color-tertiary-foreground": "var(--color-white-900)",
+      "--internal-color-accent-foreground": "var(--color-black-800)",
+      "--internal-color-caption-foreground": "var(--color-black-600)",
+      "--internal-color-disabled-foreground": "var(--color-black-700)",
+      "--internal-color-link-foreground": "var(--color-blue-400)",
+      "--internal-color-link-strong-foreground": "var(--color-blue-300)",
+      "--internal-color-focus-ring": "color-mix(in oklab, var(--color-blue-400) 60%, transparent)"
+    },
+    "status": "partial",
+    "reason": "tema kurallari CSS'te var ama prefers-color-scheme render'i degistirmedi (sinif tabanli tema olabilir)"
+  },
+  "coverage": {
+    "status": "partial",
+    "samples": 1386,
+    "blocked_stylesheets": 0,
+    "reason": "tema kurallari CSS'te var ama prefers-color-scheme render'i degistirmedi (sinif tabanli tema olabilir)"
+  }
+}

@@ -1,0 +1,50 @@
+# --- Bagimliliklar ve derleme ciktilari ---
+node_modules/
+dist/
+build/
+out/
+.next/
+coverage/
+*.tsbuildinfo
+
+# Tauri/Rust derleme ciktisi (yuzlerce MB)
+target/
+desktop-client/src-tauri/target/
+desktop-client/src-tauri/gen/
+
+# --- SIRLAR: bunlarin depoya girmesi yasak ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+secrets.json
+credentials.json
+
+# --- Yerel veri ve loglar ---
+/data/
+postgres-data/
+redis-data/
+*.sqlite
+*.sqlite3
+*.db
+*.log
+logs/
+npm-debug.log*
+yarn-error.log*
+
+# --- Editor / OS ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+
+# --- Gecici ---
+tmp/
+.tmp/
+.cache/

@@ -1,0 +1,132 @@
+/* Kaynak sitenin @font-face tanımları.
+   `src` yolları kaynak sitenindir; kendi dosyalarınla değiştir.
+   Lisans uyarısı: font dosyalarını kopyalamak lisans ihlali
+   olabilir — aynı aileyi kendi lisansınla temin et. */
+
+@font-face {
+  font-family: JetBrains Mono;
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("../media/13bf9871fe164e7f-s.0s19wthhh_6~m.woff2?dpl=dpl_XAPe1oesVWdf2uKy6XYwgKmMzax7") format("woff2");
+}
+
+@font-face {
+  font-family: JetBrains Mono Fallback;
+  src: local("Arial");
+}
+
+@font-face {
+  font-family: inter;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../media/inter_regular-s.p.14d~dgkwwinsr.woff2?dpl=dpl_XAPe1oesVWdf2uKy6XYwgKmMzax7") format("woff2");
+}
+
+@font-face {
+  font-family: inter;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../media/inter_medium-s.p.0mb6cdaxva~_b.woff2?dpl=dpl_XAPe1oesVWdf2uKy6XYwgKmMzax7") format("woff2");
+}
+
+@font-face {
+  font-family: inter;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("../media/inter_semibold-s.p.0i89rz5dgvr85.woff2?dpl=dpl_XAPe1oesVWdf2uKy6XYwgKmMzax7") format("woff2");
+}
+
+@font-face {
+  font-family: inter;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../media/inter_bold-s.p.17izycnw7mk7o.woff2?dpl=dpl_XAPe1oesVWdf2uKy6XYwgKmMzax7") format("woff2");
+}
+
+@font-face {
+  font-family: inter Fallback;
+  src: local("Arial");
+}
+
+@font-face {
+  font-family: interDisplay;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../media/inter_display_medium-s.p.18b1yud.1tn.g.woff2?dpl=dpl_XAPe1oesVWdf2uKy6XYwgKmMzax7") format("woff2");
+}
+
+@font-face {
+  font-family: interDisplay;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("../media/inter_display_semibold-s.p.07numhg7zlt5z.woff2?dpl=dpl_XAPe1oesVWdf2uKy6XYwgKmMzax7") format("woff2");
+}
+
+@font-face {
+  font-family: interDisplay;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../media/inter_display_bold-s.p.08z.2j4gcre0y.woff2?dpl=dpl_XAPe1oesVWdf2uKy6XYwgKmMzax7") format("woff2");
+}
+
+@font-face {
+  font-family: interDisplay Fallback;
+  src: local("Arial");
+}
+
+@font-face {
+  font-family: tiemposText;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../media/tiempos_text_regular-s.p.09inv_nvjux_7.woff2?dpl=dpl_XAPe1oesVWdf2uKy6XYwgKmMzax7") format("woff2");
+}
+
+@font-face {
+  font-family: tiemposText;
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("../media/tiempos_text_regular_italic-s.p.01tz5540cqey6.woff2?dpl=dpl_XAPe1oesVWdf2uKy6XYwgKmMzax7") format("woff2");
+}
+
+@font-face {
+  font-family: tiemposText Fallback;
+  src: local("Arial");
+}
+
+@font-face {
+  font-family: intercom-font;
+  font-display: swap;
+  src: url("https://fonts.intercomcdn.com/messenger-m4/proximanova-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: intercom-font;
+  font-weight: bold;
+  font-display: swap;
+  src: url("https://fonts.intercomcdn.com/messenger-m4/proximanova-semibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: intercom-font;
+  font-style: italic;
+  font-display: swap;
+  src: url("https://fonts.intercomcdn.com/messenger-m4/proximanova-regular-italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: intercom-font;
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+  src: url("https://fonts.intercomcdn.com/messenger-m4/proximanova-semibold-italic.woff") format("woff");
+}

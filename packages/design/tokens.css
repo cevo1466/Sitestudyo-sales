@@ -1,0 +1,276 @@
+/* ============================================================================
+   SiteStudyo Sales OS — tasarim jetonlari
+   ----------------------------------------------------------------------------
+   KOKEN: attio.com, design.sitestudyo.com ile 15 Agu 2026'da olculdu.
+          Ham olcum: packages/design/reference/ (tokens.json, olcumler/)
+
+   OLCUM NE DEDI (ikinci el kaynaklarin soyledigi DEGIL):
+     Ikinci el kaynaklar Attio'yu "Hunter Black #1C1D1F + teal #3ABDAF, koyu
+     arayuz" diye anlatiyor. Sitenin bugunku hali oyle degil: olculen
+     pazarlama sitesi ACIK temali — nane yesili zemin (#e0fced), mavi birincil
+     eylem (#266df0), yesil vurgu (#00d17e). Asagidaki degerler olcume dayanir.
+
+   NEDEN BIREBIR KOPYA DEGIL:
+     Olculen sey bir PAZARLAMA sitesi: 64px basliklar, 16px govde, genis
+     bosluklar. Bizim ekranlarimiz gunde sekiz saat bakilan yogun veri
+     izgaralari. Yapisal jetonlari (tipografi orani, bosluk skalasi, yaricap,
+     hareket sureleri) oldugu gibi aldik; YOGUNLUK degerlerini uygulama icin
+     yeniden turettik ve nane zemini bir arayuz rengi olarak degil sadece
+     vurgu ailesi olarak kullandik — sekiz saat nane yesiline bakilmaz.
+
+   TEMA: Attio'nun kendi stratejisi `.dark` sinifi (olcumde 30 kural).
+         Ayni yontemi kullaniyoruz, boylece isletim sistemi tercihini de
+         elle secimi de destekleyebiliyoruz.
+   ========================================================================== */
+
+:root {
+  /* --- Tipografi --------------------------------------------------------- */
+  /* Olcum: fontFamily.base = inter. Inter SIL OFL lisansli, kendi kopyamizi
+     Fontsource'tan aliyoruz — referans paketindeki woff2 dosyalari Attio'nun
+     lisansi altinda, onlar yeniden dagitilamaz (bkz. LISANS-UYARISI.md). */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* Sayisal sutunlar (lead skoru, fiyat, yorum sayisi) hizali dursun diye:
+     tabular-nums olmadan 1 ile 8 farkli genislikte cizilir ve sutun titrer. */
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Olculen olcek: 64 / 40 / 24 / 16 / 14 / 12.
+     Uygulama tarafinda 64 ve 40 kullanilmiyor (o boyutlar hero basliklari
+     icin); 20 ve 13 ekledik — 13 tablo satirinin gercek boyutu. */
+  --text-3xl: 24px;
+  --text-2xl: 20px;
+  --text-xl: 16px;
+  --text-base: 14px;
+  --text-sm: 13px;
+  --text-xs: 12px;
+  --text-2xs: 11px;
+
+  /* Olcum: govde 500, basliklar 600/500. Attio govdede 400 degil 500
+     kullaniyor — acik zeminde ince metni okunakli tutan sey bu. */
+  --weight-normal: 450;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  /* --- Bosluk ------------------------------------------------------------ */
+  /* Olculen skala: 1,2,4,6,8,10,12,18,20,24 -> 2'nin katlarina oturtuldu */
+  --space-0: 0;
+  --space-px: 1px;
+  --space-1: 2px;
+  --space-2: 4px;
+  --space-3: 6px;
+  --space-4: 8px;
+  --space-5: 12px;
+  --space-6: 16px;
+  --space-7: 20px;
+  --space-8: 24px;
+  --space-9: 32px;
+  --space-10: 40px;
+  --space-11: 48px;
+  --space-12: 64px;
+
+  /* --- Yaricap ----------------------------------------------------------- */
+  /* Olculen: 7px, 8px, 10px, 12px. 7'yi 6'ya yuvarladik (yarim piksel
+     kenarlarda bulanik gorunuyordu), gerisi oldugu gibi. */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+  /* --- Hareket ----------------------------------------------------------- */
+  /* Olculen sureler: 0.15 / 0.2 / 0.3 / 0.4 / 0.5 sn.
+     Uygulamada 0.3 ustu kullanilmaz: bir tabloda satir secmek 300ms surerse
+     arayuz yavas hissettirir. Uzun sureler yalnizca panel/cekmece acilisinda. */
+  --duration-instant: 100ms;
+  --duration-fast: 150ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* --- Yogunluk (uygulamaya ozgu, olcumde yok) --------------------------- */
+  /* Bir isletme tablosunda ekranda kac satir gorundugu, bu urunun en onemli
+     kullanilabilirlik degiskeni. Uc kademe: sik / normal / rahat. */
+  --row-height: 36px;
+  --row-height-compact: 30px;
+  --row-height-comfy: 44px;
+  --cell-padding-x: 12px;
+  --header-height: 48px;
+  --sidebar-width: 232px;
+  --sidebar-width-collapsed: 56px;
+  --toolbar-height: 44px;
+}
+
+/* ═══════════════════════════════════════════════════════ ACIK TEMA ═══════ */
+:root,
+.light {
+  color-scheme: light;
+
+  /* Zeminler: olculen #fbfbfb (palette.11) taban, uzerine saf beyaz kartlar */
+  --bg-base: #fbfbfb;
+  --bg-surface: #ffffff;
+  --bg-raised: #ffffff;
+  --bg-sunken: #f4f5f6;
+  --bg-hover: #f1f3f5;
+  --bg-active: #e9ecef;
+  --bg-selected: #e5eeff; /* olculen palette.12 */
+
+  /* Metin: olculen #242629 (palette.1) ve #505155 (palette.3) */
+  --text-primary: #242629;
+  --text-secondary: #505155;
+  --text-muted: #83868c;
+  --text-inverse: #ffffff;
+
+  --border-subtle: #ebedef;
+  --border-default: #dfe1e4;
+  --border-strong: #c4c7cc;
+  /* Izgara cizgisi kasten daha soluk: 1px kenarlik yogun bir tabloda
+     yuzlerce kez tekrarlanir ve normal kenarlik tonu ekrani kafese cevirir. */
+  --border-grid: #eef0f1;
+
+  /* Eylem: olculen #266df0 */
+  --accent: #266df0;
+  --accent-hover: #1b5ad4;
+  --accent-active: #164ab0;
+  --accent-subtle: #e5eeff;
+  --accent-text: #1b5ad4;
+  --on-accent: #ffffff;
+
+  /* Durum: olculen #00d17e / #f5a300 / #b81c5d */
+  --success: #007d53;
+  --success-subtle: #ddf9e4;
+  --warning: #a86800;
+  --warning-subtle: #fdf1d9;
+  --danger: #b81c5d;
+  --danger-subtle: #fde8f0;
+  --info: #056c87;
+  --info-subtle: #dff2f7;
+
+  /* Olculen golge: rgba(0,0,0,0.04) 0 1px 3px + 0 0 2px — cok hafif.
+     Bu bilincli: yogun bir arayuzde belirgin golge gurultu yaratir. */
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --shadow-md: 0 1px 3px rgba(0, 0, 0, 0.04), 0 0 2px rgba(28, 40, 64, 0.18);
+  --shadow-lg: 0 8px 24px rgba(16, 24, 40, 0.1), 0 2px 6px rgba(16, 24, 40, 0.06);
+
+  --focus-ring: 0 0 0 2px var(--bg-surface), 0 0 0 4px var(--accent);
+}
+
+/* ═══════════════════════════════════════════════════════ KOYU TEMA ═══════ */
+/* Olculen sitede koyu tema degiskenleri yakalanamadi (diff bos dondu), bu
+   yuzden koyu palet OLCUM DEGIL: acik paletin ayni ton iliskilerini koruyan
+   turetilmesi. Kontrast oranlari WCAG AA'ya gore secildi. */
+.dark {
+  color-scheme: dark;
+
+  --bg-base: #16181a;
+  --bg-surface: #1c1e21;
+  --bg-raised: #232629;
+  --bg-sunken: #101214;
+  --bg-hover: #26292d;
+  --bg-active: #2e3237;
+  --bg-selected: #17294a;
+
+  --text-primary: #e8eaed;
+  --text-secondary: #a4a9b0;
+  --text-muted: #71767d;
+  --text-inverse: #16181a;
+
+  --border-subtle: #26292d;
+  --border-default: #2f3336; /* olculen .dark kuralindaki gercek deger */
+  --border-strong: #43484d;
+  --border-grid: #232629;
+
+  /* Koyu zeminde #266df0 yeterince parlamiyor; ayni hue, artirilmis parlaklik */
+  --accent: #4d8bff;
+  --accent-hover: #6b9dff;
+  --accent-active: #85adff;
+  --accent-subtle: #17294a;
+  --accent-text: #8ab4ff;
+  --on-accent: #0d1117;
+
+  --success: #2fd48b;
+  --success-subtle: #0f2e22;
+  --warning: #e5a33a;
+  --warning-subtle: #33270f;
+  --danger: #f0679e;
+  --danger-subtle: #3a1526;
+  --info: #4bc4e0;
+  --info-subtle: #0e2c33;
+
+  /* Koyu temada golge is gormez (siyah uzerine siyah); ayirici kenarlik olur */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55);
+
+  --focus-ring: 0 0 0 2px var(--bg-surface), 0 0 0 4px var(--accent);
+}
+
+/* Kullanici elle secmediyse isletim sistemi tercihini izle. */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light):not(.dark) {
+    color-scheme: dark;
+    --bg-base: #16181a;
+    --bg-surface: #1c1e21;
+    --bg-raised: #232629;
+    --bg-sunken: #101214;
+    --bg-hover: #26292d;
+    --bg-active: #2e3237;
+    --bg-selected: #17294a;
+    --text-primary: #e8eaed;
+    --text-secondary: #a4a9b0;
+    --text-muted: #71767d;
+    --text-inverse: #16181a;
+    --border-subtle: #26292d;
+    --border-default: #2f3336;
+    --border-strong: #43484d;
+    --border-grid: #232629;
+    --accent: #4d8bff;
+    --accent-hover: #6b9dff;
+    --accent-active: #85adff;
+    --accent-subtle: #17294a;
+    --accent-text: #8ab4ff;
+    --on-accent: #0d1117;
+    --success: #2fd48b;
+    --success-subtle: #0f2e22;
+    --warning: #e5a33a;
+    --warning-subtle: #33270f;
+    --danger: #f0679e;
+    --danger-subtle: #3a1526;
+    --info: #4bc4e0;
+    --info-subtle: #0e2c33;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55);
+  }
+}
+
+/* ══════════════════════════════════════════════ Lead sicakligi renkleri ══ */
+/* Urune ozgu anlam: bu renkler bir tabloda yan yana yuzlerce kez gorunur,
+   bu yuzden dolgu degil sadece nokta + metin olarak kullanilirlar. */
+:root {
+  --grade-very-hot: #b81c5d;
+  --grade-hot: #d97706;
+  --grade-warm: #056c87;
+  --grade-low: #83868c;
+}
+.dark {
+  --grade-very-hot: #f0679e;
+  --grade-hot: #e5a33a;
+  --grade-warm: #4bc4e0;
+  --grade-low: #71767d;
+}
+
+/* ══════════════════════════════════════════════════════ Erisilebilirlik ══ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
