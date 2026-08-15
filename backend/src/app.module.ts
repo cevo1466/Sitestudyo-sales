@@ -11,6 +11,7 @@ import { AuditInterceptor } from './common/interceptors/audit.interceptor';
 import { HttpExceptionFilter } from './common/filters/http-exception.filter';
 import { AuthModule } from './modules/auth/auth.module';
 import { HealthModule } from './modules/health/health.module';
+import { CompaniesModule } from './modules/companies/companies.module';
 import { JwtModule } from '@nestjs/jwt';
 
 @Global()
@@ -32,6 +33,7 @@ class CoreModule {}
     CoreModule,
     HealthModule,
     AuthModule,
+    CompaniesModule,
   ],
   providers: [
     // SIRA ONEMLI: once kimlik (JwtAuthGuard req.user'i doldurur),
