@@ -233,6 +233,13 @@ model Company {
   @@index([sector])
   @@index([websiteDomain])
   @@index([nameNormalized])
+  // Siralama indeksleri. Imlec karsilastirmasi (alan, id) ciftine bakiyor;
+  // indeks tam bu sirayla olmazsa MySQL dosya bazli siralamaya duser ve
+  // derin sayfalarda sorgu suresi kayit sayisiyla birlikte buyur.
+  @@index([leadScore, id])
+  @@index([googleRating, id])
+  @@index([firstSeenAt, id])
+  @@index([lastAnalyzedAt, id])
   @@fulltext([name, address])
   @@map("companies")
 }
