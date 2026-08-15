@@ -1,5 +1,5 @@
 import { Prisma } from '@prisma/client';
-import type { CompanyFilter } from './company-filter.dto';
+import { isNullableSortField, type CompanyFilter, type Sort } from './company-filter.dto';
 
 /**
  * Filtrenin TEK dogruluk kaynagi.
@@ -49,4 +49,102 @@ export class CompanyQuery {
 
     return where;
   }
+
+  static toOrderBy(sort: Sort): Prisma.CompanyOrderByWithRelationInput[] {
+    // id ikincil anahtar olarak ZORUNLU: tek basina leadScore ile siralanan
+    // bir listede ayni puana sahip kayitlarin sirasi belirsizdir ve sayfa
+    // sinirinda kayit atlanir veya iki kez gelir.
+    return [{ [sort.field]: sort.dir }, { id: sort.dir }];
+  }
+
+  static encodeCursor(
+    row: { id: string } & Record<string, unknown>,
+    sort: Sort,
+    total: number,
+  ): string {
+    const raw = row[sort.field];
+    const payload = {
+      v: CURSOR_VERSION,
+      k: `${sort.field}:${sort.dir}`,
+      s: raw === null || raw === undefined ? null : toPrimitive(raw),
+      i: row.id,
+      t: total,
+    };
+    return Buffer.from(JSON.stringify(payload)).toString('base64url');
+  }
+
+  static decodeCursor(raw: string, sort: Sort): DecodedCursor {
+    let payload: { v?: number; k?: string; s?: unknown; i?: unknown; t?: unknown };
+    try {
+      payload = JSON.parse(Buffer.from(raw, 'base64url').toString('utf8'));
+    } catch {
+      throw new InvalidCursorError();
+    }
+    if (
+      payload.v !== CURSOR_VERSION ||
+      payload.k !== `${sort.field}:${sort.dir}` ||
+      typeof payload.i !== 'string' ||
+      typeof payload.t !== 'number'
+    ) {
+      throw new InvalidCursorError();
+    }
+    return {
+      s: (payload.s ?? null) as string | number | null,
+      i: payload.i,
+      t: payload.t,
+    };
+  }
+
+  static cursorWhere(cursor: DecodedCursor, sort: Sort): Prisma.CompanyWhereInput {
+    const f = sort.field;
+    const idOp = sort.dir === 'desc' ? 'lt' : 'gt';
+
+    // NULL bolgesindeyiz: bu alandaki tum kayitlar NULL, siralama artik
+    // yalnizca id uzerinden ilerliyor.
+    if (cursor.s === null) {
+      return { OR: [{ [f]: null, id: { [idOp]: cursor.i } } as Prisma.CompanyWhereInput] };
+    }
+
+    const cmp = sort.dir === 'desc' ? 'lt' : 'gt';
+    const or: Prisma.CompanyWhereInput[] = [
+      { [f]: { [cmp]: cursor.s } } as Prisma.CompanyWhereInput,
+    ];
+
+    // MySQL desc siralamada NULL'lari EN SONA koyar. Degeri olan kayitlarin
+    // arkasindan NULL'lar gelecegi icin onlari da sonraki sayfaya dahil
+    // etmeliyiz; yoksa NULL'li kayitlar listede hic gorunmez.
+    if (isNullableSortField(f)) {
+      or.push({ [f]: null } as Prisma.CompanyWhereInput);
+    }
+
+    or.push({ [f]: cursor.s, id: { [idOp]: cursor.i } } as Prisma.CompanyWhereInput);
+    return { OR: or };
+  }
+}
+
+
+// ────────────────────────────────────────────────────────────────── Imlec
+
+export class InvalidCursorError extends Error {
+  constructor() {
+    super('Imlec gecersiz veya farkli bir siralamaya ait');
+  }
+}
+
+export interface DecodedCursor {
+  /** Siralama alaninin degeri; NULL bolgesindeysek null. */
+  s: string | number | null;
+  /** Esitlik bozucu — id olmadan ayni degerli kayitlar atlanir/tekrarlanir. */
+  i: string;
+  /** Toplam sayi; her sayfada COUNT(*) calistirmamak icin tasinir. */
+  t: number;
+}
+
+const CURSOR_VERSION = 1;
+
+/** Decimal / Date / sayi -> JSON'a yazilabilir ilkel deger. */
+function toPrimitive(value: unknown): string | number {
+  if (value instanceof Date) return value.toISOString();
+  if (typeof value === 'number' || typeof value === 'string') return value;
+  return String(value); // Prisma.Decimal
 }

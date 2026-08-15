@@ -30,3 +30,77 @@ export const companyFilterSchema = z
   });
 
 export type CompanyFilter = z.infer<typeof companyFilterSchema>;
+
+// ────────────────────────────────────────────────── Siralama ve sayfalama
+
+/** NULL olamayan alanlar: asc ve desc serbest. */
+export const NON_NULL_SORTABLE = ['leadScore', 'name', 'firstSeenAt'] as const;
+/** NULL olabilen alanlar: yalnizca desc (gerekce company-query.ts cursorWhere). */
+export const NULLABLE_SORTABLE = ['googleRating', 'googleReviewsCount', 'lastAnalyzedAt'] as const;
+export const SORTABLE_FIELDS = [...NON_NULL_SORTABLE, ...NULLABLE_SORTABLE] as const;
+
+export type SortField = (typeof SORTABLE_FIELDS)[number];
+export interface Sort {
+  field: SortField;
+  dir: 'asc' | 'desc';
+}
+
+export function isNullableSortField(field: string): boolean {
+  return (NULLABLE_SORTABLE as readonly string[]).includes(field);
+}
+
+const sortSchema = z
+  .string()
+  .default('leadScore:desc')
+  .transform((raw, ctx): Sort => {
+    const [field, dir = 'desc'] = raw.split(':');
+    if (!(SORTABLE_FIELDS as readonly string[]).includes(field)) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: `Siralanamayan alan: ${field}. Gecerli alanlar: ${SORTABLE_FIELDS.join(', ')}`,
+      });
+      return z.NEVER;
+    }
+    if (dir !== 'asc' && dir !== 'desc') {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'Yon yalnizca asc veya desc olabilir' });
+      return z.NEVER;
+    }
+    // MySQL asc'de NULL'lari basa koyuyor ve keyset sayfalama o bolgede
+    // dogru ilerlemiyor. Sessizce yanlis sonuc vermektense reddediyoruz.
+    if (dir === 'asc' && isNullableSortField(field)) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: `${field} alani bos olabildigi icin yalnizca desc ile siralanabilir`,
+      });
+      return z.NEVER;
+    }
+    return { field: field as SortField, dir };
+  });
+
+/**
+ * Sorgu dizesi duz gelir (?city=Ankara&limit=7&sort=name:asc). Sayfalama
+ * alanlarini ayirip geri kalanini filtre semasina veriyoruz; boylece istemci
+ * ic ice nesne kurmak zorunda kalmiyor.
+ */
+export const listQuerySchema = z
+  .object({
+    sort: sortSchema,
+    limit: z.coerce.number().int().min(1).max(200).default(50),
+    cursor: z.string().max(500).optional(),
+  })
+  .passthrough()
+  .transform((raw, ctx) => {
+    const { sort, limit, cursor, ...rest } = raw as Record<string, unknown> & {
+      sort: Sort;
+      limit: number;
+      cursor?: string;
+    };
+    const parsed = companyFilterSchema.safeParse(rest);
+    if (!parsed.success) {
+      for (const issue of parsed.error.issues) ctx.addIssue(issue);
+      return z.NEVER;
+    }
+    return { filter: parsed.data, sort, limit, cursor };
+  });
+
+export type ListQuery = z.infer<typeof listQuerySchema>;
