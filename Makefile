@@ -1,5 +1,12 @@
 .PHONY: help setup up down logs ps build migrate seed test lint backup nginx-check nginx-reload mem
 
+# Bu sunucuda Compose v2 eklentisi kurulu degil, yalnizca eski `docker-compose`
+# ikilisi var. Ikisini de destekliyoruz ama v2 onerilir:
+#   sudo apt install docker-compose-plugin
+# v1 artik bakim almiyor ve saglik kontrolune bagli `depends_on` kurallarini
+# guvenilir uygulamiyor.
+DC := $(shell docker compose version >/dev/null 2>&1 && echo "docker compose" || echo "docker-compose")
+
 help: ## Komutlari listele
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-16s\033[0m %s\n", $$1, $$2}'
 
@@ -9,22 +16,22 @@ setup: ## .env dosyalarini olustur (varsa dokunmaz)
 	@echo "Sirlari doldur:  openssl rand -base64 48   ve   openssl rand -hex 32"
 
 up: ## Servisleri baslat
-	docker compose up -d --build
+	$(DC) up -d --build
 
 down: ## Servisleri durdur
-	docker compose down
+	$(DC) down
 
 ps: ## Durum
-	docker compose ps
+	$(DC) ps
 
 logs: ## Canli loglar
-	docker compose logs -f --tail=100
+	$(DC) logs -f --tail=100
 
 migrate: ## Migration'lari uygula (uretim)
-	docker compose exec backend npx prisma migrate deploy
+	$(DC) exec backend npx prisma migrate deploy
 
 seed: ## Baslangic verisini yukle
-	docker compose exec backend npm run seed
+	$(DC) exec backend npm run seed
 
 test: ## Testleri calistir
 	cd backend && npm test
