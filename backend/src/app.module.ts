@@ -12,6 +12,7 @@ import { HttpExceptionFilter } from './common/filters/http-exception.filter';
 import { AuthModule } from './modules/auth/auth.module';
 import { HealthModule } from './modules/health/health.module';
 import { CompaniesModule } from './modules/companies/companies.module';
+import { CrmSharedModule } from './modules/crm-shared/crm-shared.module';
 import { JwtModule } from '@nestjs/jwt';
 
 @Global()
@@ -33,6 +34,7 @@ class CoreModule {}
     CoreModule,
     HealthModule,
     AuthModule,
+    CrmSharedModule,
     CompaniesModule,
   ],
   providers: [
