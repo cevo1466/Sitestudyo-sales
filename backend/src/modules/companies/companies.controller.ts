@@ -9,12 +9,18 @@ import {
 } from './company-filter.dto';
 import { updateCompanySchema, type UpdateCompanyDto } from './update-company.dto';
 import { ZodValidationPipe } from '../../common/pipes/zod-validation.pipe';
+import { CompanyBulkService } from './company-bulk.service';
+import { bulkSchema, type BulkDto } from './bulk.dto';
+import { CurrentUser, type AuthUser } from '../../common/decorators/current-user.decorator';
 
 const countSchema = z.object({ filter: companyFilterSchema.default({}) });
 
 @Controller('companies')
 export class CompaniesController {
-  constructor(private readonly companies: CompaniesService) {}
+  constructor(
+    private readonly companies: CompaniesService,
+    private readonly bulkService: CompanyBulkService,
+  ) {}
 
   @Get()
   list(@Query(new ZodValidationPipe(listQuerySchema)) q: ListQuery) {
@@ -34,6 +40,19 @@ export class CompaniesController {
   @HttpCode(200)
   async count(@Body(new ZodValidationPipe(countSchema)) body: { filter: CompanyFilter }) {
     return { matched: await this.companies.count(body.filter) };
+  }
+
+  /**
+   * Toplu islem ID degil FILTRE alir: 3.400 kaydi secince 3.400 kimlik
+   * gondermek pratik degil ve imlecli listede istemci hepsini gormemistir.
+   */
+  @Post('bulk')
+  @HttpCode(200)
+  runBulk(
+    @Body(new ZodValidationPipe(bulkSchema)) dto: BulkDto,
+    @CurrentUser() user: AuthUser,
+  ) {
+    return this.bulkService.run(dto, user.id);
   }
 
   @Get(':id')
