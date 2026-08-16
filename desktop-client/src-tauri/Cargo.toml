@@ -1,6 +1,6 @@
 [package]
 name = "sitestudyo-sales-os"
-version = "0.2.1"
+version = "0.2.2"
 description = "SiteStudyo Sales OS"
 authors = ["SiteStudyo"]
 edition = "2021"
