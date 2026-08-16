@@ -55,6 +55,17 @@ jobs:
         run: npx prisma migrate deploy
         working-directory: backend
 
+      # E2e testleri varsayilan satis hunisini ve puanlama kurallarini
+      # kullaniyor. Tohumlama olmadan 16 test "Cannot read properties of
+      # null (reading 'stages')" ile patliyordu — kod hatasi degil, eksik
+      # baslangic verisi. Yerelde gorunmuyordu cunku gelistirme
+      # veritabani coktan tohumlanmisti.
+      - name: Baslangic verisini yukle
+        run: npm run seed
+        working-directory: backend
+        env:
+          SEED_ADMIN_PASSWORD: ci-test-only
+
       - run: npm run lint
         working-directory: backend
 

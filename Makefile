@@ -41,7 +41,7 @@ test: ## Testleri calistir (birim + e2e)
 ## unutulursa testler "kolon yok" diye toplu halde patlar ve sanki kod
 ## bozulmus gibi gorunur. Bu hedef ikisini birden yapiyor.
 test-e2e: ## e2e testleri (test veritabanini once gunceller)
-	cd backend && 	PW=$$(grep -oP '(?<=mysql://salesos:)[^@]+' .env) && 	DATABASE_URL="mysql://salesos:$$PW@127.0.0.1:3306/salesos_test" npx prisma migrate deploy && 	DATABASE_URL="mysql://salesos:$$PW@127.0.0.1:3306/salesos" npm run test:e2e
+	cd backend && 	PW=$$(grep -oP '(?<=mysql://salesos:)[^@]+' .env) && 	DATABASE_URL="mysql://salesos:$$PW@127.0.0.1:3306/salesos_test" npx prisma migrate deploy && 	DATABASE_URL="mysql://salesos:$$PW@127.0.0.1:3306/salesos_test" npm run seed && 	DATABASE_URL="mysql://salesos:$$PW@127.0.0.1:3306/salesos" npm run test:e2e
 
 lint: ## Kod denetimi
 	cd backend && npm run lint
