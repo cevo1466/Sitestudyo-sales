@@ -64,6 +64,12 @@ enum DncType {
   PHONE
 }
 
+enum TaskStatus {
+  OPEN
+  DONE
+  CANCELLED
+}
+
 enum JobStatus {
   QUEUED
   RUNNING
@@ -111,6 +117,7 @@ model User {
   savedSearches SavedSearch[]
   mailAccounts  MailAccount[]
   discoveryRuns DiscoveryRun[]
+  tasks         Task[]
 
   @@map("users")
 }
@@ -226,6 +233,7 @@ model Company {
   tags      CompanyTag[]
   threads   EmailThread[]
   inbound   InboundLead[]
+  tasks     Task[]
 
   @@index([websiteStatus, leadScore])
   @@index([leadGrade, leadScore])
@@ -398,6 +406,7 @@ model Lead {
 
   activities Activity[]
   notes      Note[]
+  tasks      Task[]
 
   @@index([stageId, stageEnteredAt])
   @@index([ownerId])
@@ -677,4 +686,34 @@ model Setting {
   updatedAt DateTime @updatedAt
 
   @@map("settings")
+}
+
+/// Takip gorevi: "3 gun sonra tekrar ara".
+///
+/// Zaman tunelinden (activities) AYRI: aktivite OLMUS bir seyi kaydeder,
+/// gorev OLACAK bir seyi hatirlatir. Ayni tabloda tutulsalardi "bugun ne
+/// yapmaliyim" sorusu gecmis kayitlar arasindan suzulerek cevaplanirdi.
+model Task {
+  id        String     @id @default(uuid()) @db.VarChar(36)
+  companyId String?    @db.VarChar(36)
+  leadId    String?    @db.VarChar(36)
+  userId    String     @db.VarChar(36)
+
+  title     String     @db.VarChar(255)
+  notes     String?    @db.Text
+  dueAt     DateTime
+  status    TaskStatus @default(OPEN)
+  completedAt DateTime?
+
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  company Company? @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  lead    Lead?    @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  user    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  /// "Bugun ne yapmaliyim" sorgusu tam bu indeksi kullaniyor.
+  @@index([userId, status, dueAt])
+  @@index([companyId])
+  @@map("tasks")
 }

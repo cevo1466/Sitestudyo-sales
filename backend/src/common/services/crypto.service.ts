@@ -52,7 +52,7 @@ export class CryptoService {
     return Buffer.concat([decipher.update(data), decipher.final()]).toString('utf8');
   }
 
-  encryptJson(value: unknown): Buffer {
+  encryptJson<T = unknown>(value: T): Buffer {
     return this.encrypt(JSON.stringify(value));
   }
 

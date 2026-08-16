@@ -21,6 +21,9 @@ import { ScoringModule } from './modules/scoring/scoring.module';
 import { AnalyzerModule } from './modules/analyzer/analyzer.module';
 import { InboundModule } from './modules/inbound/inbound.module';
 import { CrawlerModule } from './modules/crawler/crawler.module';
+import { MailModule } from './modules/mail/mail.module';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
+import { TasksModule } from './modules/tasks/tasks.module';
 import { JwtModule } from '@nestjs/jwt';
 
 @Global()
@@ -52,6 +55,9 @@ class CoreModule {}
     AnalyzerModule,
     InboundModule,
     CrawlerModule,
+    MailModule,
+    DashboardModule,
+    TasksModule,
   ],
   providers: [
     // SIRA ONEMLI: once kimlik (JwtAuthGuard req.user'i doldurur),

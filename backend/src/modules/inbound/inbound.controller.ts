@@ -80,8 +80,13 @@ export class InboundController {
   private verify(req: { headers: Record<string, string>; rawBody?: Buffer; body: unknown }): void {
     const ts = req.headers['x-inbound-timestamp'];
     const sig = req.headers['x-inbound-signature'];
-    const body = req.rawBody ? req.rawBody.toString('utf8') : JSON.stringify(req.body);
-    if (!ts || !sig || !this.crypto.verifyInboundSignature(body, ts, sig)) {
+
+    // YALNIZCA ham govde. Yeniden serilestirilmis JSON'a dusmek, bicim
+    // farklarinda (bosluk, anahtar sirasi) imzayi sessizce gecersiz kilar —
+    // ve daha kotusu, bazi istemcilerde tesadufen tutup bazilarinda
+    // tutmayan bir dogrulama uretir. Ham govde yoksa reddediyoruz.
+    const body = req.rawBody?.toString('utf8');
+    if (!body || !ts || !sig || !this.crypto.verifyInboundSignature(body, ts, sig)) {
       throw new UnauthorizedException({
         code: 'invalid_signature',
         message: 'Istek imzasi gecersiz',

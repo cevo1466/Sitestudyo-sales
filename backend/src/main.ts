@@ -34,11 +34,43 @@ async function bootstrap(): Promise<void> {
     // Kapali olsa her istegin kaynagi nginx konteyneri gorunur ve
     // oran sinirlama tek bir sayaca duserdi.
     new FastifyAdapter({ trustProxy: true, bodyLimit: 2 * 1024 * 1024 }),
-    { logger: env.NODE_ENV === 'production' ? ['log', 'warn', 'error'] : undefined },
+    {
+      logger: env.NODE_ENV === 'production' ? ['log', 'warn', 'error'] : undefined,
+      // Nest'in kendi JSON ayristiricisi KAPALI: asagida ham govdeyi de
+      // saklayan kendi ayristiricimizi kuruyoruz. Ikisi ayni anda
+      // kayitli olamiyor (Fastify 'already present' hatasi veriyor).
+      bodyParser: false,
+    },
   );
 
   app.setGlobalPrefix('api/v1');
   app.enableShutdownHooks();
+
+  /**
+   * HAM govdeyi sakla — HMAC dogrulamasi icin zorunlu.
+   *
+   * Imza, istemcinin gonderdigi baytlar uzerinden hesaplanir. Sunucu
+   * govdeyi ayristirip YENIDEN serilestirirse en ufak bicim farki
+   * (iki nokta ustustenden sonra bosluk, anahtar sirasi, unicode kacisi)
+   * imzayi bozar. Python'un json.dumps'i varsayilan olarak bosluk koyuyor,
+   * JSON.stringify koymuyor: ayni veri, farkli bayt, gecersiz imza.
+   */
+  app
+    .getHttpAdapter()
+    .getInstance()
+    .addContentTypeParser(
+      'application/json',
+      { parseAs: 'buffer' },
+      (req, body: Buffer, done) => {
+        (req as unknown as { rawBody: Buffer }).rawBody = body;
+        if (!body.length) return done(null, {});
+        try {
+          done(null, JSON.parse(body.toString('utf8')));
+        } catch {
+          done(new Error('Govde gecerli JSON degil'));
+        }
+      },
+    );
 
   await app.register(helmet, {
     // Bu bir JSON API'si; tarayicida sayfa sunmuyoruz.
