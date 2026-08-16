@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { api, getConnection, setAccessToken, clearConnection, ApiError } from '../../services/api';
+import { api, getConnection, setTokens, clearConnection, ApiError } from '../../services/api';
 
 interface LoginResponse {
   accessToken: string;
@@ -23,7 +23,9 @@ export function LoginScreen({ onIn }: { onIn: (name: string) => void }) {
         method: 'POST',
         body: JSON.stringify({ email, password }),
       });
-      setAccessToken(r.accessToken);
+      // Yenileme token'i de saklaniyor: onsuz 15 dakika sonra her istek
+      // 401 doner ve uygulama "Liste yuklenemedi" deyip kilitlenir.
+      setTokens(r.accessToken, r.refreshToken);
       onIn(r.user.name);
     } catch (err) {
       setError(err instanceof ApiError ? err.message : 'Giriş yapılamadı');

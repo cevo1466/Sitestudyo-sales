@@ -7,6 +7,7 @@
  */
 
 const STORAGE_KEY = 'salesos.connection';
+const REFRESH_KEY = 'salesos.refresh';
 
 export interface Connection {
   serverUrl: string;
@@ -28,22 +29,39 @@ export function saveConnection(c: Connection): void {
 
 export function clearConnection(): void {
   localStorage.removeItem(STORAGE_KEY);
+  localStorage.removeItem(REFRESH_KEY);
 }
 
 /**
- * Erisim token'i YALNIZCA BELLEKTE.
+ * Erisim token'i YALNIZCA BELLEKTE. Omru 15 dakika.
  *
- * localStorage'a yazilsaydi, sayfada calisan herhangi bir kod onu
- * okuyabilirdi. Uygulama kapaninca token ucuyor; oturumu surdurmek
- * refresh token'in isi (masaustu surumunde isletim sistemi anahtar
- * zincirinde saklanacak).
+ * Yenileme token'i ise diske yaziliyor. Bu bir odunlesme:
+ *   - Bellekte tutulsaydi uygulama her kapandiginda tekrar giris gerekirdi.
+ *   - Diskte tutulunca, o dosyayi okuyabilen biri oturumu ele gecirebilir.
+ * Masaustu uygulamasinda depolama zaten uygulamanin kendi profilinde ve
+ * isletim sistemi kullanici hesabiyla korunuyor. Anahtar zinciri (OS
+ * keychain) daha iyi olurdu; ilerideki is.
  */
 let accessToken: string | null = null;
-export function setAccessToken(t: string | null): void {
-  accessToken = t;
+
+export function setTokens(access: string | null, refresh?: string | null): void {
+  accessToken = access;
+  if (refresh === null) localStorage.removeItem(REFRESH_KEY);
+  else if (refresh) localStorage.setItem(REFRESH_KEY, refresh);
 }
+
 export function hasToken(): boolean {
   return accessToken !== null;
+}
+
+export function hasSession(): boolean {
+  return Boolean(localStorage.getItem(REFRESH_KEY));
+}
+
+/** Oturum tamamen bittiginde cagriliyor — App giris ekranina donuyor. */
+let onSessionLost: (() => void) | null = null;
+export function setSessionLostHandler(fn: () => void): void {
+  onSessionLost = fn;
 }
 
 export class ApiError extends Error {
@@ -64,12 +82,8 @@ function baseUrl(): string {
   return c?.serverUrl?.replace(/\/+$/, '') ?? '';
 }
 
-export async function api<T>(
-  path: string,
-  init: RequestInit & { serverUrl?: string } = {},
-): Promise<T> {
-  const root = init.serverUrl?.replace(/\/+$/, '') ?? baseUrl();
-  const res = await fetch(`${root}/api/v1${path}`, {
+async function raw(path: string, init: RequestInit, root: string): Promise<Response> {
+  return fetch(`${root}/api/v1${path}`, {
     ...init,
     headers: {
       'Content-Type': 'application/json',
@@ -77,6 +91,63 @@ export async function api<T>(
       ...init.headers,
     },
   });
+}
+
+/**
+ * Erisim token'ini yeniler.
+ *
+ * Es zamanli istekler ayni anda 401 alabilir; her biri ayri ayri yenileme
+ * cagirirsa sunucu ROTASYON yuzunden ikincisini "tekrar kullanim" sayip
+ * TUM oturumu iptal eder. Bu yuzden ayni anda yalnizca bir yenileme
+ * calisiyor, digerleri onu bekliyor.
+ */
+let refreshing: Promise<boolean> | null = null;
+
+function refreshTokens(): Promise<boolean> {
+  refreshing ??= (async () => {
+    const refreshToken = localStorage.getItem(REFRESH_KEY);
+    if (!refreshToken) return false;
+    try {
+      const res = await fetch(`${baseUrl()}/api/v1/auth/refresh`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ refreshToken }),
+      });
+      if (!res.ok) return false;
+      const body = (await res.json()) as { accessToken: string; refreshToken: string };
+      setTokens(body.accessToken, body.refreshToken);
+      return true;
+    } catch {
+      return false;
+    } finally {
+      // Bir sonraki 401 yeni bir yenileme baslatabilsin.
+      setTimeout(() => {
+        refreshing = null;
+      }, 0);
+    }
+  })();
+  return refreshing;
+}
+
+export async function api<T>(
+  path: string,
+  init: RequestInit & { serverUrl?: string } = {},
+): Promise<T> {
+  const root = init.serverUrl?.replace(/\/+$/, '') ?? baseUrl();
+
+  let res = await raw(path, init, root);
+
+  // 15 dakikalik erisim token'i dolunca sessizce yenileyip TEKRAR
+  // deniyoruz. Bu olmadan uygulama 15 dakika sonra "Liste yuklenemedi"
+  // deyip duruyordu ve tek cozum kapatip yeniden acmakti.
+  if (res.status === 401 && !path.startsWith('/auth/')) {
+    if (await refreshTokens()) {
+      res = await raw(path, init, root);
+    } else {
+      setTokens(null, null);
+      onSessionLost?.();
+    }
+  }
 
   if (res.status === 204) return undefined as T;
 
@@ -90,6 +161,12 @@ export async function api<T>(
     );
   }
   return body as T;
+}
+
+/** Kayitli yenileme token'i ile oturumu geri getirir (uygulama acilisinda). */
+export async function restoreSession(): Promise<boolean> {
+  if (!getConnection() || !hasSession()) return false;
+  return refreshTokens();
 }
 
 // ───────────────────────────────────────────────────────────── Tipler

@@ -1,5 +1,11 @@
-import { useState } from 'react';
-import { getConnection, hasToken } from './services/api';
+import { useEffect, useState } from 'react';
+import {
+  getConnection,
+  hasToken,
+  hasSession,
+  restoreSession,
+  setSessionLostHandler,
+} from './services/api';
 import { ConnectionScreen } from './features/connection/ConnectionScreen';
 import { LoginScreen } from './features/auth/LoginScreen';
 import { CompaniesScreen } from './features/companies/CompaniesScreen';
@@ -24,6 +30,34 @@ export function App() {
   );
   const [user, setUser] = useState<string>('');
   const [tab, setTab] = useState<Tab>('companies');
+  // Kayitli oturum varsa acilista sessizce geri getiriyoruz; her acilista
+  // sifre sormak gunde bes kez acilan bir araci kullanilmaz yapardi.
+  const [restoring, setRestoring] = useState(() => Boolean(getConnection()) && hasSession());
+
+  useEffect(() => {
+    // Oturum herhangi bir anda tamamen biterse (yenileme de reddedilirse)
+    // kullaniciyi giris ekranina alalim — kirik bir ekranda birakmayalim.
+    setSessionLostHandler(() => setStage('login'));
+  }, []);
+
+  useEffect(() => {
+    if (!restoring) return;
+    void restoreSession()
+      .then((ok) => {
+        if (ok) setStage('app');
+      })
+      .finally(() => setRestoring(false));
+  }, [restoring]);
+
+  if (restoring) {
+    return (
+      <div className="gate">
+        <div className="gate-card">
+          <p className="lede">Oturum geri getiriliyor…</p>
+        </div>
+      </div>
+    );
+  }
 
   if (stage === 'connect') return <ConnectionScreen onReady={() => setStage('login')} />;
   if (stage === 'login')
