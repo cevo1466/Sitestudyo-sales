@@ -39,12 +39,15 @@ describe('Companies bulk (e2e)', () => {
 
     await prisma.companyTag.deleteMany({});
     await prisma.tag.deleteMany({ where: { slug: { startsWith: 'blk-' } } });
+    await prisma.lead.deleteMany({});
     await cleanupCompanies(prisma);
     for (let i = 0; i < 20; i++) await makeCompany(prisma, { city: 'Ankara' });
-    for (let i = 0; i < 20; i++) await makeCompany(prisma, { city: 'Istanbul' });
+    // Istanbul 201 kayit: promote'un 200 sinirini asmasi icin
+    for (let i = 0; i < 201; i++) await makeCompany(prisma, { city: 'Istanbul' });
   }, 180000);
 
   afterAll(async () => {
+    await prisma.lead.deleteMany({});
     await prisma.companyTag.deleteMany({});
     await prisma.tag.deleteMany({ where: { slug: { startsWith: 'blk-' } } });
     await prisma.doNotContact.deleteMany({});
@@ -160,5 +163,28 @@ describe('Companies bulk (e2e)', () => {
       payload: { tagIds: ['00000000-0000-4000-8000-000000000000'] },
     }).expect(400);
     expect(res.body.code).toBe('validation_error');
+  });
+
+  it('secili isletmeleri topluca huniye alir', async () => {
+    const res = await bulk({ filter: { city: 'Ankara' }, action: 'promote' }).expect(200);
+    expect(res.body.matched).toBe(20);
+    expect(res.body.applied).toBe(20);
+    expect(await prisma.lead.count()).toBe(20);
+  });
+
+  it('zaten acik kaydi olanlari atlar, hata vermez', async () => {
+    // Ikinci calistirma: hepsinin zaten acik kaydi var.
+    const res = await bulk({ filter: { city: 'Ankara' }, action: 'promote' }).expect(200);
+    expect(res.body.applied).toBe(0);
+    expect(res.body.skipped).toBe(res.body.matched);
+    expect(await prisma.lead.count()).toBe(20); // yeni kayit acilmadi
+  });
+
+  it('200 sinirini asan terfiyi reddeder ve TEK kayit bile acmaz', async () => {
+    const before = await prisma.lead.count();
+    const res = await bulk({ filter: { city: 'Istanbul' }, action: 'promote' }).expect(400);
+    expect(res.body.code).toBe('bulk_limit_exceeded');
+    expect(res.body.message).toContain('201');
+    expect(await prisma.lead.count()).toBe(before);
   });
 });

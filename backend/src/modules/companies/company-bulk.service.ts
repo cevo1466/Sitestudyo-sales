@@ -3,15 +3,19 @@ import { DncType, Prisma } from '@prisma/client';
 import { PrismaService } from '../../common/prisma/prisma.service';
 import { CompanyQuery } from './company-query';
 import { PROMOTE_LIMIT, type BulkDto, type BulkResult } from './bulk.dto';
+import { LeadsService } from '../leads/leads.service';
 
 /** Tek seferde islenecek satir sayisi — cok buyuk INSERT'ler kilit suresini uzatir. */
 const BATCH = 500;
 
 @Injectable()
 export class CompanyBulkService {
-  constructor(private readonly prisma: PrismaService) {}
+  constructor(
+    private readonly prisma: PrismaService,
+    private readonly leads: LeadsService,
+  ) {}
 
-  async run(dto: BulkDto, _userId: string): Promise<BulkResult> {
+  async run(dto: BulkDto, userId: string): Promise<BulkResult> {
     // Bos filtre = tum havuz. Kazara "hepsini etiketle" geri alinmasi zor bir
     // hata; en az bir daraltma kosulu sart.
     if (Object.keys(dto.filter).length === 0) {
@@ -69,7 +73,7 @@ export class CompanyBulkService {
     let applied = 0;
 
     for (let i = 0; i < ids.length; i += BATCH) {
-      applied += await this.applyBatch(dto, ids.slice(i, i + BATCH));
+      applied += await this.applyBatch(dto, ids.slice(i, i + BATCH), userId);
     }
 
     return { matched, applied, skipped: matched - Math.min(applied, matched) };
@@ -81,7 +85,11 @@ export class CompanyBulkService {
     return rows.map((r) => r.id);
   }
 
-  private async applyBatch(dto: BulkDto, companyIds: string[]): Promise<number> {
+  private async applyBatch(
+    dto: BulkDto,
+    companyIds: string[],
+    userId: string,
+  ): Promise<number> {
     switch (dto.action) {
       case 'tag': {
         const data = companyIds.flatMap((companyId) =>
@@ -113,12 +121,32 @@ export class CompanyBulkService {
         });
         return res.count;
       }
-      case 'promote':
-        // Gorev 12'de leads modulu hazir olunca doldurulacak.
-        throw new BadRequestException({
-          code: 'not_implemented',
-          message: 'Toplu terfi henuz kullanilabilir degil',
-        });
+      case 'promote': {
+        let created = 0;
+        // Her isletme KENDI transaction'inda: biri "zaten acik kayit var"
+        // diye reddedilince digerlerinin geri alinmasi istenmiyor. Toplu
+        // islemde kismi basari mesru bir sonuc ve applied/skipped ile
+        // acikca bildiriliyor.
+        for (const companyId of companyIds) {
+          try {
+            await this.leads.promote(
+              {
+                companyId,
+                pipelineId: dto.payload.pipelineId,
+                title: 'Toplu terfi',
+                currency: 'TRY',
+              },
+              userId,
+            );
+            created++;
+          } catch (err) {
+            // lead_already_open bir hata degil, atlanacak bir durum.
+            if (err instanceof ConflictException) continue;
+            throw err;
+          }
+        }
+        return created;
+      }
     }
   }
 }
