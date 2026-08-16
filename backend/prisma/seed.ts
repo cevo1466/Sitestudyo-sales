@@ -48,22 +48,31 @@ const SECTORS: Record<string, string[]> = {
   guzellik: [
     'Kuaför', 'Berber Dükkanı', 'Güzellik Salonu', 'Erkek kuaförü',
     'Kadın kuaförü', 'Tırnak salonu', 'Cilt bakım kliniği', 'Spa',
+    'Epilasyon Hizmeti', 'Epilasyon Hizmetleri', 'Lazer Epilasyon Hizmeti',
+    'Manikür/Pedikür Salonu', 'Sağlık ve Güzellik Merkezi', 'Kozmetik mağazası',
   ],
   yeme_icme: [
     'Restoran', 'Kafe', 'Kahve dükkanı', 'Balık Restoranı', 'Kahvaltı restoranı',
     'Meyhane', 'Türk restoranı', 'Pastane', 'Fırın', 'Bar', 'Pizza restoranı',
+    // 24 Haz 2026 Istanbul taramasindan gelen gercek kategoriler
+    'Aile restoranı', 'Büfe', 'Çiğ Köfteci', 'Deniz mahsülleri restoranı',
+    'Dondurma dükkanı', 'Dönerci', 'Dürüm Restoranı', 'Et Lokantası',
+    'Fast food lokantası', 'Hamburger restoranı', 'İrlanda pub\'ı', 'Izgara',
+    'Kebap Restoranı', 'Köfteci', 'Mangal', 'Pideci', 'Pilav Restoranı',
+    'Sağlıklı Yemek Restoranı', 'Tatlı Dükkanı', 'Tatlıcı', 'Tostçu',
   ],
   spor_saglik: [
     'Pilates Salonu', 'Spor salonu', 'Yoga stüdyosu', 'Fizik tedavi merkezi',
     'Diş kliniği', 'Klinik', 'Veteriner', 'Eczane',
   ],
-  lojistik: ['Depo', 'Lojistik Firması', 'Kargo Şirketi', 'Nakliyat şirketi'],
+  lojistik: ['Depo', 'Lojistik Firması', 'Kargo Şirketi', 'Nakliyat şirketi', 'Nakliyat Şirketi', 'Ulaşım Hizmeti'],
   profesyonel_hizmet: [
     'Mimarlık ofisi', 'Avukat', 'Hukuk bürosu', 'Muhasebeci',
     'Emlakçı', 'Sigorta acentesi', 'Danışmanlık',
+    'Mimar', 'Mimari Tasarımcı', 'Mühendis', 'İnşaat Şirketi',
   ],
-  perakende: ['Mağaza', 'Butik', 'Market', 'Kuyumcu', 'Optik', 'Mobilyacı'],
-  egitim: ['Kurs', 'Dershane', 'Anaokulu', 'Sürücü kursu', 'Dil okulu'],
+  perakende: ['Mağaza', 'Butik', 'Market', 'Kuyumcu', 'Optik', 'Mobilyacı', 'Bakkal'],
+  egitim: ['Kurs', 'Dershane', 'Anaokulu', 'Sürücü kursu', 'Dil okulu', 'Topluluk merkezi'],
 };
 
 async function main(): Promise<void> {

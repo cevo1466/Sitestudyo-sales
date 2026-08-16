@@ -16,6 +16,7 @@ import { CrmSharedModule } from './modules/crm-shared/crm-shared.module';
 import { ContactsModule } from './modules/contacts/contacts.module';
 import { PipelinesModule } from './modules/pipelines/pipelines.module';
 import { LeadsModule } from './modules/leads/leads.module';
+import { DiscoveryModule } from './modules/discovery/discovery.module';
 import { JwtModule } from '@nestjs/jwt';
 
 @Global()
@@ -42,6 +43,7 @@ class CoreModule {}
     ContactsModule,
     PipelinesModule,
     LeadsModule,
+    DiscoveryModule,
   ],
   providers: [
     // SIRA ONEMLI: once kimlik (JwtAuthGuard req.user'i doldurur),
