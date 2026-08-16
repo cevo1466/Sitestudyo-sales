@@ -115,3 +115,57 @@ describe('coverageProgress', () => {
     expect(coverageProgress(CITIES.flatMap(coverCity)).percent).toBe(100);
   });
 });
+
+describe('sitesi olan isletmeleri de tarama', () => {
+  const base = {
+    remainingUsd: 5,
+    costPerPlace: 0.005,
+    maxPerSearch: 100,
+    maxTermsPerRun: 10,
+  };
+
+  it('varsayilan olarak yalnizca sitesizleri tarar', () => {
+    const plan = planNextRun({ covered: [], ...base });
+    expect(plan?.onlyWithoutWebsite).toBe(true);
+  });
+
+  it('acildiginda filtresiz plan uretir', () => {
+    const plan = planNextRun({ covered: [], includeWithWebsite: true, ...base });
+    expect(plan?.onlyWithoutWebsite).toBe(false);
+  });
+
+  // Bu testin korudugu sey: filtre durumu kapsama anahtarina dahil olmazsa
+  // sistem "her sey tarandi" der ve sitesi olan isletmeler ICIN HIC tarama
+  // yapmaz. Sicak leadlerin olusmasi tam olarak bu taramaya bagli.
+  it('sitesizler icin tarandi diye filtresiz taramayi atlamaz', () => {
+    const covered: Target[] = [];
+    for (const locationQuery of CITIES) {
+      for (const term of TERMS) {
+        covered.push({ locationQuery, term, onlyWithoutWebsite: true });
+      }
+    }
+    expect(planNextRun({ covered, ...base })).toBeNull();
+
+    const plan = planNextRun({ covered, includeWithWebsite: true, ...base });
+    expect(plan).not.toBeNull();
+    expect(plan?.onlyWithoutWebsite).toBe(false);
+    expect(plan?.locationQuery).toBe(CITIES[0]);
+  });
+
+  it('filtresiz tarama da kendi icinde tekrar etmez', () => {
+    const covered: Target[] = TERMS.slice(0, 3).map((term) => ({
+      locationQuery: CITIES[0],
+      term,
+      onlyWithoutWebsite: false,
+    }));
+    const plan = planNextRun({ covered, includeWithWebsite: true, ...base });
+    expect(plan?.terms).not.toContain(TERMS[0]);
+    expect(plan?.terms[0]).toBe(TERMS[3]);
+  });
+
+  it('eski kayitlarda filtre alani yoksa sitesiz sayilir', () => {
+    const covered: Target[] = [{ locationQuery: CITIES[0], term: TERMS[0] }];
+    expect(planNextRun({ covered, ...base })?.terms).not.toContain(TERMS[0]);
+    expect(planNextRun({ covered, includeWithWebsite: true, ...base })?.terms[0]).toBe(TERMS[0]);
+  });
+});

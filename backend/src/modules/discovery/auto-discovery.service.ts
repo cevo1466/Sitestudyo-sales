@@ -67,17 +67,54 @@ export class AutoDiscoveryService {
     });
     const out: Target[] = [];
     for (const r of runs) {
-      const p = (r.params ?? {}) as { locationQuery?: string; searchTerms?: string[] };
+      const p = (r.params ?? {}) as {
+        locationQuery?: string;
+        searchTerms?: string[];
+        onlyWithoutWebsite?: boolean;
+      };
       if (!p.locationQuery) continue;
+      // Eski kayitlarda bu alan yok; hepsi sitesizler icin yapilmisti.
+      const onlyWithoutWebsite = p.onlyWithoutWebsite ?? true;
       for (const term of p.searchTerms ?? []) {
-        out.push({ locationQuery: p.locationQuery, term });
+        out.push({ locationQuery: p.locationQuery, term, onlyWithoutWebsite });
       }
     }
     return out;
   }
 
   async progress() {
-    return coverageProgress(await this.coveredTargets());
+    const covered = await this.coveredTargets();
+    return {
+      withoutWebsite: coverageProgress(covered, true),
+      withWebsite: coverageProgress(covered, false),
+      includeWithWebsite: await this.includeWithWebsite(),
+    };
+  }
+
+  /**
+   * Sitesi OLAN isletmeler de taransin mi?
+   *
+   * Ayarlar ekranindan acilip kapanir. Acik oldugunda izgara ikinci kez,
+   * filtresiz taranir; site analizoru ve iletisim tarayicisi ancak boyle
+   * is gorur — sitesi olmayan bir isletmede analiz edilecek adres yok.
+   * Puan tavani da ancak boyle 75'in uzerine cikar.
+   */
+  async includeWithWebsite(): Promise<boolean> {
+    const row = await this.prisma.setting.findUnique({
+      where: { key: 'discovery.include_with_website' },
+    });
+    return (row?.value as { enabled?: boolean } | null)?.enabled === true;
+  }
+
+  /** Sitesi olanlarin da taranmasini acar/kapatir. */
+  async setIncludeWithWebsite(enabled: boolean): Promise<{ enabled: boolean }> {
+    await this.prisma.setting.upsert({
+      where: { key: 'discovery.include_with_website' },
+      create: { key: 'discovery.include_with_website', value: { enabled } },
+      update: { value: { enabled } },
+    });
+    this.logger.log(`Sitesi olanlari tara: ${enabled ? 'ACIK' : 'KAPALI'}`);
+    return { enabled };
   }
 
   /**
@@ -105,8 +142,10 @@ export class AutoDiscoveryService {
       };
     }
 
+    const includeWithWebsite = await this.includeWithWebsite();
     const plan = planNextRun({
       covered: await this.coveredTargets(),
+      includeWithWebsite,
       remainingUsd: state.remainingUsd,
       costPerPlace: COST_PER_PLACE,
       maxPerSearch: 100,
@@ -137,15 +176,19 @@ export class AutoDiscoveryService {
         maxPerSearch: plan.maxPerSearch,
         language: 'tr',
         countryCode: 'tr',
-        // Havuzun tamami "sitesi yok" olsun istiyoruz: satis hedefimiz bu.
-        onlyWithoutWebsite: true,
+        // Filtre planlayicidan geliyor. Kapali oldugunda sitesi OLAN
+        // isletmeler de dondugu icin analizor devreye girer; bozuk veya
+        // eski siteler en sicak leadlerdir.
+        onlyWithoutWebsite: plan.onlyWithoutWebsite,
         account,
       },
       admin?.id ?? '',
     );
 
     this.logger.log(
-      `Otomatik tarama: ${plan.locationQuery} / ${plan.terms.length} terim ~$${plan.estimatedUsd} (${account})`,
+      `Otomatik tarama: ${plan.locationQuery} / ${plan.terms.length} terim ` +
+        `~$${plan.estimatedUsd} (${account}, ` +
+        `${plan.onlyWithoutWebsite ? 'yalnizca sitesizler' : 'sitesi olanlar dahil'})`,
     );
 
     return {
@@ -192,7 +235,7 @@ export class AutoDiscoveryService {
   async tick(): Promise<{
     imported: Array<{ runId: string; created: number; duplicates: number }>;
     started: AutoRunResult[];
-    progress: { done: number; total: number; percent: number };
+    progress: Awaited<ReturnType<AutoDiscoveryService['progress']>>;
   }> {
     const imported = await this.importFinished();
 

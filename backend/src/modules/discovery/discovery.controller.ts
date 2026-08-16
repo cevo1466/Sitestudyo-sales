@@ -30,6 +30,21 @@ export class DiscoveryController {
     return { accounts: [primary, secondary].filter(Boolean), progress };
   }
 
+  /**
+   * Sitesi OLAN isletmelerin de taranmasini acar/kapatir.
+   *
+   * Kapaliyken havuza yalnizca sitesiz isletmeler girer ve puan tavani
+   * 75'te kalir — site sorunu puanlari bir site gerektiriyor. Acildiginda
+   * analizor ve iletisim tarayicisi devreye girer, gercek "sicak" leadler
+   * ancak boyle olusur.
+   */
+  @Roles(UserRole.ADMIN)
+  @Post('auto/include-with-website')
+  @HttpCode(200)
+  setIncludeWithWebsite(@Body() body: { enabled?: unknown }) {
+    return this.auto.setIncludeWithWebsite(body?.enabled === true);
+  }
+
   /** Zamanlayicinin yaptigini elle tetikler — KREDI HARCAYABILIR. */
   @Roles(UserRole.ADMIN)
   @Post('auto/tick')

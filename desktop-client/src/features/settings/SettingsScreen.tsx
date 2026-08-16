@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { api, getConnection, clearConnection } from '../../services/api';
+import { DiscoveryPanel } from './DiscoveryPanel';
 
 interface Rule {
   id: string;
@@ -241,6 +242,8 @@ export function SettingsScreen() {
           <div className="skeleton" style={{ height: 120, borderRadius: 8 }} />
         )}
       </section>
+
+      <DiscoveryPanel />
 
       <section className="panel">
         <h2>Sunucu</h2>

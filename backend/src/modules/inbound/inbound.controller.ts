@@ -5,7 +5,17 @@ import { InboundService } from './inbound.service';
 import { ZodValidationPipe } from '../../common/pipes/zod-validation.pipe';
 import { Public } from '../../common/decorators/public.decorator';
 import { CryptoService } from '../../common/services/crypto.service';
-import { clientIp } from '../../common/http/client-ip';
+import { clientIp, type IpBearingRequest } from '../../common/http/client-ip';
+
+/** HMAC dogrulamasi ham govdeye bagli; `rawBody` bu yuzden sekilde. */
+type InboundRequest = IpBearingRequest & { rawBody?: Buffer; body?: unknown };
+
+/** Baslik degerini metin olarak okur (Fastify tekrar eden basligi dizi verir). */
+function header(req: InboundRequest, name: string): string | undefined {
+  const raw = req.headers?.[name];
+  const value = Array.isArray(raw) ? raw[0] : raw;
+  return typeof value === 'string' ? value : undefined;
+}
 
 const inboundSchema = z
   .object({
@@ -42,7 +52,7 @@ export class InboundController {
   @Public()
   @Post('inbound-leads')
   @HttpCode(201)
-  receive(@Body(new ZodValidationPipe(inboundSchema)) dto: z.infer<typeof inboundSchema>, @Req() req: any) {
+  receive(@Body(new ZodValidationPipe(inboundSchema)) dto: z.infer<typeof inboundSchema>, @Req() req: InboundRequest) {
     this.verify(req);
     return this.inbound.receive(dto, clientIp(req));
   }
@@ -50,7 +60,7 @@ export class InboundController {
   @Public()
   @Post('events')
   @HttpCode(202)
-  event(@Body(new ZodValidationPipe(eventSchema)) dto: z.infer<typeof eventSchema>, @Req() req: any) {
+  event(@Body(new ZodValidationPipe(eventSchema)) dto: z.infer<typeof eventSchema>, @Req() req: InboundRequest) {
     this.verify(req);
     return this.inbound.recordEvent(dto, clientIp(req));
   }
@@ -77,9 +87,9 @@ export class InboundController {
    * Bu uclar internete acik; imzasiz birakilsaydi herkes havuza sahte
    * lead basabilir, gelen kutusunu kullanilamaz hale getirebilirdi.
    */
-  private verify(req: { headers: Record<string, string>; rawBody?: Buffer; body: unknown }): void {
-    const ts = req.headers['x-inbound-timestamp'];
-    const sig = req.headers['x-inbound-signature'];
+  private verify(req: InboundRequest): void {
+    const ts = header(req, 'x-inbound-timestamp');
+    const sig = header(req, 'x-inbound-signature');
 
     // YALNIZCA ham govde. Yeniden serilestirilmis JSON'a dusmek, bicim
     // farklarinda (bosluk, anahtar sirasi) imzayi sessizce gecersiz kilar —

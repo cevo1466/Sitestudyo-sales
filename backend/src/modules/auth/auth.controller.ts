@@ -4,7 +4,7 @@ import { loginSchema, refreshSchema, type LoginDto, type RefreshDto } from './dt
 import { ZodValidationPipe } from '../../common/pipes/zod-validation.pipe';
 import { Public } from '../../common/decorators/public.decorator';
 import { CurrentUser, type AuthUser } from '../../common/decorators/current-user.decorator';
-import { clientIp } from '../../common/http/client-ip';
+import { clientIp, userAgent, type IpBearingRequest } from '../../common/http/client-ip';
 
 @Controller('auth')
 export class AuthController {
@@ -13,20 +13,20 @@ export class AuthController {
   @Public()
   @Post('login')
   @HttpCode(200)
-  login(@Body(new ZodValidationPipe(loginSchema)) dto: LoginDto, @Req() req: any) {
+  login(@Body(new ZodValidationPipe(loginSchema)) dto: LoginDto, @Req() req: IpBearingRequest) {
     return this.auth.login(dto.email, dto.password, {
       ip: clientIp(req),
-      userAgent: req.headers?.['user-agent'],
+      userAgent: userAgent(req),
     });
   }
 
   @Public()
   @Post('refresh')
   @HttpCode(200)
-  refresh(@Body(new ZodValidationPipe(refreshSchema)) dto: RefreshDto, @Req() req: any) {
+  refresh(@Body(new ZodValidationPipe(refreshSchema)) dto: RefreshDto, @Req() req: IpBearingRequest) {
     return this.auth.refresh(dto.refreshToken, {
       ip: clientIp(req),
-      userAgent: req.headers?.['user-agent'],
+      userAgent: userAgent(req),
     });
   }
 

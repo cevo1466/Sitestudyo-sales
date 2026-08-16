@@ -25,14 +25,14 @@ describe('redact', () => {
     const out = redact({
       user: { name: 'Melih', password: 'gizli' },
       mail: { smtpUser: 'a@b.com', smtpPassword: 'gizli' },
-    }) as any;
+    }) as Record<string, Record<string, string>>;
     expect(out.user.name).toBe('Melih');
     expect(out.user.password).toBe('***');
     expect(out.mail.smtpPassword).toBe('***');
   });
 
   it('dizilerin icine girer', () => {
-    const out = redact([{ token: 'a' }, { token: 'b' }]) as any[];
+    const out = redact([{ token: 'a' }, { token: 'b' }]) as Record<string, string>[];
     expect(out.map((o) => o.token)).toEqual(['***', '***']);
   });
 
@@ -42,7 +42,7 @@ describe('redact', () => {
   });
 
   it('dairesel olmayan derin yapida sonsuz donmez', () => {
-    let deep: any = { password: 'x' };
+    let deep: Record<string, unknown> = { password: 'x' };
     for (let i = 0; i < 20; i++) deep = { nested: deep };
     expect(() => redact(deep)).not.toThrow();
   });

@@ -11,6 +11,8 @@
 export interface Target {
   locationQuery: string;
   term: string;
+  /** Bu tarama sitesizlerle mi sinirliydi? Eski kayitlarda yok -> true sayilir. */
+  onlyWithoutWebsite?: boolean;
 }
 
 export interface PlanInput {
@@ -26,6 +28,15 @@ export interface PlanInput {
   maxTermsPerRun: number;
   /** Guvenlik payi: krediyi son kurusuna kadar harcamiyoruz. */
   safetyMarginUsd?: number;
+  /**
+   * Sitesi OLAN isletmeleri de tara.
+   *
+   * Varsayilan kapali: havuzun tamami "sitesi yok" olsun diye baslamistik.
+   * Acildiginda ayni izgara ikinci kez, filtresiz taranir — ayni isletmeler
+   * degil, ayni ARAMALAR. Sonuc kumesi farkli olur cunku filtre kalkinca
+   * sitesi olanlar da doner.
+   */
+  includeWithWebsite?: boolean;
 }
 
 export interface Plan {
@@ -33,6 +44,16 @@ export interface Plan {
   terms: string[];
   maxPerSearch: number;
   estimatedUsd: number;
+  /**
+   * Bu tarama yalnizca sitesi OLMAYANLARI mi getirecek?
+   *
+   * false olan taramalar sitesi OLAN isletmeleri de getirir; site
+   * analizoru ve iletisim tarayicisi ancak o zaman is gorur. Bozuk,
+   * eski veya mobil uyumsuz siteler ise en sicak leadlerdir — sitesi
+   * hic olmayanlardan bile daha sicak olabilirler, cunku o isletme
+   * dijitale zaten para harciyor demektir.
+   */
+  onlyWithoutWebsite: boolean;
 }
 
 /**
@@ -89,8 +110,15 @@ export const TERMS = [
   'fizyoterapi',
 ];
 
-function key(t: Target): string {
-  return `${t.locationQuery}|||${t.term}`;
+/**
+ * Kapsama anahtari.
+ *
+ * Filtre durumu anahtara DAHIL: "Ankara / dis klinigi" aramasi sitesizler
+ * icin yapilmis olabilir ama sitesi olanlar icin yapilmamistir. Ikisi ayri
+ * kapsama sayilmazsa, filtresiz tarama hic baslamaz.
+ */
+function key(t: Target, onlyWithoutWebsite = true): string {
+  return `${t.locationQuery}|||${t.term}|||${onlyWithoutWebsite ? 'nw' : 'all'}`;
 }
 
 /**
@@ -104,7 +132,10 @@ export function planNextRun(input: PlanInput): Plan | null {
   const budget = input.remainingUsd - margin;
   if (budget <= 0) return null;
 
-  const coveredKeys = new Set(input.covered.map(key));
+  const onlyWithoutWebsite = !input.includeWithWebsite;
+  const coveredKeys = new Set(
+    input.covered.map((t) => key(t, t.onlyWithoutWebsite ?? true)),
+  );
   const costPerTerm = input.maxPerSearch * input.costPerPlace;
   if (costPerTerm <= 0) return null;
 
@@ -117,7 +148,9 @@ export function planNextRun(input: PlanInput): Plan | null {
   // gecmiyoruz. Boylece bir sehir "tamamlandi" diyebiliyoruz; her sehirden
   // biraz toplamak, hicbir sehri tam kapsamamak demek olurdu.
   for (const locationQuery of CITIES) {
-    const remaining = TERMS.filter((term) => !coveredKeys.has(key({ locationQuery, term })));
+    const remaining = TERMS.filter(
+      (term) => !coveredKeys.has(key({ locationQuery, term }, onlyWithoutWebsite)),
+    );
     if (!remaining.length) continue;
 
     const terms = remaining.slice(0, limit);
@@ -126,6 +159,7 @@ export function planNextRun(input: PlanInput): Plan | null {
       terms,
       maxPerSearch: input.maxPerSearch,
       estimatedUsd: Number((terms.length * costPerTerm).toFixed(2)),
+      onlyWithoutWebsite,
     };
   }
 
@@ -134,17 +168,16 @@ export function planNextRun(input: PlanInput): Plan | null {
 }
 
 /** Izgaranin ne kadari tarandi? Arayuzde ilerleme gostermek icin. */
-export function coverageProgress(covered: Target[]): {
-  done: number;
-  total: number;
-  percent: number;
-} {
-  const coveredKeys = new Set(covered.map(key));
+export function coverageProgress(
+  covered: Target[],
+  onlyWithoutWebsite = true,
+): { done: number; total: number; percent: number } {
+  const coveredKeys = new Set(covered.map((t) => key(t, t.onlyWithoutWebsite ?? true)));
   const total = CITIES.length * TERMS.length;
   let done = 0;
   for (const locationQuery of CITIES) {
     for (const term of TERMS) {
-      if (coveredKeys.has(key({ locationQuery, term }))) done++;
+      if (coveredKeys.has(key({ locationQuery, term }, onlyWithoutWebsite))) done++;
     }
   }
   return { done, total, percent: Math.round((done / total) * 100) };
