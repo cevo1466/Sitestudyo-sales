@@ -76,6 +76,11 @@ jobs:
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Guncelleyicinin imzasi. Bu anahtar olmadan tauri-action
+          # latest.json URETMEZ ve uygulamadaki guncelleme dugmesi
+          # hicbir zaman guncelleme goremez.
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ''
         with:
           projectPath: desktop-client
           tagName: ${{ github.ref_type == 'tag' && github.ref_name || 'desktop-vdev' }}
