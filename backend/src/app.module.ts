@@ -18,6 +18,7 @@ import { PipelinesModule } from './modules/pipelines/pipelines.module';
 import { LeadsModule } from './modules/leads/leads.module';
 import { DiscoveryModule } from './modules/discovery/discovery.module';
 import { ScoringModule } from './modules/scoring/scoring.module';
+import { AnalyzerModule } from './modules/analyzer/analyzer.module';
 import { JwtModule } from '@nestjs/jwt';
 
 @Global()
@@ -46,6 +47,7 @@ class CoreModule {}
     LeadsModule,
     DiscoveryModule,
     ScoringModule,
+    AnalyzerModule,
   ],
   providers: [
     // SIRA ONEMLI: once kimlik (JwtAuthGuard req.user'i doldurur),
