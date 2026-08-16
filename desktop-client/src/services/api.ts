@@ -82,6 +82,19 @@ function baseUrl(): string {
   return c?.serverUrl?.replace(/\/+$/, '') ?? '';
 }
 
+/**
+ * Istek tekrar gonderilebilir mi?
+ *
+ * Bir kez okunmus akis (stream) veya tuketilmis govde ikinci kez
+ * gonderilemez ("body already used"). Bugun tum cagrilar JSON metni
+ * gonderiyor ve metin tekrar kullanilabilir; bu kontrol ileride biri
+ * dosya yuklemesi eklediginde sessizce kirilmayi engelliyor.
+ */
+function canRetry(init: RequestInit): boolean {
+  const b = init.body;
+  return b === undefined || b === null || typeof b === 'string';
+}
+
 async function raw(path: string, init: RequestInit, root: string): Promise<Response> {
   return fetch(`${root}/api/v1${path}`, {
     ...init,
@@ -101,32 +114,58 @@ async function raw(path: string, init: RequestInit, root: string): Promise<Respo
  * TUM oturumu iptal eder. Bu yuzden ayni anda yalnizca bir yenileme
  * calisiyor, digerleri onu bekliyor.
  */
-let refreshing: Promise<boolean> | null = null;
+/** Yenileme sonucu: oturum bitti mi, yoksa gecici bir aksaklik mi. */
+type RefreshOutcome = 'ok' | 'expired' | 'unavailable';
 
-function refreshTokens(): Promise<boolean> {
-  refreshing ??= (async () => {
+let refreshing: Promise<RefreshOutcome> | null = null;
+
+function refreshTokens(root: string): Promise<RefreshOutcome> {
+  if (refreshing) return refreshing;
+
+  const run = (async (): Promise<RefreshOutcome> => {
     const refreshToken = localStorage.getItem(REFRESH_KEY);
-    if (!refreshToken) return false;
+    if (!refreshToken) return 'expired';
     try {
-      const res = await fetch(`${baseUrl()}/api/v1/auth/refresh`, {
+      const res = await fetch(`${root}/api/v1/auth/refresh`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ refreshToken }),
       });
-      if (!res.ok) return false;
-      const body = (await res.json()) as { accessToken: string; refreshToken: string };
-      setTokens(body.accessToken, body.refreshToken);
-      return true;
+
+      // 5xx = sunucu gecici olarak bozuk. Oturumu SILMIYORUZ; bir
+      // saniyelik aksaklik yuzunden kullaniciyi disari atmak, sorunu
+      // cozmek yerine buyutmek olur.
+      if (res.status >= 500) return 'unavailable';
+      if (!res.ok) return 'expired';
+
+      const body: unknown = await res.json();
+      // Cevabin bicimini dogruluyoruz: bozuk bir cevabi token diye
+      // saklamak, bir sonraki istekte anlasilmaz bir 401 uretirdi.
+      if (
+        typeof body !== 'object' ||
+        body === null ||
+        typeof (body as { accessToken?: unknown }).accessToken !== 'string' ||
+        typeof (body as { refreshToken?: unknown }).refreshToken !== 'string'
+      ) {
+        return 'expired';
+      }
+      const t = body as { accessToken: string; refreshToken: string };
+      setTokens(t.accessToken, t.refreshToken);
+      return 'ok';
     } catch {
-      return false;
-    } finally {
-      // Bir sonraki 401 yeni bir yenileme baslatabilsin.
-      setTimeout(() => {
-        refreshing = null;
-      }, 0);
+      // Ag hatasi — oturum bitmis DEGIL.
+      return 'unavailable';
     }
   })();
-  return refreshing;
+
+  refreshing = run;
+  // Kilidi promise KIMLIGINE gore aciyoruz: setTimeout(...,0) ile
+  // acmak, promise bittikten sonraki kisa arada eski sonucu servis
+  // ediyor ve gercekte yenileme yapmadan "basarili" sayilabiliyordu.
+  void run.finally(() => {
+    if (refreshing === run) refreshing = null;
+  });
+  return run;
 }
 
 export async function api<T>(
@@ -140,13 +179,20 @@ export async function api<T>(
   // 15 dakikalik erisim token'i dolunca sessizce yenileyip TEKRAR
   // deniyoruz. Bu olmadan uygulama 15 dakika sonra "Liste yuklenemedi"
   // deyip duruyordu ve tek cozum kapatip yeniden acmakti.
-  if (res.status === 401 && !path.startsWith('/auth/')) {
-    if (await refreshTokens()) {
+  //
+  // `path` burada /auth/login gibi; /api/v1 onekini raw() ekliyor.
+  if (res.status === 401 && !path.startsWith('/auth/') && canRetry(init)) {
+    // Yenileme, istegin gittigi AYNI sunucuya gidiyor. baseUrl()
+    // kullanilsaydi token bir sunucudan alinip digerine gonderilebilirdi.
+    const outcome = await refreshTokens(root);
+    if (outcome === 'ok') {
       res = await raw(path, init, root);
-    } else {
+    } else if (outcome === 'expired') {
       setTokens(null, null);
       onSessionLost?.();
     }
+    // 'unavailable' -> token'lara DOKUNMUYORUZ. Asagida 401 hatasi
+    // firlatilacak, kullanici tekrar deneyince oturum devam edecek.
   }
 
   if (res.status === 204) return undefined as T;
@@ -166,7 +212,7 @@ export async function api<T>(
 /** Kayitli yenileme token'i ile oturumu geri getirir (uygulama acilisinda). */
 export async function restoreSession(): Promise<boolean> {
   if (!getConnection() || !hasSession()) return false;
-  return refreshTokens();
+  return (await refreshTokens(baseUrl())) === 'ok';
 }
 
 // ───────────────────────────────────────────────────────────── Tipler
