@@ -5,6 +5,7 @@ import { LoginScreen } from './features/auth/LoginScreen';
 import { CompaniesScreen } from './features/companies/CompaniesScreen';
 import { PipelineScreen } from './features/pipeline/PipelineScreen';
 import { SettingsScreen } from './features/settings/SettingsScreen';
+import { ThemeToggle } from './components/ThemeToggle';
 
 type Stage = 'connect' | 'login' | 'app';
 type Tab = 'companies' | 'pipeline' | 'settings';
@@ -52,7 +53,10 @@ export function App() {
             </button>
           ))}
         </nav>
-        <div className="topbar-right">{user}</div>
+        <div className="topbar-right">
+          <span>{user}</span>
+          <ThemeToggle />
+        </div>
       </header>
 
       {tab === 'companies' && <CompaniesScreen />}

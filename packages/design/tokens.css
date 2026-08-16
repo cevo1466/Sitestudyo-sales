@@ -193,13 +193,17 @@
   --on-accent: #0d1117;
 
   --success: #2fd48b;
-  --success-subtle: #0f2e22;
+  --success-subtle: #16241e;
   --warning: #e5a33a;
-  --warning-subtle: #33270f;
+  /* Ekranda denenince fark edildi: doygun kahverengi (#33270f) dolgu
+     koyu zeminde kutuyu panelin onune gecirip dikkat caliyordu. Acik
+     temada ayni kutu sessizce duruyor. Yuzeye yakin, sicakligi sezilen
+     bir tona cekildi; okunakliligi metin rengi zaten tasiyor. */
+  --warning-subtle: #262019;
   --danger: #f0679e;
-  --danger-subtle: #3a1526;
+  --danger-subtle: #2a1a21;
   --info: #4bc4e0;
-  --info-subtle: #0e2c33;
+  --info-subtle: #16262a;
 
   /* Koyu temada golge is gormez (siyah uzerine siyah); ayirici kenarlik olur */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
@@ -235,13 +239,13 @@
     --accent-text: #8ab4ff;
     --on-accent: #0d1117;
     --success: #2fd48b;
-    --success-subtle: #0f2e22;
+    --success-subtle: #16241e;
     --warning: #e5a33a;
-    --warning-subtle: #33270f;
+    --warning-subtle: #262019;
     --danger: #f0679e;
-    --danger-subtle: #3a1526;
+    --danger-subtle: #2a1a21;
     --info: #4bc4e0;
-    --info-subtle: #0e2c33;
+    --info-subtle: #16262a;
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
     --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.45);
     --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55);

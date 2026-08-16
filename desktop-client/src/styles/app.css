@@ -781,3 +781,33 @@ table.rules .off {
   background: var(--warning-subtle);
   color: var(--warning);
 }
+
+/* ══════════════════════════════════════════════════════ Tema dugmesi ══ */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+.theme-toggle:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+/* Bildirim kutulari kenarlikla tanimli: koyu temada dolgu tek basina
+   yeterince ayirmiyordu, dolguyu koyulastirmak ise kutuyu bagirtiyordu.
+   Ince kenarlik ikisini de cozuyor. */
+.notice {
+  border: 1px solid color-mix(in srgb, currentColor 26%, transparent);
+}
