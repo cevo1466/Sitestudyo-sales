@@ -48,3 +48,15 @@ Thumbs.db
 tmp/
 .tmp/
 .cache/
+
+# Site analizlerinin HAM ciktisi.
+# Analiz edilen sitenin istemci tarafi anahtarlarini beraberinde getiriyor
+# (folk.app olcumunde gitleaks bir Weglot anahtari yakaladi) ve megabaytlarca
+# ekran goruntusu/varlik tasiyor. Depoya yalnizca olcum ozeti girer.
+packages/design/reference-*/site/
+packages/design/reference-*/screenshots/
+packages/design/reference-*/assets/
+packages/design/reference-*/tech-stack.json
+packages/design/reference-*/analysis.json
+packages/design/reference-*/pages.json
+packages/design/reference-*/rapor.html
