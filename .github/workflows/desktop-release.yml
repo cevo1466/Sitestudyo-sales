@@ -1,11 +1,14 @@
 # Masaustu installer'lari BURADA uretilir, VDS'te degil.
 #
-# Neden: VDS'te Rust toolchain yok ve Linux'tan Windows'a Tauri capraz
-# derlemesi pratikte calismiyor. Her isletim sistemi kendi runner'inda
-# kendi installer'ini uretir — kullanicinin bilgisayarinda Node veya Rust
-# kurulu olmasi gerekmez, tek dosya indirip kurar.
+# Neden: .msi yalnizca Windows'ta uretilebilir; VDS Linux ve uzerinde Rust
+# yok. Her isletim sistemi kendi runner'inda kendi installer'ini derler.
+# Kullanicinin bilgisayarinda Node veya Rust kurulu olmasi gerekmez —
+# tek dosya indirip kurar.
 #
-# Yayinlamak icin:  git tag desktop-v0.1.0 && git push --tags
+# Yayinlamak icin:
+#   git tag desktop-v0.1.0 && git push origin desktop-v0.1.0
+#
+# Elle calistirmak icin: Actions sekmesi -> Desktop Release -> Run workflow
 
 name: Desktop Release
 
@@ -14,26 +17,41 @@ on:
     tags: ['desktop-v*']
   workflow_dispatch:
 
+# tauri-action surum olusturup dosya yukleyecek; yazma izni sart.
+permissions:
+  contents: write
+
 jobs:
   build:
     strategy:
       fail-fast: false
       matrix:
         include:
+          # Windows: .msi ve .exe (NSIS) ureten tek platform.
           - os: windows-latest
-            target: ''
-            label: windows
+            args: ''
+          # macOS: Intel ve Apple Silicon tek pakette.
           - os: macos-latest
-            target: '--target universal-apple-darwin'
-            label: macos
+            args: '--target universal-apple-darwin'
+          # Linux: .AppImage ve .deb
           - os: ubuntu-22.04
-            target: ''
-            label: linux
+            args: ''
 
     runs-on: ${{ matrix.os }}
 
     steps:
       - uses: actions/checkout@v4
+
+      # Tauri'nin Linux'ta ihtiyac duydugu sistem kutuphaneleri.
+      # Diger platformlarda gerekmiyor.
+      - name: Linux bagimliliklari
+        if: matrix.os == 'ubuntu-22.04'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev \
+            patchelf libssl-dev build-essential curl wget file \
+            libxdo-dev libsoup-3.0-dev libjavascriptcoregtk-4.1-dev
 
       - uses: actions/setup-node@v4
         with:
@@ -43,38 +61,39 @@ jobs:
 
       - uses: dtolnay/rust-toolchain@stable
         with:
+          # macOS'ta tek pakette iki mimari icin ikisi de gerekli.
           targets: ${{ matrix.os == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
 
+      # Rust derlemesi uzun surer; onbellek olmadan her calisma ~10 dk.
       - uses: swatinem/rust-cache@v2
         with:
-          workspaces: desktop-client/src-tauri -> target
+          workspaces: './desktop-client/src-tauri -> target'
 
-      # Tauri'nin Linux'ta ihtiyac duydugu sistem kutuphaneleri
-      - name: Linux bagimliliklari
-        if: matrix.os == 'ubuntu-22.04'
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev \
-            librsvg2-dev patchelf libssl-dev
-
-      - run: npm ci --no-audit --no-fund
+      - name: Bagimliliklari kur
         working-directory: desktop-client
+        run: npm ci --no-audit --no-fund
 
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           projectPath: desktop-client
-          tagName: ${{ github.ref_name }}
-          releaseName: 'SiteStudyo Sales OS ${{ github.ref_name }}'
+          tagName: ${{ github.ref_type == 'tag' && github.ref_name || 'desktop-vdev' }}
+          releaseName: 'SiteStudyo Sales OS ${{ github.ref_type == ''tag'' && github.ref_name || ''(deneme)'' }}'
           releaseBody: |
-            Kurulum dosyasini indir ve calistir.
+            Kurulum dosyasini indirip calistirin.
 
-            Ilk acilista **Sunucu Adresi** sorulur:
+            | Isletim sistemi | Dosya |
+            |---|---|
+            | Windows | `.msi` (veya `.exe`) |
+            | macOS | `.dmg` |
+            | Linux | `.AppImage` / `.deb` |
+
+            **Ilk acilista sunucu adresi sorulur:**
             `https://api.sitestudyo.com`
 
-            Adresi girip "Baglantiyi Test Et" dedikten sonra hesabinla giris yap.
-            Adres bilgisayarina kaydedilir; bir daha sorulmaz.
+            Adresi girip "Baglantiyi test et" dedikten sonra hesabinizla
+            giris yapin. Adres bu bilgisayara kaydedilir, bir daha sorulmaz.
           releaseDraft: true
           prerelease: false
-          args: ${{ matrix.target }}
+          args: ${{ matrix.args }}

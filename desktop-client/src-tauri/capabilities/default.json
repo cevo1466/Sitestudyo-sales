@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Ana pencerenin izinleri. Tauri 2'de her yetenek acikca verilir; verilmeyen hicbir sey calismaz.",
+  "windows": ["main"],
+  "permissions": ["core:default"]
+}
