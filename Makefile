@@ -33,8 +33,15 @@ migrate: ## Migration'lari uygula (uretim)
 seed: ## Baslangic verisini yukle
 	$(DC) exec backend npm run seed
 
-test: ## Testleri calistir
+test: ## Testleri calistir (birim + e2e)
 	cd backend && npm test
+	$(MAKE) test-e2e
+
+## e2e AYRI veritabaninda kosar. Sema degistiginde buraya da uygulanmali —
+## unutulursa testler "kolon yok" diye toplu halde patlar ve sanki kod
+## bozulmus gibi gorunur. Bu hedef ikisini birden yapiyor.
+test-e2e: ## e2e testleri (test veritabanini once gunceller)
+	cd backend && 	PW=$$(grep -oP '(?<=mysql://salesos:)[^@]+' .env) && 	DATABASE_URL="mysql://salesos:$$PW@127.0.0.1:3306/salesos_test" npx prisma migrate deploy && 	DATABASE_URL="mysql://salesos:$$PW@127.0.0.1:3306/salesos" npm run test:e2e
 
 lint: ## Kod denetimi
 	cd backend && npm run lint
