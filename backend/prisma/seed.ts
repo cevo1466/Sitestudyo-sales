@@ -17,25 +17,28 @@ const prisma = new PrismaClient();
  * degistirilebilmeleri sart. Puanlama motoru her hesaplamada buradan okur.
  */
 const SCORE_RULES = [
-  { key: 'no_website', label: 'Hic web sitesi yok', weight: 40, sortOrder: 10 },
-  { key: 'broken_website', label: 'Site bozuk (5xx / zaman asimi)', weight: 35, sortOrder: 20 },
-  { key: 'social_only', label: 'Sadece sosyal medya hesabi var', weight: 30, sortOrder: 30 },
-  { key: 'outdated_weak', label: 'Site eski veya zayif', weight: 25, sortOrder: 40 },
-  { key: 'not_responsive', label: 'Mobil uyumlu degil', weight: 15, sortOrder: 50 },
-  { key: 'ssl_problem', label: 'SSL sertifikasi sorunlu', weight: 10, sortOrder: 60 },
-  { key: 'no_contact_form', label: 'Iletisim formu yok', weight: 10, sortOrder: 70 },
-  { key: 'high_rating', label: 'Google puani yuksek (>= 4.0)', weight: 10, sortOrder: 80 },
-  { key: 'many_reviews', label: 'Yorum sayisi yuksek (>= 50)', weight: 10, sortOrder: 90 },
-  { key: 'email_found', label: 'Herkese acik e-posta bulundu', weight: 10, sortOrder: 100 },
-  { key: 'phone_available', label: 'Telefon numarasi var', weight: 5, sortOrder: 110 },
+  { key: 'no_website', label: 'Hiç web sitesi yok', weight: 40, sortOrder: 10 },
+  { key: 'broken_website', label: 'Site bozuk (5xx / zaman aşımı)', weight: 35, sortOrder: 20 },
+  { key: 'social_only', label: 'Sadece sosyal medya hesabı var', weight: 30, sortOrder: 30 },
+  { key: 'outdated_weak', label: 'Site eski veya zayıf', weight: 25, sortOrder: 40 },
+  { key: 'not_responsive', label: 'Mobil uyumlu değil', weight: 15, sortOrder: 50 },
+  { key: 'ssl_problem', label: 'SSL sertifikası sorunlu', weight: 10, sortOrder: 60 },
+  { key: 'no_contact_form', label: 'İletişim formu yok', weight: 10, sortOrder: 70 },
+  { key: 'high_rating', label: 'Google puanı yüksek (≥ 4.0)', weight: 10, sortOrder: 80 },
+  { key: 'many_reviews', label: 'Yorum sayısı yüksek (≥ 50)', weight: 10, sortOrder: 90 },
+  { key: 'email_found', label: 'Herkese açık e-posta bulundu', weight: 10, sortOrder: 100 },
+  { key: 'phone_available', label: 'Telefon numarası var', weight: 5, sortOrder: 110 },
 ];
 
+// Asama ve kural adlari EKRANDA GORUNUYOR — kaynak dosyalarda Turkce
+// karakter kullanmama kurali kullaniciya donen metinleri kapsamiyor.
+// ASCII yazilmislardi ve panoda "ILETISIME GECILDI" diye cikiyordu.
 const STAGES = [
   { key: 'lead', name: 'Aday', sortOrder: 10, color: '#6B7280' },
-  { key: 'contacted', name: 'Iletisime Gecildi', sortOrder: 20, color: '#3B82F6' },
-  { key: 'meeting', name: 'Gorusme Ayarlandi', sortOrder: 30, color: '#8B5CF6' },
-  { key: 'proposal', name: 'Teklif Gonderildi', sortOrder: 40, color: '#F59E0B' },
-  { key: 'won', name: 'Kazanildi', sortOrder: 50, color: '#10B981', isWon: true },
+  { key: 'contacted', name: 'İletişime Geçildi', sortOrder: 20, color: '#3B82F6' },
+  { key: 'meeting', name: 'Görüşme Ayarlandı', sortOrder: 30, color: '#8B5CF6' },
+  { key: 'proposal', name: 'Teklif Gönderildi', sortOrder: 40, color: '#F59E0B' },
+  { key: 'won', name: 'Kazanıldı', sortOrder: 50, color: '#10B981', isWon: true },
   { key: 'lost', name: 'Kaybedildi', sortOrder: 60, color: '#EF4444', isLost: true },
 ];
 
@@ -149,7 +152,7 @@ async function main(): Promise<void> {
   let pipeline = await prisma.pipeline.findFirst({ where: { isDefault: true } });
   if (!pipeline) {
     pipeline = await prisma.pipeline.create({
-      data: { name: 'Satis Hunisi', isDefault: true },
+      data: { name: 'Satış Hunisi', isDefault: true },
     });
   }
   for (const stage of STAGES) {
