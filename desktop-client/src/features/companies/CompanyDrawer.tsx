@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+import { GRADE_LABEL, label } from '../../lib/labels';
 import { api } from '../../services/api';
 import { WhatsAppPanel } from './WhatsAppPanel';
 
@@ -185,7 +186,7 @@ export function CompanyDrawer({
                 <h3>Lead skoru</h3>
                 <div className="score-line">
                   <span className={`score-big grade-${detail.leadGrade}`}>{detail.leadScore}</span>
-                  <span className="score-grade">{detail.leadGrade}</span>
+                  <span className="score-grade">{label(GRADE_LABEL, detail.leadGrade)}</span>
                 </div>
                 {reasons.length > 0 && (
                   <ul className="reasons">

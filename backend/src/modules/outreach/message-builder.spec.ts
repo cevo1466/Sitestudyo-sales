@@ -177,3 +177,34 @@ describe('buildMessages', () => {
     }
   });
 });
+
+describe('onerilen sablon her zaman bir tanesine duser', () => {
+  // Bu testin korudugu sey: recommendedTemplateKey SABIT anahtarlar
+  // donduruyor ('sosyal_kanit' / 'site_sorunlu' / 'sade'). Kullanici artik
+  // Ayarlar ekranindan kendi sablonlarini ekleyip bunlari silebiliyor.
+  // Yedek olmasaydi o an "onerilen" ipucu sessizce kaybolur, kimse de
+  // sebebini anlamazdi.
+  const kendi: MessageTemplate[] = [
+    { key: 'benim_sablonum', label: 'Benim şablonum', body: 'Merhaba {{isim}}' },
+    { key: 'ikinci', label: 'İkinci', body: 'Selam {{isim}}' },
+  ];
+
+  it('sabit anahtarlarin hicbiri listede yoksa ilk sablonu onerir', () => {
+    const out = buildMessages(base, kendi);
+    expect(out.filter((m) => m.recommended)).toHaveLength(1);
+    expect(out[0].recommended).toBe(true);
+  });
+
+  it('sabit anahtar listede varsa onu secer', () => {
+    const karisik: MessageTemplate[] = [
+      { key: 'benim_sablonum', label: 'Benim şablonum', body: 'Merhaba' },
+      { key: recommendedTemplateKey(base), label: 'Uygun', body: '{{yorum}} yorum' },
+    ];
+    const out = buildMessages(base, karisik);
+    expect(out.find((m) => m.recommended)?.key).toBe(recommendedTemplateKey(base));
+  });
+
+  it('bos listede patlamaz', () => {
+    expect(buildMessages(base, [])).toEqual([]);
+  });
+});

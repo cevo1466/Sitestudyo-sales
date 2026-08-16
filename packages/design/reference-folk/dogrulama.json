@@ -1,0 +1,86 @@
+{
+  "overall": "KISMEN DOĞRULANDI",
+  "counts": {
+    "measured": 6,
+    "partial": 6,
+    "not-measured": 0
+  },
+  "total_areas": 12,
+  "areas": {
+    "colors": {
+      "status": "measured",
+      "samples": 15,
+      "reason": null
+    },
+    "typography": {
+      "status": "measured",
+      "samples": 12,
+      "reason": null
+    },
+    "components": {
+      "status": "measured",
+      "samples": 14,
+      "reason": null
+    },
+    "sections": {
+      "status": "measured",
+      "samples": 2,
+      "reason": null
+    },
+    "responsive": {
+      "status": "measured",
+      "samples": 3,
+      "reason": null
+    },
+    "motion": {
+      "status": "partial",
+      "samples": 0,
+      "reason": "Sayfa tarama sırasında ilerlemedi; sahne/pin/parallaks ölçülemedi (duraan teknik ölçümleri geçerli)"
+    },
+    "tech_stack": {
+      "status": "measured",
+      "samples": 9,
+      "reason": null
+    },
+    "layout_system": {
+      "status": "partial",
+      "samples": 22,
+      "reason": "hiçbir bölümde içerik kenarı ölçülemedi (tüm bölümler tam genişlik olabilir)",
+      "container_confident": false,
+      "pages_measured": 2,
+      "pages_attempted": 2
+    },
+    "surfaces": {
+      "status": "partial",
+      "samples": 438,
+      "reason": "2 stylesheet cross-origin oldugu icin okunamadi; tema kurallari eksik olabilir",
+      "blocked_stylesheets": 2
+    },
+    "theme_variants": {
+      "status": "partial",
+      "samples": 1,
+      "reason": "2 stylesheet cross-origin oldugu icin okunamadi; tema kurallari eksik olabilir",
+      "blocked_stylesheets": 2
+    },
+    "interaction_states": {
+      "status": "partial",
+      "samples": 9,
+      "reason": "2 stylesheet cross-origin olduğu için CSS kuralları okunamadı; davranışsal ölçüm 9/9 elemanda yapıldı",
+      "elements_attempted": 9,
+      "blocked_stylesheets": 2
+    },
+    "assets": {
+      "status": "partial",
+      "samples": 45,
+      "reason": null,
+      "downloaded": 40,
+      "attempted": 47,
+      "skipped_reasons": {
+        "file_limit": 7
+      },
+      "bytes": 1184872,
+      "inline_written": 5
+    }
+  },
+  "unmeasured": []
+}

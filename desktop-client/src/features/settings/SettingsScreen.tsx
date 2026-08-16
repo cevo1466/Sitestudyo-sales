@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { api, getConnection, clearConnection } from '../../services/api';
+import { GRADE_LABEL, label } from '../../lib/labels';
 import { DiscoveryPanel } from './DiscoveryPanel';
+import { TemplateManager } from './TemplateManager';
+import { AppUpdatePanel } from './AppUpdatePanel';
 
 interface Rule {
   id: string;
@@ -20,12 +23,6 @@ interface Stats {
   discovery: { totalSpentUsd: number };
 }
 
-const GRADE_LABEL: Record<string, string> = {
-  VERY_HOT: 'Çok sıcak',
-  HOT: 'Sıcak',
-  WARM: 'Ilık',
-  LOW: 'Düşük',
-};
 
 export function SettingsScreen() {
   const [rules, setRules] = useState<Rule[]>([]);
@@ -137,11 +134,11 @@ export function SettingsScreen() {
         {/* Tavan uyarisi — sistemin neden 'Sicak' lead uretmedigini aciklar */}
         {stats && stats.pool.byGrade.HOT === 0 && stats.pool.byGrade.VERY_HOT === 0 && (
           <div className="notice warn">
-            <strong>Havuzun tamamının sitesi yok.</strong> Site sorunu puanları (mobil uyumsuzluk,
-            SSL, iletişim formu) site gerektirdiği için devreye girmiyor. Bu yüzden erişilebilir
-            en yüksek skor <strong>{noSiteCeiling}</strong> — “Sıcak” eşiği 70 olduğu sürece hiçbir
-            kayıt sıcak görünmeyecek. Ya eşiği düşürecek şekilde ağırlıkları artırın, ya da sitesi
-            olan işletmeleri de tarayın.
+            Havuzun tamamının sitesi yok. Site sorunu puanları (mobil uyumsuzluk, SSL,
+            iletişim formu) bir site gerektirdiği için devreye girmiyor. Erişilebilir
+            en yüksek skor bu yüzden {noSiteCeiling}. “Sıcak” eşiği 70 olduğu sürece
+            hiçbir kayıt sıcak görünmez. Ağırlıkları artırıp eşiği yakalayabilir ya da
+            sitesi olan işletmeleri de tarayabilirsiniz.
           </div>
         )}
 
@@ -225,7 +222,7 @@ export function SettingsScreen() {
               {Object.entries(stats.pool.byGrade).map(([g, n]) => (
                 <tr key={g}>
                   <td>
-                    <span className={`grade-dot grade-${g}`} /> {GRADE_LABEL[g] ?? g}
+                    <span className={`grade-dot grade-${g}`} /> {label(GRADE_LABEL, g)}
                   </td>
                   <td style={{ textAlign: 'right' }}>{n.toLocaleString('tr')}</td>
                 </tr>
@@ -243,7 +240,11 @@ export function SettingsScreen() {
         )}
       </section>
 
+      <TemplateManager />
+
       <DiscoveryPanel />
+
+      <AppUpdatePanel />
 
       <section className="panel">
         <h2>Sunucu</h2>

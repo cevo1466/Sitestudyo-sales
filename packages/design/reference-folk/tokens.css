@@ -1,0 +1,106 @@
+/* tokens.css — design.sitestudyo.com tarafından ölçülerek üretildi
+   Kaynak: https://folk.app
+
+   Bu değerler kaynak sitenin computed CSS'inden ÖLÇÜLDÜ; tahmin değil.
+   Doğrudan projene yapıştırabilirsin. Kopyalanan tek şey ölçü sistemi;
+   içerik, kompozisyon ve metin senin olmalı. */
+
+:root {
+  /* Semantik renk rolleri */
+  --color-background: #ffffff;
+  --color-surface: #000000;
+  --color-text: #030200;
+  --color-muted-text: #000000;
+  --color-border: #030200;
+  --color-primary-action: #000000;
+  --color-accent: #fff0bd;
+
+  /* Gözlenen palet */
+  --palette-1: #030200;
+  --palette-2: #ffffff;
+  --palette-3: #000000;
+  --palette-4: #222222;
+  --palette-5: #050500;
+  --palette-6: #f7f3ef;
+  --palette-7: #646464;
+  --palette-8: #333333;
+  --palette-9: #f6dff6;
+  --palette-10: #e3efdc;
+  --palette-11: #c4eaee;
+  --palette-12: #bed9ef;
+
+  /* Tipografi */
+  --font-family: Foundersgrotesk;
+  --font-size-display: 64px;
+  --font-weight-display: 500;
+  --line-height-display: 64px;
+  --font-size-h1: 64px;
+  --font-weight-h1: 500;
+  --line-height-h1: 64px;
+  --font-size-h2: 21px;
+  --font-weight-h2: 500;
+  --line-height-h2: 25.2px;
+  --font-size-h3: 48px;
+  --font-weight-h3: 500;
+  --line-height-h3: 52.8px;
+  --font-size-body: 14.4px;
+  --font-weight-body: 400;
+  --line-height-body: 23.04px;
+  --font-size-small: 15px;
+  --font-weight-small: 500;
+  --line-height-small: 31.5px;
+  --font-size-caption: 14px;
+  --font-weight-caption: 400;
+  --line-height-caption: 22.4px;
+  --font-size-button: 14.4px;
+  --font-weight-button: 400;
+  --line-height-button: 23.04px;
+  --font-size-label: 15px;
+  --font-weight-label: 500;
+  --line-height-label: 31.5px;
+
+  /* Köşe yarıçapı */
+  --radius-1: 0px;
+  --radius-2: 1000px;
+  --radius-3: 20px;
+  --radius-4: 1440px;
+  --radius-5: 50%;
+  --radius-6: 100px;
+
+  /* Boşluk ölçeği */
+  --spacing-1: 24px;
+  --spacing-2: 16px;
+  --spacing-3: 8px;
+  --spacing-4: 144px;
+  --spacing-5: 10px;
+  --spacing-6: 20px;
+  --spacing-7: 4px;
+  --spacing-8: 6px;
+  --spacing-9: 6.4px;
+  --spacing-10: 112px;
+
+  /* Bölüm ritmi */
+  --section-gaps-1: 112px;
+  --section-gaps-2: 160px;
+  --section-gaps-3: 80px;
+  --section-gaps-4: 144px;
+  --section-gaps-5: 264px;
+  --section-gaps-6: 296px;
+
+  /* Konteyner genişlikleri */
+  --containers-1: 1160px;
+  --containers-2: 320px;
+  --containers-3: 360px;
+  --containers-4: 1440px;
+  --containers-5: 280px;
+
+  /* Yükseklik (elevation) */
+  --shadow-1: rgba(0, 0, 0, 0.06) 0px 1px 6px 0px, rgba(0, 0, 0, 0.16) 0px 2px 32px 0px;
+
+  /* Hareket */
+  --transition-1: 0.1s;
+  --transition-2: 0.2s;
+  --transition-3: 0.15s;
+  --transition-4: 0.3s;
+  --transition-5: 0.167s;
+}

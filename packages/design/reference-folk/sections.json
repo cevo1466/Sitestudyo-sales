@@ -1,0 +1,579 @@
+{
+  "pages": [
+    {
+      "page_id": 1,
+      "page_type": "home",
+      "url": "https://folk.app/",
+      "sections": [
+        {
+          "section_type": "hero",
+          "position": 1,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "high",
+          "components": [
+            "heading_system",
+            "cta_button",
+            "hero_image"
+          ],
+          "confidence": 0.76,
+          "evidence": {
+            "top": -7289,
+            "height": 615,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 1,
+            "images": 1,
+            "inputs": 3,
+            "top_heading": "The CRM that works for your team"
+          }
+        },
+        {
+          "section_type": "hero",
+          "position": 2,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "high",
+          "components": [
+            "heading_system",
+            "cta_button",
+            "hero_image"
+          ],
+          "confidence": 0.78,
+          "evidence": {
+            "top": -7289,
+            "height": 1112,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 1,
+            "images": 2,
+            "inputs": 3,
+            "top_heading": "The CRM that works for your team"
+          }
+        },
+        {
+          "section_type": "gallery",
+          "position": 3,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "images",
+            "media"
+          ],
+          "confidence": 0.86,
+          "evidence": {
+            "top": -6097,
+            "height": 6271,
+            "headings": 14,
+            "ctas": 6,
+            "cards": 1,
+            "images": 47,
+            "inputs": 0,
+            "top_heading": "Trusted by 5000+ companies around the world"
+          }
+        },
+        {
+          "section_type": "hero",
+          "position": 4,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "high",
+          "components": [
+            "heading_system",
+            "cta_button",
+            "hero_image"
+          ],
+          "confidence": 0.78,
+          "evidence": {
+            "top": -5556,
+            "height": 543,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 1,
+            "images": 2,
+            "inputs": 0,
+            "top_heading": "folk CRM captures multi-channel data to automate your work"
+          }
+        },
+        {
+          "section_type": "hero",
+          "position": 5,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "high",
+          "components": [
+            "heading_system",
+            "cta_button",
+            "hero_image"
+          ],
+          "confidence": 0.78,
+          "evidence": {
+            "top": -4853,
+            "height": 572,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 1,
+            "images": 2,
+            "inputs": 0,
+            "top_heading": "Capture contacts fast as lightning"
+          }
+        },
+        {
+          "section_type": "hero",
+          "position": 6,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "high",
+          "components": [
+            "heading_system",
+            "cta_button",
+            "hero_image"
+          ],
+          "confidence": 0.78,
+          "evidence": {
+            "top": -4168,
+            "height": 593,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 1,
+            "images": 2,
+            "inputs": 0,
+            "top_heading": "Sales research, done for your team"
+          }
+        },
+        {
+          "section_type": "hero",
+          "position": 7,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "high",
+          "components": [
+            "heading_system",
+            "cta_button",
+            "hero_image"
+          ],
+          "confidence": 0.78,
+          "evidence": {
+            "top": -3463,
+            "height": 588,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 1,
+            "images": 2,
+            "inputs": 0,
+            "top_heading": "Personal outreach, at scale"
+          }
+        },
+        {
+          "section_type": "hero",
+          "position": 8,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "high",
+          "components": [
+            "heading_system",
+            "cta_button",
+            "hero_image"
+          ],
+          "confidence": 0.78,
+          "evidence": {
+            "top": -2763,
+            "height": 588,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 1,
+            "images": 2,
+            "inputs": 0,
+            "top_heading": "Get the full story about every lead"
+          }
+        },
+        {
+          "section_type": "hero",
+          "position": 9,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "high",
+          "components": [
+            "heading_system",
+            "cta_button",
+            "hero_image"
+          ],
+          "confidence": 0.78,
+          "evidence": {
+            "top": -2063,
+            "height": 588,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 1,
+            "images": 2,
+            "inputs": 0,
+            "top_heading": "Sell together, close faster"
+          }
+        },
+        {
+          "section_type": "hero",
+          "position": 10,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "high",
+          "components": [
+            "heading_system",
+            "cta_button",
+            "hero_image"
+          ],
+          "confidence": 0.7,
+          "evidence": {
+            "top": -1332,
+            "height": 318,
+            "headings": 5,
+            "ctas": 0,
+            "cards": 1,
+            "images": 4,
+            "inputs": 0,
+            "top_heading": "Finally, a CRM connected to your stack"
+          }
+        },
+        {
+          "section_type": "hero",
+          "position": 11,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "high",
+          "components": [
+            "heading_system",
+            "cta_button",
+            "hero_image"
+          ],
+          "confidence": 0.7,
+          "evidence": {
+            "top": -902,
+            "height": 605,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 7,
+            "inputs": 0,
+            "top_heading": "Loved by closers"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 12,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.7,
+          "evidence": {
+            "top": -185,
+            "height": 199,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 3,
+            "inputs": 0,
+            "top_heading": "Your data is safe with us"
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 13,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 174,
+            "height": 1033,
+            "headings": 1,
+            "ctas": 8,
+            "cards": 1,
+            "images": 1,
+            "inputs": 3,
+            "top_heading": "Start your 14-day free trial"
+          }
+        },
+        {
+          "section_type": "form",
+          "position": 14,
+          "layout": "flex-row",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "inputs",
+            "buttons",
+            "labels"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 270,
+            "height": 305,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 3,
+            "top_heading": "Start your 14-day free trial"
+          }
+        }
+      ],
+      "source": "dom"
+    },
+    {
+      "page_id": 2,
+      "page_type": "unknown",
+      "url": "https://www.folk.app/agency-crm",
+      "sections": [
+        {
+          "section_type": "hero",
+          "position": 1,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "high",
+          "components": [
+            "heading_system",
+            "cta_button"
+          ],
+          "confidence": 0.68,
+          "evidence": {
+            "top": 0,
+            "height": 534,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 3,
+            "top_heading": "The #1 CRM for Agencies"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 2,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.7,
+          "evidence": {
+            "top": 1759,
+            "height": 369,
+            "headings": 4,
+            "ctas": 0,
+            "cards": 1,
+            "images": 3,
+            "inputs": 0,
+            "top_heading": "A CRM that doesn’t destroy your soul"
+          }
+        },
+        {
+          "section_type": "card-grid",
+          "position": 3,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "cards",
+            "icons_or_images"
+          ],
+          "confidence": 0.9,
+          "evidence": {
+            "top": 1832,
+            "height": 296,
+            "headings": 3,
+            "ctas": 0,
+            "cards": 3,
+            "images": 3,
+            "inputs": 0,
+            "top_heading": "Prospect without the pain"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 4,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.6,
+          "evidence": {
+            "top": 2389,
+            "height": 154,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Finally, a single source of truth"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 5,
+          "layout": "flex-row",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.6,
+          "evidence": {
+            "top": 2976,
+            "height": 158,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Capture contacts from LinkedIn instantly"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 6,
+          "layout": "flex-row",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.6,
+          "evidence": {
+            "top": 3588,
+            "height": 158,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Save time on research with 1-click Enrichment"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 7,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.6,
+          "evidence": {
+            "top": 4217,
+            "height": 175,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Scale outreach while keeping it personal"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 8,
+          "layout": "flex-row",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.6,
+          "evidence": {
+            "top": 4804,
+            "height": 158,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Non-standardized sales cycles? No problem."
+          }
+        },
+        {
+          "section_type": "card-grid",
+          "position": 9,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "cards",
+            "icons_or_images",
+            "cta_button"
+          ],
+          "confidence": 0.95,
+          "evidence": {
+            "top": 5256,
+            "height": 307,
+            "headings": 3,
+            "ctas": 3,
+            "cards": 3,
+            "images": 3,
+            "inputs": 0,
+            "top_heading": "See folk in action"
+          }
+        },
+        {
+          "section_type": "gallery",
+          "position": 10,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "images",
+            "media"
+          ],
+          "confidence": 0.7,
+          "evidence": {
+            "top": 5675,
+            "height": 605,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 7,
+            "inputs": 0,
+            "top_heading": "Loved by closers"
+          }
+        },
+        {
+          "section_type": "form",
+          "position": 11,
+          "layout": "flex-row",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "inputs",
+            "buttons",
+            "labels"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 7017,
+            "height": 305,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 3,
+            "top_heading": "Start your 14-day free trial"
+          }
+        }
+      ],
+      "source": "dom"
+    }
+  ]
+}

@@ -69,8 +69,9 @@ export function DiscoveryPanel() {
     <section className="panel">
       <h2>Otomatik keşif</h2>
       <p className="panel-lede">
-        Her sabah 09:17’de kredi kontrol edilir; varsa sıradaki taranmamış şehir ve
-        sektör kümesi çekilir. Aynı arama iki kez, aynı işletme iki kez çekilmez.
+        Her sabah 09:17’de kredi kontrol edilir. Kredi varsa sıradaki taranmamış
+        şehir ve sektör kümesi çekilir. Daha önce yapılmış bir arama tekrar
+        çalıştırılmaz, havuzdaki bir işletme ikinci kez indirilmez.
       </p>
 
       <table className="rules">
@@ -79,7 +80,7 @@ export function DiscoveryPanel() {
             <td>Kalan kredi</td>
             <td style={{ textAlign: 'right' }}>
               <strong>${credit.toFixed(2)}</strong>
-              {credit <= 0.25 && <span className="muted"> — yenilenmesi bekleniyor</span>}
+              {credit <= 0.25 && <span className="muted"> (yenilenmesi bekleniyor)</span>}
             </td>
           </tr>
           <tr>
@@ -107,9 +108,10 @@ export function DiscoveryPanel() {
         <span>
           <strong>Sitesi olan işletmeleri de tara</strong>
           <span className="switch-note">
-            Şu an havuzun tamamının sitesi yok, bu yüzden site analizörü hiç
-            çalışmıyor ve puan tavanı 75’te kalıyor. Bunu açarsan bozuk ve eski
-            siteler de bulunur — <strong>gerçek “sıcak” leadler ancak böyle oluşur.</strong>
+            Havuzdaki işletmelerin hiçbirinin sitesi yok. Analiz edilecek adres
+            olmadığı için site analizörü çalışmıyor ve puan tavanı 75’te kalıyor.
+            Bu açıkken bozuk ve eski siteleri olan işletmeler de bulunur; sıcak
+            eşiğini geçen kayıtlar o zaman çıkar.
           </span>
         </span>
       </label>

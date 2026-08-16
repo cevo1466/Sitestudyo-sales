@@ -1,0 +1,4499 @@
+{
+  "schema": "design.sitestudyo.global_design_system.v2",
+  "source_policy": "content-free design language; do not copy source text, exact layout, brand story or CTA labels",
+  "visual_theme_atmosphere": {
+    "design_language": "derived from repeated color, typography, spacing, surface and section patterns across the crawled site",
+    "brand_character": "infer as polished, consistent and system-led when token repetition is strong; adjust tone to the new brand",
+    "visual_atmosphere": "use the observed density, whitespace and surface hierarchy rather than source content",
+    "user_feel": "predictable, coherent and easy to scan; preserve clarity over decorative noise",
+    "core_principles": [
+      "reuse the extracted token proportions",
+      "keep hierarchy section-first and component-consistent",
+      "separate primary actions from neutral surfaces",
+      "preserve whitespace rhythm across pages",
+      "avoid source copy and exact composition"
+    ]
+  },
+  "color_system": {
+    "palette": [
+      {
+        "hex": "#030200",
+        "semantic_role": "palette_1",
+        "usage_ratio": 0.792,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#ffffff",
+        "semantic_role": "palette_2",
+        "usage_ratio": 0.074,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#000000",
+        "semantic_role": "palette_3",
+        "usage_ratio": 0.052,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#222222",
+        "semantic_role": "palette_4",
+        "usage_ratio": 0.025,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#050500",
+        "semantic_role": "palette_5",
+        "usage_ratio": 0.021,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#f7f3ef",
+        "semantic_role": "palette_6",
+        "usage_ratio": 0.013,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#646464",
+        "semantic_role": "palette_7",
+        "usage_ratio": 0.006,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#333333",
+        "semantic_role": "palette_8",
+        "usage_ratio": 0.004,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#f6dff6",
+        "semantic_role": "palette_9",
+        "usage_ratio": 0.002,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#e3efdc",
+        "semantic_role": "palette_10",
+        "usage_ratio": 0.002,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#c4eaee",
+        "semantic_role": "palette_11",
+        "usage_ratio": 0.002,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#bed9ef",
+        "semantic_role": "palette_12",
+        "usage_ratio": 0.002,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      }
+    ],
+    "brand_ranked": [
+      {
+        "hex": "#000000",
+        "saturation": 0.0,
+        "share": 0.052
+      },
+      {
+        "hex": "#fff0bd",
+        "saturation": 1.0,
+        "share": 0.002
+      },
+      {
+        "hex": "#bed9ef",
+        "saturation": 0.605,
+        "share": 0.002
+      },
+      {
+        "hex": "#c4eaee",
+        "saturation": 0.553,
+        "share": 0.002
+      },
+      {
+        "hex": "#f6dff6",
+        "saturation": 0.561,
+        "share": 0.002
+      },
+      {
+        "hex": "#eaddf3",
+        "saturation": 0.478,
+        "share": 0.001
+      }
+    ],
+    "semantic": {
+      "background": {
+        "hex": "#ffffff",
+        "semantic_role": "background",
+        "usage_ratio": 0.593,
+        "use_for": [
+          "page backgrounds",
+          "large quiet surfaces",
+          "negative space"
+        ],
+        "avoid_for": [
+          "small text",
+          "critical actions without contrast checks"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      "surface": {
+        "hex": "#000000",
+        "semantic_role": "surface",
+        "usage_ratio": 0.176,
+        "use_for": [
+          "cards",
+          "modals",
+          "inputs",
+          "table rows",
+          "secondary panels"
+        ],
+        "avoid_for": [
+          "primary CTA if it blends into the page"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      "text": {
+        "hex": "#030200",
+        "semantic_role": "text",
+        "usage_ratio": 0.889,
+        "use_for": [
+          "primary reading text",
+          "headings when contrast is sufficient"
+        ],
+        "avoid_for": [
+          "large filled surfaces",
+          "decorative backgrounds"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      "muted_text": {
+        "hex": "#000000",
+        "semantic_role": "muted_text",
+        "usage_ratio": 0.037,
+        "use_for": [
+          "helper text",
+          "metadata",
+          "secondary labels"
+        ],
+        "avoid_for": [
+          "primary actions",
+          "long body copy at low contrast"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      "border": {
+        "hex": "#030200",
+        "semantic_role": "border",
+        "usage_ratio": 0.885,
+        "use_for": [
+          "separators",
+          "input outlines",
+          "card boundaries"
+        ],
+        "avoid_for": [
+          "large text blocks",
+          "dominant brand moments"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      "primary_action": {
+        "hex": "#000000",
+        "semantic_role": "primary_action",
+        "usage_ratio": 0.052,
+        "use_for": [
+          "main CTA",
+          "selected state",
+          "high-emphasis controls"
+        ],
+        "avoid_for": [
+          "dense backgrounds",
+          "long reading surfaces",
+          "disabled states"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      "accent": {
+        "hex": "#fff0bd",
+        "semantic_role": "accent",
+        "usage_ratio": 0.002,
+        "use_for": [
+          "badges",
+          "focus cues",
+          "small visual anchors"
+        ],
+        "avoid_for": [
+          "body copy",
+          "large page backgrounds",
+          "error messaging unless semantically appropriate"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      "success": {
+        "hex": "tespit-edilemedi",
+        "role": "success",
+        "note": "Bu sitede bu role karsilik gelen bir renk gozlenmedi."
+      },
+      "warning": {
+        "hex": "tespit-edilemedi",
+        "role": "warning",
+        "note": "Bu sitede bu role karsilik gelen bir renk gozlenmedi."
+      },
+      "error": {
+        "hex": "tespit-edilemedi",
+        "role": "error",
+        "note": "Bu sitede bu role karsilik gelen bir renk gozlenmedi."
+      }
+    },
+    "contrast": {
+      "text": "#030200",
+      "dominant_background": "#ffffff",
+      "dominant_pair_ratio": 20.74,
+      "best_background": "#ffffff",
+      "best_pair_ratio": 20.74,
+      "text_on_background": 20.74,
+      "action_text_color": "#ffffff",
+      "action_on_background": 21.0,
+      "passes_aa": true
+    }
+  },
+  "typography_system": {
+    "font_family": "Foundersgrotesk",
+    "font_family_stack": [
+      "Foundersgrotesk",
+      "Inter",
+      "Uxumgrotesque",
+      "Rubik"
+    ],
+    "display": {
+      "size": "64px",
+      "weight": "500",
+      "line_height": "64px",
+      "letter_spacing": "1px",
+      "usage": "largest brand/hero statement only",
+      "measured": true
+    },
+    "h1": {
+      "size": "64px",
+      "weight": "500",
+      "line_height": "64px",
+      "letter_spacing": "1px",
+      "usage": "page-level heading",
+      "measured": true
+    },
+    "h2": {
+      "size": "21px",
+      "weight": "500",
+      "line_height": "25.2px",
+      "letter_spacing": "1px",
+      "usage": "major section heading",
+      "measured": true
+    },
+    "h3": {
+      "size": "48px",
+      "weight": "500",
+      "line_height": "52.8px",
+      "letter_spacing": "1px",
+      "usage": "card or subsection heading",
+      "measured": true
+    },
+    "body": {
+      "size": "14.4px",
+      "weight": "400",
+      "line_height": "23.04px",
+      "letter_spacing": "1px",
+      "usage": "primary reading and descriptions",
+      "measured": true
+    },
+    "small": {
+      "size": "15px",
+      "weight": "500",
+      "line_height": "31.5px",
+      "letter_spacing": "1px",
+      "usage": "secondary descriptions and compact UI",
+      "measured": true
+    },
+    "caption": {
+      "size": "14px",
+      "weight": "400",
+      "line_height": "22.4px",
+      "letter_spacing": "1px",
+      "usage": "metadata, helper text and annotations",
+      "measured": true
+    },
+    "button": {
+      "size": "14.4px",
+      "weight": "400",
+      "line_height": "23.04px",
+      "letter_spacing": "1px",
+      "usage": "interactive commands",
+      "measured": true
+    },
+    "label": {
+      "size": "15px",
+      "weight": "500",
+      "line_height": "31.5px",
+      "letter_spacing": "1px",
+      "usage": "form labels and UI descriptors",
+      "measured": true
+    },
+    "observed": {
+      "weights": [
+        "400",
+        "500",
+        "700"
+      ],
+      "line_heights": [
+        "23.04px",
+        "31.5px",
+        "22.4px",
+        "19.5px",
+        "21px",
+        "17.5px",
+        "26px",
+        "24px"
+      ],
+      "letter_spacings": [
+        "1px",
+        "0.26px"
+      ]
+    }
+  },
+  "component_library": {
+    "primary_button": {
+      "name": "Primary Button",
+      "background": "#000000",
+      "text": "#ffffff",
+      "radius": "0px",
+      "padding": "24px 16px",
+      "height": "44-52px",
+      "hover": "tespit-edilemedi (öneri): kontrastı hafifçe artır, renk ailesini koru",
+      "active": "tespit-edilemedi (öneri): daha koyu/güçlü dolguyla görsel olarak sıkıştır",
+      "disabled": "reduce opacity to 45-55%, keep geometry unchanged, remove elevation",
+      "shadow": "rgba(0, 0, 0, 0.06) 0px 1px 6px 0px, rgba(0, 0, 0, 0.16) 0px 2px 32px 0px",
+      "border": "transparent or same-color border",
+      "contrast_ratio": 21.0
+    },
+    "secondary_button": {
+      "name": "Secondary Button",
+      "background": "#ffffff",
+      "text": "#030200",
+      "radius": "0px",
+      "padding": "24px 16px",
+      "height": "42-50px",
+      "hover": "tespit-edilemedi (öneri): #000000 ya da düşük kontrastlı bir ton kullan",
+      "active": "tespit-edilemedi (öneri): kenarlık kontrastını artır, yüzey parlaklığını azalt",
+      "disabled": "reduce opacity to 45-55%, keep geometry unchanged, remove elevation",
+      "shadow": "none or lower than primary surfaces",
+      "border": "1px solid current palette border"
+    },
+    "cards": {
+      "name": "Cards",
+      "background": "#ffffff",
+      "text": "#030200",
+      "radius": "0px",
+      "padding": "16px",
+      "height": "content-defined; preserve consistent vertical rhythm",
+      "hover": "tespit-edilemedi (öneri): kenarlık kontrastını ya da yüksekliği hafif artır; boyut değiştirme",
+      "active": "tespit-edilemedi (öneri): yüzeyi sabit tut; seçili durumu kenarlık/aksan ile göster",
+      "disabled": "reduce opacity to 45-55%, keep geometry unchanged, remove elevation",
+      "shadow": "rgba(0, 0, 0, 0.06) 0px 1px 6px 0px, rgba(0, 0, 0, 0.16) 0px 2px 32px 0px",
+      "border": "1px solid low-contrast border"
+    },
+    "pricing_cards": {
+      "status": "not-observed",
+      "note": "Bu sitede 'pricing_cards' pattern'ine dair DOM kaniti bulunamadi; spec uretilmedi. Ihtiyacin varsa mevcut token'lardan turet."
+    },
+    "hero": {
+      "status": "not-observed",
+      "note": "Bu sitede 'hero' pattern'ine dair DOM kaniti bulunamadi; spec uretilmedi. Ihtiyacin varsa mevcut token'lardan turet."
+    },
+    "navigation": {
+      "layout": "horizontal on desktop, collapsed/stacked on mobile",
+      "height": "64-88px desktop, 56-72px mobile",
+      "background": "#ffffff",
+      "border": "1px bottom separator when needed",
+      "item_style": "14.4px text with compact spacing and clear active state"
+    },
+    "footer": {
+      "layout": "multi-column or compact grouped links",
+      "background": "#030200",
+      "text": "#ffffff",
+      "spacing": "large top/bottom padding with tighter internal link rhythm"
+    },
+    "inputs": {
+      "name": "Inputs",
+      "background": "#ffffff",
+      "text": "#030200",
+      "radius": "0px",
+      "padding": "24px 16px",
+      "height": "42-48px",
+      "hover": "tespit-edilemedi (öneri): kenarlık kontrastını artır",
+      "active": "tespit-edilemedi (öneri): aksan/birincil token ile net bir odak halkası göster",
+      "disabled": "reduce opacity to 45-55%, keep geometry unchanged, remove elevation",
+      "shadow": "none",
+      "border": "1px solid low-contrast border"
+    },
+    "search": {
+      "status": "not-observed",
+      "note": "Bu sitede 'search' pattern'ine dair DOM kaniti bulunamadi; spec uretilmedi. Ihtiyacin varsa mevcut token'lardan turet."
+    },
+    "dropdown": {
+      "name": "Dropdown",
+      "background": "#ffffff",
+      "text": "#030200",
+      "radius": "0px",
+      "padding": "24px 16px",
+      "height": "42-48px",
+      "hover": "tespit-edilemedi (öneri): kenarlık kontrastını artır",
+      "active": "tespit-edilemedi (öneri): aksan/birincil token ile net bir odak halkası göster",
+      "disabled": "reduce opacity to 45-55%, keep geometry unchanged, remove elevation",
+      "shadow": "none",
+      "border": "1px solid low-contrast border"
+    },
+    "tabs": {
+      "status": "not-observed",
+      "note": "Bu sitede 'tabs' pattern'ine dair DOM kaniti bulunamadi; spec uretilmedi. Ihtiyacin varsa mevcut token'lardan turet."
+    },
+    "badges": {
+      "background": "#000000",
+      "text": "#030200",
+      "radius": "smaller than cards; pill only if observed radius supports it",
+      "padding": "4-8px vertical, 8-12px horizontal",
+      "border": "1px solid subtle border"
+    },
+    "alerts": {
+      "status": "not-observed",
+      "note": "Bu sitede 'alerts' pattern'ine dair DOM kaniti bulunamadi; spec uretilmedi. Ihtiyacin varsa mevcut token'lardan turet."
+    },
+    "modal": {
+      "status": "not-observed",
+      "note": "Bu sitede 'modal' pattern'ine dair DOM kaniti bulunamadi; spec uretilmedi. Ihtiyacin varsa mevcut token'lardan turet."
+    },
+    "accordion": {
+      "name": "Accordion",
+      "background": "#ffffff",
+      "text": "#030200",
+      "radius": "0px",
+      "padding": "16px",
+      "height": "row-based; expanded panel keeps same rhythm",
+      "hover": "tespit-edilemedi (öneri): kenarlık kontrastını ya da yüksekliği hafif artır; boyut değiştirme",
+      "active": "tespit-edilemedi (öneri): yüzeyi sabit tut; seçili durumu kenarlık/aksan ile göster",
+      "disabled": "reduce opacity to 45-55%, keep geometry unchanged, remove elevation",
+      "shadow": "rgba(0, 0, 0, 0.06) 0px 1px 6px 0px, rgba(0, 0, 0, 0.16) 0px 2px 32px 0px",
+      "border": "1px solid low-contrast border"
+    },
+    "faq": {
+      "status": "not-observed",
+      "note": "Bu sitede 'faq' pattern'ine dair DOM kaniti bulunamadi; spec uretilmedi. Ihtiyacin varsa mevcut token'lardan turet."
+    },
+    "pricing_table": {
+      "status": "not-observed",
+      "note": "Bu sitede 'pricing_table' pattern'ine dair DOM kaniti bulunamadi; spec uretilmedi. Ihtiyacin varsa mevcut token'lardan turet."
+    },
+    "cta_banner": {
+      "status": "not-observed",
+      "note": "Bu sitede 'cta_banner' pattern'ine dair DOM kaniti bulunamadi; spec uretilmedi. Ihtiyacin varsa mevcut token'lardan turet."
+    },
+    "feature_card": {
+      "name": "Feature Card",
+      "background": "#ffffff",
+      "text": "#030200",
+      "radius": "0px",
+      "padding": "16px",
+      "height": "content-defined; preserve consistent vertical rhythm",
+      "hover": "tespit-edilemedi (öneri): kenarlık kontrastını ya da yüksekliği hafif artır; boyut değiştirme",
+      "active": "tespit-edilemedi (öneri): yüzeyi sabit tut; seçili durumu kenarlık/aksan ile göster",
+      "disabled": "reduce opacity to 45-55%, keep geometry unchanged, remove elevation",
+      "shadow": "rgba(0, 0, 0, 0.06) 0px 1px 6px 0px, rgba(0, 0, 0, 0.16) 0px 2px 32px 0px",
+      "border": "1px solid low-contrast border"
+    },
+    "product_card": {
+      "name": "Product Card",
+      "background": "#ffffff",
+      "text": "#030200",
+      "radius": "0px",
+      "padding": "16px",
+      "height": "image/media area plus text/action stack",
+      "hover": "tespit-edilemedi (öneri): kenarlık kontrastını ya da yüksekliği hafif artır; boyut değiştirme",
+      "active": "tespit-edilemedi (öneri): yüzeyi sabit tut; seçili durumu kenarlık/aksan ile göster",
+      "disabled": "reduce opacity to 45-55%, keep geometry unchanged, remove elevation",
+      "shadow": "rgba(0, 0, 0, 0.06) 0px 1px 6px 0px, rgba(0, 0, 0, 0.16) 0px 2px 32px 0px",
+      "border": "1px solid low-contrast border"
+    },
+    "_evidence": {
+      "interaction_states_measured": false,
+      "interaction_states_note": "hover/focus/active/disabled ölçülmedi — bu alanlar öneridir. Kaynak sitede gerçekte ne olduğunu görmek için elemanın üzerine gelip devtools ile karşılaştır.",
+      "observed": [
+        "accordion",
+        "badges",
+        "card",
+        "feature_card",
+        "footer",
+        "ghost_button",
+        "input",
+        "navbar",
+        "primary_button",
+        "product_card",
+        "secondary_button",
+        "select",
+        "table",
+        "textarea"
+      ],
+      "not_observed": [
+        "alerts",
+        "cta_banner",
+        "faq",
+        "hero",
+        "modal",
+        "pricing_table",
+        "search",
+        "tabs"
+      ]
+    }
+  },
+  "layout_system": {
+    "grid": "use observed grid/flex rhythm from component-patterns; choose responsive columns by content density",
+    "max_width": [
+      "1160px",
+      "320px",
+      "360px",
+      "1440px",
+      "280px",
+      "440px",
+      "640px",
+      "600px"
+    ],
+    "breakpoints": {
+      "status": "tespit-edilemedi",
+      "note": "Breakpoint tespiti icin cok-viewport tarama gerekir."
+    },
+    "section_spacing": [
+      "24px",
+      "16px",
+      "8px",
+      "144px",
+      "10px",
+      "20px"
+    ],
+    "component_spacing": [
+      "144px",
+      "10px",
+      "20px",
+      "4px",
+      "6px",
+      "6.4px",
+      "112px"
+    ],
+    "container_padding": [
+      "24px",
+      "16px",
+      "8px",
+      "144px"
+    ],
+    "white_space_philosophy": "let sections breathe; use denser rhythm only inside forms, tables and repeated cards",
+    "visual_rhythm": "dominant sections: hero, generic-block, gallery, content, form, card-grid, footer"
+  },
+  "elevation_system": {
+    "shadow_scale": [
+      "rgba(0, 0, 0, 0.06) 0px 1px 6px 0px, rgba(0, 0, 0, 0.16) 0px 2px 32px 0px"
+    ],
+    "border_hierarchy": [
+      "1px"
+    ],
+    "radius_hierarchy": [
+      "0px",
+      "1000px",
+      "20px",
+      "1440px",
+      "50%",
+      "100px"
+    ],
+    "surface_hierarchy": [
+      "page background",
+      "surface/card",
+      "raised/modal",
+      "primary action"
+    ]
+  },
+  "motion_language": {
+    "hover_behavior": "infer through component states: subtle color, border or elevation change; avoid layout shift",
+    "transition_durations": [
+      "0.1s",
+      "0.2s",
+      "0.15s",
+      "0.3s",
+      "0.167s",
+      "0.08s"
+    ],
+    "animation_type": "functional micro-interactions only; no decorative motion unless the source repeatedly signals it",
+    "scroll_behavior": "standard document scroll with section clarity",
+    "carousel_behavior": "only use if required by the product; keep controls explicit and accessible",
+    "vision_basis": "motion is inferred because static screenshots cannot prove runtime animation"
+  },
+  "design_principles": [
+    "CTA colors should come from the highest-contrast primary/action token, not from arbitrary new hues.",
+    "Cards should use the observed surface, border, radius and shadow hierarchy instead of decorative styling.",
+    "Thin borders are preferred when the palette already provides strong surface separation.",
+    "Radius should stay within the extracted hierarchy; do not inflate corners unless the source system supports it.",
+    "Hero sections should preserve generous whitespace and clear hierarchy while using original content.",
+    "Footers may invert surface/text colors when the extracted palette supports strong contrast."
+  ],
+  "do_and_dont": {
+    "do": [
+      "Use extracted tokens as ratios and roles, not as a mandate to copy the source.",
+      "Build reusable components from the component specs.",
+      "Keep typography hierarchy consistent across page types.",
+      "Validate contrast for every semantic color role.",
+      "Keep hover/active states subtle and stable."
+    ],
+    "dont": [
+      "Do not copy source headings, paragraphs, menus, CTA labels or brand phrases.",
+      "Do not recreate exact section order or exact page composition.",
+      "Do not add unrelated colors outside the semantic palette.",
+      "Do not treat Vision inferences as stronger than computed CSS evidence.",
+      "Do not produce any of the measured AI tells listed in forbidden_ai_tells."
+    ]
+  },
+  "forbidden_ai_tells": [
+    {
+      "rule": "Yanıp sönen, nefes alan, parlayan (pulse / glow / box-shadow halesi) buton ve kart YOK.",
+      "instead": "Durum değişimini renk ve kenarlıkla anlat; hareket sadece kullanıcı eylemine yanıt olsun.",
+      "metric": "pulse_glow_elements",
+      "measured_on_source": "0 adet",
+      "healthy_threshold": "0 adet"
+    },
+    {
+      "rule": "Tam yuvarlak (pill / border-radius:999px) rozet ve etiket enflasyonu YOK.",
+      "instead": "Rozet köşe yarıçapı, sitede ölçülen radius hiyerarşisinin İÇİNDE kalsın.",
+      "metric": "pill_badges",
+      "measured_on_source": "1 adet",
+      "healthy_threshold": "2 adet"
+    },
+    {
+      "rule": "Her kutuya birden yuvarlak köşe + gölge verme.",
+      "instead": "Yüzey ayrımını önce kenarlık ve zemin farkıyla kur; gölgeyi yalnızca gerçekten yükseltilmiş öğeye (modal, dropdown) sakla.",
+      "metric": "soft_ui_share",
+      "measured_on_source": "%0",
+      "healthy_threshold": "%18"
+    },
+    {
+      "rule": "Mor-indigo gradyan (#8b5cf6 → #6366f1 ailesi) YOK.",
+      "instead": "Ölçülen marka renginden türetilmiş düz renk veya çok düşük kontrastlı tek tonlu geçiş kullan.",
+      "metric": "violet_gradient",
+      "measured_on_source": "0 adet",
+      "healthy_threshold": "0 adet"
+    },
+    {
+      "rule": "Gradyan dolgulu (background-clip:text) başlık YOK.",
+      "instead": "Hiyerarşiyi punto, ağırlık ve boşlukla kur.",
+      "metric": "gradient_text",
+      "measured_on_source": "0 adet",
+      "healthy_threshold": "1 adet"
+    },
+    {
+      "rule": "Cam efekti (backdrop-filter: blur) yüzey enflasyonu YOK.",
+      "instead": "En fazla tek bir yapışkan katmanda kullan (ör. üst menü); içerik kartlarında kullanma.",
+      "metric": "glass_surfaces",
+      "measured_on_source": "0 adet",
+      "healthy_threshold": "1 adet"
+    },
+    {
+      "rule": "Birbirinin tıpatıp aynısı 3'lü kart dizisi YOK.",
+      "instead": "Kartların ağırlığını içeriğe göre farklılaştır; gerektiğinde asimetrik düzen kur.",
+      "metric": "identical_card_groups",
+      "measured_on_source": "2 adet",
+      "healthy_threshold": "2 adet"
+    },
+    {
+      "rule": "Başlıklarda emoji YOK.",
+      "instead": "Anlamı kelimeyle taşı; ikon gerekiyorsa tutarlı bir ikon setinden gelsin.",
+      "metric": "heading_emoji",
+      "measured_on_source": "0 adet",
+      "healthy_threshold": "0 adet"
+    },
+    {
+      "rule": "Varsayılan çerçeve paletini (Tailwind slate/indigo/violet tonları) olduğu gibi kullanma.",
+      "instead": "Paleti, bu raporda ölçülen marka renginden türet.",
+      "metric": "tailwind_default_color_share",
+      "measured_on_source": "%0",
+      "healthy_threshold": "%20"
+    },
+    {
+      "rule": "Stok/placeholder görsel (unsplash, placehold, picsum) YOK.",
+      "instead": "Gerçek ürün görseli yoksa görsel yerine tipografik veya geometrik bir çözüm kur.",
+      "metric": "stock_image_share",
+      "measured_on_source": "%0",
+      "healthy_threshold": "%0"
+    },
+    {
+      "rule": "Lorem ipsum ve \"doldurma\" metin YOK.",
+      "instead": "Gerçek, kısa ve iddialı metin yaz (aşağıdaki humanizer kuralına bak).",
+      "metric": "lorem_hits",
+      "measured_on_source": "0 adet",
+      "healthy_threshold": "0 adet"
+    },
+    {
+      "rule": "Sayfanın tamamını ortalama.",
+      "instead": "Hero dışında sola hizala; okuma satır uzunluğunu 60-80 karakterde tut.",
+      "metric": "center_text_share",
+      "measured_on_source": "%4",
+      "healthy_threshold": "%30"
+    },
+    {
+      "rule": "Rastgele boşluk değerleri kullanma.",
+      "instead": "4px (veya 8px) tabanlı tek bir ölçeğe bağlı kal.",
+      "metric": "spacing_grid_share",
+      "measured_on_source": "%93",
+      "healthy_threshold": "%88"
+    },
+    {
+      "rule": "Onlarca farklı punto kullanma.",
+      "instead": "Bu raporda ölçülen tipografi ölçeğine sadık kal.",
+      "metric": "distinct_font_sizes",
+      "measured_on_source": "12 adet",
+      "healthy_threshold": "9 adet"
+    },
+    {
+      "rule": "WCAG AA eşiğinin altında metin/zemin çifti bırakma.",
+      "instead": "Her semantik rol için kontrastı doğrula; bu raporda hesaplanmış oranlar var.",
+      "metric": "contrast_fail_share",
+      "measured_on_source": "%0",
+      "healthy_threshold": "%2"
+    }
+  ],
+  "copywriting_requirement": {
+    "skill": "humanizer",
+    "install": "npx skills add https://github.com/blader/humanizer --skill humanizer",
+    "rule": "Sayfadaki bütün metinler humanizer skill'inden geçirilerek yazılır; kalıp pazarlama dili, üçlü liste ritmi ve emoji'li madde işaretleri kullanılmaz."
+  },
+  "ai_design_generation_guide": {
+    "directive": "Generate a new, original design with the same quality level and design logic. Use this document only as a design language specification. Do not generate code from this section and do not copy the source site.",
+    "must_follow": [
+      "Start from the semantic color roles, typography roles and layout rhythm.",
+      "Create new content architecture and new copy.",
+      "Use component specs for geometry, states, spacing and hierarchy.",
+      "Preserve the observed density and visual atmosphere while changing composition.",
+      "Cross-check computed CSS tokens before trusting screenshot-only inferences.",
+      "Obey every rule in forbidden_ai_tells — buttons must never be pill-shaped with a glow/pulse halo.",
+      "Write all copy with the humanizer skill (npx skills add https://github.com/blader/humanizer --skill humanizer)."
+    ],
+    "read_first": "BUILD_PROMPT.md",
+    "output_expectation": "A distinct design that feels related in quality, polish and system discipline, but is not a clone."
+  },
+  "raw_tokens": {
+    "colors": {
+      "text": [
+        {
+          "value": "#030200",
+          "count": 771,
+          "share": 0.889
+        },
+        {
+          "value": "#000000",
+          "count": 32,
+          "share": 0.037
+        },
+        {
+          "value": "#222222",
+          "count": 24,
+          "share": 0.028
+        },
+        {
+          "value": "#050500",
+          "count": 20,
+          "share": 0.023
+        },
+        {
+          "value": "#ffffff",
+          "count": 8,
+          "share": 0.009
+        },
+        {
+          "value": "#646464",
+          "count": 6,
+          "share": 0.007
+        },
+        {
+          "value": "#333333",
+          "count": 4,
+          "share": 0.005
+        },
+        {
+          "value": "#0a0a00",
+          "count": 2,
+          "share": 0.002
+        }
+      ],
+      "backgrounds": [
+        {
+          "value": "#ffffff",
+          "count": 64,
+          "share": 0.593
+        },
+        {
+          "value": "#000000",
+          "count": 19,
+          "share": 0.176
+        },
+        {
+          "value": "#f7f3ef",
+          "count": 13,
+          "share": 0.12
+        },
+        {
+          "value": "#f6dff6",
+          "count": 2,
+          "share": 0.019
+        },
+        {
+          "value": "#e3efdc",
+          "count": 2,
+          "share": 0.019
+        },
+        {
+          "value": "#c4eaee",
+          "count": 2,
+          "share": 0.019
+        },
+        {
+          "value": "#bed9ef",
+          "count": 2,
+          "share": 0.019
+        },
+        {
+          "value": "#fff0bd",
+          "count": 2,
+          "share": 0.019
+        },
+        {
+          "value": "#030200",
+          "count": 1,
+          "share": 0.009
+        },
+        {
+          "value": "#eaddf3",
+          "count": 1,
+          "share": 0.009
+        }
+      ],
+      "likely_palette": [
+        {
+          "value": "#030200",
+          "count": 772,
+          "share": 0.792
+        },
+        {
+          "value": "#ffffff",
+          "count": 72,
+          "share": 0.074
+        },
+        {
+          "value": "#000000",
+          "count": 51,
+          "share": 0.052
+        },
+        {
+          "value": "#222222",
+          "count": 24,
+          "share": 0.025
+        },
+        {
+          "value": "#050500",
+          "count": 20,
+          "share": 0.021
+        },
+        {
+          "value": "#f7f3ef",
+          "count": 13,
+          "share": 0.013
+        },
+        {
+          "value": "#646464",
+          "count": 6,
+          "share": 0.006
+        },
+        {
+          "value": "#333333",
+          "count": 4,
+          "share": 0.004
+        },
+        {
+          "value": "#f6dff6",
+          "count": 2,
+          "share": 0.002
+        },
+        {
+          "value": "#e3efdc",
+          "count": 2,
+          "share": 0.002
+        },
+        {
+          "value": "#c4eaee",
+          "count": 2,
+          "share": 0.002
+        },
+        {
+          "value": "#bed9ef",
+          "count": 2,
+          "share": 0.002
+        },
+        {
+          "value": "#fff0bd",
+          "count": 2,
+          "share": 0.002
+        },
+        {
+          "value": "#0a0a00",
+          "count": 2,
+          "share": 0.002
+        },
+        {
+          "value": "#eaddf3",
+          "count": 1,
+          "share": 0.001
+        }
+      ]
+    },
+    "typography": {
+      "font_families": [
+        {
+          "value": "Foundersgrotesk",
+          "count": 606,
+          "share": 0.699
+        },
+        {
+          "value": "Inter",
+          "count": 174,
+          "share": 0.201
+        },
+        {
+          "value": "Uxumgrotesque",
+          "count": 58,
+          "share": 0.067
+        },
+        {
+          "value": "Rubik",
+          "count": 14,
+          "share": 0.016
+        },
+        {
+          "value": "system-ui",
+          "count": 8,
+          "share": 0.009
+        },
+        {
+          "value": "Instrumentserif",
+          "count": 7,
+          "share": 0.008
+        }
+      ],
+      "font_sizes": [
+        {
+          "value": "14.4px",
+          "count": 591,
+          "share": 0.683
+        },
+        {
+          "value": "15px",
+          "count": 129,
+          "share": 0.149
+        },
+        {
+          "value": "14px",
+          "count": 62,
+          "share": 0.072
+        },
+        {
+          "value": "13px",
+          "count": 31,
+          "share": 0.036
+        },
+        {
+          "value": "20px",
+          "count": 13,
+          "share": 0.015
+        },
+        {
+          "value": "48px",
+          "count": 11,
+          "share": 0.013
+        },
+        {
+          "value": "10px",
+          "count": 6,
+          "share": 0.007
+        },
+        {
+          "value": "28px",
+          "count": 6,
+          "share": 0.007
+        },
+        {
+          "value": "40px",
+          "count": 5,
+          "share": 0.006
+        },
+        {
+          "value": "64px",
+          "count": 3,
+          "share": 0.003
+        },
+        {
+          "value": "24px",
+          "count": 3,
+          "share": 0.003
+        },
+        {
+          "value": "21px",
+          "count": 2,
+          "share": 0.002
+        }
+      ],
+      "heading_samples": [
+        {
+          "page": "home",
+          "level": "h1",
+          "fontFamily": "Uxumgrotesque, sans-serif",
+          "fontSize": "64px",
+          "fontWeight": "500",
+          "color": "rgba(3, 2, 0, 0.89)"
+        },
+        {
+          "page": "home",
+          "level": "h4",
+          "fontFamily": "Uxumgrotesque, sans-serif",
+          "fontSize": "21px",
+          "fontWeight": "500",
+          "color": "rgba(3, 2, 0, 0.89)"
+        },
+        {
+          "page": "home",
+          "level": "h2",
+          "fontFamily": "Uxumgrotesque, sans-serif",
+          "fontSize": "48px",
+          "fontWeight": "500",
+          "color": "rgb(0, 0, 0)"
+        },
+        {
+          "page": "home",
+          "level": "h3",
+          "fontFamily": "Uxumgrotesque, sans-serif",
+          "fontSize": "40px",
+          "fontWeight": "500",
+          "color": "rgba(3, 2, 0, 0.89)"
+        },
+        {
+          "page": "home",
+          "level": "h3",
+          "fontFamily": "Uxumgrotesque, sans-serif",
+          "fontSize": "40px",
+          "fontWeight": "500",
+          "color": "rgba(3, 2, 0, 0.89)"
+        },
+        {
+          "page": "home",
+          "level": "h3",
+          "fontFamily": "Uxumgrotesque, sans-serif",
+          "fontSize": "40px",
+          "fontWeight": "500",
+          "color": "rgba(3, 2, 0, 0.89)"
+        },
+        {
+          "page": "home",
+          "level": "h3",
+          "fontFamily": "Uxumgrotesque, sans-serif",
+          "fontSize": "40px",
+          "fontWeight": "500",
+          "color": "rgba(3, 2, 0, 0.89)"
+        },
+        {
+          "page": "home",
+          "level": "h3",
+          "fontFamily": "Uxumgrotesque, sans-serif",
+          "fontSize": "40px",
+          "fontWeight": "500",
+          "color": "rgba(3, 2, 0, 0.89)"
+        },
+        {
+          "page": "inner-page",
+          "level": "h1",
+          "fontFamily": "Uxumgrotesque, sans-serif",
+          "fontSize": "64px",
+          "fontWeight": "500",
+          "color": "rgba(3, 2, 0, 0.89)"
+        },
+        {
+          "page": "inner-page",
+          "level": "h4",
+          "fontFamily": "Uxumgrotesque, sans-serif",
+          "fontSize": "21px",
+          "fontWeight": "500",
+          "color": "rgba(3, 2, 0, 0.89)"
+        },
+        {
+          "page": "inner-page",
+          "level": "h2",
+          "fontFamily": "Uxumgrotesque, sans-serif",
+          "fontSize": "48px",
+          "fontWeight": "500",
+          "color": "rgba(3, 2, 0, 0.89)"
+        },
+        {
+          "page": "inner-page",
+          "level": "h3",
+          "fontFamily": "Inter, Arial, sans-serif",
+          "fontSize": "15px",
+          "fontWeight": "400",
+          "color": "rgba(3, 2, 0, 0.89)"
+        },
+        {
+          "page": "inner-page",
+          "level": "h3",
+          "fontFamily": "Inter, Arial, sans-serif",
+          "fontSize": "15px",
+          "fontWeight": "400",
+          "color": "rgba(3, 2, 0, 0.89)"
+        },
+        {
+          "page": "inner-page",
+          "level": "h3",
+          "fontFamily": "Inter, Arial, sans-serif",
+          "fontSize": "15px",
+          "fontWeight": "400",
+          "color": "rgba(3, 2, 0, 0.89)"
+        },
+        {
+          "page": "inner-page",
+          "level": "h2",
+          "fontFamily": "Uxumgrotesque, sans-serif",
+          "fontSize": "48px",
+          "fontWeight": "500",
+          "color": "rgba(3, 2, 0, 0.89)"
+        },
+        {
+          "page": "inner-page",
+          "level": "h2",
+          "fontFamily": "Uxumgrotesque, sans-serif",
+          "fontSize": "48px",
+          "fontWeight": "500",
+          "color": "rgba(3, 2, 0, 0.89)"
+        }
+      ],
+      "font_weights": [
+        {
+          "value": "400",
+          "count": 731,
+          "share": 0.843
+        },
+        {
+          "value": "500",
+          "count": 121,
+          "share": 0.14
+        },
+        {
+          "value": "700",
+          "count": 15,
+          "share": 0.017
+        }
+      ],
+      "line_heights": [
+        {
+          "value": "23.04px",
+          "count": 591,
+          "share": 0.727
+        },
+        {
+          "value": "31.5px",
+          "count": 54,
+          "share": 0.066
+        },
+        {
+          "value": "22.4px",
+          "count": 48,
+          "share": 0.059
+        },
+        {
+          "value": "19.5px",
+          "count": 30,
+          "share": 0.037
+        },
+        {
+          "value": "21px",
+          "count": 23,
+          "share": 0.028
+        },
+        {
+          "value": "17.5px",
+          "count": 14,
+          "share": 0.017
+        },
+        {
+          "value": "26px",
+          "count": 12,
+          "share": 0.015
+        },
+        {
+          "value": "24px",
+          "count": 10,
+          "share": 0.012
+        },
+        {
+          "value": "18px",
+          "count": 8,
+          "share": 0.01
+        },
+        {
+          "value": "52.8px",
+          "count": 7,
+          "share": 0.009
+        }
+      ],
+      "letter_spacings": [
+        {
+          "value": "1px",
+          "count": 8,
+          "share": 0.571
+        },
+        {
+          "value": "0.26px",
+          "count": 6,
+          "share": 0.429
+        }
+      ],
+      "weight_by_size": {
+        "14px": "400",
+        "14.4px": "400",
+        "13px": "400",
+        "64px": "500",
+        "15px": "500",
+        "21px": "500",
+        "28px": "400",
+        "20px": "700",
+        "48px": "500",
+        "40px": "500",
+        "16px": "500",
+        "10px": "500",
+        "56px": "500",
+        "12px": "400",
+        "24px": "500"
+      },
+      "line_height_by_size": {
+        "14px": "22.4px",
+        "14.4px": "23.04px",
+        "13px": "19.5px",
+        "64px": "64px",
+        "15px": "31.5px",
+        "21px": "25.2px",
+        "28px": "28px",
+        "20px": "20px",
+        "48px": "52.8px",
+        "40px": "44px",
+        "16px": "19.2px",
+        "10px": "10px",
+        "56px": "61.6px",
+        "12px": "19.2px",
+        "24px": "28.8px"
+      }
+    },
+    "motion": {
+      "transition_durations": [
+        {
+          "value": "0.1s",
+          "count": 4,
+          "share": 0.235
+        },
+        {
+          "value": "0.2s",
+          "count": 3,
+          "share": 0.176
+        },
+        {
+          "value": "0.15s",
+          "count": 2,
+          "share": 0.118
+        },
+        {
+          "value": "0.3s",
+          "count": 2,
+          "share": 0.118
+        },
+        {
+          "value": "0.167s",
+          "count": 2,
+          "share": 0.118
+        },
+        {
+          "value": "0.08s",
+          "count": 2,
+          "share": 0.118
+        },
+        {
+          "value": "0.25s",
+          "count": 2,
+          "share": 0.118
+        }
+      ]
+    },
+    "shape": {
+      "border_radius": [
+        {
+          "value": "0px",
+          "count": 844,
+          "share": 0.973
+        },
+        {
+          "value": "1000px",
+          "count": 10,
+          "share": 0.012
+        },
+        {
+          "value": "20px",
+          "count": 6,
+          "share": 0.007
+        },
+        {
+          "value": "1440px",
+          "count": 4,
+          "share": 0.005
+        },
+        {
+          "value": "50%",
+          "count": 2,
+          "share": 0.002
+        },
+        {
+          "value": "100px",
+          "count": 1,
+          "share": 0.001
+        }
+      ],
+      "border": {
+        "widths": [
+          {
+            "value": "1px",
+            "count": 60,
+            "share": 1.0
+          }
+        ],
+        "colors": [
+          {
+            "value": "#030200",
+            "count": 767,
+            "share": 0.885
+          },
+          {
+            "value": "#000000",
+            "count": 40,
+            "share": 0.046
+          },
+          {
+            "value": "#222222",
+            "count": 24,
+            "share": 0.028
+          },
+          {
+            "value": "#050500",
+            "count": 20,
+            "share": 0.023
+          },
+          {
+            "value": "#646464",
+            "count": 6,
+            "share": 0.007
+          },
+          {
+            "value": "#333333",
+            "count": 4,
+            "share": 0.005
+          },
+          {
+            "value": "#ffffff",
+            "count": 4,
+            "share": 0.005
+          },
+          {
+            "value": "#0a0a00",
+            "count": 2,
+            "share": 0.002
+          }
+        ]
+      },
+      "shadow": [
+        {
+          "value": "rgba(0, 0, 0, 0.06) 0px 1px 6px 0px, rgba(0, 0, 0, 0.16) 0px 2px 32px 0px",
+          "count": 2,
+          "share": 1.0
+        }
+      ]
+    },
+    "spacing": {
+      "container_widths": [
+        {
+          "value": "1160px",
+          "count": 132,
+          "share": 0.326
+        },
+        {
+          "value": "320px",
+          "count": 66,
+          "share": 0.163
+        },
+        {
+          "value": "360px",
+          "count": 49,
+          "share": 0.121
+        },
+        {
+          "value": "1440px",
+          "count": 33,
+          "share": 0.081
+        },
+        {
+          "value": "280px",
+          "count": 29,
+          "share": 0.072
+        },
+        {
+          "value": "440px",
+          "count": 28,
+          "share": 0.069
+        },
+        {
+          "value": "640px",
+          "count": 22,
+          "share": 0.054
+        },
+        {
+          "value": "600px",
+          "count": 18,
+          "share": 0.044
+        },
+        {
+          "value": "1120px",
+          "count": 12,
+          "share": 0.03
+        },
+        {
+          "value": "880px",
+          "count": 9,
+          "share": 0.022
+        },
+        {
+          "value": "720px",
+          "count": 3,
+          "share": 0.007
+        },
+        {
+          "value": "1000px",
+          "count": 2,
+          "share": 0.005
+        }
+      ],
+      "padding": [
+        {
+          "value": "24px",
+          "count": 112,
+          "share": 0.307
+        },
+        {
+          "value": "16px",
+          "count": 90,
+          "share": 0.247
+        },
+        {
+          "value": "8px",
+          "count": 37,
+          "share": 0.101
+        },
+        {
+          "value": "10px",
+          "count": 26,
+          "share": 0.071
+        },
+        {
+          "value": "20px",
+          "count": 24,
+          "share": 0.066
+        },
+        {
+          "value": "6px",
+          "count": 19,
+          "share": 0.052
+        },
+        {
+          "value": "6.4px",
+          "count": 16,
+          "share": 0.044
+        },
+        {
+          "value": "4px",
+          "count": 14,
+          "share": 0.038
+        },
+        {
+          "value": "12px",
+          "count": 8,
+          "share": 0.022
+        },
+        {
+          "value": "48px",
+          "count": 8,
+          "share": 0.022
+        },
+        {
+          "value": "3px",
+          "count": 6,
+          "share": 0.016
+        },
+        {
+          "value": "32px",
+          "count": 4,
+          "share": 0.011
+        }
+      ],
+      "margin": [
+        {
+          "value": "144px",
+          "count": 41,
+          "share": 0.36
+        },
+        {
+          "value": "112px",
+          "count": 15,
+          "share": 0.132
+        },
+        {
+          "value": "40px",
+          "count": 10,
+          "share": 0.088
+        },
+        {
+          "value": "4px",
+          "count": 8,
+          "share": 0.07
+        },
+        {
+          "value": "1.625px",
+          "count": 8,
+          "share": 0.07
+        },
+        {
+          "value": "12px",
+          "count": 5,
+          "share": 0.044
+        },
+        {
+          "value": "160px",
+          "count": 5,
+          "share": 0.044
+        },
+        {
+          "value": "8px",
+          "count": 4,
+          "share": 0.035
+        },
+        {
+          "value": "288.281px",
+          "count": 4,
+          "share": 0.035
+        },
+        {
+          "value": "16px",
+          "count": 4,
+          "share": 0.035
+        },
+        {
+          "value": "24px",
+          "count": 2,
+          "share": 0.018
+        },
+        {
+          "value": "71.9531px",
+          "count": 2,
+          "share": 0.018
+        }
+      ],
+      "scale": [
+        {
+          "value": "24px",
+          "count": 114,
+          "share": 0.238
+        },
+        {
+          "value": "16px",
+          "count": 94,
+          "share": 0.196
+        },
+        {
+          "value": "8px",
+          "count": 41,
+          "share": 0.086
+        },
+        {
+          "value": "144px",
+          "count": 41,
+          "share": 0.086
+        },
+        {
+          "value": "10px",
+          "count": 26,
+          "share": 0.054
+        },
+        {
+          "value": "20px",
+          "count": 24,
+          "share": 0.05
+        },
+        {
+          "value": "4px",
+          "count": 22,
+          "share": 0.046
+        },
+        {
+          "value": "6px",
+          "count": 19,
+          "share": 0.04
+        },
+        {
+          "value": "6.4px",
+          "count": 16,
+          "share": 0.033
+        },
+        {
+          "value": "112px",
+          "count": 15,
+          "share": 0.031
+        },
+        {
+          "value": "12px",
+          "count": 13,
+          "share": 0.027
+        },
+        {
+          "value": "48px",
+          "count": 10,
+          "share": 0.021
+        }
+      ],
+      "section_gaps": [
+        {
+          "value": "112px",
+          "count": 7,
+          "share": 0.538
+        },
+        {
+          "value": "160px",
+          "count": 2,
+          "share": 0.154
+        },
+        {
+          "value": "80px",
+          "count": 1,
+          "share": 0.077
+        },
+        {
+          "value": "144px",
+          "count": 1,
+          "share": 0.077
+        },
+        {
+          "value": "264px",
+          "count": 1,
+          "share": 0.077
+        },
+        {
+          "value": "296px",
+          "count": 1,
+          "share": 0.077
+        }
+      ]
+    },
+    "components": {
+      "action_samples": [
+        {
+          "page": "home",
+          "tag": "button",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Rubik, \"Axeptio CJK Fallback\", sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "700",
+          "borderRadius": "0px",
+          "width": 48,
+          "height": 48
+        },
+        {
+          "page": "home",
+          "tag": "a",
+          "color": "rgb(51, 51, 51)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Foundersgrotesk",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "0px",
+          "width": 68,
+          "height": 24
+        },
+        {
+          "page": "home",
+          "tag": "a",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Foundersgrotesk",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "20px",
+          "width": 65,
+          "height": 30
+        },
+        {
+          "page": "home",
+          "tag": "a",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0.1)",
+          "fontFamily": "Foundersgrotesk",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "20px",
+          "width": 100,
+          "height": 30
+        },
+        {
+          "page": "home",
+          "tag": "a",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Foundersgrotesk",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "20px",
+          "width": 56,
+          "height": 30
+        },
+        {
+          "page": "home",
+          "tag": "a",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Foundersgrotesk",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "100px",
+          "width": 198,
+          "height": 26
+        },
+        {
+          "page": "home",
+          "tag": "input",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(0, 0, 0)",
+          "fontFamily": "Inter, Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "borderRadius": "1440px",
+          "width": 300,
+          "height": 36
+        },
+        {
+          "page": "home",
+          "tag": "a",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Foundersgrotesk",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "0px",
+          "width": 99,
+          "height": 21
+        },
+        {
+          "page": "home",
+          "tag": "a",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Foundersgrotesk",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "0px",
+          "width": 184,
+          "height": 21
+        },
+        {
+          "page": "home",
+          "tag": "a",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Foundersgrotesk",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "0px",
+          "width": 201,
+          "height": 21
+        },
+        {
+          "page": "home",
+          "tag": "a",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Foundersgrotesk",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "0px",
+          "width": 244,
+          "height": 21
+        },
+        {
+          "page": "home",
+          "tag": "a",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Foundersgrotesk",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "0px",
+          "width": 159,
+          "height": 21
+        },
+        {
+          "page": "inner-page",
+          "tag": "button",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Rubik, \"Axeptio CJK Fallback\", sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "700",
+          "borderRadius": "0px",
+          "width": 48,
+          "height": 48
+        },
+        {
+          "page": "inner-page",
+          "tag": "a",
+          "color": "rgb(51, 51, 51)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Foundersgrotesk",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "0px",
+          "width": 68,
+          "height": 24
+        },
+        {
+          "page": "inner-page",
+          "tag": "a",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Foundersgrotesk",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "20px",
+          "width": 65,
+          "height": 30
+        },
+        {
+          "page": "inner-page",
+          "tag": "a",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Foundersgrotesk",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "20px",
+          "width": 100,
+          "height": 30
+        },
+        {
+          "page": "inner-page",
+          "tag": "a",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Foundersgrotesk",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "20px",
+          "width": 56,
+          "height": 30
+        },
+        {
+          "page": "inner-page",
+          "tag": "input",
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(0, 0, 0)",
+          "fontFamily": "Inter, Arial, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "borderRadius": "1440px",
+          "width": 300,
+          "height": 36
+        },
+        {
+          "page": "inner-page",
+          "tag": "a",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Inter, Arial, sans-serif",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "0px",
+          "width": 76,
+          "height": 50
+        },
+        {
+          "page": "inner-page",
+          "tag": "a",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Inter, Arial, sans-serif",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "0px",
+          "width": 68,
+          "height": 50
+        },
+        {
+          "page": "inner-page",
+          "tag": "a",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Inter, Arial, sans-serif",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "0px",
+          "width": 81,
+          "height": 50
+        },
+        {
+          "page": "inner-page",
+          "tag": "a",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Inter, Arial, sans-serif",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "0px",
+          "width": 75,
+          "height": 50
+        },
+        {
+          "page": "inner-page",
+          "tag": "a",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Inter, Arial, sans-serif",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "0px",
+          "width": 93,
+          "height": 50
+        },
+        {
+          "page": "inner-page",
+          "tag": "a",
+          "color": "rgba(3, 2, 0, 0.89)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "fontFamily": "Foundersgrotesk",
+          "fontSize": "14.4px",
+          "fontWeight": "400",
+          "borderRadius": "0px",
+          "width": 368,
+          "height": 307
+        }
+      ]
+    }
+  },
+  "raw_component_patterns": {
+    "buttons": [
+      {
+        "pattern": "action_controls",
+        "count": 80,
+        "common_font_sizes": [
+          {
+            "value": "15px",
+            "count": 41,
+            "share": 0.512
+          },
+          {
+            "value": "14.4px",
+            "count": 33,
+            "share": 0.412
+          },
+          {
+            "value": "14px",
+            "count": 6,
+            "share": 0.075
+          }
+        ],
+        "common_radius": [
+          {
+            "value": "0px",
+            "count": 69,
+            "share": 0.863
+          },
+          {
+            "value": "20px",
+            "count": 6,
+            "share": 0.075
+          },
+          {
+            "value": "1440px",
+            "count": 4,
+            "share": 0.05
+          },
+          {
+            "value": "100px",
+            "count": 1,
+            "share": 0.013
+          }
+        ],
+        "common_text_colors": [
+          {
+            "value": "rgba(3, 2, 0, 0.89)",
+            "count": 74,
+            "share": 0.925
+          },
+          {
+            "value": "rgb(255, 255, 255)",
+            "count": 4,
+            "share": 0.05
+          },
+          {
+            "value": "rgb(51, 51, 51)",
+            "count": 2,
+            "share": 0.025
+          }
+        ],
+        "common_backgrounds": [
+          {
+            "value": "rgba(0, 0, 0, 0)",
+            "count": 75,
+            "share": 0.938
+          },
+          {
+            "value": "rgb(0, 0, 0)",
+            "count": 4,
+            "share": 0.05
+          },
+          {
+            "value": "rgba(0, 0, 0, 0.1)",
+            "count": 1,
+            "share": 0.013
+          }
+        ],
+        "confidence": 0.78
+      }
+    ],
+    "cards": [
+      {
+        "pattern": "surface_blocks",
+        "common_radius": [
+          {
+            "value": "0px",
+            "count": 426,
+            "share": 0.973
+          },
+          {
+            "value": "1000px",
+            "count": 5,
+            "share": 0.011
+          },
+          {
+            "value": "20px",
+            "count": 3,
+            "share": 0.007
+          },
+          {
+            "value": "1440px",
+            "count": 2,
+            "share": 0.005
+          },
+          {
+            "value": "100px",
+            "count": 1,
+            "share": 0.002
+          },
+          {
+            "value": "50%",
+            "count": 1,
+            "share": 0.002
+          },
+          {
+            "value": "0px",
+            "count": 418,
+            "share": 0.974
+          },
+          {
+            "value": "1000px",
+            "count": 5,
+            "share": 0.012
+          }
+        ],
+        "common_backgrounds": [
+          {
+            "value": "#ffffff",
+            "count": 34,
+            "share": 0.607
+          },
+          {
+            "value": "#000000",
+            "count": 10,
+            "share": 0.179
+          },
+          {
+            "value": "#f7f3ef",
+            "count": 6,
+            "share": 0.107
+          },
+          {
+            "value": "#f6dff6",
+            "count": 1,
+            "share": 0.018
+          },
+          {
+            "value": "#e3efdc",
+            "count": 1,
+            "share": 0.018
+          },
+          {
+            "value": "#c4eaee",
+            "count": 1,
+            "share": 0.018
+          },
+          {
+            "value": "#bed9ef",
+            "count": 1,
+            "share": 0.018
+          },
+          {
+            "value": "#fff0bd",
+            "count": 1,
+            "share": 0.018
+          }
+        ],
+        "confidence": 0.68
+      }
+    ],
+    "forms": [
+      {
+        "pattern": "input_groups",
+        "confidence": 0.62
+      }
+    ],
+    "navigation": [
+      {
+        "pattern": "top_or_footer_navigation",
+        "confidence": 0.62
+      }
+    ],
+    "badges": [],
+    "media_blocks": [],
+    "grids": [
+      {
+        "pattern": "layout_rhythm",
+        "font_size_distribution": [
+          {
+            "value": "14.4px",
+            "count": 305,
+            "share": 0.696
+          },
+          {
+            "value": "15px",
+            "count": 62,
+            "share": 0.142
+          },
+          {
+            "value": "14px",
+            "count": 31,
+            "share": 0.071
+          },
+          {
+            "value": "13px",
+            "count": 16,
+            "share": 0.037
+          },
+          {
+            "value": "10px",
+            "count": 6,
+            "share": 0.014
+          },
+          {
+            "value": "40px",
+            "count": 5,
+            "share": 0.011
+          },
+          {
+            "value": "48px",
+            "count": 4,
+            "share": 0.009
+          },
+          {
+            "value": "28px",
+            "count": 3,
+            "share": 0.007
+          },
+          {
+            "value": "64px",
+            "count": 2,
+            "share": 0.005
+          },
+          {
+            "value": "21px",
+            "count": 1,
+            "share": 0.002
+          }
+        ],
+        "heading_style_distribution": [
+          {
+            "level": "h1",
+            "fontFamily": "Uxumgrotesque, sans-serif",
+            "fontSize": "64px",
+            "fontWeight": "500",
+            "color": "rgba(3, 2, 0, 0.89)"
+          },
+          {
+            "level": "h4",
+            "fontFamily": "Uxumgrotesque, sans-serif",
+            "fontSize": "21px",
+            "fontWeight": "500",
+            "color": "rgba(3, 2, 0, 0.89)"
+          },
+          {
+            "level": "h2",
+            "fontFamily": "Uxumgrotesque, sans-serif",
+            "fontSize": "48px",
+            "fontWeight": "500",
+            "color": "rgb(0, 0, 0)"
+          },
+          {
+            "level": "h3",
+            "fontFamily": "Uxumgrotesque, sans-serif",
+            "fontSize": "40px",
+            "fontWeight": "500",
+            "color": "rgba(3, 2, 0, 0.89)"
+          },
+          {
+            "level": "h3",
+            "fontFamily": "Uxumgrotesque, sans-serif",
+            "fontSize": "40px",
+            "fontWeight": "500",
+            "color": "rgba(3, 2, 0, 0.89)"
+          },
+          {
+            "level": "h3",
+            "fontFamily": "Uxumgrotesque, sans-serif",
+            "fontSize": "40px",
+            "fontWeight": "500",
+            "color": "rgba(3, 2, 0, 0.89)"
+          },
+          {
+            "level": "h3",
+            "fontFamily": "Uxumgrotesque, sans-serif",
+            "fontSize": "40px",
+            "fontWeight": "500",
+            "color": "rgba(3, 2, 0, 0.89)"
+          },
+          {
+            "level": "h3",
+            "fontFamily": "Uxumgrotesque, sans-serif",
+            "fontSize": "40px",
+            "fontWeight": "500",
+            "color": "rgba(3, 2, 0, 0.89)"
+          },
+          {
+            "level": "h2",
+            "fontFamily": "Uxumgrotesque, sans-serif",
+            "fontSize": "48px",
+            "fontWeight": "500",
+            "color": "rgba(3, 2, 0, 0.89)"
+          },
+          {
+            "level": "h3",
+            "fontFamily": "Inter, Arial, sans-serif",
+            "fontSize": "15px",
+            "fontWeight": "400",
+            "color": "rgba(3, 2, 0, 0.89)"
+          }
+        ],
+        "display_distribution": [
+          {
+            "value": "block",
+            "count": 256,
+            "share": 0.584
+          },
+          {
+            "value": "flex",
+            "count": 145,
+            "share": 0.331
+          },
+          {
+            "value": "inline-block",
+            "count": 15,
+            "share": 0.034
+          },
+          {
+            "value": "inline",
+            "count": 14,
+            "share": 0.032
+          },
+          {
+            "value": "grid",
+            "count": 7,
+            "share": 0.016
+          },
+          {
+            "value": "inline-flex",
+            "count": 1,
+            "share": 0.002
+          },
+          {
+            "value": "block",
+            "count": 262,
+            "share": 0.611
+          },
+          {
+            "value": "flex",
+            "count": 114,
+            "share": 0.266
+          },
+          {
+            "value": "inline",
+            "count": 20,
+            "share": 0.047
+          },
+          {
+            "value": "inline-block",
+            "count": 20,
+            "share": 0.047
+          }
+        ],
+        "container_widths": [
+          {
+            "value": "1160px",
+            "count": 73,
+            "share": 0.371
+          },
+          {
+            "value": "320px",
+            "count": 31,
+            "share": 0.157
+          },
+          {
+            "value": "280px",
+            "count": 23,
+            "share": 0.117
+          },
+          {
+            "value": "640px",
+            "count": 22,
+            "share": 0.112
+          },
+          {
+            "value": "1440px",
+            "count": 17,
+            "share": 0.086
+          },
+          {
+            "value": "360px",
+            "count": 11,
+            "share": 0.056
+          },
+          {
+            "value": "880px",
+            "count": 5,
+            "share": 0.025
+          },
+          {
+            "value": "720px",
+            "count": 3,
+            "share": 0.015
+          },
+          {
+            "value": "600px",
+            "count": 3,
+            "share": 0.015
+          },
+          {
+            "value": "1000px",
+            "count": 2,
+            "share": 0.01
+          }
+        ],
+        "confidence": 0.74
+      }
+    ],
+    "color_usage": {
+      "text": [
+        {
+          "value": "#030200",
+          "count": 389,
+          "share": 0.888
+        },
+        {
+          "value": "#000000",
+          "count": 20,
+          "share": 0.046
+        },
+        {
+          "value": "#222222",
+          "count": 12,
+          "share": 0.027
+        },
+        {
+          "value": "#050500",
+          "count": 10,
+          "share": 0.023
+        },
+        {
+          "value": "#ffffff",
+          "count": 4,
+          "share": 0.009
+        },
+        {
+          "value": "#333333",
+          "count": 2,
+          "share": 0.005
+        },
+        {
+          "value": "#0a0a00",
+          "count": 1,
+          "share": 0.002
+        },
+        {
+          "value": "#030200",
+          "count": 382,
+          "share": 0.89
+        },
+        {
+          "value": "#000000",
+          "count": 12,
+          "share": 0.028
+        },
+        {
+          "value": "#222222",
+          "count": 12,
+          "share": 0.028
+        }
+      ],
+      "backgrounds": [
+        {
+          "value": "#ffffff",
+          "count": 34,
+          "share": 0.607
+        },
+        {
+          "value": "#000000",
+          "count": 10,
+          "share": 0.179
+        },
+        {
+          "value": "#f7f3ef",
+          "count": 6,
+          "share": 0.107
+        },
+        {
+          "value": "#f6dff6",
+          "count": 1,
+          "share": 0.018
+        },
+        {
+          "value": "#e3efdc",
+          "count": 1,
+          "share": 0.018
+        },
+        {
+          "value": "#c4eaee",
+          "count": 1,
+          "share": 0.018
+        },
+        {
+          "value": "#bed9ef",
+          "count": 1,
+          "share": 0.018
+        },
+        {
+          "value": "#fff0bd",
+          "count": 1,
+          "share": 0.018
+        },
+        {
+          "value": "#030200",
+          "count": 1,
+          "share": 0.018
+        },
+        {
+          "value": "#ffffff",
+          "count": 30,
+          "share": 0.577
+        }
+      ]
+    },
+    "isolated_components": [
+      {
+        "type": "nav-item",
+        "className": "w-inline-block",
+        "occurrence_count": 18,
+        "dominant_tag": "A",
+        "structure_patterns": [
+          "div",
+          "div>div"
+        ],
+        "extracted_styles": {
+          "background": "rgba(0, 0, 0, 0)",
+          "text_color": "rgba(3, 2, 0, 0.89)",
+          "border_radius": "0px",
+          "padding": "0px 0px 0px 0px",
+          "font_size": "14.4px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "56",
+          "height": "21"
+        },
+        "example_count": 4
+      },
+      {
+        "type": "card",
+        "className": "logo-cell",
+        "occurrence_count": 18,
+        "dominant_tag": "DIV",
+        "structure_patterns": [
+          "img"
+        ],
+        "extracted_styles": {
+          "background": "rgb(255, 255, 255)",
+          "text_color": "rgba(3, 2, 0, 0.89)",
+          "border_radius": "0px",
+          "padding": "24px 16px 24px 16px",
+          "font_size": "14.4px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "191",
+          "height": "100"
+        },
+        "example_count": 4
+      },
+      {
+        "type": "badge-or-tag",
+        "className": "nav-wrapper-link",
+        "occurrence_count": 6,
+        "dominant_tag": "DIV",
+        "structure_patterns": [
+          "div>img",
+          "div"
+        ],
+        "extracted_styles": {
+          "background": "rgba(0, 0, 0, 0)",
+          "text_color": "rgb(34, 34, 34)",
+          "border_radius": "0px",
+          "padding": "0px 0px 0px 0px",
+          "font_size": "14.4px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "36",
+          "height": "22"
+        },
+        "example_count": 4
+      },
+      {
+        "type": "input-group",
+        "className": "form-field-wrapper-2",
+        "occurrence_count": 4,
+        "dominant_tag": "DIV",
+        "structure_patterns": [
+          "label>input",
+          "label>select"
+        ],
+        "extracted_styles": {
+          "background": "rgba(0, 0, 0, 0)",
+          "text_color": "rgba(3, 2, 0, 0.89)",
+          "border_radius": "0px",
+          "padding": "0px 0px 0px 0px",
+          "font_size": "14.4px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "300",
+          "height": "65"
+        },
+        "example_count": 4
+      },
+      {
+        "type": "card",
+        "className": "form-label-ads",
+        "occurrence_count": 4,
+        "dominant_tag": "LABEL",
+        "structure_patterns": [],
+        "extracted_styles": {
+          "background": "rgba(0, 0, 0, 0)",
+          "text_color": "rgb(0, 0, 0)",
+          "border_radius": "0px",
+          "padding": "0px 0px 0px 0px",
+          "font_size": "15px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "300",
+          "height": "24"
+        },
+        "example_count": 4
+      },
+      {
+        "type": "card",
+        "className": "form-input",
+        "occurrence_count": 4,
+        "dominant_tag": "INPUT",
+        "structure_patterns": [
+          "option>option>option>option>option>option>option"
+        ],
+        "extracted_styles": {
+          "background": "rgba(255, 255, 255, 0.9)",
+          "text_color": "rgba(3, 2, 0, 0.89)",
+          "border_radius": "0px",
+          "padding": "6.4px 8px 6.4px 8px",
+          "font_size": "14px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "1px",
+          "width": "300",
+          "height": "37"
+        },
+        "example_count": 4
+      },
+      {
+        "type": "feature-card",
+        "className": "rl_navbar1_menu-dropdown",
+        "occurrence_count": 3,
+        "dominant_tag": "DIV",
+        "structure_patterns": [
+          "div>nav"
+        ],
+        "extracted_styles": {
+          "background": "rgba(0, 0, 0, 0)",
+          "text_color": "rgba(3, 2, 0, 0.89)",
+          "border_radius": "0px",
+          "padding": "0px 0px 0px 0px",
+          "font_size": "14.4px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "93",
+          "height": "62"
+        },
+        "example_count": 3
+      },
+      {
+        "type": "card",
+        "className": "nav-item",
+        "occurrence_count": 3,
+        "dominant_tag": "DIV",
+        "structure_patterns": [
+          "div"
+        ],
+        "extracted_styles": {
+          "background": "rgba(0, 0, 0, 0)",
+          "text_color": "rgb(34, 34, 34)",
+          "border_radius": "0px",
+          "padding": "20px 10px 20px 10px",
+          "font_size": "14.4px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "93",
+          "height": "62"
+        },
+        "example_count": 3
+      },
+      {
+        "type": "badge-or-tag",
+        "className": "nav-chevron",
+        "occurrence_count": 3,
+        "dominant_tag": "IMG",
+        "structure_patterns": [],
+        "extracted_styles": {
+          "background": "rgba(0, 0, 0, 0)",
+          "text_color": "rgb(34, 34, 34)",
+          "border_radius": "0px",
+          "padding": "0px 0px 0px 0px",
+          "font_size": "14.4px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "8",
+          "height": "22"
+        },
+        "example_count": 3
+      },
+      {
+        "type": "nav-item",
+        "className": "rl_navbar1_dropdown-toggle",
+        "occurrence_count": 3,
+        "dominant_tag": "A",
+        "structure_patterns": [
+          "div"
+        ],
+        "extracted_styles": {
+          "background": "rgba(0, 0, 0, 0)",
+          "text_color": "rgba(3, 2, 0, 0.89)",
+          "border_radius": "20px",
+          "padding": "4px 10px 4px 10px",
+          "font_size": "14.4px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "56",
+          "height": "30"
+        },
+        "example_count": 3
+      },
+      {
+        "type": "badge-or-tag",
+        "className": "rating-grid-number",
+        "occurrence_count": 3,
+        "dominant_tag": "P",
+        "structure_patterns": [],
+        "extracted_styles": {
+          "background": "rgba(0, 0, 0, 0)",
+          "text_color": "rgba(3, 2, 0, 0.89)",
+          "border_radius": "0px",
+          "padding": "0px 0px 0px 0px",
+          "font_size": "28px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "29",
+          "height": "28"
+        },
+        "example_count": 3
+      },
+      {
+        "type": "nav-item",
+        "className": "w-inline-block",
+        "occurrence_count": 19,
+        "dominant_tag": "A",
+        "structure_patterns": [
+          "div"
+        ],
+        "extracted_styles": {
+          "background": "rgba(0, 0, 0, 0)",
+          "text_color": "rgba(3, 2, 0, 0.89)",
+          "border_radius": "0px",
+          "padding": "16px 6px 16px 6px",
+          "font_size": "14.4px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "56",
+          "height": "50"
+        },
+        "example_count": 4
+      },
+      {
+        "type": "card",
+        "className": "logo-cell",
+        "occurrence_count": 18,
+        "dominant_tag": "DIV",
+        "structure_patterns": [
+          "img"
+        ],
+        "extracted_styles": {
+          "background": "rgb(255, 255, 255)",
+          "text_color": "rgba(3, 2, 0, 0.89)",
+          "border_radius": "0px",
+          "padding": "24px 16px 24px 16px",
+          "font_size": "14.4px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "191",
+          "height": "100"
+        },
+        "example_count": 4
+      },
+      {
+        "type": "badge-or-tag",
+        "className": "nav-wrapper-link",
+        "occurrence_count": 6,
+        "dominant_tag": "DIV",
+        "structure_patterns": [
+          "div>img",
+          "div"
+        ],
+        "extracted_styles": {
+          "background": "rgba(0, 0, 0, 0)",
+          "text_color": "rgb(34, 34, 34)",
+          "border_radius": "0px",
+          "padding": "0px 0px 0px 0px",
+          "font_size": "14.4px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "36",
+          "height": "22"
+        },
+        "example_count": 4
+      },
+      {
+        "type": "input-group",
+        "className": "form-field-wrapper-2",
+        "occurrence_count": 4,
+        "dominant_tag": "DIV",
+        "structure_patterns": [
+          "label>input",
+          "label>select"
+        ],
+        "extracted_styles": {
+          "background": "rgba(0, 0, 0, 0)",
+          "text_color": "rgba(3, 2, 0, 0.89)",
+          "border_radius": "0px",
+          "padding": "0px 0px 0px 0px",
+          "font_size": "14.4px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "300",
+          "height": "65"
+        },
+        "example_count": 4
+      },
+      {
+        "type": "card",
+        "className": "form-label-ads",
+        "occurrence_count": 4,
+        "dominant_tag": "LABEL",
+        "structure_patterns": [],
+        "extracted_styles": {
+          "background": "rgba(0, 0, 0, 0)",
+          "text_color": "rgb(0, 0, 0)",
+          "border_radius": "0px",
+          "padding": "0px 0px 0px 0px",
+          "font_size": "15px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "300",
+          "height": "24"
+        },
+        "example_count": 4
+      },
+      {
+        "type": "card",
+        "className": "form-input",
+        "occurrence_count": 4,
+        "dominant_tag": "INPUT",
+        "structure_patterns": [
+          "option>option>option>option>option>option>option"
+        ],
+        "extracted_styles": {
+          "background": "rgba(255, 255, 255, 0.9)",
+          "text_color": "rgba(3, 2, 0, 0.89)",
+          "border_radius": "0px",
+          "padding": "6.4px 8px 6.4px 8px",
+          "font_size": "14px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "1px",
+          "width": "300",
+          "height": "37"
+        },
+        "example_count": 4
+      },
+      {
+        "type": "feature-card",
+        "className": "rl_navbar1_menu-dropdown",
+        "occurrence_count": 3,
+        "dominant_tag": "DIV",
+        "structure_patterns": [
+          "div>nav"
+        ],
+        "extracted_styles": {
+          "background": "rgba(0, 0, 0, 0)",
+          "text_color": "rgba(3, 2, 0, 0.89)",
+          "border_radius": "0px",
+          "padding": "0px 0px 0px 0px",
+          "font_size": "14.4px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "93",
+          "height": "62"
+        },
+        "example_count": 3
+      },
+      {
+        "type": "card",
+        "className": "nav-item",
+        "occurrence_count": 3,
+        "dominant_tag": "DIV",
+        "structure_patterns": [
+          "div"
+        ],
+        "extracted_styles": {
+          "background": "rgba(0, 0, 0, 0)",
+          "text_color": "rgb(34, 34, 34)",
+          "border_radius": "0px",
+          "padding": "20px 10px 20px 10px",
+          "font_size": "14.4px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "93",
+          "height": "62"
+        },
+        "example_count": 3
+      },
+      {
+        "type": "badge-or-tag",
+        "className": "nav-chevron",
+        "occurrence_count": 3,
+        "dominant_tag": "IMG",
+        "structure_patterns": [],
+        "extracted_styles": {
+          "background": "rgba(0, 0, 0, 0)",
+          "text_color": "rgb(34, 34, 34)",
+          "border_radius": "0px",
+          "padding": "0px 0px 0px 0px",
+          "font_size": "14.4px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "8",
+          "height": "22"
+        },
+        "example_count": 3
+      },
+      {
+        "type": "nav-item",
+        "className": "rl_navbar1_dropdown-toggle",
+        "occurrence_count": 3,
+        "dominant_tag": "A",
+        "structure_patterns": [
+          "div"
+        ],
+        "extracted_styles": {
+          "background": "rgba(0, 0, 0, 0)",
+          "text_color": "rgba(3, 2, 0, 0.89)",
+          "border_radius": "20px",
+          "padding": "4px 10px 4px 10px",
+          "font_size": "14.4px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "56",
+          "height": "30"
+        },
+        "example_count": 3
+      },
+      {
+        "type": "badge-or-tag",
+        "className": "rating-grid-number",
+        "occurrence_count": 3,
+        "dominant_tag": "P",
+        "structure_patterns": [],
+        "extracted_styles": {
+          "background": "rgba(0, 0, 0, 0)",
+          "text_color": "rgba(3, 2, 0, 0.89)",
+          "border_radius": "0px",
+          "padding": "0px 0px 0px 0px",
+          "font_size": "28px",
+          "font_weight": "400",
+          "box_shadow": "none",
+          "border_width": "0px",
+          "width": "29",
+          "height": "28"
+        },
+        "example_count": 3
+      }
+    ],
+    "isolated_count": 22
+  },
+  "vision_analysis_count": 2,
+  "vision_reconciliation": {
+    "color_agreement": 1.0,
+    "font_agreement": 1.0,
+    "overall_agreement": 1.0,
+    "colors_checked": 20,
+    "fonts_checked": 11,
+    "conflicts": [],
+    "verdict": "güçlü-uyum"
+  },
+  "vision_observed_components": [
+    {
+      "value": "primary-button",
+      "count": 2,
+      "share": 0.111
+    },
+    {
+      "value": "text-input",
+      "count": 1,
+      "share": 0.056
+    },
+    {
+      "value": "feature-card",
+      "count": 1,
+      "share": 0.056
+    },
+    {
+      "value": "logo-cell",
+      "count": 1,
+      "share": 0.056
+    },
+    {
+      "value": "testimonial-card",
+      "count": 1,
+      "share": 0.056
+    },
+    {
+      "value": "integration-tile",
+      "count": 1,
+      "share": 0.056
+    },
+    {
+      "value": "industry-pill",
+      "count": 1,
+      "share": 0.056
+    },
+    {
+      "value": "secondary-button",
+      "count": 1,
+      "share": 0.056
+    },
+    {
+      "value": "surface-card",
+      "count": 1,
+      "share": 0.056
+    },
+    {
+      "value": "pill-tag",
+      "count": 1,
+      "share": 0.056
+    },
+    {
+      "value": "avatar-circle",
+      "count": 1,
+      "share": 0.056
+    },
+    {
+      "value": "logo-grid-cell",
+      "count": 1,
+      "share": 0.056
+    }
+  ],
+  "vision_page_roles": [
+    {
+      "value": "product",
+      "count": 2,
+      "share": 1.0
+    }
+  ],
+  "vision_pages": [
+    {
+      "parsed": true,
+      "page_role": "product",
+      "confidence": 0.92,
+      "visual_tone": [
+        "editorial-soft",
+        "high-contrast-monochrome-with-pastel-accents",
+        "playful-but-mature",
+        "low-noise",
+        "generous-whitespace"
+      ],
+      "colors": [
+        {
+          "hex": "#ffffff",
+          "role": "background",
+          "role_canonical": true,
+          "confidence": 0.99,
+          "css_match_claimed": true,
+          "css_verified": true,
+          "css_match_exact": true
+        },
+        {
+          "hex": "#000000",
+          "role": "primary",
+          "role_canonical": true,
+          "confidence": 0.99,
+          "css_match_claimed": true,
+          "css_verified": true,
+          "css_match_exact": true
+        },
+        {
+          "hex": "#f7f3ef",
+          "role": "muted-background",
+          "role_canonical": false,
+          "confidence": 0.85,
+          "css_match_claimed": true,
+          "css_verified": true,
+          "css_match_exact": true
+        },
+        {
+          "hex": "#f6dff6",
+          "role": "accent-background",
+          "role_canonical": false,
+          "confidence": 0.85,
+          "css_match_claimed": true,
+          "css_verified": true,
+          "css_match_exact": true
+        },
+        {
+          "hex": "#e3efdc",
+          "role": "accent-background",
+          "role_canonical": false,
+          "confidence": 0.85,
+          "css_match_claimed": true,
+          "css_verified": true,
+          "css_match_exact": true
+        },
+        {
+          "hex": "#030200",
+          "role": "text",
+          "role_canonical": true,
+          "confidence": 0.95,
+          "css_match_claimed": true,
+          "css_verified": true,
+          "css_match_exact": true
+        },
+        {
+          "hex": "#222222",
+          "role": "text-secondary",
+          "role_canonical": false,
+          "confidence": 0.85,
+          "css_match_claimed": true,
+          "css_verified": true,
+          "css_match_exact": true
+        },
+        {
+          "hex": "#050500",
+          "role": "text",
+          "role_canonical": true,
+          "confidence": 0.9,
+          "css_match_claimed": true,
+          "css_verified": true,
+          "css_match_exact": true
+        },
+        {
+          "hex": "#c8eaf7",
+          "role": "accent-background",
+          "role_canonical": false,
+          "confidence": 0.6,
+          "css_match_claimed": false,
+          "css_verified": true,
+          "css_match_exact": false
+        },
+        {
+          "hex": "#fff3c4",
+          "role": "accent-background",
+          "role_canonical": false,
+          "confidence": 0.6,
+          "css_match_claimed": false,
+          "css_verified": true,
+          "css_match_exact": false
+        }
+      ],
+      "typography": [
+        {
+          "role": "display-heading",
+          "role_canonical": false,
+          "family_inference": "serif/slab-display",
+          "css_family": "Uxumgrotesque",
+          "weight": "regular-to-medium",
+          "size_relation": "very large (40-48px+)",
+          "confidence": 0.8,
+          "css_verified": true
+        },
+        {
+          "role": "body",
+          "role_canonical": true,
+          "family_inference": "humanist sans",
+          "css_family": "Inter",
+          "weight": "400-500",
+          "size_relation": "14-15px base",
+          "confidence": 0.9,
+          "css_verified": true
+        },
+        {
+          "role": "ui-nav",
+          "role_canonical": false,
+          "family_inference": "geometric sans",
+          "css_family": "Foundersgrotesk",
+          "weight": "500-700",
+          "size_relation": "13-15px",
+          "confidence": 0.85,
+          "css_verified": true
+        },
+        {
+          "role": "button",
+          "role_canonical": true,
+          "family_inference": "geometric sans",
+          "css_family": "Foundersgrotesk",
+          "weight": "500-600",
+          "size_relation": "14-15px",
+          "confidence": 0.85,
+          "css_verified": true
+        }
+      ],
+      "layout": {
+        "structure": "single vertical narrative with alternating full-width feature blocks; each block transitions between white, cream, and pastel-tinted panels",
+        "grid": "12-col implied container ~1280-1440px; product mockups centered with large negative breathing room",
+        "spacing_scale": "large vertical rhythm; section padding ~96-144px (matches 112/144px margin tokens); horizontal generous gutters",
+        "density": "spacious",
+        "confidence": 0.9
+      },
+      "components": [
+        {
+          "name": "primary-button",
+          "description": "solid black, fully rounded (pill, ~1000px radius), white label, ~14-15px text, ~10-16px vertical padding",
+          "states_or_variants": "single dark fill; no visible ghost variant in screenshot",
+          "confidence": 0.95
+        },
+        {
+          "name": "text-input",
+          "description": "rounded (token suggests 1440 / 100px), thin 1px border, light background, inline submit button merged visually",
+          "states_or_variants": "single neutral state observed",
+          "confidence": 0.8
+        },
+        {
+          "name": "feature-card",
+          "description": "tinted panels (lavender / mint / cyan / yellow), 20px radius, internal padding 24px, contains a small UI mockup or schematic",
+          "states_or_variants": "color is the variant differentiator",
+          "confidence": 0.85
+        },
+        {
+          "name": "logo-cell",
+          "description": "white or cream cell, generous padding, monogram wordmark rendering",
+          "states_or_variants": "",
+          "confidence": 0.9
+        },
+        {
+          "name": "testimonial-card",
+          "description": "soft tinted background, avatar circle, short quote, minimal metadata",
+          "states_or_variants": "",
+          "confidence": 0.8
+        },
+        {
+          "name": "integration-tile",
+          "description": "small square tile with monochrome icon, dense grid layout",
+          "states_or_variants": "",
+          "confidence": 0.85
+        },
+        {
+          "name": "industry-pill",
+          "description": "small rounded chip used for category filters",
+          "states_or_variants": "",
+          "confidence": 0.7
+        }
+      ],
+      "imagery": {
+        "style": "editorial documentary photography mixed with realistic product UI mockups; muted, natural-light aesthetic",
+        "usage": "human hands interacting with a device, casual office portrait in testimonials; mockups dominate the body",
+        "confidence": 0.85
+      },
+      "css_cross_reference_notes": [
+        "Computed text colors are near-black variants (#030200, #050500, #222222) — consistent with visually perceived ink; pure #000 reserved for solid buttons and inversion bands",
+        "Background palette is overwhelmingly white with three clear accent washes (#f7f3ef cream, #f6dff6 lavender, #e3efdc mint) plus inferred cyan/yellow pastels not listed in top-5",
+        "Border radius scale of {0, 20, 100, 1000, 1440} indicates a strong pill/fully-rounded design language; visual confirms pill CTAs and rounded cards",
+        "Box shadow count is 1 variant — pages feel flat; depth comes from color blocks and layering, not elevation",
+        "Margin tokens {112, 144} align with very tall section spacing observed visually",
+        "Three font families coexist: a display (Uxumgrotesque) for narrative headings, a UI grotesk (Foundersgrotesk) for nav/buttons, and a neutral workhorse (Inter) for body — visual perception matches this tri-role split"
+      ],
+      "inspiration_notes": [
+        "Adopt a tri-typeface system: one distinctive display face for narrative headings, one geometric sans for UI/buttons, one neutral for body",
+        "Build the page rhythm around monochrome default + 3-5 pastel tinted panels rather than gradients or shadows",
+        "Use one large editorial heading per section, then a single product mockup centered with heavy negative space — let the screenshot breathe",
+        "Pill-shaped primary action (radius ~1000px) with solid black fill; keep CTA weight to one visual moment per section",
+        "Define a flat elevation system: no shadow, depth comes only from color blocks and 1px borders",
+        "Anchor middle-of-page credibility with a horizontal logo grid on a warm cream band",
+        "Group social proof in 3-4 small tinted cards, not a single hero quote",
+        "Close with a single dark inversion band containing the same lead-capture form used in the hero — bookend the page",
+        "Use a generous vertical scale (>=96px between sections) even at the cost of more scroll; density is reserved for integration grids and tables",
+        "Photography should be muted, natural-light, human-scale — used sparingly as accent, not decoration"
+      ],
+      "markdown": "**Tasarım dili özeti**\n\nSayfa, neredeyse tamamen beyaz bir tuval üzerinde ilerleyen, gölge yerine renk bloklarıyla derinlik kuran editorial bir SaaS anlatımı kuruyor. Tipografi üçlü bir yapıya oturuyor: dikkat çekici bir display ailesi (görsel olarak serif/slab hissi veren, hesaplanmış CSS'te Uxumgrotesque olarak geçen) hero ve bölüm başlıklarını taşırken, UI ve butonlar geometric bir grotesk olan Foundersgrotesk'te, gövde metinleri ise Inter'de kalıyor. Bu üçlü kontrast, ilgili bölüm ayrımını tipografik seviyede çözüyor.\n\n**Renk sistemi**\n\nKompozisyon siyah-beyaz bir ana omurga üzerinde yürüyor; vurgu yalnızca üç pastel yüzeyden geliyor: krem (#f7f3ef), lavanta (#f6dff6) ve nane yeşili (#e3efdc). Görselde ayrıca algılanan soft cyan ve pastel sarı panel/chip'ler, sayfanın ilgili bölüm olmayan, çocuksu-olmayan pastel paletini genişletiyor. Saf siyah (#000000) yalnızca birincil CTA ve dark inversion bandına ayrılmış; metin hep near-black varyantlarla (#030200, #050500, #222222) basılıyor — bu küçük ayrım, ilgili bölüm hiyerarşisini takviye ediyor.\n\n**Layout ve ritim**\n\nSayfa stacked, tek-sütun, çok uzun bir anlatı. Her bölüm yaklaşık 96–144px dış boşlukla ayrılıyor (CSS token'ları 112/144 ile uyumlu) ve her demo bloğu tek bir büyük başlık + tek bir UI mockup + yan çağrı olarak kuruluyor. Yoğunluk ilgili bölüm — derinlik mockup'ların etrafındaki nefes alanından geliyor, içerik sıkıştırılmıyor. Yoğunlaşan tek yüzeyler: logo grid'i (krem band üzerinde) ve integrations ızgarası.\n\n**Bileşen dili**\n\nKöşe yuvarlaklığı skalası {0, 20, 100, 1000, 1440} olacak şekilde kurulmuş — bu, ilgili bölüm ve ilgili bölüm geometriye güçlü bir bağlılık olduğunu gösteriyor. Birincil CTA tamamen yuvarlak, siyah solid, beyaz etiketli, ghost varyantı görselde yok. Kartlar 20px radius ve pastel yüzeylerle ayrışıyor; kartların varyantı rengidir, gölgesi değil. Kutucuk/kutu formu yerine her bölümde ilgili bölüm kullanılıyor. Testimonial'lar 3-4'lü küçük cluster'lar halinde, yine pastel yüzeylerde çalışıyor.\n\n**Görsellik**\n\nFotoğraf stili muted, doğal ışıklı, belgesel — ellerin cihazla etkileşimi ve sade ofis portreleri birkaç yerde accent olarak kullanılmış. Görsel ağırlık UI mockup'larda; fotoğraf dekor değil, mikro-anlatı.\n\n**CSS cross-reference**\n\nComputed CSS ile görsel analiz büyük ölçüde tutarlı: font aileleri üçlü olarak ayrışıyor, renkler near-black metin + pastel yüzeyler olarak beklenen dağılımda, radius skalası gözlemlenen pill geometriyi doğruluyor. Tek şeffaflık: computed top-5'te yer almayan cyan ve pastel sarı paneller görselde açıkça var; bu yüzeyler daha alt sıralarda ama tasarım sistemi için gerçek bir token oldukları ilgili bölüm olarak not edilmeli. Gölge sayısının 1 olması, sayfanın düz (flat) karakterini sayısal olarak doğruluyor.\n\n**İlham prensipleri (kopyalanmaya değil, ilham alınmaya uygun)**\n\n- Tek bir kalın görsel anlatı başına: büyük display başlık + ortalanmış tek mockup + bol beyaz alan.\n- Derinlik için gölge değil, renk bloğu kullan; UI'i ilgili bölüm değil ilgili bölüm.\n- Birincil CTA'yı siyah pill olarak tek bir görsel ritim noktasına sabitle; sayfa boyunca tek bir CTA geometrisi.\n- Sayfa eksenini pastel yıkamalarla böl (krem/lavanta/mint); metin hiyerarşisini siyah tonlarıyla yarat, aksan için daima yüzey rengi kullan.\n- Sosyal kanıtı bir kahraman alıntı yerine 3-4 pastel karttan oluşan bir cluster olarak sun.\n- Sayfayı, hero'daki lead-capture formunun aynısının yer aldığı tek bir karanlık inversion bandı ile kapat.\n- Dikey ritim gözünü korkutmasın: 96px+ section padding, yoğunluk yalnızca logo/integrations ızgaralarında.",
+      "url_kind": "home",
+      "screenshot": "001_https___folk_app_.png"
+    },
+    {
+      "parsed": true,
+      "page_role": "product",
+      "confidence": 0.92,
+      "visual_tone": [
+        "soft pastel palette anchored on lavender/pink",
+        "friendly, approachable, premium-SaaS",
+        "low-contrast airy composition",
+        "rounded geometry, soft shadows, playful without being childish",
+        "high typographic contrast between display and body"
+      ],
+      "colors": [
+        {
+          "hex": "#eaddf3",
+          "role": "background",
+          "role_canonical": true,
+          "confidence": 0.95,
+          "css_match_claimed": true,
+          "css_verified": true,
+          "css_match_exact": true
+        },
+        {
+          "hex": "#f6dff6",
+          "role": "background",
+          "role_canonical": true,
+          "confidence": 0.95,
+          "css_match_claimed": true,
+          "css_verified": true,
+          "css_match_exact": true
+        },
+        {
+          "hex": "#ffffff",
+          "role": "surface",
+          "role_canonical": false,
+          "confidence": 0.99,
+          "css_match_claimed": true,
+          "css_verified": true,
+          "css_match_exact": true
+        },
+        {
+          "hex": "#f7f3ef",
+          "role": "surface-muted",
+          "role_canonical": false,
+          "confidence": 0.85,
+          "css_match_claimed": true,
+          "css_verified": true,
+          "css_match_exact": true
+        },
+        {
+          "hex": "#000000",
+          "role": "text-primary",
+          "role_canonical": false,
+          "confidence": 0.99,
+          "css_match_claimed": true,
+          "css_verified": true,
+          "css_match_exact": true
+        },
+        {
+          "hex": "#222222",
+          "role": "text-secondary",
+          "role_canonical": false,
+          "confidence": 0.9,
+          "css_match_claimed": true,
+          "css_verified": true,
+          "css_match_exact": true
+        },
+        {
+          "hex": "#646464",
+          "role": "text-muted",
+          "role_canonical": false,
+          "confidence": 0.9,
+          "css_match_claimed": true,
+          "css_verified": true,
+          "css_match_exact": true
+        },
+        {
+          "hex": "#050500",
+          "role": "text-on-tint",
+          "role_canonical": false,
+          "confidence": 0.8,
+          "css_match_claimed": true,
+          "css_verified": true,
+          "css_match_exact": true
+        },
+        {
+          "hex": "#e5e5e5",
+          "role": "border",
+          "role_canonical": true,
+          "confidence": 0.85,
+          "css_match_claimed": true,
+          "css_verified": true,
+          "css_match_exact": false
+        },
+        {
+          "hex": "#1a1a1a",
+          "role": "border-strong",
+          "role_canonical": false,
+          "confidence": 0.8,
+          "css_match_claimed": false,
+          "css_verified": true,
+          "css_match_exact": false
+        }
+      ],
+      "typography": [
+        {
+          "role": "hero-display",
+          "role_canonical": false,
+          "family_inference": "custom display grotesque with quirky character (Uxum-like)",
+          "css_family": "Uxumgrotesque",
+          "weight": "medium/regular with tight tracking",
+          "size_relation": "very large, ~48px hero, scales up",
+          "confidence": 0.9,
+          "css_verified": true
+        },
+        {
+          "role": "section-heading",
+          "role_canonical": false,
+          "family_inference": "same display grotesque as hero",
+          "css_family": "Uxumgrotesque",
+          "weight": "regular",
+          "size_relation": "large, ~28-40px range, two-line wrapping common",
+          "confidence": 0.85,
+          "css_verified": true
+        },
+        {
+          "role": "body",
+          "role_canonical": true,
+          "family_inference": "humanist/neutral sans",
+          "css_family": "Inter",
+          "weight": "regular",
+          "size_relation": "compact ~14-15px, high line-height",
+          "confidence": 0.95,
+          "css_verified": true
+        },
+        {
+          "role": "nav",
+          "role_canonical": true,
+          "family_inference": "humanist sans",
+          "css_family": "Inter",
+          "weight": "medium",
+          "size_relation": "small ~14px",
+          "confidence": 0.9,
+          "css_verified": true
+        },
+        {
+          "role": "button-label",
+          "role_canonical": false,
+          "family_inference": "humanist sans",
+          "css_family": "Inter",
+          "weight": "medium",
+          "size_relation": "~14-15px, comfortable padding",
+          "confidence": 0.9,
+          "css_verified": true
+        },
+        {
+          "role": "caption-micro",
+          "role_canonical": false,
+          "family_inference": "humanist sans, slightly tighter",
+          "css_family": "Inter",
+          "weight": "regular",
+          "size_relation": "13-14px, muted gray",
+          "confidence": 0.85,
+          "css_verified": true
+        },
+        {
+          "role": "wordmark-monogram",
+          "role_canonical": false,
+          "family_inference": "geometric grotesque with custom ligature",
+          "css_family": "Foundersgrotesk",
+          "weight": "regular",
+          "size_relation": "logo-sized, distinctive",
+          "confidence": 0.8,
+          "css_verified": true
+        }
+      ],
+      "layout": {
+        "structure": "single-column narrative with alternating two-column feature rows; hero stacked center-aligned",
+        "grid": "12-col underlying grid; feature rows split 5/7 or 6/6; logo grid appears 4 columns; testimonial grid 3 columns",
+        "spacing_scale": "generous vertical rhythm; large section breaks (~96-160px between blocks); tight internal card padding (~16-24px); gutters ~24-32px",
+        "density": "",
+        "confidence": 0.88
+      },
+      "components": [
+        {
+          "name": "primary-button",
+          "description": "pill-shaped, dark fill (#000), white label, ~1000px radius, ~40-48px height, slight inward padding; sits inside dark capsules for hero CTA",
+          "states_or_variants": "default dark, inverted (white on dark) inferred",
+          "confidence": 0.9
+        },
+        {
+          "name": "secondary-button",
+          "description": "pill-shaped, white fill with thin dark border, dark label; subtle shadow",
+          "states_or_variants": "default outlined",
+          "confidence": 0.85
+        },
+        {
+          "name": "surface-card",
+          "description": "white, ~20px radius, ~16-24px padding, single soft shadow (low blur), 1px or 0px border",
+          "states_or_variants": "interactive (CRM mock), static (feature), media (video)",
+          "confidence": 0.95
+        },
+        {
+          "name": "pill-tag",
+          "description": "small rounded badge ~1440px radius, light tinted background, short label, used for categorization and metadata chips",
+          "states_or_variants": "tinted variants by category",
+          "confidence": 0.9
+        },
+        {
+          "name": "avatar-circle",
+          "description": "50% radius circular image, paired with name + role text; appears in testimonial cards",
+          "states_or_variants": "image-only and image+text",
+          "confidence": 0.95
+        },
+        {
+          "name": "logo-grid-cell",
+          "description": "flat logo on neutral surface, no frame, even grid spacing, low contrast monochrome treatment",
+          "states_or_variants": "static",
+          "confidence": 0.9
+        },
+        {
+          "name": "feature-callout",
+          "description": "two-column row: heading + subhead left, illustrated card/UI right; reverses direction by section",
+          "states_or_variants": "left-image, right-image alternation",
+          "confidence": 0.9
+        },
+        {
+          "name": "video-card",
+          "description": "rounded surface with thumbnail, play affordance overlay, small label strip",
+          "states_or_variants": "with CTA chip",
+          "confidence": 0.85
+        },
+        {
+          "name": "form-input",
+          "description": "pill or fully-rounded input, white fill, subtle border, generous height",
+          "states_or_variants": "single field + button combo",
+          "confidence": 0.8
+        },
+        {
+          "name": "footer-link-column",
+          "description": "stacked text links, left-aligned, muted gray, no icons",
+          "states_or_variants": "static",
+          "confidence": 0.85
+        },
+        {
+          "name": "navigation-bar",
+          "description": "sticky-feel header; left wordmark, center horizontal nav, right auth actions; transparent over tinted hero",
+          "states_or_variants": "default",
+          "confidence": 0.8
+        }
+      ],
+      "imagery": {
+        "style": "flat UI mockups of the product on tinted gradient; soft photographic avatars (real people); monochrome logo lockups",
+        "usage": "product illustrations dominate hero and feature sections; humans reserved for social proof",
+        "confidence": 0.85
+      },
+      "css_cross_reference_notes": [
+        "Computed lavender #eaddf3 and pink #f6dff6 match visible gradient washes exactly.",
+        "Computed #f7f3ef confirms a warm off-white secondary surface tone, slightly cream rather than neutral.",
+        "Border-radius 20px is consistent with the dominant card rounding; 1000px drives pill buttons/tags; 1440px for capsule chips; 50% used for circular avatars.",
+        "Box-shadow count is single-variant — confirms minimal, low-elevation shadow language visible in screenshots.",
+        "Detected font families match the visible duality: Uxumgrotesque (distinctive display) + Inter (neutral UI/body). Foundersgrotesk appears reserved for wordmark/decorative.",
+        "Font size scale 14–15px for body, 24–28px for subhead, ~48px for hero display matches the observed hierarchy.",
+        "Top margin tokens (112/144/160px) indicate generous vertical rhythm between hero/feature sections.",
+        "Body text color #222 and muted #646464 explain the soft, low-contrast body feel against white surfaces."
+      ],
+      "inspiration_notes": [
+        "Adopt a dual-typeface system: one quirky characterful display face for headings + one neutral humanist sans for UI to create personality without sacrificing legibility.",
+        "Use a single soft pastel gradient as the only chromatic moment on the page; let everything else be white/black/gray so product UI mockups stay the focus.",
+        "Cards: 20px corner radius + single low-blur shadow + 1px optional border. Avoid heavy elevation stacks.",
+        "Buttons: full-pill (≥1000px radius), consistent vertical padding, single primary color (near-black) and one outlined secondary.",
+        "Section rhythm: alternate left/right two-column feature blocks to create narrative pacing while keeping a single grid baseline.",
+        "Trust row: flat monochrome logos in an even 4-column grid, no boxes, no captions — keeps the wall quiet.",
+        "Accent surfaces: introduce a warm off-white (#f7f3ef) as secondary card tone to soften pure white contrast blocks.",
+        "Avatar + short quote in 3-column grid for testimonials; keep them human and small to preserve whitespace.",
+        "Reserve the only dark element for primary CTAs; everything else should breathe on light surfaces.",
+        "Footer stays typographic only: stacked link columns, muted gray, no decorative imagery, anchoring the page quietly."
+      ],
+      "markdown": "` with concise professional explanation\n\nI should not reproduce any text/copy from the source site. I need to focus on abstract design principles: hierarchy, density, spacing, grid, color ratios, typography character, radius, border, shadow, component behavior.\n\nLet me analyze the screenshot carefully:\n\n**Visual observations:**\n- The page has a soft lavender/purple gradient background at the top (#eaddf3 to #f6dff6 based on computed CSS)\n- There's a CRM-style interface screenshot shown in the hero section\n- Cards have soft rounded corners (looks like 20px based on border-radius values)\n- Typography appears to use a mix of a display serif/grotesque font (Uxumgrotesque or Foundersgrotesk) and Inter for body\n- Buttons appear to be pill-shaped (1000px border-radius)\n- Color palette: black text, white cards, lavender/pink background, with some accent colors\n- Logo grids showing trusted companies in a clean grid layout\n- Cards with shadow effect (subtle, single variant)\n- The overall tone is clean, modern, friendly, approachable\n- Density is balanced to spacious\n- Grid system appears to be multi-column with consistent gutters\n\n**Layout structure:**\n- Hero section with stacked layout at top\n- Trust/logos grid (4 columns)\n- Feature sections alternating left/right with cards\n- FAQ accordion at bottom\n- CTA footer\n- Standard footer with links\n\n**Components:**\n- Cards with rounded corners and subtle shadows\n- Pill buttons\n- Avatar circles with images\n- Badge/pill components (tags)\n- Form inputs with rounded corners\n- Icon-based feature cards\n- Video player cards\n- FAQ accordion items\n\n**Color analysis:**\n- Background lavender: #eaddf3 / #f6dff6\n- White cards: #ffffff\n- Black text: #000000 / #030200\n- Muted text: #646464\n- Soft cream/off-white: #f7f3ef\n- Pink accent: #f6dff6\n\n**Typography:**\n- Display heading uses a distinctive grotesque (likely Uxumgrotesque based on the unique characters visible)\n- Body uses Inter or similar humanist sans\n- Headings are large and bold\n- Body text is medium size with good line height\n\nLet me structure my analysis now.</think>\n\n```json\n{\n  ilgili bölüm: ilgili bölüm,\n  ilgili bölüm: 0.92,\n  ilgili bölüm: [\n    ilgili bölüm,\n    ilgili bölüm,\n    ilgili bölüm,\n    ilgili bölüm,\n    ilgili bölüm\n  ],\n  ilgili bölüm: [\n    {\"hex\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.95, ilgili bölüm: ilgili bölüm, ilgili bölüm: true},\n    {\"hex\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.95, ilgili bölüm: ilgili bölüm, ilgili bölüm: true},\n    {\"hex\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.99, ilgili bölüm: ilgili bölüm, ilgili bölüm: true},\n    {\"hex\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.85, ilgili bölüm: ilgili bölüm, ilgili bölüm: true},\n    {\"hex\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.99, ilgili bölüm: ilgili bölüm, ilgili bölüm: true},\n    {\"hex\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.9, ilgili bölüm: ilgili bölüm, ilgili bölüm: true},\n    {\"hex\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.9, ilgili bölüm: ilgili bölüm, ilgili bölüm: true},\n    {\"hex\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.8, ilgili bölüm: ilgili bölüm, ilgili bölüm: true},\n    {\"hex\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.85, ilgili bölüm: ilgili bölüm, ilgili bölüm: true},\n    {\"hex\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.8, ilgili bölüm: ilgili bölüm, ilgili bölüm: false}\n  ],\n  ilgili bölüm: [\n    {\"role\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.9},\n    {\"role\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.85},\n    {\"role\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.95},\n    {\"role\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.9},\n    {\"role\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.9},\n    {\"role\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.85},\n    {\"role\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.8}\n  ],\n  ilgili bölüm: {\n    ilgili bölüm: \"single-column narrative with alternating two-column feature rows; hero stacked center-aligned\",\n    ilgili bölüm: \"12-col underlying grid; feature rows split 5/7 or 6/6; logo grid appears 4 columns; testimonial grid 3 columns\",\n    ilgili bölüm: \"generous vertical rhythm; large section breaks (~96-160px between blocks); tight internal card padding (~16-24px); gutters ~24-32px\",\n    ilgili bölüm: ilgili bölüm,\n    ilgili bölüm: ilgili bölüm,\n    ilgili bölüm: 0.88\n  },\n  ilgili bölüm: [\n    {\"name\": ilgili bölüm, ilgili bölüm: \"pill-shaped, dark fill (#000), white label, ~1000px radius, ~40-48px height, slight inward padding; sits inside dark capsules for hero CTA\", ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.9},\n    {\"name\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.85},\n    {\"name\": ilgili bölüm, ilgili bölüm: \"white, ~20px radius, ~16-24px padding, single soft shadow (low blur), 1px or 0px border\", ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.95},\n    {\"name\": ilgili bölüm, ilgili bölüm: \"small rounded badge ~1440px radius, light tinted background, short label, used for categorization and metadata chips\", ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.9},\n    {\"name\": ilgili bölüm, ilgili bölüm: \"50% radius circular image, paired with name + role text; appears in testimonial cards\", ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.95},\n    {\"name\": ilgili bölüm, ilgili bölüm: \"flat logo on neutral surface, no frame, even grid spacing, low contrast monochrome treatment\", ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.9},\n    {\"name\": ilgili bölüm, ilgili bölüm: \"two-column row: heading + subhead left, illustrated card/UI right; reverses direction by section\", ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.9},\n    {\"name\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.85},\n    {\"name\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.8},\n    {\"name\": ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.85},\n    {\"name\": ilgili bölüm, ilgili bölüm: \"sticky-feel header; left wordmark, center horizontal nav, right auth actions; transparent over tinted hero\", ilgili bölüm: ilgili bölüm, ilgili bölüm: 0.8}\n  ],\n  ilgili bölüm: {\n    ilgili bölüm: \"flat UI mockups of the product on tinted gradient; soft photographic avatars (real people); monochrome logo lockups\",\n    ilgili bölüm: \"product illustrations dominate hero and feature sections; humans reserved for social proof\",\n    ilgili bölüm: 0.85\n  },\n  ilgili bölüm: [\n    \"Computed lavender #eaddf3 and pink #f6dff6 match visible gradient washes exactly.\",\n    \"Computed #f7f3ef confirms a warm off-white secondary surface tone, slightly cream rather than neutral.\",\n    \"Border-radius 20px is consistent with the dominant card rounding; 1000px drives pill buttons/tags; 1440px for capsule chips; 50% used for circular avatars.\",\n    \"Box-shadow count is single-variant — confirms minimal, low-elevation shadow language visible in screenshots.\",\n    \"Detected font families match the visible duality: Uxumgrotesque (distinctive display) + Inter (neutral UI/body). Foundersgrotesk appears reserved for wordmark/decorative.\",\n    \"Font size scale 14–15px for body, 24–28px for subhead, ~48px for hero display matches the observed hierarchy.\",\n    \"Top margin tokens (112/144/160px) indicate generous vertical rhythm between hero/feature sections.\",\n    \"Body text color #222 and muted #646464 explain the soft, low-contrast body feel against white surfaces.\"\n  ],\n  ilgili bölüm: [\n    \"Adopt a dual-typeface system: one quirky characterful display face for headings + one neutral humanist sans for UI to create personality without sacrificing legibility.\",\n    \"Use a single soft pastel gradient as the only chromatic moment on the page; let everything else be white/black/gray so product UI mockups stay the focus.\",\n    \"Cards: 20px corner radius + single low-blur shadow + 1px optional border. Avoid heavy elevation stacks.\",\n    \"Buttons: full-pill (≥1000px radius), consistent vertical padding, single primary color (near-black) and one outlined secondary.\",\n    \"Section rhythm: alternate left/right two-column feature blocks to create narrative pacing while keeping a single grid baseline.\",\n    \"Trust row: flat monochrome logos in an even 4-column grid, no boxes, no captions — keeps the wall quiet.\",\n    \"Accent surfaces: introduce a warm off-white (#f7f3ef) as secondary card tone to soften pure white contrast blocks.\",\n    \"Avatar + short quote in 3-column grid for testimonials; keep them human and small to preserve whitespace.\",\n    \"Reserve the only dark element for primary CTAs; everything else should breathe on light surfaces.\",\n    \"Footer stays typographic only: stacked link columns, muted gray, no decorative imagery, anchoring the page quietly.\"\n  ]\n}\n```\n\n## VISUAL_AUDIT_MARKDOWN\n\n**Tone & overall identity.** The page reads as a friendly, premium SaaS marketing surface. A single soft lavender→pink pastel wash carries the hero and a few accent moments, while the rest of the canvas stays neutral white with a warm off-white (#f7f3ef) as a secondary surface. The chromatic ratio is roughly: ~70% white surface, ~20% tinted background, ~10% near-black text/UI, with pink/lavender acting as a single emotional accent rather than a system color. This is a ilgili bölüm aesthetic — the product UI mockups are the visual hero, not the page chrome.\n\n**Typography.** A distinctive display grotesque with quirky letterforms (visible ligatures, slightly humanist proportions) carries every heading; it scales from ~48px hero down to ~28px section headings. Body, nav, and button labels all sit on a neutral humanist sans (Inter) at 14–15px with generous line-height. The contrast between the display face and the neutral UI sans is the page's main voice — it's the strongest personality signal. Wordmark/monogram uses a third custom geometric grotesque for branded moments.\n\n**Layout & rhythm.** A 12-column grid underlies the page. Hero is center-stacked. Below it, alternating two-column feature rows (heading-left / UI-right, then reverse) drive a narrative cadence. Vertical rhythm is generous: 112–160px gaps between sections. The trust row is a quiet 4-column flat logo grid with no frames or captions. A 3-column testimonial block sits later. Footer is purely typographic with stacked link columns in muted gray.\n\n**Components.**\n- *Cards*: 20px radius, ~16–24px padding, single low-blur shadow, optional hairline border. Three jobs: product mockup surface, feature illustration, video thumbnail.\n- *Buttons*: pill-shaped (1000px radius). Primary is solid near-black on white; secondary is outlined white-with-border. Heights feel consistent and tactile.\n- *Pill tags*: capsule chips for categorization and metadata, tinted background variants.\n- *Avatars*: 50% circular, paired with name+role text in testimonial rows.\n- *Form inputs*: fully-rounded, generous height, used for lead-capture moments.\n- *Nav*: wordmark left, horizontal nav center, auth actions right; transparent over tinted hero.\n\n**Imagery.** Mostly flat product UI illustrations on tinted gradient surfaces. Real human avatars are reserved for social proof only. Logos are flat monochrome.\n\n**Design-system takeaways for inspiration.**\n1. Build the personality around a type pairing, not around color — one characterful display face + one neutral UI sans.\n2. Pick a single pastel gradient as your ilgili bölüm backdrop, not a multi-color system.\n3. Cards should share one radius (20px), one shadow, optional 1px border. No mixed elevations.\n4. Buttons should be uniformly pill-shaped with a single solid primary color; resist gradients or shadows.\n5. Alternate feature-block direction to create rhythm without changing grid baseline.\n6. Keep trust rows typographically silent (flat logos, no frames) so adjacent sections can be loud.\n7. Use a warm off-white as a second surface tone to break pure-white monotony.\n8. Reserve dark for CTAs and headings only — let everything else breathe on light surfaces.\n9. Footer is typographic only: stacked link columns, muted color, zero decoration.\n10. Maintain at least 96–120px between major sections to preserve the airy, premium feel.",
+      "url_kind": "inner-page",
+      "screenshot": "002_https___www_folk_app_agency_crm.png"
+    }
+  ],
+  "colors": {
+    "palette": [
+      {
+        "hex": "#030200",
+        "semantic_role": "palette_1",
+        "usage_ratio": 0.792,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#ffffff",
+        "semantic_role": "palette_2",
+        "usage_ratio": 0.074,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#000000",
+        "semantic_role": "palette_3",
+        "usage_ratio": 0.052,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#222222",
+        "semantic_role": "palette_4",
+        "usage_ratio": 0.025,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#050500",
+        "semantic_role": "palette_5",
+        "usage_ratio": 0.021,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#f7f3ef",
+        "semantic_role": "palette_6",
+        "usage_ratio": 0.013,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#646464",
+        "semantic_role": "palette_7",
+        "usage_ratio": 0.006,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#333333",
+        "semantic_role": "palette_8",
+        "usage_ratio": 0.004,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#f6dff6",
+        "semantic_role": "palette_9",
+        "usage_ratio": 0.002,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#e3efdc",
+        "semantic_role": "palette_10",
+        "usage_ratio": 0.002,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#c4eaee",
+        "semantic_role": "palette_11",
+        "usage_ratio": 0.002,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      {
+        "hex": "#bed9ef",
+        "semantic_role": "palette_12",
+        "usage_ratio": 0.002,
+        "use_for": [
+          "supporting UI role"
+        ],
+        "avoid_for": [
+          "unrelated semantic roles"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      }
+    ],
+    "brand_ranked": [
+      {
+        "hex": "#000000",
+        "saturation": 0.0,
+        "share": 0.052
+      },
+      {
+        "hex": "#fff0bd",
+        "saturation": 1.0,
+        "share": 0.002
+      },
+      {
+        "hex": "#bed9ef",
+        "saturation": 0.605,
+        "share": 0.002
+      },
+      {
+        "hex": "#c4eaee",
+        "saturation": 0.553,
+        "share": 0.002
+      },
+      {
+        "hex": "#f6dff6",
+        "saturation": 0.561,
+        "share": 0.002
+      },
+      {
+        "hex": "#eaddf3",
+        "saturation": 0.478,
+        "share": 0.001
+      }
+    ],
+    "semantic": {
+      "background": {
+        "hex": "#ffffff",
+        "semantic_role": "background",
+        "usage_ratio": 0.593,
+        "use_for": [
+          "page backgrounds",
+          "large quiet surfaces",
+          "negative space"
+        ],
+        "avoid_for": [
+          "small text",
+          "critical actions without contrast checks"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      "surface": {
+        "hex": "#000000",
+        "semantic_role": "surface",
+        "usage_ratio": 0.176,
+        "use_for": [
+          "cards",
+          "modals",
+          "inputs",
+          "table rows",
+          "secondary panels"
+        ],
+        "avoid_for": [
+          "primary CTA if it blends into the page"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      "text": {
+        "hex": "#030200",
+        "semantic_role": "text",
+        "usage_ratio": 0.889,
+        "use_for": [
+          "primary reading text",
+          "headings when contrast is sufficient"
+        ],
+        "avoid_for": [
+          "large filled surfaces",
+          "decorative backgrounds"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      "muted_text": {
+        "hex": "#000000",
+        "semantic_role": "muted_text",
+        "usage_ratio": 0.037,
+        "use_for": [
+          "helper text",
+          "metadata",
+          "secondary labels"
+        ],
+        "avoid_for": [
+          "primary actions",
+          "long body copy at low contrast"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      "border": {
+        "hex": "#030200",
+        "semantic_role": "border",
+        "usage_ratio": 0.885,
+        "use_for": [
+          "separators",
+          "input outlines",
+          "card boundaries"
+        ],
+        "avoid_for": [
+          "large text blocks",
+          "dominant brand moments"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      "primary_action": {
+        "hex": "#000000",
+        "semantic_role": "primary_action",
+        "usage_ratio": 0.052,
+        "use_for": [
+          "main CTA",
+          "selected state",
+          "high-emphasis controls"
+        ],
+        "avoid_for": [
+          "dense backgrounds",
+          "long reading surfaces",
+          "disabled states"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      "accent": {
+        "hex": "#fff0bd",
+        "semantic_role": "accent",
+        "usage_ratio": 0.002,
+        "use_for": [
+          "badges",
+          "focus cues",
+          "small visual anchors"
+        ],
+        "avoid_for": [
+          "body copy",
+          "large page backgrounds",
+          "error messaging unless semantically appropriate"
+        ],
+        "hover": "tespit-edilemedi (öneri): temel renkten %6-10 koyu/açık bir durum türet; kontrastı uygulamada doğrula",
+        "active": "tespit-edilemedi (öneri): temel renkten %10-14 daha güçlü bir durum türet; yeni renk ailesi katma"
+      },
+      "success": {
+        "hex": "tespit-edilemedi",
+        "role": "success",
+        "note": "Bu sitede bu role karsilik gelen bir renk gozlenmedi."
+      },
+      "warning": {
+        "hex": "tespit-edilemedi",
+        "role": "warning",
+        "note": "Bu sitede bu role karsilik gelen bir renk gozlenmedi."
+      },
+      "error": {
+        "hex": "tespit-edilemedi",
+        "role": "error",
+        "note": "Bu sitede bu role karsilik gelen bir renk gozlenmedi."
+      }
+    },
+    "contrast": {
+      "text": "#030200",
+      "dominant_background": "#ffffff",
+      "dominant_pair_ratio": 20.74,
+      "best_background": "#ffffff",
+      "best_pair_ratio": 20.74,
+      "text_on_background": 20.74,
+      "action_text_color": "#ffffff",
+      "action_on_background": 21.0,
+      "passes_aa": true
+    }
+  },
+  "typography": {
+    "font_family": "Foundersgrotesk",
+    "font_family_stack": [
+      "Foundersgrotesk",
+      "Inter",
+      "Uxumgrotesque",
+      "Rubik"
+    ],
+    "display": {
+      "size": "64px",
+      "weight": "500",
+      "line_height": "64px",
+      "letter_spacing": "1px",
+      "usage": "largest brand/hero statement only",
+      "measured": true
+    },
+    "h1": {
+      "size": "64px",
+      "weight": "500",
+      "line_height": "64px",
+      "letter_spacing": "1px",
+      "usage": "page-level heading",
+      "measured": true
+    },
+    "h2": {
+      "size": "21px",
+      "weight": "500",
+      "line_height": "25.2px",
+      "letter_spacing": "1px",
+      "usage": "major section heading",
+      "measured": true
+    },
+    "h3": {
+      "size": "48px",
+      "weight": "500",
+      "line_height": "52.8px",
+      "letter_spacing": "1px",
+      "usage": "card or subsection heading",
+      "measured": true
+    },
+    "body": {
+      "size": "14.4px",
+      "weight": "400",
+      "line_height": "23.04px",
+      "letter_spacing": "1px",
+      "usage": "primary reading and descriptions",
+      "measured": true
+    },
+    "small": {
+      "size": "15px",
+      "weight": "500",
+      "line_height": "31.5px",
+      "letter_spacing": "1px",
+      "usage": "secondary descriptions and compact UI",
+      "measured": true
+    },
+    "caption": {
+      "size": "14px",
+      "weight": "400",
+      "line_height": "22.4px",
+      "letter_spacing": "1px",
+      "usage": "metadata, helper text and annotations",
+      "measured": true
+    },
+    "button": {
+      "size": "14.4px",
+      "weight": "400",
+      "line_height": "23.04px",
+      "letter_spacing": "1px",
+      "usage": "interactive commands",
+      "measured": true
+    },
+    "label": {
+      "size": "15px",
+      "weight": "500",
+      "line_height": "31.5px",
+      "letter_spacing": "1px",
+      "usage": "form labels and UI descriptors",
+      "measured": true
+    },
+    "observed": {
+      "weights": [
+        "400",
+        "500",
+        "700"
+      ],
+      "line_heights": [
+        "23.04px",
+        "31.5px",
+        "22.4px",
+        "19.5px",
+        "21px",
+        "17.5px",
+        "26px",
+        "24px"
+      ],
+      "letter_spacings": [
+        "1px",
+        "0.26px"
+      ]
+    }
+  },
+  "spacing": {
+    "container_widths": [
+      {
+        "value": "1160px",
+        "count": 132,
+        "share": 0.326
+      },
+      {
+        "value": "320px",
+        "count": 66,
+        "share": 0.163
+      },
+      {
+        "value": "360px",
+        "count": 49,
+        "share": 0.121
+      },
+      {
+        "value": "1440px",
+        "count": 33,
+        "share": 0.081
+      },
+      {
+        "value": "280px",
+        "count": 29,
+        "share": 0.072
+      },
+      {
+        "value": "440px",
+        "count": 28,
+        "share": 0.069
+      },
+      {
+        "value": "640px",
+        "count": 22,
+        "share": 0.054
+      },
+      {
+        "value": "600px",
+        "count": 18,
+        "share": 0.044
+      },
+      {
+        "value": "1120px",
+        "count": 12,
+        "share": 0.03
+      },
+      {
+        "value": "880px",
+        "count": 9,
+        "share": 0.022
+      },
+      {
+        "value": "720px",
+        "count": 3,
+        "share": 0.007
+      },
+      {
+        "value": "1000px",
+        "count": 2,
+        "share": 0.005
+      }
+    ],
+    "padding": [
+      {
+        "value": "24px",
+        "count": 112,
+        "share": 0.307
+      },
+      {
+        "value": "16px",
+        "count": 90,
+        "share": 0.247
+      },
+      {
+        "value": "8px",
+        "count": 37,
+        "share": 0.101
+      },
+      {
+        "value": "10px",
+        "count": 26,
+        "share": 0.071
+      },
+      {
+        "value": "20px",
+        "count": 24,
+        "share": 0.066
+      },
+      {
+        "value": "6px",
+        "count": 19,
+        "share": 0.052
+      },
+      {
+        "value": "6.4px",
+        "count": 16,
+        "share": 0.044
+      },
+      {
+        "value": "4px",
+        "count": 14,
+        "share": 0.038
+      },
+      {
+        "value": "12px",
+        "count": 8,
+        "share": 0.022
+      },
+      {
+        "value": "48px",
+        "count": 8,
+        "share": 0.022
+      },
+      {
+        "value": "3px",
+        "count": 6,
+        "share": 0.016
+      },
+      {
+        "value": "32px",
+        "count": 4,
+        "share": 0.011
+      }
+    ],
+    "margin": [
+      {
+        "value": "144px",
+        "count": 41,
+        "share": 0.36
+      },
+      {
+        "value": "112px",
+        "count": 15,
+        "share": 0.132
+      },
+      {
+        "value": "40px",
+        "count": 10,
+        "share": 0.088
+      },
+      {
+        "value": "4px",
+        "count": 8,
+        "share": 0.07
+      },
+      {
+        "value": "1.625px",
+        "count": 8,
+        "share": 0.07
+      },
+      {
+        "value": "12px",
+        "count": 5,
+        "share": 0.044
+      },
+      {
+        "value": "160px",
+        "count": 5,
+        "share": 0.044
+      },
+      {
+        "value": "8px",
+        "count": 4,
+        "share": 0.035
+      },
+      {
+        "value": "288.281px",
+        "count": 4,
+        "share": 0.035
+      },
+      {
+        "value": "16px",
+        "count": 4,
+        "share": 0.035
+      },
+      {
+        "value": "24px",
+        "count": 2,
+        "share": 0.018
+      },
+      {
+        "value": "71.9531px",
+        "count": 2,
+        "share": 0.018
+      }
+    ],
+    "scale": [
+      {
+        "value": "24px",
+        "count": 114,
+        "share": 0.238
+      },
+      {
+        "value": "16px",
+        "count": 94,
+        "share": 0.196
+      },
+      {
+        "value": "8px",
+        "count": 41,
+        "share": 0.086
+      },
+      {
+        "value": "144px",
+        "count": 41,
+        "share": 0.086
+      },
+      {
+        "value": "10px",
+        "count": 26,
+        "share": 0.054
+      },
+      {
+        "value": "20px",
+        "count": 24,
+        "share": 0.05
+      },
+      {
+        "value": "4px",
+        "count": 22,
+        "share": 0.046
+      },
+      {
+        "value": "6px",
+        "count": 19,
+        "share": 0.04
+      },
+      {
+        "value": "6.4px",
+        "count": 16,
+        "share": 0.033
+      },
+      {
+        "value": "112px",
+        "count": 15,
+        "share": 0.031
+      },
+      {
+        "value": "12px",
+        "count": 13,
+        "share": 0.027
+      },
+      {
+        "value": "48px",
+        "count": 10,
+        "share": 0.021
+      }
+    ],
+    "section_gaps": [
+      {
+        "value": "112px",
+        "count": 7,
+        "share": 0.538
+      },
+      {
+        "value": "160px",
+        "count": 2,
+        "share": 0.154
+      },
+      {
+        "value": "80px",
+        "count": 1,
+        "share": 0.077
+      },
+      {
+        "value": "144px",
+        "count": 1,
+        "share": 0.077
+      },
+      {
+        "value": "264px",
+        "count": 1,
+        "share": 0.077
+      },
+      {
+        "value": "296px",
+        "count": 1,
+        "share": 0.077
+      }
+    ]
+  },
+  "shape": {
+    "border_radius": [
+      {
+        "value": "0px",
+        "count": 844,
+        "share": 0.973
+      },
+      {
+        "value": "1000px",
+        "count": 10,
+        "share": 0.012
+      },
+      {
+        "value": "20px",
+        "count": 6,
+        "share": 0.007
+      },
+      {
+        "value": "1440px",
+        "count": 4,
+        "share": 0.005
+      },
+      {
+        "value": "50%",
+        "count": 2,
+        "share": 0.002
+      },
+      {
+        "value": "100px",
+        "count": 1,
+        "share": 0.001
+      }
+    ],
+    "border": {
+      "widths": [
+        {
+          "value": "1px",
+          "count": 60,
+          "share": 1.0
+        }
+      ],
+      "colors": [
+        {
+          "value": "#030200",
+          "count": 767,
+          "share": 0.885
+        },
+        {
+          "value": "#000000",
+          "count": 40,
+          "share": 0.046
+        },
+        {
+          "value": "#222222",
+          "count": 24,
+          "share": 0.028
+        },
+        {
+          "value": "#050500",
+          "count": 20,
+          "share": 0.023
+        },
+        {
+          "value": "#646464",
+          "count": 6,
+          "share": 0.007
+        },
+        {
+          "value": "#333333",
+          "count": 4,
+          "share": 0.005
+        },
+        {
+          "value": "#ffffff",
+          "count": 4,
+          "share": 0.005
+        },
+        {
+          "value": "#0a0a00",
+          "count": 2,
+          "share": 0.002
+        }
+      ]
+    },
+    "shadow": [
+      {
+        "value": "rgba(0, 0, 0, 0.06) 0px 1px 6px 0px, rgba(0, 0, 0, 0.16) 0px 2px 32px 0px",
+        "count": 2,
+        "share": 1.0
+      }
+    ]
+  }
+}

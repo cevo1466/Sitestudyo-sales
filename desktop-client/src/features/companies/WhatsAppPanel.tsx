@@ -22,11 +22,18 @@ interface Outreach {
 /**
  * WhatsApp temas paneli.
  *
- * Uc kademeli uyari, cunku bir numaranin WhatsApp'ta kayitli olup
- * olmadigini ONCEDEN ogrenmenin yolu yok — WhatsApp boyle bir sorgu
- * vermiyor. Yapabilecegimiz tek durust sey numaranin TURUNU soylemek:
- * cep hatlari neredeyse her zaman WhatsApp'li, sabit hatlar degil.
- * Havuzun ucte biri sabit hat oldugu icin bu uyari onemli.
+ * TASARIM KARARI: bu panel mesaji GONDERMEZ. WhatsApp'i mesaj yazili
+ * halde acar, gonder tusuna kullanici kendi basar. Boylece metni son bir
+ * kez okuyup duzeltebiliyor. Sablon degiskenleri (yorum sayisi, ilce)
+ * veri eksikse bos kaliyor ve o hali musteriye gitmemeli.
+ *
+ * Metin bu yuzden her zaman acik duruyor. Onceden bir "sablon sec"
+ * adiminin arkasindaydi ve gonderilecek yazi hic gorunmuyordu.
+ *
+ * Numaranin WhatsApp'ta kayitli olup olmadigi ONCEDEN bilinemez, WhatsApp
+ * boyle bir sorgu vermiyor. Yapilabilecek tek durust sey numaranin turunu
+ * soylemek: cep hatlari neredeyse her zaman WhatsApp'li, sabit hatlar
+ * degil. Havuzun ucte biri sabit hat.
  */
 export function WhatsAppPanel({
   companyId,
@@ -36,17 +43,22 @@ export function WhatsAppPanel({
   onSent: () => void;
 }) {
   const [data, setData] = useState<Outreach | null>(null);
-  const [picking, setPicking] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
+  const [draft, setDraft] = useState('');
+  const [opened, setOpened] = useState(false);
+  const [copied, setCopied] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     let dead = false;
+    setOpened(false);
     api<Outreach>(`/outreach/company/${companyId}/messages`)
       .then((d) => {
         if (dead) return;
         setData(d);
-        setSelected(d.messages.find((m) => m.recommended)?.key ?? d.messages[0]?.key ?? null);
+        const first = d.messages.find((m) => m.recommended) ?? d.messages[0];
+        setSelected(first?.key ?? null);
+        setDraft(first?.text ?? '');
       })
       .catch((e: Error) => !dead && setError(e.message));
     return () => {
@@ -55,23 +67,38 @@ export function WhatsAppPanel({
   }, [companyId]);
 
   if (error) return <div className="notice error">{error}</div>;
-  if (!data) return <div className="skeleton" style={{ height: 64, borderRadius: 8 }} />;
+  if (!data) return <div className="skeleton" style={{ height: 64 }} />;
 
-  const msg = data.messages.find((m) => m.key === selected) ?? data.messages[0];
+  const recommended = data.messages.find((m) => m.recommended) ?? null;
 
-  function send(): void {
-    if (!msg?.url) return;
-    // Pencereyi HEMEN aciyoruz. Kayit isteginin cevabini beklemek
-    // tarayicinin acilir pencere engeline takilir (kullanici tiklamasiyla
-    // ayni anda olmayan window.open engellenir).
-    window.open(msg.url, '_blank', 'noopener');
+  function pick(key: string): void {
+    const m = data!.messages.find((x) => x.key === key);
+    setSelected(key);
+    setDraft(m?.text ?? '');
+  }
+
+  /**
+   * WhatsApp'i acar. GONDERMEZ.
+   *
+   * Adresteki metin WhatsApp'in yazi kutusuna dusuyor, gonderme tusuna
+   * kullanici basiyor. Temasi bu yuzden "gonderildi" diye degil "acildi"
+   * diye kaydediyoruz. Yalan bir zaman tuneli, hic kayit tutmamaktan
+   * daha kotu olurdu.
+   */
+  function openWhatsApp(): void {
+    if (!data!.phoneE164 || data!.blocked) return;
+    const url = `https://wa.me/${data!.phoneE164.replace(/\D/g, '')}?text=${encodeURIComponent(draft)}`;
+    // Pencereyi HEMEN aciyoruz. Kayit isteginin cevabini beklersek
+    // tarayicinin acilir pencere engeline takiliyor: kullanici tiklamasiyla
+    // ayni anda olmayan window.open cagrisi engelleniyor.
+    window.open(url, '_blank', 'noopener');
+    setOpened(true);
     void api(`/outreach/company/${companyId}/whatsapp-sent`, {
       method: 'POST',
-      body: JSON.stringify({ templateKey: msg.key, text: msg.text }),
+      body: JSON.stringify({ templateKey: selected ?? 'ozel', text: draft }),
     })
       .then(onSent)
       .catch(() => undefined);
-    setPicking(false);
   }
 
   async function block(): Promise<void> {
@@ -87,7 +114,6 @@ export function WhatsAppPanel({
     }
   }
 
-  // --- Gonderilemez durumlar ---
   if (data.blocked) {
     return (
       <div className="wa-panel blocked">
@@ -102,7 +128,7 @@ export function WhatsAppPanel({
       <div className="wa-panel off">
         <div className="wa-title">Telefon numarası yok</div>
         <p className="wa-note">
-          Bu işletmenin Google kaydında telefon bulunmuyor, WhatsApp gönderilemez.
+          Google kaydında telefon bulunmuyor, bu işletmeye WhatsApp açılamaz.
         </p>
       </div>
     );
@@ -112,54 +138,77 @@ export function WhatsAppPanel({
     <div className="wa-panel">
       <div className="wa-head">
         <div>
-          <div className="wa-title">WhatsApp’tan yaz</div>
+          <div className="wa-title">WhatsApp</div>
           <div className="wa-phone">{data.phone ?? data.phoneE164}</div>
         </div>
-        <button className="wa-send" onClick={() => setPicking((p) => !p)}>
-          {picking ? 'Kapat' : 'Şablon seç'}
-        </button>
       </div>
 
       {data.phoneKind === 'landline' && (
         <p className="wa-warn">
-          Bu bir <strong>sabit hat</strong> — WhatsApp’ı olmayabilir. Yine de
-          deneyebilirsiniz; kayıtlı değilse WhatsApp size söyler.
+          Bu bir sabit hat, WhatsApp’ı olmayabilir. Yine de deneyebilirsiniz.
+          Numara kayıtlı değilse WhatsApp size söyler.
         </p>
       )}
 
-      {picking && (
-        <div className="wa-picker">
-          <div className="wa-tabs">
-            {data.messages.map((m) => (
-              <button
-                key={m.key}
-                className={`wa-tab${m.key === selected ? ' on' : ''}`}
-                onClick={() => setSelected(m.key)}
-              >
-                {m.label}
-                {m.recommended && <span className="wa-rec" title="Bu işletme için önerilen">★</span>}
-              </button>
-            ))}
-          </div>
+      <div className="wa-tabs">
+        {data.messages.map((m) => (
+          <button
+            key={m.key}
+            className={`wa-tab${m.key === selected ? ' on' : ''}`}
+            onClick={() => pick(m.key)}
+          >
+            {m.label}
+          </button>
+        ))}
+      </div>
 
-          <textarea className="wa-preview" readOnly value={msg?.text ?? ''} rows={6} />
+      <textarea
+        className="wa-preview"
+        value={draft}
+        rows={7}
+        onChange={(e) => setDraft(e.target.value)}
+        spellCheck={false}
+      />
 
-          <div className="wa-actions">
-            <button className="btn" style={{ width: 'auto', padding: '0 18px' }} onClick={send}>
-              WhatsApp’ta aç ve gönder
-            </button>
-            <button
-              className="btn secondary"
-              style={{ width: 'auto', padding: '0 14px' }}
-              onClick={() => void navigator.clipboard.writeText(msg?.text ?? '')}
-            >
-              Kopyala
-            </button>
-            <button className="wa-block" onClick={() => void block()}>
-              Bir daha yazma
-            </button>
-          </div>
-        </div>
+      <p className="wa-hint">
+        {recommended && recommended.key === selected
+          ? 'Google verisine göre bu işletmeye en uygun şablon bu. '
+          : ''}
+        Metin WhatsApp’a yazılı gelir, gönder tuşuna siz basarsınız. Burada
+        da değiştirebilirsiniz.
+      </p>
+
+      <div className="wa-actions">
+        <button
+          className="btn"
+          style={{ width: 'auto', padding: '0 18px' }}
+          onClick={openWhatsApp}
+          disabled={!draft.trim()}
+        >
+          WhatsApp’ta aç
+        </button>
+        <button
+          className="btn secondary"
+          style={{ width: 'auto', padding: '0 14px' }}
+          onClick={() => {
+            void navigator.clipboard.writeText(draft);
+            setCopied(true);
+            window.setTimeout(() => setCopied(false), 1600);
+          }}
+        >
+          {copied ? 'Kopyalandı' : 'Kopyala'}
+        </button>
+        <button className="wa-block" onClick={() => void block()}>
+          Bir daha yazma
+        </button>
+      </div>
+
+      {opened && (
+        <p className="wa-opened">
+          WhatsApp açıldı, temas zaman tüneline işlendi. Mesajı gerçekten
+          gönderip göndermediğinizi buradan göremiyoruz, kayıt “açıldı”
+          olarak duruyor.
+        </p>
       )}
     </div>
   );

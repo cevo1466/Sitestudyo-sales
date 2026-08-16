@@ -44,8 +44,12 @@
   --text-xs: 12px;
   --text-2xs: 11px;
 
-  /* Olcum: govde 500, basliklar 600/500. Attio govdede 400 degil 500
-     kullaniyor — acik zeminde ince metni okunakli tutan sey bu. */
+  /* Attio govdede 500 kullaniyordu; onu koruyoruz, acik zeminde ince metni
+     okunakli tutan sey bu.
+     folk olcumu agirlik dagilimini soyle verdi: 400 -> %84, 500 -> %14,
+     700 -> %1.7. Yani kalin yazi neredeyse hic yok. --weight-bold artik
+     arayuzde KULLANILMIYOR; jeton yalnizca geriye donuk uyumluluk icin
+     duruyor. Vurgu kalinlikla degil renk ve bosluklla veriliyor. */
   --weight-normal: 450;
   --weight-medium: 500;
   --weight-semibold: 600;
@@ -73,13 +77,23 @@
   --space-12: 64px;
 
   /* --- Yaricap ----------------------------------------------------------- */
-  /* Olculen: 7px, 8px, 10px, 12px. 7'yi 6'ya yuvarladik (yarim piksel
-     kenarlarda bulanik gorunuyordu), gerisi oldugu gibi. */
-  --radius-sm: 4px;
-  --radius-md: 6px;
-  --radius-lg: 8px;
-  --radius-xl: 12px;
+  /* folk.app olcumu (16 Agu 2026): border-radius 0px -> %97.3, hap %1.2.
+     Attio'dan alinan 6-12px degerleri panele "yonetim paneli sablonu"
+     gorunumu veriyordu; kullanicinin ilk tarif ettigi sikayet buydu.
+     Sifira inmiyoruz ama sifira YAKLASIYORUZ: 1-2px, ekranda kenar
+     yumusatmasi kadar kaliyor, hap hicbir yerde kalmiyor.
+     --radius-full YALNIZCA gercekten dairesel seyler icin (derece noktasi,
+     avatar). Dugme veya cip icin kullanilirsa hap geri gelir. */
+  --radius-sm: 0;
+  --radius-md: 2px;
+  --radius-lg: 3px;
+  --radius-xl: 4px;
   --radius-full: 9999px;
+
+  /* Kucuk buyuk-harf etiketler icin harf araligi.
+     folk olcumu: letter-spacing 1px, %57 pay. Bizde 11-12px etiketlerde
+     oransal karsiligi ~0.06em. */
+  --tracking-wide: 0.06em;
 
   /* --- Hareket ----------------------------------------------------------- */
   /* linear.app olcumu: 0.1 / 0.12 / 0.16 / 0.25 / 0.4 sn — attio'dan
@@ -138,6 +152,18 @@
      Indigo hem daha karakterli hem yogun bir tabloda maviden daha az
      "baglanti rengi" gibi okunuyor. */
   --accent: #5e6ad2;
+
+  /* --- Murekkep: birincil eylemin dolgusu -------------------------------- */
+  /* folk olcumu: metin #030200 -> %88.9, zemin #ffffff -> %59.3, kenarlik
+     1px ve neredeyse siyah. Yani vurgu bir RENK degil, kontrast.
+     Mor dolgulu dugme "yapay zeka paneli" gorunumunun en guclu isaretiydi;
+     birincil eylem murekkebe tasindi. --accent duruyor ama artik yalnizca
+     islevsel: odak halkasi, secili satir, baglanti metni. */
+  --ink: #1b1c1e;
+  --ink-hover: #303236;
+  --ink-active: #0d0e0f;
+  --on-ink: #ffffff;
+
   --accent-hover: #4f5ac0;
   --accent-active: #434ea8;
   --accent-subtle: #eceefb;
@@ -193,6 +219,14 @@
 
   /* Koyu zeminde indigo'nun acik tonu — olculen palette[7] */
   --accent: #828fff;
+
+  /* Koyu temada murekkep tersine doner: koyu zeminde koyu dolgu gorunmez.
+     Dugme acik, uzerindeki yazi koyu olur — kagit uzerine basilmis gibi. */
+  --ink: #f0f1f2;
+  --ink-hover: #ffffff;
+  --ink-active: #d8dade;
+  --on-ink: #0f1011;
+
   --accent-hover: #9aa4ff;
   --accent-active: #b0b8ff;
   --accent-subtle: #1e2033;
@@ -240,6 +274,14 @@
     --border-strong: #3a3d44;
     --border-grid: #1c1c1f;
     --accent: #828fff;
+
+  /* Koyu temada murekkep tersine doner: koyu zeminde koyu dolgu gorunmez.
+     Dugme acik, uzerindeki yazi koyu olur — kagit uzerine basilmis gibi. */
+  --ink: #f0f1f2;
+  --ink-hover: #ffffff;
+  --ink-active: #d8dade;
+  --on-ink: #0f1011;
+
     --accent-hover: #9aa4ff;
     --accent-active: #b0b8ff;
     --accent-subtle: #1e2033;

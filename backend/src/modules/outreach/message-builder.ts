@@ -120,10 +120,16 @@ export function buildMessages(
   templates: MessageTemplate[],
 ): RenderedMessage[] {
   const best = recommendedTemplateKey(c);
+  // Onerilen anahtar SABIT KODLU ('sosyal_kanit' / 'site_sorunlu' / 'sade').
+  // Kullanici artik kendi sablonlarini ekleyip bunlari silebiliyor; o anahtar
+  // listede yoksa hicbir sablon onerilmis gorunmez ve kimse sebebini anlamaz.
+  // Eslesme tutmazsa listedeki ilk sablona dusuyoruz: oneri kalitesi duser
+  // ama ipucu satiri sessizce kaybolmaz.
+  const chosen = templates.some((t) => t.key === best) ? best : templates[0]?.key;
   return templates.map((t) => ({
     key: t.key,
     label: t.label,
     text: renderTemplate(t.body, c),
-    recommended: t.key === best,
+    recommended: t.key === chosen,
   }));
 }
