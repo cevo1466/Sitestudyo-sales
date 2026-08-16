@@ -680,13 +680,23 @@ table.grid td {
 
 /* ═══════════════════════════════════════════════════════════ AYARLAR ══ */
 
+/* Ayarlar: genis ekranda iki sutun.
+   Olculdu: 1280px'de tek sutun 697px yer kapliyor ve sagda 583px (%46)
+   olu alan kaliyordu. Paneller birbirinden bagimsiz kartlar oldugu icin
+   yan yana dizilmeleri okumayi bozmuyor, kaydirmayi da yariya indiriyor.
+   420px alt sinir: puanlama tablosunun sutunlari bundan darda ust uste
+   biniyor. */
 .settings {
   overflow: auto;
   min-height: 0;
   padding: var(--space-8);
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  align-items: start;
   gap: var(--space-8);
-  max-width: 760px;
+  max-width: 1360px;
+  margin-inline: auto;
+  width: 100%;
 }
 
 .panel {
