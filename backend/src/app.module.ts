@@ -14,6 +14,7 @@ import { HealthModule } from './modules/health/health.module';
 import { CompaniesModule } from './modules/companies/companies.module';
 import { CrmSharedModule } from './modules/crm-shared/crm-shared.module';
 import { ContactsModule } from './modules/contacts/contacts.module';
+import { PipelinesModule } from './modules/pipelines/pipelines.module';
 import { JwtModule } from '@nestjs/jwt';
 
 @Global()
@@ -38,6 +39,7 @@ class CoreModule {}
     CrmSharedModule,
     CompaniesModule,
     ContactsModule,
+    PipelinesModule,
   ],
   providers: [
     // SIRA ONEMLI: once kimlik (JwtAuthGuard req.user'i doldurur),
