@@ -1,0 +1,1677 @@
+{
+  "colors": {
+    "text": [
+      {
+        "value": "#f7f8f8",
+        "count": 2232,
+        "share": 0.495
+      },
+      {
+        "value": "#8a8f98",
+        "count": 928,
+        "share": 0.206
+      },
+      {
+        "value": "#d0d6e0",
+        "count": 789,
+        "share": 0.175
+      },
+      {
+        "value": "#62666d",
+        "count": 441,
+        "share": 0.098
+      },
+      {
+        "value": "#ffffff",
+        "count": 68,
+        "share": 0.015
+      },
+      {
+        "value": "#828fff",
+        "count": 30,
+        "share": 0.007
+      },
+      {
+        "value": "#08090a",
+        "count": 11,
+        "share": 0.002
+      },
+      {
+        "value": "#e2e4e7",
+        "count": 4,
+        "share": 0.001
+      },
+      {
+        "value": "#3e3e44",
+        "count": 3,
+        "share": 0.001
+      },
+      {
+        "value": "#e2e4e6",
+        "count": 2,
+        "share": 0.0
+      },
+      {
+        "value": "#27a644",
+        "count": 1,
+        "share": 0.0
+      },
+      {
+        "value": "#f34f52",
+        "count": 1,
+        "share": 0.0
+      }
+    ],
+    "backgrounds": [
+      {
+        "value": "#08090a",
+        "count": 210,
+        "share": 0.479
+      },
+      {
+        "value": "#ffffff",
+        "count": 87,
+        "share": 0.199
+      },
+      {
+        "value": "#0f1011",
+        "count": 48,
+        "share": 0.11
+      },
+      {
+        "value": "#1c1c1f",
+        "count": 22,
+        "share": 0.05
+      },
+      {
+        "value": "#18191a",
+        "count": 19,
+        "share": 0.043
+      },
+      {
+        "value": "#23252a",
+        "count": 13,
+        "share": 0.03
+      },
+      {
+        "value": "#e5e5e6",
+        "count": 9,
+        "share": 0.021
+      },
+      {
+        "value": "#5e6ad2",
+        "count": 6,
+        "share": 0.014
+      },
+      {
+        "value": "#6366f1",
+        "count": 5,
+        "share": 0.011
+      },
+      {
+        "value": "#eb5757",
+        "count": 3,
+        "share": 0.007
+      },
+      {
+        "value": "#8b5cf6",
+        "count": 3,
+        "share": 0.007
+      },
+      {
+        "value": "#f34f52",
+        "count": 2,
+        "share": 0.005
+      }
+    ],
+    "likely_palette": [
+      {
+        "value": "#f7f8f8",
+        "count": 2232,
+        "share": 0.451
+      },
+      {
+        "value": "#8a8f98",
+        "count": 928,
+        "share": 0.188
+      },
+      {
+        "value": "#d0d6e0",
+        "count": 789,
+        "share": 0.159
+      },
+      {
+        "value": "#62666d",
+        "count": 441,
+        "share": 0.089
+      },
+      {
+        "value": "#08090a",
+        "count": 221,
+        "share": 0.045
+      },
+      {
+        "value": "#ffffff",
+        "count": 155,
+        "share": 0.031
+      },
+      {
+        "value": "#0f1011",
+        "count": 48,
+        "share": 0.01
+      },
+      {
+        "value": "#828fff",
+        "count": 30,
+        "share": 0.006
+      },
+      {
+        "value": "#1c1c1f",
+        "count": 22,
+        "share": 0.004
+      },
+      {
+        "value": "#18191a",
+        "count": 19,
+        "share": 0.004
+      },
+      {
+        "value": "#23252a",
+        "count": 13,
+        "share": 0.003
+      },
+      {
+        "value": "#e5e5e6",
+        "count": 9,
+        "share": 0.002
+      },
+      {
+        "value": "#5e6ad2",
+        "count": 6,
+        "share": 0.001
+      },
+      {
+        "value": "#6366f1",
+        "count": 5,
+        "share": 0.001
+      },
+      {
+        "value": "#e2e4e7",
+        "count": 4,
+        "share": 0.001
+      },
+      {
+        "value": "#eb5757",
+        "count": 3,
+        "share": 0.001
+      }
+    ]
+  },
+  "typography": {
+    "font_families": [
+      {
+        "value": "Inter Variable",
+        "count": 4471,
+        "share": 0.991
+      },
+      {
+        "value": "Berkeley Mono",
+        "count": 39,
+        "share": 0.009
+      }
+    ],
+    "font_sizes": [
+      {
+        "value": "16px",
+        "count": 2255,
+        "share": 0.5
+      },
+      {
+        "value": "13px",
+        "count": 829,
+        "share": 0.184
+      },
+      {
+        "value": "15px",
+        "count": 482,
+        "share": 0.107
+      },
+      {
+        "value": "17px",
+        "count": 412,
+        "share": 0.091
+      },
+      {
+        "value": "12px",
+        "count": 158,
+        "share": 0.035
+      },
+      {
+        "value": "13.3333px",
+        "count": 132,
+        "share": 0.029
+      },
+      {
+        "value": "14px",
+        "count": 65,
+        "share": 0.014
+      },
+      {
+        "value": "10px",
+        "count": 57,
+        "share": 0.013
+      },
+      {
+        "value": "24px",
+        "count": 30,
+        "share": 0.007
+      },
+      {
+        "value": "14.875px",
+        "count": 22,
+        "share": 0.005
+      },
+      {
+        "value": "20px",
+        "count": 19,
+        "share": 0.004
+      },
+      {
+        "value": "48px",
+        "count": 16,
+        "share": 0.004
+      }
+    ],
+    "heading_samples": [
+      {
+        "page": "home",
+        "level": "h1",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "64px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "home",
+        "level": "h3",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "20px",
+        "fontWeight": "590",
+        "color": "rgb(208, 214, 224)"
+      },
+      {
+        "page": "home",
+        "level": "h4",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "590",
+        "color": "rgb(208, 214, 224)"
+      },
+      {
+        "page": "home",
+        "level": "h2",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "48px",
+        "fontWeight": "510",
+        "color": "rgb(138, 143, 152)"
+      },
+      {
+        "page": "home",
+        "level": "h2",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "48px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "home",
+        "level": "h2",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "48px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "home",
+        "level": "h2",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "48px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "home",
+        "level": "h2",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "48px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "inner-page",
+        "level": "h1",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "64px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "inner-page",
+        "level": "h2",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "48px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "inner-page",
+        "level": "h2",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "48px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "inner-page",
+        "level": "h2",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "48px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "inner-page",
+        "level": "h2",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "72px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "inner-page",
+        "level": "h3",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "inner-page",
+        "level": "h3",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "inner-page",
+        "level": "h3",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "inner-page",
+        "level": "h1",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "72px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "inner-page",
+        "level": "h2",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "48px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "inner-page",
+        "level": "h3",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "590",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "inner-page",
+        "level": "h3",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "590",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "inner-page",
+        "level": "h3",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "590",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "inner-page",
+        "level": "h3",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "590",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "inner-page",
+        "level": "h2",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "48px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "inner-page",
+        "level": "h3",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "510",
+        "color": "rgb(40, 42, 48)"
+      },
+      {
+        "page": "content-index",
+        "level": "h1",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "48px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "content-index",
+        "level": "h3",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "20px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "content-index",
+        "level": "h3",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "20px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "content-index",
+        "level": "h3",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "20px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "content-index",
+        "level": "h3",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "20px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      },
+      {
+        "page": "content-index",
+        "level": "h3",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "20px",
+        "fontWeight": "510",
+        "color": "rgb(247, 248, 248)"
+      }
+    ],
+    "font_weights": [
+      {
+        "value": "400",
+        "count": 3683,
+        "share": 0.817
+      },
+      {
+        "value": "510",
+        "count": 761,
+        "share": 0.169
+      },
+      {
+        "value": "590",
+        "count": 47,
+        "share": 0.01
+      },
+      {
+        "value": "500",
+        "count": 19,
+        "share": 0.004
+      }
+    ],
+    "line_heights": [
+      {
+        "value": "24px",
+        "count": 2686,
+        "share": 0.627
+      },
+      {
+        "value": "19.5px",
+        "count": 455,
+        "share": 0.106
+      },
+      {
+        "value": "27.2px",
+        "count": 398,
+        "share": 0.093
+      },
+      {
+        "value": "20.8px",
+        "count": 180,
+        "share": 0.042
+      },
+      {
+        "value": "16.8px",
+        "count": 119,
+        "share": 0.028
+      },
+      {
+        "value": "32px",
+        "count": 72,
+        "share": 0.017
+      },
+      {
+        "value": "21px",
+        "count": 59,
+        "share": 0.014
+      },
+      {
+        "value": "15px",
+        "count": 57,
+        "share": 0.013
+      },
+      {
+        "value": "20px",
+        "count": 52,
+        "share": 0.012
+      },
+      {
+        "value": "19.95px",
+        "count": 33,
+        "share": 0.008
+      }
+    ],
+    "letter_spacings": [
+      {
+        "value": "-0.165px",
+        "count": 468,
+        "share": 0.444
+      },
+      {
+        "value": "-0.13px",
+        "count": 417,
+        "share": 0.396
+      },
+      {
+        "value": "-0.182px",
+        "count": 53,
+        "share": 0.05
+      },
+      {
+        "value": "-0.288px",
+        "count": 30,
+        "share": 0.028
+      },
+      {
+        "value": "-0.24px",
+        "count": 19,
+        "share": 0.018
+      },
+      {
+        "value": "-0.039px",
+        "count": 17,
+        "share": 0.016
+      }
+    ],
+    "weight_by_size": {
+      "16px": "400",
+      "14px": "400",
+      "13px": "400",
+      "64px": "510",
+      "15px": "400",
+      "13.3333px": "400",
+      "12px": "400",
+      "20px": "590",
+      "11px": "510",
+      "10px": "510",
+      "48px": "510",
+      "24px": "400",
+      "72px": "510",
+      "17px": "400",
+      "32px": "590",
+      "13.6px": "510",
+      "14.875px": "400"
+    },
+    "line_height_by_size": {
+      "16px": "24px",
+      "14px": "21px",
+      "13px": "19.5px",
+      "64px": "64px",
+      "15px": "24px",
+      "12px": "16.8px",
+      "20px": "26.6px",
+      "11px": "15.4px",
+      "10px": "15px",
+      "48px": "48px",
+      "24px": "31.92px",
+      "72px": "72px",
+      "17px": "27.2px",
+      "32px": "36px",
+      "14.875px": "19.3375px"
+    }
+  },
+  "motion": {
+    "transition_durations": [
+      {
+        "value": "0.1s",
+        "count": 222,
+        "share": 0.558
+      },
+      {
+        "value": "0.25s",
+        "count": 83,
+        "share": 0.209
+      },
+      {
+        "value": "0.16s",
+        "count": 58,
+        "share": 0.146
+      },
+      {
+        "value": "0.4s",
+        "count": 16,
+        "share": 0.04
+      },
+      {
+        "value": "0.12s",
+        "count": 16,
+        "share": 0.04
+      },
+      {
+        "value": "0.2s",
+        "count": 3,
+        "share": 0.008
+      }
+    ]
+  },
+  "shape": {
+    "border_radius": [
+      {
+        "value": "0px",
+        "count": 3776,
+        "share": 0.838
+      },
+      {
+        "value": "9999px",
+        "count": 290,
+        "share": 0.064
+      },
+      {
+        "value": "5px",
+        "count": 103,
+        "share": 0.023
+      },
+      {
+        "value": "8px",
+        "count": 72,
+        "share": 0.016
+      },
+      {
+        "value": "6px",
+        "count": 63,
+        "share": 0.014
+      },
+      {
+        "value": "2px",
+        "count": 39,
+        "share": 0.009
+      },
+      {
+        "value": "4px",
+        "count": 38,
+        "share": 0.008
+      },
+      {
+        "value": "999px",
+        "count": 30,
+        "share": 0.007
+      },
+      {
+        "value": "50%",
+        "count": 28,
+        "share": 0.006
+      },
+      {
+        "value": "4.4625px",
+        "count": 22,
+        "share": 0.005
+      },
+      {
+        "value": "12px",
+        "count": 21,
+        "share": 0.005
+      },
+      {
+        "value": "24px",
+        "count": 15,
+        "share": 0.003
+      }
+    ],
+    "border": {
+      "widths": [
+        {
+          "value": "1px",
+          "count": 435,
+          "share": 1.0
+        }
+      ],
+      "colors": [
+        {
+          "value": "#f7f8f8",
+          "count": 2084,
+          "share": 0.464
+        },
+        {
+          "value": "#8a8f98",
+          "count": 927,
+          "share": 0.206
+        },
+        {
+          "value": "#d0d6e0",
+          "count": 556,
+          "share": 0.124
+        },
+        {
+          "value": "#62666d",
+          "count": 426,
+          "share": 0.095
+        },
+        {
+          "value": "#ffffff",
+          "count": 237,
+          "share": 0.053
+        },
+        {
+          "value": "#34343a",
+          "count": 202,
+          "share": 0.045
+        },
+        {
+          "value": "#828fff",
+          "count": 30,
+          "share": 0.007
+        },
+        {
+          "value": "#e5e5e6",
+          "count": 9,
+          "share": 0.002
+        },
+        {
+          "value": "#23252a",
+          "count": 6,
+          "share": 0.001
+        },
+        {
+          "value": "#e2e4e7",
+          "count": 3,
+          "share": 0.001
+        },
+        {
+          "value": "#383b3f",
+          "count": 3,
+          "share": 0.001
+        },
+        {
+          "value": "#3e3e44",
+          "count": 3,
+          "share": 0.001
+        }
+      ]
+    },
+    "shadow": [
+      {
+        "value": "rgba(0, 0, 0, 0.2) 0px 0px 0px 1px",
+        "count": 34,
+        "share": 0.207
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.03) 0px 1.2px 0px 0px",
+        "count": 30,
+        "share": 0.183
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.4) 0px 2px 4px 0px",
+        "count": 16,
+        "share": 0.098
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.25) 0px 2px 32px 0px",
+        "count": 16,
+        "share": 0.098
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.08) 0px 0px 0px 0.5px inset",
+        "count": 16,
+        "share": 0.098
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.06) 0px 4px 4px -1px, rgba(0, 0, 0, 0.12) 0px 1px 1px 0px",
+        "count": 15,
+        "share": 0.091
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(62, 62, 68) 0px 0px 0px 1px",
+        "count": 12,
+        "share": 0.073
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 8px 2px 0px, rgba(0, 0, 0, 0.01) 0px 5px 2px 0px, rgba(0, 0, 0, 0.04) 0px 3px 2px 0px, rgba(0, 0, 0, 0.07) 0px 1px 1px 0px, rgba(0, 0, 0, 0",
+        "count": 9,
+        "share": 0.055
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset",
+        "count": 9,
+        "share": 0.055
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.03) 0px 0px 0px 1px inset, rgba(255, 255, 255, 0.04) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.6) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px",
+        "count": 5,
+        "share": 0.03
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.1) 0px 0px 0px 2px",
+        "count": 1,
+        "share": 0.006
+      },
+      {
+        "value": "rgb(35, 37, 42) 0px 0px 0px 1px inset",
+        "count": 1,
+        "share": 0.006
+      }
+    ]
+  },
+  "spacing": {
+    "container_widths": [
+      {
+        "value": "640px",
+        "count": 331,
+        "share": 0.193
+      },
+      {
+        "value": "400px",
+        "count": 311,
+        "share": 0.181
+      },
+      {
+        "value": "320px",
+        "count": 220,
+        "share": 0.128
+      },
+      {
+        "value": "600px",
+        "count": 215,
+        "share": 0.125
+      },
+      {
+        "value": "280px",
+        "count": 185,
+        "share": 0.108
+      },
+      {
+        "value": "1280px",
+        "count": 98,
+        "share": 0.057
+      },
+      {
+        "value": "1440px",
+        "count": 88,
+        "share": 0.051
+      },
+      {
+        "value": "360px",
+        "count": 71,
+        "share": 0.041
+      },
+      {
+        "value": "240px",
+        "count": 55,
+        "share": 0.032
+      },
+      {
+        "value": "1360px",
+        "count": 35,
+        "share": 0.02
+      },
+      {
+        "value": "1320px",
+        "count": 33,
+        "share": 0.019
+      },
+      {
+        "value": "520px",
+        "count": 29,
+        "share": 0.017
+      }
+    ],
+    "padding": [
+      {
+        "value": "32px",
+        "count": 491,
+        "share": 0.212
+      },
+      {
+        "value": "8px",
+        "count": 488,
+        "share": 0.21
+      },
+      {
+        "value": "5px",
+        "count": 241,
+        "share": 0.104
+      },
+      {
+        "value": "12px",
+        "count": 145,
+        "share": 0.063
+      },
+      {
+        "value": "10px",
+        "count": 143,
+        "share": 0.062
+      },
+      {
+        "value": "16px",
+        "count": 126,
+        "share": 0.054
+      },
+      {
+        "value": "6px",
+        "count": 119,
+        "share": 0.051
+      },
+      {
+        "value": "24px",
+        "count": 115,
+        "share": 0.05
+      },
+      {
+        "value": "3px",
+        "count": 88,
+        "share": 0.038
+      },
+      {
+        "value": "14px",
+        "count": 60,
+        "share": 0.026
+      },
+      {
+        "value": "4px",
+        "count": 55,
+        "share": 0.024
+      },
+      {
+        "value": "1.4875px",
+        "count": 44,
+        "share": 0.019
+      }
+    ],
+    "margin": [
+      {
+        "value": "1px",
+        "count": 230,
+        "share": 0.24
+      },
+      {
+        "value": "8px",
+        "count": 196,
+        "share": 0.205
+      },
+      {
+        "value": "2px",
+        "count": 68,
+        "share": 0.071
+      },
+      {
+        "value": "6px",
+        "count": 61,
+        "share": 0.064
+      },
+      {
+        "value": "16px",
+        "count": 61,
+        "share": 0.064
+      },
+      {
+        "value": "4px",
+        "count": 48,
+        "share": 0.05
+      },
+      {
+        "value": "23px",
+        "count": 38,
+        "share": 0.04
+      },
+      {
+        "value": "20px",
+        "count": 32,
+        "share": 0.033
+      },
+      {
+        "value": "5px",
+        "count": 26,
+        "share": 0.027
+      },
+      {
+        "value": "7px",
+        "count": 22,
+        "share": 0.023
+      },
+      {
+        "value": "24px",
+        "count": 20,
+        "share": 0.021
+      },
+      {
+        "value": "48px",
+        "count": 18,
+        "share": 0.019
+      }
+    ],
+    "scale": [
+      {
+        "value": "8px",
+        "count": 684,
+        "share": 0.209
+      },
+      {
+        "value": "32px",
+        "count": 499,
+        "share": 0.152
+      },
+      {
+        "value": "5px",
+        "count": 267,
+        "share": 0.081
+      },
+      {
+        "value": "1px",
+        "count": 230,
+        "share": 0.07
+      },
+      {
+        "value": "16px",
+        "count": 187,
+        "share": 0.057
+      },
+      {
+        "value": "6px",
+        "count": 180,
+        "share": 0.055
+      },
+      {
+        "value": "12px",
+        "count": 160,
+        "share": 0.049
+      },
+      {
+        "value": "10px",
+        "count": 143,
+        "share": 0.044
+      },
+      {
+        "value": "24px",
+        "count": 135,
+        "share": 0.041
+      },
+      {
+        "value": "4px",
+        "count": 103,
+        "share": 0.031
+      },
+      {
+        "value": "3px",
+        "count": 88,
+        "share": 0.027
+      },
+      {
+        "value": "2px",
+        "count": 87,
+        "share": 0.027
+      }
+    ],
+    "section_gaps": [
+      {
+        "value": "0px",
+        "count": 13,
+        "share": 0.433
+      },
+      {
+        "value": "224px",
+        "count": 2,
+        "share": 0.067
+      },
+      {
+        "value": "256px",
+        "count": 2,
+        "share": 0.067
+      },
+      {
+        "value": "128px",
+        "count": 2,
+        "share": 0.067
+      },
+      {
+        "value": "72px",
+        "count": 2,
+        "share": 0.067
+      },
+      {
+        "value": "80px",
+        "count": 1,
+        "share": 0.033
+      },
+      {
+        "value": "360px",
+        "count": 1,
+        "share": 0.033
+      },
+      {
+        "value": "384px",
+        "count": 1,
+        "share": 0.033
+      }
+    ]
+  },
+  "components": {
+    "action_samples": [
+      {
+        "page": "home",
+        "tag": "a",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(94, 106, 210)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "510",
+        "borderRadius": "0px",
+        "width": 1440,
+        "height": 32
+      },
+      {
+        "page": "home",
+        "tag": "a",
+        "color": "rgb(247, 248, 248)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "borderRadius": "6px",
+        "width": 104,
+        "height": 32
+      },
+      {
+        "page": "home",
+        "tag": "button",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 73,
+        "height": 32
+      },
+      {
+        "page": "home",
+        "tag": "button",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 91,
+        "height": 32
+      },
+      {
+        "page": "home",
+        "tag": "a",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 92,
+        "height": 32
+      },
+      {
+        "page": "home",
+        "tag": "a",
+        "color": "rgb(247, 248, 248)",
+        "backgroundColor": "rgba(255, 255, 255, 0.08)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 67,
+        "height": 32
+      },
+      {
+        "page": "home",
+        "tag": "a",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 52,
+        "height": 32
+      },
+      {
+        "page": "home",
+        "tag": "a",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 74,
+        "height": 32
+      },
+      {
+        "page": "home",
+        "tag": "a",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 62,
+        "height": 32
+      },
+      {
+        "page": "home",
+        "tag": "a",
+        "color": "rgb(8, 9, 10)",
+        "backgroundColor": "rgb(229, 229, 230)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "510",
+        "borderRadius": "9999px",
+        "width": 72,
+        "height": 32
+      },
+      {
+        "page": "home",
+        "tag": "a",
+        "color": "rgb(247, 248, 248)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "borderRadius": "0px",
+        "width": 175,
+        "height": 25
+      },
+      {
+        "page": "home",
+        "tag": "button",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13.3333px",
+        "fontWeight": "400",
+        "borderRadius": "4px",
+        "width": 100,
+        "height": 28
+      },
+      {
+        "page": "inner-page",
+        "tag": "a",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(94, 106, 210)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "510",
+        "borderRadius": "0px",
+        "width": 1440,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "a",
+        "color": "rgb(247, 248, 248)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "borderRadius": "6px",
+        "width": 104,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "button",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 73,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "button",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 91,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "a",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 92,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "a",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 67,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "a",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 52,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "a",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 74,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "a",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 62,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "a",
+        "color": "rgb(8, 9, 10)",
+        "backgroundColor": "rgb(229, 229, 230)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "510",
+        "borderRadius": "9999px",
+        "width": 72,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "button",
+        "color": "rgb(247, 248, 248)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "510",
+        "borderRadius": "9999px",
+        "width": 32,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "button",
+        "color": "rgb(247, 248, 248)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "510",
+        "borderRadius": "9999px",
+        "width": 32,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "a",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(94, 106, 210)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "510",
+        "borderRadius": "0px",
+        "width": 1440,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "a",
+        "color": "rgb(247, 248, 248)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "borderRadius": "6px",
+        "width": 104,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "button",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 73,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "button",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 91,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "a",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 92,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "a",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 67,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "a",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 52,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "a",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 74,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "a",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 62,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "a",
+        "color": "rgb(8, 9, 10)",
+        "backgroundColor": "rgb(229, 229, 230)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "510",
+        "borderRadius": "9999px",
+        "width": 72,
+        "height": 32
+      },
+      {
+        "page": "inner-page",
+        "tag": "button",
+        "color": "rgb(8, 9, 10)",
+        "backgroundColor": "rgb(229, 229, 230)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "510",
+        "borderRadius": "9999px",
+        "width": 171,
+        "height": 40
+      },
+      {
+        "page": "inner-page",
+        "tag": "button",
+        "color": "rgb(98, 102, 109)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "borderRadius": "0px",
+        "width": 24,
+        "height": 24
+      },
+      {
+        "page": "content-index",
+        "tag": "a",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(94, 106, 210)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "510",
+        "borderRadius": "0px",
+        "width": 1440,
+        "height": 32
+      },
+      {
+        "page": "content-index",
+        "tag": "a",
+        "color": "rgb(247, 248, 248)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "borderRadius": "6px",
+        "width": 104,
+        "height": 32
+      },
+      {
+        "page": "content-index",
+        "tag": "button",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 73,
+        "height": 32
+      },
+      {
+        "page": "content-index",
+        "tag": "button",
+        "color": "rgb(138, 143, 152)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Inter Variable\", \"SF Pro Display\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "borderRadius": "9999px",
+        "width": 91,
+        "height": 32
+      }
+    ]
+  }
+}

@@ -12,6 +12,7 @@ import { CompaniesScreen } from './features/companies/CompaniesScreen';
 import { PipelineScreen } from './features/pipeline/PipelineScreen';
 import { SettingsScreen } from './features/settings/SettingsScreen';
 import { ThemeToggle } from './components/ThemeToggle';
+import { UpdateButton } from './components/UpdateButton';
 
 type Stage = 'connect' | 'login' | 'app';
 type Tab = 'companies' | 'pipeline' | 'settings';
@@ -88,6 +89,7 @@ export function App() {
           ))}
         </nav>
         <div className="topbar-right">
+          <UpdateButton />
           <span>{user}</span>
           <ThemeToggle />
         </div>

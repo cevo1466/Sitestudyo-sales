@@ -1,0 +1,194 @@
+{
+  "area": "surface_system",
+  "gradients": {
+    "dominant": [
+      {
+        "type": "linear",
+        "repeating": false,
+        "angle": 0.0,
+        "angle_raw": "to top",
+        "stops": [
+          {
+            "color": "lab(0 0 0 / 0.5)",
+            "position": "0px"
+          },
+          {
+            "color": "lab(0 0 0 / 0.45)",
+            "position": "10px"
+          },
+          {
+            "color": "lab(0 0 0 / 0.35)",
+            "position": "24px"
+          },
+          {
+            "color": "lab(0 0 0 / 0.25)",
+            "position": "40px"
+          },
+          {
+            "color": "lab(0 0 0 / 0.15)",
+            "position": "58px"
+          },
+          {
+            "color": "lab(0 0 0 / 0.08)",
+            "position": "78px"
+          },
+          {
+            "color": "lab(0 0 0 / 0.03)",
+            "position": "98px"
+          },
+          {
+            "color": "lab(0 0 0 / 0.005)",
+            "position": "112px"
+          },
+          {
+            "color": "rgba(0, 0, 0, 0)",
+            "position": "120px"
+          }
+        ],
+        "color_count": 9,
+        "raw": "linear-gradient(to top, lab(0 0 0 / 0.5) 0px, lab(0 0 0 / 0.45) 10px, lab(0 0 0 / 0.35) 24px, lab(0 0 0 / 0.25) 40px, lab(0 0 0 / 0.15) 58px, lab(0 0 0 / 0.08) 78px, lab(0 0 0 / 0.03) 98px, lab(0 0 0 / 0.005) 112px, rgba(0, 0, 0, 0) 120px)",
+        "count": 1,
+        "area_ratio": 0.781,
+        "token": "gradient-linear-1",
+        "css_var": "--gradient-linear-1"
+      }
+    ],
+    "incidental_count": 1,
+    "types": {
+      "linear": 2
+    }
+  },
+  "effects": {
+    "profile": {
+      "mix_blend_mode": 0,
+      "backdrop_filter": 2,
+      "filter": 0,
+      "clip_path": 4,
+      "mask_image": 0,
+      "opacity": 15,
+      "flat": false
+    },
+    "signatures": [
+      "cam-efekti (backdrop blur)",
+      "kirpilmis (clip-path) yuzeyler",
+      "1 baskin gradyan"
+    ],
+    "top": {
+      "mix_blend_mode": [],
+      "backdrop_filter": [
+        {
+          "value": "blur(20px)",
+          "count": 1,
+          "area": 105120
+        },
+        {
+          "value": "blur(4px)",
+          "count": 1,
+          "area": 6248
+        }
+      ],
+      "filter": [],
+      "clip_path": [
+        {
+          "value": "inset(50%)",
+          "count": 4,
+          "area": 4
+        }
+      ],
+      "mask_image": [],
+      "opacity": [
+        {
+          "value": "0.8",
+          "count": 9,
+          "area": 365778
+        },
+        {
+          "value": "0",
+          "count": 5,
+          "area": 47868
+        },
+        {
+          "value": "0.6",
+          "count": 1,
+          "area": 263
+        }
+      ]
+    }
+  },
+  "backgrounds": {
+    "images": [],
+    "count": 0
+  },
+  "media": {
+    "aspect_scale": [
+      {
+        "ratio": "1:1",
+        "count": 9,
+        "share": 0.9
+      },
+      {
+        "ratio": "16:9",
+        "count": 1,
+        "share": 0.1
+      }
+    ],
+    "dominant_ratio": "1:1",
+    "object_fit": [
+      {
+        "value": "cover",
+        "count": 9
+      },
+      {
+        "value": "contain",
+        "count": 1
+      }
+    ],
+    "radius": [
+      {
+        "value": "4px",
+        "count": 9
+      },
+      {
+        "value": "8px",
+        "count": 1
+      }
+    ],
+    "sample_count": 10,
+    "avg_density": 2.57
+  },
+  "theme": {
+    "has_dark_variant": true,
+    "mechanism": "prefers-color-scheme + [data-theme]",
+    "changed_var_count": 0,
+    "changed_surfaces": {},
+    "dark_vars": {
+      "--tweet-skeleton-gradient": "linear-gradient(270deg, #15202b, #1e2732, #1e2732, #15202b)",
+      "--tweet-border": "1px solid #425364",
+      "--tweet-font-family": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+      "--tweet-font-color": "#f7f9f9",
+      "--tweet-font-color-secondary": "#8b98a5",
+      "--tweet-bg-color": "#15202b",
+      "--tweet-bg-color-hover": "#1e2732",
+      "--tweet-quoted-bg-color-hover": "#ffffff08",
+      "--tweet-color-blue-primary": "#1d9bf0",
+      "--tweet-color-blue-primary-hover": "#1a8cd8",
+      "--tweet-color-blue-secondary": "#6bc9fb",
+      "--tweet-color-blue-secondary-hover": "#6bc9fb1a",
+      "--tweet-color-red-primary": "#f91880",
+      "--tweet-color-red-primary-hover": "#f918801a",
+      "--tweet-color-green-primary": "#00ba7c",
+      "--tweet-color-green-primary-hover": "#00ba7c1a",
+      "--tweet-twitter-icon-color": "var(--tweet-font-color)",
+      "--tweet-verified-old-color": "#829aab",
+      "--tweet-verified-blue-color": "#fff"
+    },
+    "status": "partial",
+    "reason": "51 stylesheet cross-origin oldugu icin okunamadi; tema kurallari eksik olabilir"
+  },
+  "coverage": {
+    "status": "partial",
+    "samples": 661,
+    "blocked_stylesheets": 51,
+    "reason": "51 stylesheet cross-origin oldugu icin okunamadi; tema kurallari eksik olabilir"
+  }
+}

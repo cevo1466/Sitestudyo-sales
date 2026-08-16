@@ -50,6 +50,7 @@ enum LeadGrade {
 
 enum ActivityType {
   CALL
+  WHATSAPP
   MEETING
   EMAIL_OUT
   EMAIL_IN
@@ -219,6 +220,12 @@ model Company {
   firstSeenAt    DateTime  @default(now())
   lastAnalyzedAt DateTime?
   lastScoredAt   DateTime?
+  /// Bu isletmeye EN SON ne zaman temas edildi (arama, WhatsApp, mail,
+  /// gorusme). Aktivitelerden turetiliyor ama burada da tutuluyor:
+  /// "temas edilmeyenler" filtresi ve "son temas" siralamasi 2.000+
+  /// kayitta her seferinde activities tablosunu taramak zorunda kalmasin.
+  /// TEK YAZICI: ActivityService — baska hicbir yer bu alani yazmaz.
+  lastContactedAt DateTime?
   /// Saglayicidan gelen ham kayit — sema degisirse geriye donuk yeniden isleyebilelim.
   raw Json?
 
@@ -241,6 +248,7 @@ model Company {
   @@index([sector])
   @@index([websiteDomain])
   @@index([nameNormalized])
+  @@index([lastContactedAt])
   // Siralama indeksleri. Imlec karsilastirmasi (alan, id) ciftine bakiyor;
   // indeks tam bu sirayla olmazsa MySQL dosya bazli siralamaya duser ve
   // derin sayfalarda sorgu suresi kayit sayisiyla birlikte buyur.
@@ -248,6 +256,7 @@ model Company {
   @@index([googleRating, id])
   @@index([firstSeenAt, id])
   @@index([lastAnalyzedAt, id])
+  @@index([lastContactedAt, id])
   @@fulltext([name, address])
   @@map("companies")
 }

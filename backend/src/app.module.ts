@@ -24,6 +24,7 @@ import { CrawlerModule } from './modules/crawler/crawler.module';
 import { MailModule } from './modules/mail/mail.module';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { TasksModule } from './modules/tasks/tasks.module';
+import { OutreachModule } from './modules/outreach/outreach.module';
 import { JwtModule } from '@nestjs/jwt';
 
 @Global()
@@ -58,6 +59,7 @@ class CoreModule {}
     MailModule,
     DashboardModule,
     TasksModule,
+    OutreachModule,
   ],
   providers: [
     // SIRA ONEMLI: once kimlik (JwtAuthGuard req.user'i doldurur),

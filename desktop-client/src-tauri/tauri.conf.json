@@ -54,5 +54,16 @@
         ]
       }
     }
+  },
+  "plugins": {
+    "updater": {
+      "endpoints": [
+        "https://api.sitestudyo.com/updates/latest.json"
+      ],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEEyODJDODg1RDFBQkFDOTMKUldTVHJLdlJoY2lDb2dkU1EzMy80ZWR3VTFFTm0yUzVvME5kWk5ETjJQZUZLSDJBdDN6eTBhWlQK",
+      "windows": {
+        "installMode": "passive"
+      }
+    }
   }
 }

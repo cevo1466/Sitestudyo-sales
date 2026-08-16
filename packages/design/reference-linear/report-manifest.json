@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-08-16T16:26:35",
+  "start_url": "https://linear.app",
+  "coverage": {
+    "pages_crawled": 6,
+    "pages_with_screenshot": 6,
+    "pages_scroll_captured": 2,
+    "pages_vision_analyzed": 6,
+    "technologies_detected": 5
+  },
+  "sections": [
+    {
+      "section": "crawl",
+      "status": "tam",
+      "detail": "6 sayfa gezildi, 6 ekran görüntüsü alındı"
+    },
+    {
+      "section": "scroll_capture",
+      "status": "uygulandı",
+      "detail": "2/6 sayfada kaydırma ile tam yakalama yapıldı"
+    },
+    {
+      "section": "teknoloji_tespiti",
+      "status": "tam",
+      "detail": "5 teknoloji tespit edildi, 6/6 sayfada runtime probe çalıştı"
+    },
+    {
+      "section": "computed_css_tokens",
+      "status": "tam",
+      "detail": "Renk/tipografi/spacing token'ları gerçek computed CSS'ten çıkarıldı"
+    },
+    {
+      "section": "gorsel_analiz_vision",
+      "status": "tam",
+      "detail": "6/6 sayfa görsel olarak analiz edildi"
+    }
+  ],
+  "warnings": [],
+  "complete": true
+}

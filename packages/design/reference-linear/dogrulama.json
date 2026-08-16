@@ -1,0 +1,84 @@
+{
+  "overall": "KISMEN DOĞRULANDI",
+  "counts": {
+    "measured": 8,
+    "partial": 4,
+    "not-measured": 0
+  },
+  "total_areas": 12,
+  "areas": {
+    "colors": {
+      "status": "measured",
+      "samples": 16,
+      "reason": null
+    },
+    "typography": {
+      "status": "measured",
+      "samples": 12,
+      "reason": null
+    },
+    "components": {
+      "status": "measured",
+      "samples": 12,
+      "reason": null
+    },
+    "sections": {
+      "status": "measured",
+      "samples": 6,
+      "reason": null
+    },
+    "responsive": {
+      "status": "measured",
+      "samples": 3,
+      "reason": null
+    },
+    "motion": {
+      "status": "measured",
+      "samples": 5,
+      "reason": null
+    },
+    "tech_stack": {
+      "status": "measured",
+      "samples": 5,
+      "reason": null
+    },
+    "layout_system": {
+      "status": "partial",
+      "samples": 43,
+      "reason": "hiçbir bölümde içerik kenarı ölçülemedi (tüm bölümler tam genişlik olabilir)",
+      "container_confident": false,
+      "pages_measured": 6,
+      "pages_attempted": 6
+    },
+    "surfaces": {
+      "status": "partial",
+      "samples": 661,
+      "reason": "51 stylesheet cross-origin oldugu icin okunamadi; tema kurallari eksik olabilir",
+      "blocked_stylesheets": 51
+    },
+    "theme_variants": {
+      "status": "partial",
+      "samples": 1,
+      "reason": "51 stylesheet cross-origin oldugu icin okunamadi; tema kurallari eksik olabilir",
+      "blocked_stylesheets": 51
+    },
+    "interaction_states": {
+      "status": "partial",
+      "samples": 11,
+      "reason": "51 stylesheet cross-origin olduğu için CSS kuralları okunamadı; davranışsal ölçüm 11/11 elemanda yapıldı",
+      "elements_attempted": 11,
+      "blocked_stylesheets": 51
+    },
+    "assets": {
+      "status": "measured",
+      "samples": 46,
+      "reason": null,
+      "downloaded": 6,
+      "attempted": 6,
+      "skipped_reasons": {},
+      "bytes": 949464,
+      "inline_written": 40
+    }
+  },
+  "unmeasured": []
+}

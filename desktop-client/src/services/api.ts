@@ -231,6 +231,7 @@ export interface Company {
   leadGrade: 'VERY_HOT' | 'HOT' | 'WARM' | 'LOW';
   googleRating: string | number | null;
   googleReviewsCount: number | null;
+  lastContactedAt: string | null;
 }
 
 export interface CompanyPage {

@@ -1,0 +1,360 @@
+{
+  "area": "interaction_states",
+  "states": {
+    "focus": {
+      "button": {
+        "samples": 3,
+        "changed_samples": 3,
+        "changes": {
+          "outline": {
+            "from": "rgba(0, 0, 0, 0) none 3px",
+            "to": "#5e69d1 solid 1px",
+            "count": 3
+          },
+          "outlineOffset": {
+            "from": "0px",
+            "to": "2px",
+            "count": 3
+          },
+          "backgroundColor": {
+            "from": "rgba(0, 0, 0, 0)",
+            "to": "rgba(255, 255, 255, 0.08)",
+            "count": 1
+          }
+        },
+        "summary": [
+          "outline rgba(0, 0, 0, 0) none 3px → #5e69d1 solid 1px",
+          "outlineOffset 0px → 2px",
+          "backgroundColor rgba(0, 0, 0, 0) → rgba(255, 255, 255, 0.08)"
+        ],
+        "selectors": [
+          "button#radix-_R_6fab6lqa_-trigger-product",
+          "button#radix-_R_6fab6lqa_-trigger-resources",
+          "button#base-ui-_R_3b9ai86nab6lqa_"
+        ]
+      },
+      "input": {
+        "samples": 2,
+        "changed_samples": 2,
+        "changes": {
+          "outlineOffset": {
+            "from": "0px",
+            "to": "2px",
+            "count": 2
+          }
+        },
+        "summary": [
+          "outlineOffset 0px → 2px"
+        ],
+        "selectors": [
+          "input#radix-_R_1bj2nab6lqaH2_",
+          "textarea._8fVXdW_editableTextarea"
+        ]
+      },
+      "card": {
+        "samples": 2,
+        "changed_samples": 2,
+        "changes": {
+          "outline": {
+            "from": "rgba(0, 0, 0, 0) none 3px",
+            "to": "#5e69d1 solid 1px",
+            "count": 2
+          },
+          "outlineOffset": {
+            "from": "0px",
+            "to": "2px",
+            "count": 2
+          }
+        },
+        "summary": [
+          "outline rgba(0, 0, 0, 0) none 3px → #5e69d1 solid 1px",
+          "outlineOffset 0px → 2px"
+        ],
+        "selectors": [
+          "a.Dc5tqa_customerCard.Dc5tqa_primary",
+          "a.Dc5tqa_customerCard.Dc5tqa_secondary"
+        ]
+      },
+      "link": {
+        "samples": 3,
+        "changed_samples": 3,
+        "changes": {
+          "outline": {
+            "from": "rgba(0, 0, 0, 0) none 3px",
+            "to": "#5e69d1 solid 1px",
+            "count": 3
+          },
+          "outlineOffset": {
+            "from": "0px",
+            "to": "2px",
+            "count": 3
+          }
+        },
+        "summary": [
+          "outline rgba(0, 0, 0, 0) none 3px → #5e69d1 solid 1px",
+          "outlineOffset 0px → 2px"
+        ],
+        "selectors": [
+          "a.TZTsQG_logoLink.I_mUeq_root",
+          "a.TZTsQG_anchor.I_mUeq_root"
+        ]
+      }
+    },
+    "hover": {
+      "button": {
+        "samples": 1,
+        "changed_samples": 1,
+        "changes": {
+          "color": {
+            "from": "#8a8f98",
+            "to": "#f7f8f8",
+            "count": 1
+          },
+          "borderColor": {
+            "from": "#8a8f98",
+            "to": "#f7f8f8",
+            "count": 1
+          }
+        },
+        "summary": [
+          "color #8a8f98 → #f7f8f8",
+          "borderColor #8a8f98 → #f7f8f8"
+        ],
+        "selectors": [
+          "button#radix-_R_6fab6lqa_-trigger-resources"
+        ]
+      },
+      "input": {
+        "samples": 2,
+        "changed_samples": 0,
+        "changes": {},
+        "summary": [],
+        "selectors": [
+          "input#radix-_R_1bj2nab6lqaH2_",
+          "textarea._8fVXdW_editableTextarea"
+        ]
+      },
+      "card": {
+        "samples": 3,
+        "changed_samples": 2,
+        "changes": {
+          "filter": {
+            "from": "brightness(1.03)",
+            "to": "brightness(1)",
+            "count": 2
+          }
+        },
+        "summary": [
+          "filter brightness(1.03) → brightness(1)",
+          "filter none → brightness(1.03)"
+        ],
+        "selectors": [
+          "div.Dc5tqa_customerCards",
+          "a.Dc5tqa_customerCard.Dc5tqa_primary",
+          "a.Dc5tqa_customerCard.Dc5tqa_secondary"
+        ]
+      },
+      "link": {
+        "samples": 3,
+        "changed_samples": 2,
+        "changes": {
+          "color": {
+            "from": "#8a8f98",
+            "to": "#f7f8f8",
+            "count": 2
+          },
+          "backgroundColor": {
+            "from": "rgba(0, 0, 0, 0)",
+            "to": "rgba(255, 255, 255, 0.08)",
+            "count": 2
+          },
+          "borderColor": {
+            "from": "#8a8f98",
+            "to": "#f7f8f8",
+            "count": 2
+          }
+        },
+        "summary": [
+          "color #8a8f98 → #f7f8f8",
+          "backgroundColor rgba(0, 0, 0, 0) → rgba(255, 255, 255, 0.08)",
+          "borderColor #8a8f98 → #f7f8f8"
+        ],
+        "selectors": [
+          "a.TZTsQG_logoLink.I_mUeq_root",
+          "a.TZTsQG_anchor.I_mUeq_root"
+        ]
+      }
+    }
+  },
+  "css_rules": {
+    "focus-visible": [
+      {
+        "selector": "[data-sonner-toast]:focus-visible",
+        "declarations": "box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px, rgba(0, 0, 0, 0.2) 0px 0px 0px 2px;"
+      },
+      {
+        "selector": "[data-sonner-toast][data-styled=\"true\"] [data-button]:focus-visible",
+        "declarations": "box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 0px 2px;"
+      },
+      {
+        "selector": "[data-sonner-toast][data-styled=\"true\"] [data-close-button]:focus-visible",
+        "declarations": "box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px, rgba(0, 0, 0, 0.2) 0px 0px 0px 2px;"
+      },
+      {
+        "selector": "._91f_Kq_volumePositioner:focus-visible ._91f_Kq_volumeThumb",
+        "declarations": "outline: var(--focus-ring-outline); outline-offset: var(--focus-ring-offset);"
+      },
+      {
+        "selector": ".lAb7VG_permalink:focus-visible",
+        "declarations": "opacity: 1; visibility: visible;"
+      }
+    ],
+    "hover": [
+      {
+        "selector": "[data-sonner-toast][data-styled=\"true\"]:hover [data-close-button]:hover",
+        "declarations": "background: var(--gray2); border-color: var(--gray5);"
+      },
+      {
+        "selector": "[data-sonner-toaster][data-sonner-theme=\"dark\"] [data-sonner-toast] [data-close-button]:hover",
+        "declarations": "background: var(--normal-bg-hover); border-color: var(--normal-border-hover);"
+      },
+      {
+        "selector": "[data-vaul-handle]:active, [data-vaul-handle]:hover",
+        "declarations": "opacity: 1;"
+      },
+      {
+        "selector": ".JxizdW_root:hover",
+        "declarations": "text-decoration-line: underline; text-decoration-thickness: 1px;"
+      },
+      {
+        "selector": ".V5AtfW_trigger:hover",
+        "declarations": "color: var(--color-text-secondary);"
+      },
+      {
+        "selector": ":is(.F44d3q_videoButton:hover, .F44d3q_videoButton:focus-visible)",
+        "declarations": "background-color: var(--tweet-color-blue-primary-hover);"
+      },
+      {
+        "selector": ".F44d3q_watchOnTwitter > a:hover",
+        "declarations": "background-color: rgba(39, 44, 48, 0.75);"
+      },
+      {
+        "selector": ".F44d3q_viewReplies:hover",
+        "declarations": "background-color: var(--tweet-color-blue-primary-hover);"
+      },
+      {
+        "selector": ".gnnxzG_root:hover",
+        "declarations": "background-color: var(--tweet-quoted-bg-color-hover);"
+      },
+      {
+        "selector": ":where(._91f_Kq_root[data-idle=\"true\"]:not(:has(._91f_Kq_controls:hover))), :where(._91f_Kq_root[data-idle=\"true\"]:not(:has(._91f_Kq_controls:hover))) *",
+        "declarations": "cursor: var(--cursor-none) !important;"
+      },
+      {
+        "selector": ":where(._91f_Kq_root[data-idle=\"true\"]:not(:has(._91f_Kq_controls:hover))) ._91f_Kq_chrome",
+        "declarations": "opacity: 0;"
+      },
+      {
+        "selector": ":where(._91f_Kq_root[data-idle=\"true\"]:not(:has(._91f_Kq_controls:hover))) ._91f_Kq_controls",
+        "declarations": "transform: translateY(16px);"
+      },
+      {
+        "selector": ":where(._91f_Kq_root._91f_Kq_variant-inline[data-status=\"paused\"], ._91f_Kq_root[data-idle=\"false\"], ._91f_Kq_root:has(._91f_Kq_controls:hover)) ._91f_Kq_captio",
+        "declarations": "transform: translateY(-86px);"
+      },
+      {
+        "selector": ":where(._91f_Kq_root._91f_Kq_variant-inline[data-status=\"paused\"], ._91f_Kq_root[data-idle=\"false\"], ._91f_Kq_root:has(._91f_Kq_controls:hover)) ._91f_Kq_captio",
+        "declarations": "transform: translateY(-32px);"
+      },
+      {
+        "selector": ":where(._91f_Kq_root._91f_Kq_variant-inline[data-status=\"paused\"], ._91f_Kq_root[data-idle=\"false\"], ._91f_Kq_root:has(._91f_Kq_controls:hover)) ._91f_Kq_chrome",
+        "declarations": "opacity: 1;"
+      },
+      {
+        "selector": ":where(._91f_Kq_root._91f_Kq_variant-inline[data-status=\"paused\"], ._91f_Kq_root[data-idle=\"false\"], ._91f_Kq_root:has(._91f_Kq_controls:hover)) ._91f_Kq_contro",
+        "declarations": "transform: translateY(0px);"
+      },
+      {
+        "selector": "._91f_Kq_glassContainer:not([disabled]):hover",
+        "declarations": "backdrop-filter: blur(8px); background: rgba(255, 255, 255, 0.16);"
+      },
+      {
+        "selector": ":is(._91f_Kq_root:has([data-sound]:not(:disabled):hover) ._91f_Kq_volumePositioner, ._91f_Kq_volumePositioner:hover)",
+        "declarations": "visibility: visible; pointer-events: auto;"
+      },
+      {
+        "selector": "._91f_Kq_track:hover :is(._91f_Kq_previewLineThumb, ._91f_Kq_timestampThumb)",
+        "declarations": "opacity: 1;"
+      },
+      {
+        "selector": ".lAb7VG_permalink:hover",
+        "declarations": "color: var(--color-text-primary);"
+      },
+      {
+        "selector": ".lAb7VG_root:hover .lAb7VG_permalink",
+        "declarations": "opacity: 1; visibility: visible;"
+      },
+      {
+        "selector": ".j8azeW_root:where(:hover, :focus) .j8azeW_inline",
+        "declarations": "opacity: 1; visibility: visible; --visibility-delay: 0s;"
+      },
+      {
+        "selector": ".j8azeW_root:where(:hover, :focus) .j8azeW_icon",
+        "declarations": "transform: translateY(-50%);"
+      },
+      {
+        "selector": ".j8azeW_iconOnlyParent:where(:hover, :focus-within) .j8azeW_inline",
+        "declarations": "opacity: 1; visibility: visible; --visibility-delay: 0s;"
+      },
+      {
+        "selector": ".j8azeW_iconOnlyParent:where(:hover, :focus-within) .j8azeW_icon",
+        "declarations": "transform: translateY(-50%);"
+      }
+    ],
+    "active": [
+      {
+        "selector": "._91f_Kq_track:active",
+        "declarations": "height: var(--track-active-size);"
+      },
+      {
+        "selector": "._91f_Kq_track:active ._91f_Kq_previewLineThumb",
+        "declarations": "background: var(--color-white);"
+      }
+    ],
+    "focus": [
+      {
+        "selector": "._91f_Kq_glassContainer:not([disabled]):focus, ._91f_Kq_glassContainer:not([disabled]):focus-within, ._91f_Kq_glassContainer._91f_Kq_show",
+        "declarations": "backdrop-filter: blur(8px); background: rgba(255, 255, 255, 0.16);"
+      },
+      {
+        "selector": "._91f_Kq_volumePositioner:focus, ._91f_Kq_volumePositioner:focus-within",
+        "declarations": "visibility: visible; pointer-events: auto;"
+      },
+      {
+        "selector": "._91f_Kq_root:has([data-sound]:not(:disabled):focus-within) ._91f_Kq_volumePositioner",
+        "declarations": "visibility: visible; pointer-events: auto;"
+      }
+    ]
+  },
+  "coverage": {
+    "status": "partial",
+    "samples": 11,
+    "elements_attempted": 11,
+    "blocked_stylesheets": 51,
+    "reason": "51 stylesheet cross-origin olduğu için CSS kuralları okunamadı; davranışsal ölçüm 11/11 elemanda yapıldı"
+  },
+  "signals": {
+    "hover_samples": 9,
+    "focus_samples": 10,
+    "focus_ring_detected": true,
+    "css_interaction_rules": 47,
+    "css_states_seen": [
+      "active",
+      "focus",
+      "focus-visible",
+      "hover"
+    ],
+    "no_change_detected": false,
+    "disabled_elements_present": 1
+  }
+}

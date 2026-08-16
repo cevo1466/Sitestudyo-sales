@@ -1,12 +1,17 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { api, type Company, type CompanyPage } from '../../services/api';
 import { Evidence } from './Evidence';
+import { CompanyDrawer } from './CompanyDrawer';
 
 type Filters = {
   city?: string;
   sector?: string;
   q?: string;
   sort: string;
+  /** 'true' = temas edildi, 'false' = hic temas edilmedi */
+  contacted?: string;
+  /** yalnizca cep telefonu olanlar — WhatsApp gonderilebilir */
+  mobileOnly?: string;
 };
 
 const CITIES = ['İstanbul', 'Ankara', 'İzmir'];
@@ -24,6 +29,7 @@ const SORTS: Array<[string, string]> = [
   ['googleReviewsCount:desc', 'En çok yorum alan'],
   ['googleRating:desc', 'En yüksek puanlı'],
   ['leadScore:desc', 'En yüksek lead skoru'],
+  ['lastContactedAt:desc', 'Son temas ettiklerim'],
   ['name:asc', 'İsme göre'],
 ];
 
@@ -35,6 +41,8 @@ export function CompaniesScreen() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selected, setSelected] = useState<string | null>(null);
+  const [openId, setOpenId] = useState<string | null>(null);
+  const [reloadKey, setReloadKey] = useState(0);
   const sentinel = useRef<HTMLDivElement>(null);
 
   const query = useCallback(
@@ -43,6 +51,8 @@ export function CompaniesScreen() {
       if (filters.city) p.set('city', filters.city);
       if (filters.sector) p.set('sector', filters.sector);
       if (filters.q) p.set('q', filters.q);
+      if (filters.contacted) p.set('contacted', filters.contacted);
+      if (filters.mobileOnly) p.set('mobileOnly', filters.mobileOnly);
       if (extra) p.set('cursor', extra);
       return p.toString();
     },
@@ -66,7 +76,7 @@ export function CompaniesScreen() {
     return () => {
       cancelled = true;
     };
-  }, [query]);
+  }, [query, reloadKey]);
 
   // Sonsuz kaydirma: imlecli sayfalamanin dogal karsiligi. Sayfa numarasi
   // yok cunku on binlerce kayitta OFFSET sorgusu cokuyor.
@@ -175,6 +185,40 @@ export function CompaniesScreen() {
             ))}
           </select>
 
+          <button
+            className={`chip toggle${filters.mobileOnly ? ' on' : ''}`}
+            onClick={() =>
+              setFilters((f) => ({ ...f, mobileOnly: f.mobileOnly ? undefined : 'true' }))
+            }
+            title="Sadece cep telefonu olanlar — WhatsApp gönderilebilir"
+          >
+            WhatsApp’lık
+          </button>
+          <button
+            className={`chip toggle${filters.contacted === 'false' ? ' on' : ''}`}
+            onClick={() =>
+              setFilters((f) => ({
+                ...f,
+                contacted: f.contacted === 'false' ? undefined : 'false',
+              }))
+            }
+            title="Henüz hiç temas edilmemiş işletmeler"
+          >
+            Temas edilmemiş
+          </button>
+          <button
+            className={`chip toggle${filters.contacted === 'true' ? ' on' : ''}`}
+            onClick={() =>
+              setFilters((f) => ({
+                ...f,
+                contacted: f.contacted === 'true' ? undefined : 'true',
+              }))
+            }
+            title="Daha önce yazdığım veya aradığım işletmeler"
+          >
+            Yazdıklarım
+          </button>
+
           {filters.city && (
             <span className="chip">
               {filters.city}
@@ -215,11 +259,11 @@ export function CompaniesScreen() {
               <thead>
                 <tr>
                   <th>İşletme</th>
-                  <th style={{ width: 226 }}>Kanıt</th>
-                  <th style={{ width: 130 }}>İlçe</th>
-                  <th style={{ width: 150 }}>Kategori</th>
-                  <th style={{ width: 130 }}>Telefon</th>
-                  <th style={{ width: 64, textAlign: 'right' }}>Skor</th>
+                  <th style={{ width: 232 }}>Kanıt</th>
+                  <th style={{ width: 116 }}>İlçe</th>
+                  <th style={{ width: 142 }}>Telefon</th>
+                  <th style={{ width: 96 }}>Temas</th>
+                  <th style={{ width: 56, textAlign: 'right' }}>Skor</th>
                 </tr>
               </thead>
               <tbody>
@@ -227,15 +271,23 @@ export function CompaniesScreen() {
                   <tr
                     key={c.id}
                     aria-selected={selected === c.id}
-                    onClick={() => setSelected(c.id)}
+                    onClick={() => {
+                      setSelected(c.id);
+                      setOpenId(c.id);
+                    }}
                   >
-                    <td className="cell-name">{c.name}</td>
+                    <td className="cell-name">
+                      <span className="name-main">{c.name}</span>
+                      {c.categoryRaw && <span className="name-cat">{c.categoryRaw}</span>}
+                    </td>
                     <td>
                       <Evidence rating={c.googleRating} reviews={c.googleReviewsCount} />
                     </td>
                     <td className="cell-muted">{c.district ?? '—'}</td>
-                    <td className="cell-muted">{c.categoryRaw ?? '—'}</td>
                     <td className="cell-muted">{c.phone ?? '—'}</td>
+                    <td className={`cell-contact${c.lastContactedAt ? ' done' : ''}`}>
+                      {c.lastContactedAt ? sinceText(c.lastContactedAt) : '—'}
+                    </td>
                     <td className="cell-num">
                       <span className={`score grade-${c.leadGrade}`} title={`Sınıf: ${c.leadGrade}`}>
                         {c.leadScore}
@@ -261,6 +313,24 @@ export function CompaniesScreen() {
           <div ref={sentinel} style={{ height: 1 }} />
         </div>
       </main>
+
+      {openId && (
+        <CompanyDrawer
+          companyId={openId}
+          onClose={() => setOpenId(null)}
+          // Temas kaydedilince listedeki "Temas" sutunu tazelensin.
+          onChanged={() => setReloadKey((k) => k + 1)}
+        />
+      )}
     </div>
   );
+}
+
+/** "3 gün önce" gibi kisa zaman metni. */
+function sinceText(iso: string): string {
+  const days = Math.floor((Date.now() - new Date(iso).getTime()) / 86_400_000);
+  if (days === 0) return 'bugün';
+  if (days === 1) return 'dün';
+  if (days < 30) return `${days} gün`;
+  return new Date(iso).toLocaleDateString('tr');
 }

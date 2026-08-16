@@ -1,0 +1,118 @@
+{
+  "area": "layout_system",
+  "container": {
+    "max_width": null,
+    "side_padding": null,
+    "content_left": null,
+    "content_right": null,
+    "centered": null,
+    "evidence": null,
+    "confident": false
+  },
+  "gutters": {
+    "dominant": null,
+    "base_unit": null,
+    "scale": [],
+    "column_gap": null,
+    "row_gap": null,
+    "samples": 0
+  },
+  "grid_templates": [
+    {
+      "template": "18px",
+      "columns": 1,
+      "count": 16,
+      "authored": null
+    },
+    {
+      "template": "20px",
+      "columns": 1,
+      "count": 11,
+      "authored": null
+    },
+    {
+      "template": "24px",
+      "columns": 1,
+      "count": 11,
+      "authored": null
+    },
+    {
+      "template": "672px 672px",
+      "columns": 2,
+      "count": 9,
+      "authored": null
+    },
+    {
+      "template": "28px",
+      "columns": 1,
+      "count": 7,
+      "authored": null
+    },
+    {
+      "template": "32px",
+      "columns": 1,
+      "count": 4,
+      "authored": null
+    },
+    {
+      "template": "304px 304px",
+      "columns": 2,
+      "count": 4,
+      "authored": null
+    },
+    {
+      "template": "226px",
+      "columns": 1,
+      "count": 3,
+      "authored": null
+    },
+    {
+      "template": "101px",
+      "columns": 1,
+      "count": 2,
+      "authored": null
+    },
+    {
+      "template": "73px",
+      "columns": 1,
+      "count": 1,
+      "authored": null
+    },
+    {
+      "template": "91px",
+      "columns": 1,
+      "count": 1,
+      "authored": null
+    },
+    {
+      "template": "92px",
+      "columns": 1,
+      "count": 1,
+      "authored": null
+    }
+  ],
+  "columns": {
+    "dominant": null,
+    "base_grid": 4,
+    "observed": [
+      1,
+      2
+    ],
+    "grid_containers": 0,
+    "flex_containers": 0
+  },
+  "vertical_rhythm": {
+    "dominant": null,
+    "base_step": null,
+    "scale": [],
+    "samples": 0
+  },
+  "coverage": {
+    "status": "partial",
+    "samples": 43,
+    "container_confident": false,
+    "reason": "hiçbir bölümde içerik kenarı ölçülemedi (tüm bölümler tam genişlik olabilir)",
+    "pages_measured": 6,
+    "pages_attempted": 6
+  }
+}

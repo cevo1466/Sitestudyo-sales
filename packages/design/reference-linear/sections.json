@@ -1,0 +1,1628 @@
+{
+  "pages": [
+    {
+      "page_id": 1,
+      "page_type": "home",
+      "url": "https://linear.app/",
+      "sections": [
+        {
+          "section_type": "form",
+          "position": 1,
+          "layout": "grid-or-repeated",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "inputs",
+            "buttons",
+            "labels"
+          ],
+          "confidence": 0.95,
+          "evidence": {
+            "top": 72,
+            "height": 10332,
+            "headings": 11,
+            "ctas": 8,
+            "cards": 5,
+            "images": 27,
+            "inputs": 5,
+            "top_heading": "The product development system for teams and agentsThe product developmentsystem"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 2,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.8,
+          "evidence": {
+            "top": 272,
+            "height": 185,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "The product development system for teams and agentsThe product developmentsystem"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 3,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.54,
+          "evidence": {
+            "top": 535,
+            "height": 704,
+            "headings": 0,
+            "ctas": 0,
+            "cards": 0,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": ""
+          }
+        },
+        {
+          "section_type": "card-grid",
+          "position": 4,
+          "layout": "grid-or-repeated",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "cards",
+            "icons_or_images",
+            "cta_button"
+          ],
+          "confidence": 0.95,
+          "evidence": {
+            "top": 580,
+            "height": 612,
+            "headings": 2,
+            "ctas": 6,
+            "cards": 6,
+            "images": 6,
+            "inputs": 1,
+            "top_heading": "Faster app launch"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 5,
+          "layout": "grid-2col",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.84,
+          "evidence": {
+            "top": 2609,
+            "height": 250,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 2,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Make product \noperations self-driving"
+          }
+        },
+        {
+          "section_type": "gallery",
+          "position": 6,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "images",
+            "media"
+          ],
+          "confidence": 0.68,
+          "evidence": {
+            "top": 2859,
+            "height": 626,
+            "headings": 0,
+            "ctas": 8,
+            "cards": 1,
+            "images": 6,
+            "inputs": 0,
+            "top_heading": ""
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 7,
+          "layout": "grid-2col",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.84,
+          "evidence": {
+            "top": 3843,
+            "height": 250,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 2,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Define the \nproduct direction"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 8,
+          "layout": "grid-2col",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.84,
+          "evidence": {
+            "top": 5070,
+            "height": 250,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 2,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Move work forward \nacross teams and agents"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 9,
+          "layout": "grid-2col",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.84,
+          "evidence": {
+            "top": 6252,
+            "height": 250,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 2,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Review PRs and agent output"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 10,
+          "layout": "grid-2col",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.84,
+          "evidence": {
+            "top": 7352,
+            "height": 250,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 2,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Understand \nprogress at scale"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 11,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.54,
+          "evidence": {
+            "top": 7602,
+            "height": 598,
+            "headings": 0,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": ""
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 12,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.92,
+          "evidence": {
+            "top": 8582,
+            "height": 422,
+            "headings": 1,
+            "ctas": 5,
+            "cards": 2,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Changelog"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 13,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 9952,
+            "height": 228,
+            "headings": 1,
+            "ctas": 2,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Built for the future. Available today."
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 14,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.92,
+          "evidence": {
+            "top": 10405,
+            "height": 493,
+            "headings": 5,
+            "ctas": 8,
+            "cards": 5,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Product"
+          }
+        }
+      ],
+      "source": "dom"
+    },
+    {
+      "page_id": 2,
+      "page_type": "unknown",
+      "url": "https://linear.app/about",
+      "sections": [
+        {
+          "section_type": "generic-block",
+          "position": 1,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 272,
+            "height": 176,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Building tools for the next era of product development"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 2,
+          "layout": "grid-2col",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.64,
+          "evidence": {
+            "top": 1404,
+            "height": 408,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "A new species of product tool"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 3,
+          "layout": "grid-2col",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 2069,
+            "height": 169,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Meet the team behind Linear"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 4,
+          "layout": "grid-2col",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 4757,
+            "height": 958,
+            "headings": 1,
+            "ctas": 2,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Backed by the best"
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 5,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.92,
+          "evidence": {
+            "top": 6520,
+            "height": 493,
+            "headings": 5,
+            "ctas": 8,
+            "cards": 5,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Product"
+          }
+        }
+      ],
+      "source": "dom"
+    },
+    {
+      "page_id": 3,
+      "page_type": "unknown",
+      "url": "https://linear.app/agents",
+      "sections": [
+        {
+          "section_type": "hero",
+          "position": 1,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "high",
+          "components": [
+            "heading_system",
+            "cta_button"
+          ],
+          "confidence": 0.95,
+          "evidence": {
+            "top": 200,
+            "height": 328,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 3,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Artificial colleagues.Natural collaboration."
+          }
+        },
+        {
+          "section_type": "card-grid",
+          "position": 2,
+          "layout": "grid-multi",
+          "density": "balanced",
+          "visual_weight": "medium",
+          "components": [
+            "cards",
+            "icons_or_images"
+          ],
+          "confidence": 0.8,
+          "evidence": {
+            "top": 627,
+            "height": 560,
+            "headings": 0,
+            "ctas": 0,
+            "cards": 35,
+            "images": 30,
+            "inputs": 0,
+            "top_heading": ""
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 3,
+          "layout": "grid-2col",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.76,
+          "evidence": {
+            "top": 1486,
+            "height": 179,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 2,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Delegate, automate, and orchestrate work"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 4,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.6,
+          "evidence": {
+            "top": 1666,
+            "height": 597,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Fast, focused, and reliable. Just like the rest of your team."
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 5,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.6,
+          "evidence": {
+            "top": 2263,
+            "height": 596,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Stay in the loop every step of the way"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 6,
+          "layout": "grid-2col",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.84,
+          "evidence": {
+            "top": 3116,
+            "height": 250,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 2,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Agents for every use case, ready to deploy"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 7,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.68,
+          "evidence": {
+            "top": 3366,
+            "height": 605,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Linear Agent"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 8,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.94,
+          "evidence": {
+            "top": 4747,
+            "height": 184,
+            "headings": 1,
+            "ctas": 2,
+            "cards": 2,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Create your own agents"
+          }
+        },
+        {
+          "section_type": "generic-block",
+          "position": 9,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.5,
+          "evidence": {
+            "top": 4819,
+            "height": 453,
+            "headings": 0,
+            "ctas": 0,
+            "cards": 0,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": ""
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 10,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.92,
+          "evidence": {
+            "top": 5535,
+            "height": 493,
+            "headings": 5,
+            "ctas": 8,
+            "cards": 5,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Product"
+          }
+        }
+      ],
+      "source": "dom"
+    },
+    {
+      "page_id": 4,
+      "page_type": "content/blog",
+      "url": "https://linear.app/blog",
+      "sections": [
+        {
+          "section_type": "gallery",
+          "position": 1,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "images",
+            "media"
+          ],
+          "confidence": 0.78,
+          "evidence": {
+            "top": 72,
+            "height": 6226,
+            "headings": 27,
+            "ctas": 8,
+            "cards": 1,
+            "images": 26,
+            "inputs": 0,
+            "top_heading": "Now"
+          }
+        },
+        {
+          "section_type": "card-grid",
+          "position": 2,
+          "layout": "grid-or-repeated",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "cards",
+            "icons_or_images",
+            "cta_button"
+          ],
+          "confidence": 0.95,
+          "evidence": {
+            "top": 149,
+            "height": 5925,
+            "headings": 27,
+            "ctas": 8,
+            "cards": 14,
+            "images": 26,
+            "inputs": 0,
+            "top_heading": "Now"
+          }
+        },
+        {
+          "section_type": "hero",
+          "position": 3,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "high",
+          "components": [
+            "heading_system",
+            "cta_button",
+            "hero_image"
+          ],
+          "confidence": 0.95,
+          "evidence": {
+            "top": 290,
+            "height": 872,
+            "headings": 6,
+            "ctas": 6,
+            "cards": 6,
+            "images": 6,
+            "inputs": 0,
+            "top_heading": "Coinbase’s bet on agent-first development"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 4,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.92,
+          "evidence": {
+            "top": 1292,
+            "height": 422,
+            "headings": 1,
+            "ctas": 5,
+            "cards": 2,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Changelog"
+          }
+        },
+        {
+          "section_type": "card-grid",
+          "position": 5,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "cards",
+            "icons_or_images",
+            "cta_button"
+          ],
+          "confidence": 0.95,
+          "evidence": {
+            "top": 1834,
+            "height": 872,
+            "headings": 6,
+            "ctas": 6,
+            "cards": 6,
+            "images": 6,
+            "inputs": 0,
+            "top_heading": "Reviewing code in the agent era"
+          }
+        },
+        {
+          "section_type": "card-grid",
+          "position": 6,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "cards",
+            "icons_or_images",
+            "cta_button"
+          ],
+          "confidence": 0.95,
+          "evidence": {
+            "top": 2977,
+            "height": 302,
+            "headings": 4,
+            "ctas": 4,
+            "cards": 4,
+            "images": 8,
+            "inputs": 0,
+            "top_heading": "The New Standard: a talk with Linear, Raycast, and Anthropic at South Park Commo"
+          }
+        },
+        {
+          "section_type": "card-grid",
+          "position": 7,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "cards",
+            "icons_or_images",
+            "cta_button"
+          ],
+          "confidence": 0.95,
+          "evidence": {
+            "top": 3514,
+            "height": 872,
+            "headings": 6,
+            "ctas": 6,
+            "cards": 6,
+            "images": 6,
+            "inputs": 0,
+            "top_heading": "Output isn’t design"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 8,
+          "layout": "flex-column",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 5846,
+            "height": 228,
+            "headings": 1,
+            "ctas": 2,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Built for the future. Available today."
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 9,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.92,
+          "evidence": {
+            "top": 6299,
+            "height": 502,
+            "headings": 5,
+            "ctas": 8,
+            "cards": 5,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Product"
+          }
+        }
+      ],
+      "source": "dom"
+    },
+    {
+      "page_id": 5,
+      "page_type": "unknown",
+      "url": "https://linear.app/careers",
+      "sections": [
+        {
+          "section_type": "generic-block",
+          "position": 1,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "generic_blocks"
+          ],
+          "confidence": 0.8,
+          "evidence": {
+            "top": 272,
+            "height": 177,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Help us craft high-quality tools"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 2,
+          "layout": "grid-2col",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 1358,
+            "height": 433,
+            "headings": 1,
+            "ctas": 1,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "On a quest for quality"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 3,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.72,
+          "evidence": {
+            "top": 2378,
+            "height": 1037,
+            "headings": 1,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "How we think and work"
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 4,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.8,
+          "evidence": {
+            "top": 3543,
+            "height": 3461,
+            "headings": 1,
+            "ctas": 8,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Open roles"
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 5,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.92,
+          "evidence": {
+            "top": 7005,
+            "height": 493,
+            "headings": 5,
+            "ctas": 8,
+            "cards": 5,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Product"
+          }
+        }
+      ],
+      "source": "dom"
+    },
+    {
+      "page_id": 6,
+      "page_type": "unknown",
+      "url": "https://linear.app/changelog",
+      "sections": [
+        {
+          "section_type": "gallery",
+          "position": 1,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "medium",
+          "components": [
+            "images",
+            "media"
+          ],
+          "confidence": 0.95,
+          "evidence": {
+            "top": 149,
+            "height": 26049,
+            "headings": 36,
+            "ctas": 8,
+            "cards": 2,
+            "images": 19,
+            "inputs": 0,
+            "top_heading": "Now"
+          }
+        },
+        {
+          "section_type": "hero",
+          "position": 2,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "high",
+          "components": [
+            "heading_system",
+            "cta_button",
+            "hero_image"
+          ],
+          "confidence": 0.68,
+          "evidence": {
+            "top": 347,
+            "height": 1454,
+            "headings": 2,
+            "ctas": 8,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Team initiatives"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 3,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.82,
+          "evidence": {
+            "top": 431,
+            "height": 1298,
+            "headings": 1,
+            "ctas": 7,
+            "cards": 0,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Enterprise-managed authorization for MCP⁠"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 4,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.74,
+          "evidence": {
+            "top": 1801,
+            "height": 3377,
+            "headings": 5,
+            "ctas": 8,
+            "cards": 1,
+            "images": 3,
+            "inputs": 0,
+            "top_heading": "Coding sessions on mobile"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 5,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.88,
+          "evidence": {
+            "top": 1869,
+            "height": 3237,
+            "headings": 4,
+            "ctas": 8,
+            "cards": 0,
+            "images": 3,
+            "inputs": 0,
+            "top_heading": "Guided Reviews are now generally available⁠"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 6,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.74,
+          "evidence": {
+            "top": 1869,
+            "height": 3309,
+            "headings": 4,
+            "ctas": 8,
+            "cards": 1,
+            "images": 3,
+            "inputs": 0,
+            "top_heading": "Guided Reviews are now generally available⁠"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 7,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.74,
+          "evidence": {
+            "top": 5178,
+            "height": 1701,
+            "headings": 2,
+            "ctas": 8,
+            "cards": 1,
+            "images": 2,
+            "inputs": 0,
+            "top_heading": "Text attribution and agent-assisted editing"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 8,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.88,
+          "evidence": {
+            "top": 5262,
+            "height": 1545,
+            "headings": 1,
+            "ctas": 7,
+            "cards": 0,
+            "images": 2,
+            "inputs": 0,
+            "top_heading": "Refreshed issue sidebar⁠"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 9,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks"
+          ],
+          "confidence": 0.68,
+          "evidence": {
+            "top": 6878,
+            "height": 1788,
+            "headings": 1,
+            "ctas": 8,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Introducing Loops"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 10,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.68,
+          "evidence": {
+            "top": 8666,
+            "height": 1861,
+            "headings": 3,
+            "ctas": 8,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Initiative properties"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 11,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.82,
+          "evidence": {
+            "top": 8750,
+            "height": 1705,
+            "headings": 2,
+            "ctas": 8,
+            "cards": 0,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Centrally manage access to Linear’s MCP server in Claude⁠"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 12,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.68,
+          "evidence": {
+            "top": 8750,
+            "height": 1777,
+            "headings": 2,
+            "ctas": 8,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Centrally manage access to Linear’s MCP server in Claude⁠"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 13,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.68,
+          "evidence": {
+            "top": 10527,
+            "height": 3215,
+            "headings": 6,
+            "ctas": 8,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Agent assisted project updates"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 14,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.82,
+          "evidence": {
+            "top": 10595,
+            "height": 3075,
+            "headings": 5,
+            "ctas": 8,
+            "cards": 0,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Desktop navigation history and pinned tabs⁠"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 15,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.68,
+          "evidence": {
+            "top": 10595,
+            "height": 3147,
+            "headings": 5,
+            "ctas": 8,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Desktop navigation history and pinned tabs⁠"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 16,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.74,
+          "evidence": {
+            "top": 13742,
+            "height": 2840,
+            "headings": 4,
+            "ctas": 8,
+            "cards": 1,
+            "images": 2,
+            "inputs": 0,
+            "top_heading": "Coding sessions in Linear"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 17,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.88,
+          "evidence": {
+            "top": 13810,
+            "height": 2700,
+            "headings": 3,
+            "ctas": 8,
+            "cards": 0,
+            "images": 2,
+            "inputs": 0,
+            "top_heading": "A coding agent your team will love⁠"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 18,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.74,
+          "evidence": {
+            "top": 13810,
+            "height": 2772,
+            "headings": 3,
+            "ctas": 8,
+            "cards": 1,
+            "images": 2,
+            "inputs": 0,
+            "top_heading": "A coding agent your team will love⁠"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 19,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.68,
+          "evidence": {
+            "top": 16582,
+            "height": 1541,
+            "headings": 3,
+            "ctas": 8,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Team documents"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 20,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.82,
+          "evidence": {
+            "top": 16666,
+            "height": 1385,
+            "headings": 2,
+            "ctas": 8,
+            "cards": 0,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Shared skills for Linear Agent⁠"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 21,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.68,
+          "evidence": {
+            "top": 16666,
+            "height": 1457,
+            "headings": 2,
+            "ctas": 8,
+            "cards": 1,
+            "images": 1,
+            "inputs": 0,
+            "top_heading": "Shared skills for Linear Agent⁠"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 22,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.74,
+          "evidence": {
+            "top": 18123,
+            "height": 3877,
+            "headings": 4,
+            "ctas": 8,
+            "cards": 1,
+            "images": 4,
+            "inputs": 0,
+            "top_heading": "Linear Diffs"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 23,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.88,
+          "evidence": {
+            "top": 18191,
+            "height": 3737,
+            "headings": 3,
+            "ctas": 8,
+            "cards": 0,
+            "images": 4,
+            "inputs": 0,
+            "top_heading": "Guided reviews (beta)⁠"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 24,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.74,
+          "evidence": {
+            "top": 18191,
+            "height": 3809,
+            "headings": 3,
+            "ctas": 8,
+            "cards": 1,
+            "images": 4,
+            "inputs": 0,
+            "top_heading": "Guided reviews (beta)⁠"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 25,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.74,
+          "evidence": {
+            "top": 22000,
+            "height": 3989,
+            "headings": 5,
+            "ctas": 8,
+            "cards": 1,
+            "images": 4,
+            "inputs": 0,
+            "top_heading": "Project Slack channels"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 26,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.88,
+          "evidence": {
+            "top": 22084,
+            "height": 3833,
+            "headings": 4,
+            "ctas": 8,
+            "cards": 0,
+            "images": 4,
+            "inputs": 0,
+            "top_heading": "Linear Asks Agent⁠"
+          }
+        },
+        {
+          "section_type": "content",
+          "position": 27,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "text_blocks",
+            "inline_images"
+          ],
+          "confidence": 0.74,
+          "evidence": {
+            "top": 22084,
+            "height": 3905,
+            "headings": 4,
+            "ctas": 8,
+            "cards": 1,
+            "images": 4,
+            "inputs": 0,
+            "top_heading": "Linear Asks Agent⁠"
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 28,
+          "layout": "stacked",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.5,
+          "evidence": {
+            "top": 25746,
+            "height": 1603,
+            "headings": 0,
+            "ctas": 0,
+            "cards": 1,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": ""
+          }
+        },
+        {
+          "section_type": "footer",
+          "position": 29,
+          "layout": "grid-multi",
+          "density": "spacious",
+          "visual_weight": "low",
+          "components": [
+            "navigation",
+            "legal_links",
+            "social_icons"
+          ],
+          "confidence": 0.92,
+          "evidence": {
+            "top": 26199,
+            "height": 502,
+            "headings": 5,
+            "ctas": 8,
+            "cards": 5,
+            "images": 0,
+            "inputs": 0,
+            "top_heading": "Product"
+          }
+        }
+      ],
+      "source": "dom"
+    }
+  ]
+}

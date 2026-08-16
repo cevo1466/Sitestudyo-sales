@@ -30,6 +30,19 @@ export class ActivityService {
    *   islemlerde lead ile aktivitenin AYNI transaction'da yazilmasi sart:
    *   biri yazilip digeri yazilmazsa gecmis eksik kalir.
    */
+  /**
+   * Bu turler "temas" sayilir ve isletmenin lastContactedAt alanini
+   * gunceller. NOT ve SYSTEM temas degildir: kendine not almak musteriye
+   * ulasmak anlamina gelmez, yoksa "temas edilmeyenler" listesi yalan
+   * soylerdi.
+   */
+  private static readonly CONTACT_TYPES: ActivityType[] = [
+    ActivityType.CALL,
+    ActivityType.WHATSAPP,
+    ActivityType.MEETING,
+    ActivityType.EMAIL_OUT,
+  ];
+
   record(input: RecordActivityInput, tx?: Prisma.TransactionClient) {
     if (!input.companyId && !input.leadId) {
       throw new BadRequestException({
@@ -38,6 +51,18 @@ export class ActivityService {
       });
     }
     const client = tx ?? this.prisma;
+    const occurredAt = input.occurredAt ?? new Date();
+
+    // Temas kaydini isletmeye de isliyoruz. Bu alan turetilmis ama
+    // saklaniyor: 2.000+ kayitta "temas edilmeyenler" filtresi ve
+    // "son temas" siralamasi her seferinde activities tablosunu
+    // taramak zorunda kalmasin. Bu servis TEK yazici.
+    if (input.companyId && ActivityService.CONTACT_TYPES.includes(input.type)) {
+      void client.company
+        .update({ where: { id: input.companyId }, data: { lastContactedAt: occurredAt } })
+        .catch(() => undefined);
+    }
+
     return client.activity.create({
       data: {
         type: input.type,
@@ -47,7 +72,7 @@ export class ActivityService {
         subject: input.subject ?? null,
         body: input.body ?? null,
         meta: input.meta ?? Prisma.JsonNull,
-        occurredAt: input.occurredAt ?? new Date(),
+        occurredAt,
       },
     });
   }

@@ -82,13 +82,14 @@
   --radius-full: 9999px;
 
   /* --- Hareket ----------------------------------------------------------- */
-  /* Olculen sureler: 0.15 / 0.2 / 0.3 / 0.4 / 0.5 sn.
-     Uygulamada 0.3 ustu kullanilmaz: bir tabloda satir secmek 300ms surerse
-     arayuz yavas hissettirir. Uzun sureler yalnizca panel/cekmece acilisinda. */
+  /* linear.app olcumu: 0.1 / 0.12 / 0.16 / 0.25 / 0.4 sn — attio'dan
+     belirgin sekilde HIZLI. Yogun bir calisma aracinda dogru olan bu:
+     200ms'lik bir satir vurgusu gunde yuzlerce kez tekrarlaninca
+     arayuzu agir hissettiriyor. */
   --duration-instant: 100ms;
-  --duration-fast: 150ms;
-  --duration-normal: 200ms;
-  --duration-slow: 300ms;
+  --duration-fast: 120ms;
+  --duration-normal: 160ms;
+  --duration-slow: 250ms;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 
@@ -132,12 +133,15 @@
      yuzlerce kez tekrarlanir ve normal kenarlik tonu ekrani kafese cevirir. */
   --border-grid: #eef0f1;
 
-  /* Eylem: olculen #266df0 */
-  --accent: #266df0;
-  --accent-hover: #1b5ad4;
-  --accent-active: #164ab0;
-  --accent-subtle: #e5eeff;
-  --accent-text: #1b5ad4;
+  /* Eylem: linear.app'ten OLCULEN indigo (#5e6ad2).
+     Onceki deger attio.com'un mavisiydi (#266df0) — dogru ama jenerik.
+     Indigo hem daha karakterli hem yogun bir tabloda maviden daha az
+     "baglanti rengi" gibi okunuyor. */
+  --accent: #5e6ad2;
+  --accent-hover: #4f5ac0;
+  --accent-active: #434ea8;
+  --accent-subtle: #eceefb;
+  --accent-text: #4a54b0;
   --on-accent: #ffffff;
 
   /* Durum: olculen #00d17e / #f5a300 / #b81c5d */
@@ -166,31 +170,34 @@
 .dark {
   color-scheme: dark;
 
-  --bg-base: #16181a;
-  --bg-surface: #1c1e21;
-  --bg-raised: #232629;
-  --bg-sunken: #101214;
-  --bg-hover: #26292d;
-  --bg-active: #2e3237;
-  --bg-selected: #17294a;
+  /* linear.app'ten OLCULEN degerler (16 Agu 2026).
+     Onceki koyu palet TURETILMISTI — acik paletin ton iliskilerini
+     tahmin ediyordu. Bunlar gercek olcum. */
+  --bg-base: #0f1011;
+  --bg-surface: #18191a;
+  --bg-raised: #1c1c1f;
+  --bg-sunken: #08090a;
+  --bg-hover: #1c1c1f;
+  --bg-active: #23252a;
+  --bg-selected: #23252a;
 
-  --text-primary: #e8eaed;
-  --text-secondary: #a4a9b0;
-  --text-muted: #71767d;
-  --text-inverse: #16181a;
+  --text-primary: #f7f8f8;
+  --text-secondary: #d0d6e0;
+  --text-muted: #8a8f98;
+  --text-inverse: #08090a;
 
-  --border-subtle: #26292d;
-  --border-default: #2f3336; /* olculen .dark kuralindaki gercek deger */
-  --border-strong: #43484d;
-  --border-grid: #232629;
+  --border-subtle: #18191a;
+  --border-default: #23252a;
+  --border-strong: #3a3d44;
+  --border-grid: #1c1c1f;
 
-  /* Koyu zeminde #266df0 yeterince parlamiyor; ayni hue, artirilmis parlaklik */
-  --accent: #4d8bff;
-  --accent-hover: #6b9dff;
-  --accent-active: #85adff;
-  --accent-subtle: #17294a;
-  --accent-text: #8ab4ff;
-  --on-accent: #0d1117;
+  /* Koyu zeminde indigo'nun acik tonu — olculen palette[7] */
+  --accent: #828fff;
+  --accent-hover: #9aa4ff;
+  --accent-active: #b0b8ff;
+  --accent-subtle: #1e2033;
+  --accent-text: #a5adff;
+  --on-accent: #08090a;
 
   --success: #2fd48b;
   --success-subtle: #16241e;
@@ -217,27 +224,27 @@
 @media (prefers-color-scheme: dark) {
   :root:not(.light):not(.dark) {
     color-scheme: dark;
-    --bg-base: #16181a;
-    --bg-surface: #1c1e21;
-    --bg-raised: #232629;
-    --bg-sunken: #101214;
-    --bg-hover: #26292d;
-    --bg-active: #2e3237;
-    --bg-selected: #17294a;
-    --text-primary: #e8eaed;
-    --text-secondary: #a4a9b0;
-    --text-muted: #71767d;
-    --text-inverse: #16181a;
-    --border-subtle: #26292d;
-    --border-default: #2f3336;
-    --border-strong: #43484d;
-    --border-grid: #232629;
-    --accent: #4d8bff;
-    --accent-hover: #6b9dff;
-    --accent-active: #85adff;
-    --accent-subtle: #17294a;
-    --accent-text: #8ab4ff;
-    --on-accent: #0d1117;
+    --bg-base: #0f1011;
+    --bg-surface: #18191a;
+    --bg-raised: #1c1c1f;
+    --bg-sunken: #08090a;
+    --bg-hover: #1c1c1f;
+    --bg-active: #23252a;
+    --bg-selected: #23252a;
+    --text-primary: #f7f8f8;
+    --text-secondary: #d0d6e0;
+    --text-muted: #8a8f98;
+    --text-inverse: #08090a;
+    --border-subtle: #18191a;
+    --border-default: #23252a;
+    --border-strong: #3a3d44;
+    --border-grid: #1c1c1f;
+    --accent: #828fff;
+    --accent-hover: #9aa4ff;
+    --accent-active: #b0b8ff;
+    --accent-subtle: #1e2033;
+    --accent-text: #a5adff;
+    --on-accent: #08090a;
     --success: #2fd48b;
     --success-subtle: #16241e;
     --warning: #e5a33a;

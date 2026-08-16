@@ -40,6 +40,19 @@ export class CompanyQuery {
         : { none: { email: { not: null } } };
     }
 
+    if (filter.contacted !== undefined) {
+      // Turetilmis alan lastContactedAt uzerinden: her sorguda activities
+      // tablosunu taramak 2.000+ kayitta pahali olurdu.
+      where.lastContactedAt = filter.contacted ? { not: null } : null;
+    }
+
+    if (filter.mobileOnly) {
+      // Turkiye cep hatlari +905 ile baslar. WhatsApp gonderilebilecek
+      // kayitlari ayirmanin tek guvenilir yolu bu — bir numaranin
+      // WhatsApp'ta olup olmadigini onceden sorgulamak mumkun degil.
+      where.phoneE164 = { startsWith: '+905' };
+    }
+
     // Etiketlerde VE mantigi: her etiket icin AYRI bir `some` kosulu gerekir.
     // Tek bir `some: { tag: { slug: { in: [...] } } }` yazilirsa VEYA olur —
     // "sicak VEYA ankara" doner, oysa istenen "sicak VE ankara".

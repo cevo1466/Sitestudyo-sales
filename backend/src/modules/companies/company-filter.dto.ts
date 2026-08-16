@@ -33,6 +33,10 @@ export const companyFilterSchema = z
     maxScore: z.coerce.number().int().min(0).max(100).optional(),
     hasPhone: boolFromString.optional(),
     hasEmail: boolFromString.optional(),
+    /** true = daha once temas edildi, false = hic temas edilmedi */
+    contacted: boolFromString.optional(),
+    /** Yalnizca cep telefonu olanlar (WhatsApp ihtimali yuksek) */
+    mobileOnly: boolFromString.optional(),
   })
   .refine((f) => f.minScore === undefined || f.maxScore === undefined || f.minScore <= f.maxScore, {
     message: 'minScore, maxScore degerinden buyuk olamaz',
@@ -46,7 +50,12 @@ export type CompanyFilter = z.infer<typeof companyFilterSchema>;
 /** NULL olamayan alanlar: asc ve desc serbest. */
 export const NON_NULL_SORTABLE = ['leadScore', 'name', 'firstSeenAt'] as const;
 /** NULL olabilen alanlar: yalnizca desc (gerekce company-query.ts cursorWhere). */
-export const NULLABLE_SORTABLE = ['googleRating', 'googleReviewsCount', 'lastAnalyzedAt'] as const;
+export const NULLABLE_SORTABLE = [
+  'googleRating',
+  'googleReviewsCount',
+  'lastAnalyzedAt',
+  'lastContactedAt',
+] as const;
 export const SORTABLE_FIELDS = [...NON_NULL_SORTABLE, ...NULLABLE_SORTABLE] as const;
 
 export type SortField = (typeof SORTABLE_FIELDS)[number];

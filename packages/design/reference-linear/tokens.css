@@ -1,0 +1,112 @@
+/* tokens.css — design.sitestudyo.com tarafından ölçülerek üretildi
+   Kaynak: https://linear.app
+
+   Bu değerler kaynak sitenin computed CSS'inden ÖLÇÜLDÜ; tahmin değil.
+   Doğrudan projene yapıştırabilirsin. Kopyalanan tek şey ölçü sistemi;
+   içerik, kompozisyon ve metin senin olmalı. */
+
+:root {
+  /* Semantik renk rolleri */
+  --color-background: #08090a;
+  --color-surface: #ffffff;
+  --color-text: #f7f8f8;
+  --color-muted-text: #8a8f98;
+  --color-border: #f7f8f8;
+  --color-primary-action: #5e6ad2;
+  --color-accent: #ffffff;
+  --color-warning: #eb5757;
+  --color-error: #eb5757;
+
+  /* Gözlenen palet */
+  --palette-1: #f7f8f8;
+  --palette-2: #8a8f98;
+  --palette-3: #d0d6e0;
+  --palette-4: #62666d;
+  --palette-5: #08090a;
+  --palette-6: #ffffff;
+  --palette-7: #0f1011;
+  --palette-8: #828fff;
+  --palette-9: #1c1c1f;
+  --palette-10: #18191a;
+  --palette-11: #23252a;
+  --palette-12: #e5e5e6;
+
+  /* Tipografi */
+  --font-family: Inter Variable;
+  --font-size-display: 64px;
+  --font-weight-display: 510;
+  --line-height-display: 64px;
+  --font-size-h1: 64px;
+  --font-weight-h1: 510;
+  --line-height-h1: 64px;
+  --font-size-h2: 20px;
+  --font-weight-h2: 590;
+  --line-height-h2: 26.6px;
+  --font-size-h3: 16px;
+  --font-weight-h3: 400;
+  --line-height-h3: 24px;
+  --font-size-body: 16px;
+  --font-weight-body: 400;
+  --line-height-body: 24px;
+  --font-size-small: 13px;
+  --font-weight-small: 400;
+  --line-height-small: 19.5px;
+  --font-size-caption: 15px;
+  --font-weight-caption: 400;
+  --line-height-caption: 24px;
+  --font-size-button: 16px;
+  --font-weight-button: 400;
+  --line-height-button: 24px;
+  --font-size-label: 13px;
+  --font-weight-label: 400;
+  --line-height-label: 19.5px;
+
+  /* Köşe yarıçapı */
+  --radius-1: 0px;
+  --radius-2: 9999px;
+  --radius-3: 5px;
+  --radius-4: 8px;
+  --radius-5: 6px;
+  --radius-6: 2px;
+
+  /* Boşluk ölçeği */
+  --spacing-1: 8px;
+  --spacing-2: 32px;
+  --spacing-3: 5px;
+  --spacing-4: 1px;
+  --spacing-5: 16px;
+  --spacing-6: 6px;
+  --spacing-7: 12px;
+  --spacing-8: 10px;
+  --spacing-9: 24px;
+  --spacing-10: 4px;
+
+  /* Bölüm ritmi */
+  --section-gaps-1: 0px;
+  --section-gaps-2: 224px;
+  --section-gaps-3: 256px;
+  --section-gaps-4: 128px;
+  --section-gaps-5: 72px;
+  --section-gaps-6: 80px;
+
+  /* Konteyner genişlikleri */
+  --containers-1: 640px;
+  --containers-2: 400px;
+  --containers-3: 320px;
+  --containers-4: 600px;
+  --containers-5: 280px;
+
+  /* Yükseklik (elevation) */
+  --shadow-1: rgba(0, 0, 0, 0.2) 0px 0px 0px 1px;
+  --shadow-2: rgba(0, 0, 0, 0.03) 0px 1.2px 0px 0px;
+  --shadow-3: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px;
+  --shadow-4: rgba(0, 0, 0, 0.25) 0px 2px 32px 0px;
+  --shadow-5: rgba(255, 255, 255, 0.08) 0px 0px 0px 0.5px inset;
+
+  /* Hareket */
+  --transition-1: 0.1s;
+  --transition-2: 0.25s;
+  --transition-3: 0.16s;
+  --transition-4: 0.4s;
+  --transition-5: 0.12s;
+}

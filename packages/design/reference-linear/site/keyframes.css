@@ -1,0 +1,1332 @@
+/* Kaynak sitenin GERÇEKTEN kullandığı @keyframes kuralları.
+   Sayfada tanımlı olup hiç tetiklenmeyenler alınmadı.
+   Bu dosya birebir kopyalanabilir — yorumlanmış değil, ölçülmüş. */
+
+@keyframes grid-dot-0-0-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-0-1-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  35.7143% { opacity: 1; }
+  42.8571% { opacity: 1; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 1; }
+  64.2857% { opacity: 1; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-0-2-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  28.5714% { opacity: 1; }
+  35.7143% { opacity: 1; }
+  35.7143% { opacity: 1; }
+  42.8571% { opacity: 1; }
+  42.8571% { opacity: 1; }
+  50% { opacity: 1; }
+  50% { opacity: 1; }
+  57.1429% { opacity: 1; }
+  57.1429% { opacity: 1; }
+  64.2857% { opacity: 1; }
+  64.2857% { opacity: 1; }
+  71.4286% { opacity: 1; }
+  71.4286% { opacity: 1; }
+  78.5714% { opacity: 1; }
+  78.5714% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-0-3-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  35.7143% { opacity: 1; }
+  42.8571% { opacity: 1; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 1; }
+  64.2857% { opacity: 1; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-0-4-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-1-0-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-1-1-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  28.5714% { opacity: 1; }
+  35.7143% { opacity: 1; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 1; }
+  71.4286% { opacity: 1; }
+  71.4286% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-1-2-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 1; }
+  28.5714% { opacity: 1; }
+  28.5714% { opacity: 1; }
+  35.7143% { opacity: 1; }
+  35.7143% { opacity: 1; }
+  42.8571% { opacity: 1; }
+  42.8571% { opacity: 1; }
+  50% { opacity: 1; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 1; }
+  64.2857% { opacity: 1; }
+  64.2857% { opacity: 1; }
+  71.4286% { opacity: 1; }
+  71.4286% { opacity: 1; }
+  78.5714% { opacity: 1; }
+  78.5714% { opacity: 1; }
+  85.7143% { opacity: 1; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-1-3-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  28.5714% { opacity: 1; }
+  35.7143% { opacity: 1; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 1; }
+  71.4286% { opacity: 1; }
+  71.4286% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-1-4-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-2-0-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-2-1-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 1; }
+  28.5714% { opacity: 1; }
+  28.5714% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 1; }
+  78.5714% { opacity: 1; }
+  78.5714% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-2-2-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 1; }
+  21.4286% { opacity: 1; }
+  21.4286% { opacity: 1; }
+  28.5714% { opacity: 1; }
+  28.5714% { opacity: 1; }
+  35.7143% { opacity: 1; }
+  35.7143% { opacity: 1; }
+  42.8571% { opacity: 1; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 1; }
+  71.4286% { opacity: 1; }
+  71.4286% { opacity: 1; }
+  78.5714% { opacity: 1; }
+  78.5714% { opacity: 1; }
+  85.7143% { opacity: 1; }
+  85.7143% { opacity: 1; }
+  92.8571% { opacity: 1; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-2-3-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 1; }
+  28.5714% { opacity: 1; }
+  28.5714% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 1; }
+  78.5714% { opacity: 1; }
+  78.5714% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-2-4-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-3-0-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-3-1-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 1; }
+  21.4286% { opacity: 1; }
+  21.4286% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  78.5714% { opacity: 1; }
+  85.7143% { opacity: 1; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-3-2-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 1; }
+  14.2857% { opacity: 1; }
+  14.2857% { opacity: 1; }
+  21.4286% { opacity: 1; }
+  21.4286% { opacity: 1; }
+  28.5714% { opacity: 1; }
+  28.5714% { opacity: 1; }
+  35.7143% { opacity: 1; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 1; }
+  78.5714% { opacity: 1; }
+  78.5714% { opacity: 1; }
+  85.7143% { opacity: 1; }
+  85.7143% { opacity: 1; }
+  92.8571% { opacity: 1; }
+  92.8571% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes grid-dot-3-3-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 1; }
+  21.4286% { opacity: 1; }
+  21.4286% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  78.5714% { opacity: 1; }
+  85.7143% { opacity: 1; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-3-4-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-4-0-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-4-1-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 1; }
+  14.2857% { opacity: 1; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  85.7143% { opacity: 1; }
+  92.8571% { opacity: 1; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-4-2-upDown { 
+  0% { opacity: 1; }
+  7.14286% { opacity: 1; }
+  7.14286% { opacity: 1; }
+  14.2857% { opacity: 1; }
+  14.2857% { opacity: 1; }
+  21.4286% { opacity: 1; }
+  21.4286% { opacity: 1; }
+  28.5714% { opacity: 1; }
+  28.5714% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  78.5714% { opacity: 1; }
+  85.7143% { opacity: 1; }
+  85.7143% { opacity: 1; }
+  92.8571% { opacity: 1; }
+  92.8571% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes grid-dot-4-3-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 1; }
+  14.2857% { opacity: 1; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  85.7143% { opacity: 1; }
+  92.8571% { opacity: 1; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-4-4-upDown { 
+  0% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  7.14286% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  14.2857% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  21.4286% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  28.5714% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  35.7143% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  42.8571% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  57.1429% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  64.2857% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  71.4286% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  78.5714% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  85.7143% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  92.8571% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-0-0-pong { 
+  0% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 1; }
+  62.5% { opacity: 1; }
+  62.5% { opacity: 1; }
+  75% { opacity: 1; }
+  75% { opacity: 1; }
+  87.5% { opacity: 1; }
+  87.5% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-0-1-pong { 
+  0% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  62.5% { opacity: 0.3; }
+  62.5% { opacity: 0.3; }
+  75% { opacity: 0.3; }
+  75% { opacity: 0.3; }
+  87.5% { opacity: 0.3; }
+  87.5% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-0-2-pong { 
+  0% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  62.5% { opacity: 0.3; }
+  62.5% { opacity: 0.3; }
+  75% { opacity: 0.3; }
+  75% { opacity: 0.3; }
+  87.5% { opacity: 0.3; }
+  87.5% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-0-3-pong { 
+  0% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  62.5% { opacity: 0.3; }
+  62.5% { opacity: 0.3; }
+  75% { opacity: 0.3; }
+  75% { opacity: 1; }
+  87.5% { opacity: 1; }
+  87.5% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-0-4-pong { 
+  0% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  62.5% { opacity: 0.3; }
+  62.5% { opacity: 0.3; }
+  75% { opacity: 0.3; }
+  75% { opacity: 1; }
+  87.5% { opacity: 1; }
+  87.5% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes grid-dot-1-0-pong { 
+  0% { opacity: 1; }
+  12.5% { opacity: 1; }
+  12.5% { opacity: 1; }
+  25% { opacity: 1; }
+  25% { opacity: 1; }
+  37.5% { opacity: 1; }
+  37.5% { opacity: 1; }
+  50% { opacity: 1; }
+  50% { opacity: 1; }
+  62.5% { opacity: 1; }
+  62.5% { opacity: 1; }
+  75% { opacity: 1; }
+  75% { opacity: 1; }
+  87.5% { opacity: 1; }
+  87.5% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes grid-dot-1-1-pong { 
+  0% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  62.5% { opacity: 0.3; }
+  62.5% { opacity: 0.3; }
+  75% { opacity: 0.3; }
+  75% { opacity: 0.3; }
+  87.5% { opacity: 0.3; }
+  87.5% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-1-2-pong { 
+  0% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  62.5% { opacity: 0.3; }
+  62.5% { opacity: 1; }
+  75% { opacity: 1; }
+  75% { opacity: 0.3; }
+  87.5% { opacity: 0.3; }
+  87.5% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes grid-dot-1-3-pong { 
+  0% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  62.5% { opacity: 0.3; }
+  62.5% { opacity: 0.3; }
+  75% { opacity: 0.3; }
+  75% { opacity: 0.3; }
+  87.5% { opacity: 0.3; }
+  87.5% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-1-4-pong { 
+  0% { opacity: 1; }
+  12.5% { opacity: 1; }
+  12.5% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  62.5% { opacity: 0.3; }
+  62.5% { opacity: 1; }
+  75% { opacity: 1; }
+  75% { opacity: 1; }
+  87.5% { opacity: 1; }
+  87.5% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes grid-dot-2-0-pong { 
+  0% { opacity: 1; }
+  12.5% { opacity: 1; }
+  12.5% { opacity: 1; }
+  25% { opacity: 1; }
+  25% { opacity: 1; }
+  37.5% { opacity: 1; }
+  37.5% { opacity: 1; }
+  50% { opacity: 1; }
+  50% { opacity: 1; }
+  62.5% { opacity: 1; }
+  62.5% { opacity: 1; }
+  75% { opacity: 1; }
+  75% { opacity: 1; }
+  87.5% { opacity: 1; }
+  87.5% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes grid-dot-2-1-pong { 
+  0% { opacity: 1; }
+  12.5% { opacity: 1; }
+  12.5% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 1; }
+  62.5% { opacity: 1; }
+  62.5% { opacity: 0.3; }
+  75% { opacity: 0.3; }
+  75% { opacity: 0.3; }
+  87.5% { opacity: 0.3; }
+  87.5% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-2-2-pong { 
+  0% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  62.5% { opacity: 0.3; }
+  62.5% { opacity: 0.3; }
+  75% { opacity: 0.3; }
+  75% { opacity: 0.3; }
+  87.5% { opacity: 0.3; }
+  87.5% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-2-3-pong { 
+  0% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  12.5% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  25% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  37.5% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  50% { opacity: 0.3; }
+  62.5% { opacity: 0.3; }
+  62.5% { opacity: 0.3; }
+  75% { opacity: 0.3; }
+  75% { opacity: 0.3; }
+  87.5% { opacity: 0.3; }
+  87.5% { opacity: 0.3; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes grid-dot-2-4-pong { 
+  0% { opacity: 1; }
+  12.5% { opacity: 1; }
+  12.5% { opacity: 1; }
+  25% { opacity: 1; }
+  25% { opacity: 1; }
+  37.5% { opacity: 1; }
+  37.5% { opacity: 1; }
+  50% { opacity: 1; }
+  50% { opacity: 1; }
+  62.5% { opacity: 1; }
+  62.5% { opacity: 1; }
+  75% { opacity: 1; }
+  75% { opacity: 1; }
+  87.5% { opacity: 1; }
+  87.5% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes swipe-out-left { 
+  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }
+  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) - 100%)); opacity: 0; }
+}
+
+@keyframes swipe-out-right { 
+  0% { transform: var(--y) translateX(var(--swipe-amount-x)); opacity: 1; }
+  100% { transform: var(--y) translateX(calc(var(--swipe-amount-x) + 100%)); opacity: 0; }
+}
+
+@keyframes swipe-out-up { 
+  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }
+  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) - 100%)); opacity: 0; }
+}
+
+@keyframes swipe-out-down { 
+  0% { transform: var(--y) translateY(var(--swipe-amount-y)); opacity: 1; }
+  100% { transform: var(--y) translateY(calc(var(--swipe-amount-y) + 100%)); opacity: 0; }
+}
+
+@keyframes sonner-fade-in { 
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes sonner-fade-out { 
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+
+@keyframes sonner-spin { 
+  0% { opacity: 1; }
+  100% { opacity: 0.15; }
+}
+
+@keyframes PSAPAG_dialogOpen { 
+  0% { opacity: 0; transform: translate(-50%, -49%) scale(0.95); }
+  100% { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+@keyframes PSAPAG_dialogClose { 
+  0% { opacity: 1; transform: translate(-50%, -50%); }
+  100% { opacity: 0; transform: translate(-50%, -49%) scale(0.95); }
+}
+
+@keyframes PSAPAG_fadeIn { 
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes PSAPAG_fadeOut { 
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes xt7VyG_scroll { 
+  0% { transform: translate(0px); }
+  100% { transform: translateX(calc(-100% - var(--Marquee-gap))); }
+}
+
+@keyframes xt7VyG_scroll-vertical { 
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(calc(-100% - var(--Marquee-gap))); }
+}
+
+@keyframes xt7VyG_scroll-abs { 
+  0% { transform: translateX(calc(100% + var(--Marquee-gap))); }
+  100% { transform: translate(0px); }
+}
+
+@keyframes xt7VyG_scroll-abs-vertical { 
+  0% { transform: translateY(calc(100% + var(--Marquee-gap))); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes vaulFadeIn { 
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes vaulFadeOut { 
+  100% { opacity: 0; }
+}
+
+@keyframes vaulSlideFromBottom { 
+  0% { transform: translate3d(0, var(--initial-transform,100%), 0); }
+  100% { transform: translate(0px); }
+}
+
+@keyframes vaulSlideToBottom { 
+  100% { transform: translate3d(0, var(--initial-transform,100%), 0); }
+}
+
+@keyframes gli-sprite { 
+  0% { transform: translate(0px); }
+  5% { transform: translate(-100%); }
+  5.0001% { transform: translate(0px); }
+  10% { transform: translate(-100%); }
+  10.0001% { transform: translate(0px); }
+  15% { transform: translate(-100%); }
+  15.0001% { transform: translate(0px); }
+  20% { transform: translate(-100%); }
+  20.0001% { transform: translate(0px); }
+  25% { transform: translate(-100%); }
+  25.0001% { transform: translate(0px); }
+  30% { transform: translate(-100%); }
+  30.0001% { transform: translate(0px); }
+  35% { transform: translate(-100%); }
+  35.0001% { transform: translate(0px); }
+  40% { transform: translate(-100%); }
+  40.0001% { transform: translate(0px); }
+  45% { transform: translate(-100%); }
+  45.0001% { transform: translate(0px); }
+  50% { transform: translate(-100%); }
+  50.0001% { transform: translate(0px); }
+  55% { transform: translate(-100%); }
+  55.0001% { transform: translate(0px); }
+  60% { transform: translate(-100%); }
+  60.0001% { transform: translate(0px); }
+  65% { transform: translate(-100%); }
+  65.0001% { transform: translate(0px); }
+  70% { transform: translate(-100%); }
+  70.0001% { transform: translate(0px); }
+  75% { transform: translate(-100%); }
+  75.0001% { transform: translate(0px); }
+  80% { transform: translate(-100%); }
+  80.0001% { transform: translate(0px); }
+  85% { transform: translate(-100%); }
+  85.0001% { transform: translate(0px); }
+  90% { transform: translate(-100%); }
+  90.0001% { transform: translate(0px); }
+  95% { transform: translate(-100%); }
+  95.0001% { transform: translate(0px); }
+  100% { transform: translate(-100%); }
+}
+
+@keyframes w9ZFkq_shine { 
+  0% { background-position: 0% center; }
+  100% { background-position: -300% center; }
+}
+
+@keyframes w9ZFkq_staggerIn { 
+  0% { opacity: 0; transform: translateY(4px); }
+}
+
+@keyframes w9ZFkq_revealDots { 
+  0% { clip-path: inset(0px 100% 0px 0px); }
+  15% { clip-path: inset(0px 66.6% 0px 0px); }
+  30% { clip-path: inset(0px 33.3% 0px 0px); }
+  45% { clip-path: inset(0px); }
+  65%, 100% { clip-path: inset(0px 100% 0px 0px); }
+}
+
+@keyframes qM9FAa_shimmerSweep { 
+  0% { background-position: 150% 0px; }
+  100% { background-position: -50% 0px; }
+}
+
+@keyframes qM9FAa_cursorBlink { 
+  0% { opacity: 1; }
+  49% { opacity: 1; }
+  50% { opacity: 0; }
+  99% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes PPSGPG_blink { 
+  50% { visibility: hidden; }
+}
+
+@keyframes fadeIn { 
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut { 
+  100% { opacity: 0; }
+}
+
+@keyframes slideFromBottom { 
+  0% { transform: translate3d(0,var(--initial-transform,100%),0); }
+  100% { transform: translate3d(0px, 0px, 0px); }
+}
+
+@keyframes slideToBottom { 
+  100% { transform: translate3d(0,var(--initial-transform,100%),0); }
+}
+
+@keyframes slideFromTop { 
+  0% { transform: translate3d(0,calc(var(--initial-transform,100%) * -1),0); }
+  100% { transform: translate3d(0px, 0px, 0px); }
+}
+
+@keyframes slideToTop { 
+  100% { transform: translate3d(0,calc(var(--initial-transform,100%) * -1),0); }
+}
+
+@keyframes slideFromLeft { 
+  0% { transform: translate3d(calc(var(--initial-transform,100%) * -1),0,0); }
+  100% { transform: translate3d(0px, 0px, 0px); }
+}
+
+@keyframes slideToLeft { 
+  100% { transform: translate3d(calc(var(--initial-transform,100%) * -1),0,0); }
+}
+
+@keyframes slideFromRight { 
+  0% { transform: translate3d(var(--initial-transform,100%),0,0); }
+  100% { transform: translate3d(0px, 0px, 0px); }
+}
+
+@keyframes slideToRight { 
+  100% { transform: translate3d(var(--initial-transform,100%),0,0); }
+}
+
+@keyframes lAb7VG_highlight { 
+  20%, 80% { background-color: var(--bg); border-color: var(--border); }
+}
+
+@keyframes UVNdXW_open { 
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes UVNdXW_close { 
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.9); }
+}
+
+@keyframes j9EdOW_blink { 
+  0% { visibility: visible; }
+  50% { visibility: hidden; }
+  100% { visibility: visible; }
+}
+
+@keyframes _5SlGa_shimmerSweep { 
+  0%, 100% { background-position: -180px center, 0px center; }
+  75%, 99.999% { background-position: calc(100% + 180px) center, 0px center; }
+}
+
+@keyframes AWsA3W_scrollbarIn { 
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes AWsA3W_scrollbarOut { 
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes uDqFfq_dialogIn { 
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes uDqFfq_dialogOut { 
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes _4YXZSa_pillarHeroPulse { 
+  100% { box-shadow: rgba(243, 79, 82, 0) 0px 0px 0px 10px; }
+}
+
+@keyframes _4phDSW_highlightReveal { 
+  0% { clip-path: inset(0px 100% 0px 0px); }
+  100% { clip-path: inset(0px); }
+}

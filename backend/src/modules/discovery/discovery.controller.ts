@@ -1,5 +1,6 @@
 import { Body, Controller, Get, HttpCode, Param, Post } from '@nestjs/common';
 import { DiscoveryService } from './discovery.service';
+import { AutoDiscoveryService } from './auto-discovery.service';
 import {
   startRunSchema,
   importDatasetSchema,
@@ -13,7 +14,29 @@ import { UserRole } from '@prisma/client';
 
 @Controller('discovery')
 export class DiscoveryController {
-  constructor(private readonly discovery: DiscoveryService) {}
+  constructor(
+    private readonly discovery: DiscoveryService,
+    private readonly auto: AutoDiscoveryService,
+  ) {}
+
+  /** Otomatik keşif durumu: kalan kredi ve izgara ilerlemesi. */
+  @Get('auto/status')
+  async autoStatus() {
+    const [primary, secondary, progress] = await Promise.all([
+      this.auto.accountState('primary').catch(() => null),
+      this.auto.accountState('secondary').catch(() => null),
+      this.auto.progress(),
+    ]);
+    return { accounts: [primary, secondary].filter(Boolean), progress };
+  }
+
+  /** Zamanlayicinin yaptigini elle tetikler — KREDI HARCAYABILIR. */
+  @Roles(UserRole.ADMIN)
+  @Post('auto/tick')
+  @HttpCode(200)
+  autoTick(@CurrentUser() user: AuthUser) {
+    return this.auto.tick().then((r) => ({ ...r, triggeredBy: user.id }));
+  }
 
   @Get('runs')
   list() {
