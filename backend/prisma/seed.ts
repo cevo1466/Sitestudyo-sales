@@ -71,8 +71,36 @@ const SECTORS: Record<string, string[]> = {
     'Emlakçı', 'Sigorta acentesi', 'Danışmanlık',
     'Mimar', 'Mimari Tasarımcı', 'Mühendis', 'İnşaat Şirketi',
   ],
-  perakende: ['Mağaza', 'Butik', 'Market', 'Kuyumcu', 'Optik', 'Mobilyacı', 'Bakkal'],
-  egitim: ['Kurs', 'Dershane', 'Anaokulu', 'Sürücü kursu', 'Dil okulu', 'Topluluk merkezi'],
+  perakende: [
+    'Mağaza', 'Butik', 'Market', 'Kuyumcu', 'Optik', 'Mobilyacı', 'Bakkal',
+    'Evcil Hayvan Malzemeleri Mağazası', 'Aydınlatma Mağazası',
+    'Berber Malzemeleri Satıcısı', 'Terzi', 'Motosiklet Mağazası',
+    'Otomobil Yedek Parça Mağazası',
+  ],
+  egitim: [
+    'Kurs', 'Dershane', 'Anaokulu', 'Sürücü kursu', 'Dil okulu',
+    'Topluluk merkezi', 'Okul Öncesi', 'Kreş', 'Montessori Okulu',
+    'İlköğretim Okulu',
+  ],
+
+  // --- 16 Agu 2026 Istanbul/Ankara taramalarindan turetilen yeni sektorler ---
+  // Uc kume kendi basina anlamli bir hacme ulasti (emlak 95, otomotiv 88,
+  // temizlik 94) ve satis acisindan birbirinden farkli davraniyorlar;
+  // profesyonel_hizmet altina tikmak filtreyi kullanilamaz hale getirirdi.
+  emlak: [
+    'Emlak Bürosu', 'Emlak Kiralama Ofisi', 'Gayrimenkul Danışmanı',
+    'Emlak Danışmanı', 'Apartman', 'İş Merkezi',
+  ],
+  otomotiv: [
+    'Oto Tamirhanesi', 'Araç Bakım ve Onarımı', 'Oto Lastik Dükkanı',
+    'Araba Yıkama', 'Self Servis Oto Yıkama', 'Motosiklet Tamir Dükkanı',
+    'Oto Elektrik Hizmeti', 'Araç Akü Mağazası', 'Oto Tamir Atölyesi',
+    'Oto Kaporta Dükkanı', 'Oto Galeri',
+  ],
+  temizlik: [
+    'Kuru Temizlemeci', 'Çamaşır Yıkama Hizmeti', 'Çamaşırhane',
+    'Temizlik Hizmetleri',
+  ],
 };
 
 async function main(): Promise<void> {

@@ -1,5 +1,11 @@
 import { WebsiteStatus } from '@prisma/client';
-import { normalizePlace, toE164, buildDedupeKey, classifyWebsite } from './place-normalizer';
+import {
+  normalizePlace,
+  toE164,
+  buildDedupeKey,
+  classifyWebsite,
+  canonicalCity,
+} from './place-normalizer';
 import type { RawPlace } from './place-provider.interface';
 
 /** Gercek Apify kaydindan alinmis ornek (dataset ujUIqG2ummmiPuKhr). */
@@ -114,6 +120,33 @@ describe('classifyWebsite', () => {
   });
 });
 
+describe('canonicalCity', () => {
+  it('Google bolge ekini kaldirir', () => {
+    // Gercek veride 1.812 kaydin 9'u boyleydi; duzeltilmezse
+    // city=İstanbul filtresi onlari KACIRIR.
+    for (const v of ['İstanbul - Asya', 'İstanbul - Avrupa', 'Istanbul - Asia', 'Istanbul - Europe']) {
+      expect(canonicalCity(v)).toBe('İstanbul');
+    }
+  });
+
+  it('noktasiz Istanbul yazimini duzeltir', () => {
+    // MySQL harf duyarsiz olsa da 'I' ile 'İ' AYRI harfler; esitlik saglamaz.
+    expect(canonicalCity('Istanbul')).toBe('İstanbul');
+    expect(canonicalCity('ISTANBUL')).toBe('İstanbul');
+  });
+
+  it('bilinmeyen sehri oldugu gibi birakir', () => {
+    // Uydurma bir duzeltme yapmaktansa ham degeri korumak dogru.
+    expect(canonicalCity('Kocaeli')).toBe('Kocaeli');
+    expect(canonicalCity('Elazığ')).toBe('Elazığ');
+  });
+
+  it('bos degerde null doner', () => {
+    expect(canonicalCity(null)).toBeNull();
+    expect(canonicalCity('   ')).toBeNull();
+  });
+});
+
 describe('buildDedupeKey', () => {
   it('ad ve telefondan kararli bir anahtar uretir', () => {
     const a = buildDedupeKey('ornek kuafor', '+905551234567');
@@ -150,6 +183,11 @@ describe('normalizePlace', () => {
     expect(c.city).toBe('İstanbul');
     expect(c.district).toBe('Kadıköy');
     expect(c.neighborhood).toBe('Caferağa');
+  });
+
+  it('bolgeye bolunmus il adini tek bicime indirger', () => {
+    const p = { ...APIFY_SAMPLE, state: 'İstanbul - Avrupa' };
+    expect(normalizePlace(p, { sectorMap, onlyWithoutWebsite: true }).city).toBe('İstanbul');
   });
 
   it('Turkiye disinda state ili degil eyaleti gosterir, city korunur', () => {

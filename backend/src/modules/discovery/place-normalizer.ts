@@ -50,6 +50,35 @@ export interface NormalizeOptions {
  */
 const STATE_IS_CITY_COUNTRIES = new Set(['TR']);
 
+/**
+ * Il adini tek bicime indirger.
+ *
+ * Google buyuk sehirleri bolgeye bolerek dondurebiliyor: "İstanbul - Asya",
+ * "Istanbul - Europe", "Istanbul - Asia". Bunlar duzeltilmezse `city=İstanbul`
+ * filtresi o kayitlari KACIRIR — kullanici havuzda olmayan isletmeler
+ * oldugunu bilmez. Gercek veride 1.812 kaydin 9'u boyleydi.
+ *
+ * Ayrica noktasiz "Istanbul" -> "İstanbul": MySQL siralama harf duyarsiz
+ * olsa da 'I' ile 'İ' AYRI harfler ve esitlik saglamaz.
+ */
+const CITY_CANONICAL: Record<string, string> = {
+  istanbul: 'İstanbul',
+  'istanbul - asya': 'İstanbul',
+  'istanbul - avrupa': 'İstanbul',
+  'istanbul - asia': 'İstanbul',
+  'istanbul - europe': 'İstanbul',
+  izmir: 'İzmir',
+  ankara: 'Ankara',
+};
+
+export function canonicalCity(raw: string | null | undefined): string | null {
+  if (!raw?.trim()) return null;
+  const cleaned = raw.trim().replace(/\s+/g, ' ');
+  // Noktali/noktasiz I ayrimini kaldirip arama anahtarina ceviriyoruz.
+  const key = cleaned.toLowerCase().replace(/i̇/g, 'i').replace(/ı/g, 'i');
+  return CITY_CANONICAL[key] ?? cleaned;
+}
+
 const SOCIAL_HOSTS = [
   'instagram.com',
   'facebook.com',
@@ -169,7 +198,7 @@ export function normalizePlace(place: RawPlace, opts: NormalizeOptions): Normali
   const country = (place.countryCode ?? 'TR').toUpperCase();
   const swap = STATE_IS_CITY_COUNTRIES.has(country);
 
-  const city = swap ? (place.state ?? null) : (place.city ?? null);
+  const city = canonicalCity(swap ? place.state : place.city);
   const district = swap ? (place.city ?? null) : null;
 
   const phoneE164 = toE164(place.phoneUnformatted ?? place.phone, country);
