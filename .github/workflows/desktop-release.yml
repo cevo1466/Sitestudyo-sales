@@ -76,11 +76,6 @@ jobs:
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Guncelleyicinin imzasi. Bu anahtar olmadan tauri-action
-          # latest.json URETMEZ ve uygulamadaki guncelleme dugmesi
-          # hicbir zaman guncelleme goremez.
-          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
-          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ''
         with:
           projectPath: desktop-client
           tagName: ${{ github.ref_type == 'tag' && github.ref_name || 'desktop-vdev' }}
@@ -102,3 +97,25 @@ jobs:
           releaseDraft: true
           prerelease: false
           args: ${{ matrix.args }}
+
+      # Paketleri artifact olarak da birak.
+      #
+      # NEDEN: imza artik burada atilmiyor. Sirri GitHub'a dogru bicimde
+      # yazmak uc denemede de basarisiz oldu (340, 344 karakter geldi; 348
+      # olmasi gerekiyor) ve her deneme sekiz dakikalik derlemeyi yakti.
+      # Imza anahtari zaten sunucuda duruyor, imzalamak icin CI'a ihtiyac
+      # yok. Sunucu bu artifact'i indirip imzaliyor ve latest.json'i kendi
+      # uretiyor. Boylece kopyala-yapistir zincirinden tamamen cikildi.
+      - name: Paketleri artifact olarak yukle
+        uses: actions/upload-artifact@v4
+        with:
+          name: paketler-${{ matrix.os }}
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            desktop-client/src-tauri/target/release/bundle/**/*.AppImage
+            desktop-client/src-tauri/target/release/bundle/**/*.deb
+            desktop-client/src-tauri/target/release/bundle/**/*.msi
+            desktop-client/src-tauri/target/release/bundle/**/*-setup.exe
+            desktop-client/src-tauri/target/universal-apple-darwin/release/bundle/**/*.dmg
+            desktop-client/src-tauri/target/universal-apple-darwin/release/bundle/**/*.app.tar.gz
