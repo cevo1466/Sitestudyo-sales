@@ -3,7 +3,7 @@
 # Anahtarin kendisini yazdirmiyor: GitHub sirlari loglarda maskeler zaten,
 # ama maskeleme etrafinda dolasmak da istemiyoruz. Yazdirilan iki sey
 # guvenli ve teshis icin yeterli: kac karakter oldugu ve SHA-256 ozeti.
-# Beklenen deger 348 karakter; ozet yerelde hesaplananla ayni olmali.
+# Beklenen deger 348 karakter; ozet yerelde hesaplananla ayni olmali. (2)
 name: Anahtar tanisi
 
 on:
