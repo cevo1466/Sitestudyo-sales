@@ -1,0 +1,20 @@
+# Sir taramasi yapilandirmasi.
+#
+# Varsayilan kurallarin TAMAMI gecerli; asagida yalnizca TEK bir yanlis
+# alarm susturuluyor.
+#
+# e2e testleri her calistiginda kendi kullanicisini olusturup giris
+# yapiyor ve bunun icin sabit bir parola kullaniyor. gitleaks bunu
+# "generic-api-key" sanip derlemeyi kirmisti. Parola hicbir gercek
+# sisteme ait degil, yalnizca test veritabanindaki gecici kullanicinin.
+#
+# Muafiyet BU METNE bagli, "backend/test" klasorune degil: klasorun
+# tamami muaf tutulsaydi, testlere yanlislikla yapistirilan GERCEK bir
+# anahtar da sessizce gecerdi.
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "e2e testlerinin sabit parolasi (gercek bir sir degil)"
+regexes = ['''e2e-Test-Parola-123''']
