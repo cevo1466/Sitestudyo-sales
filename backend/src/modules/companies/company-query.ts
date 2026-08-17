@@ -53,12 +53,28 @@ export class CompanyQuery {
       where.phoneE164 = { startsWith: '+905' };
     }
 
+    // AND dalinda birden fazla kosul bulusuyor; hepsi tek dizide toplanip
+    // sonunda bir kez ataniyor. Ayri ayri `where.AND = ...` yazilirsa
+    // sonraki atama oncekini SESSIZCE eziyor.
+    const and: Prisma.CompanyWhereInput[] = [];
+
     // Etiketlerde VE mantigi: her etiket icin AYRI bir `some` kosulu gerekir.
     // Tek bir `some: { tag: { slug: { in: [...] } } }` yazilirsa VEYA olur —
     // "sicak VEYA ankara" doner, oysa istenen "sicak VE ankara".
     if (filter.tags) {
-      where.AND = filter.tags.map((slug) => ({ tags: { some: { tag: { slug } } } }));
+      and.push(...filter.tags.map((slug) => ({ tags: { some: { tag: { slug } } } })));
     }
+
+    // `contacted` de lastContactedAt'e yaziyor. Ayni alana ikinci kez
+    // dogrudan yazmak yerine AND dalina koyuyoruz: iki filtre birlikte
+    // gelirse ikisi de gecerli kalir, biri digerini ezmez.
+    if (filter.notContactedSince) {
+      and.push({
+        OR: [{ lastContactedAt: null }, { lastContactedAt: { lt: filter.notContactedSince } }],
+      });
+    }
+
+    if (and.length) where.AND = and;
 
     return where;
   }

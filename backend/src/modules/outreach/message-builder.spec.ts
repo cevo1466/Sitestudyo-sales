@@ -110,6 +110,82 @@ describe('renderTemplate', () => {
   });
 });
 
+describe('renderTemplate — isletmeye ozel yeni degiskenler', () => {
+  it('kisa ad, sektor ve sehri doldurur', () => {
+    const c = { ...base, name: 'Cafe Nero', sector: 'yeme_icme' };
+    expect(renderTemplate('Merhaba {{ilkAd}}, {{sehir}} {{sektorTekil}} işi', c)).toBe(
+      'Merhaba Nero, Ankara restoran ve kafe işi',
+    );
+  });
+
+  it('olculmus sorunu cumleye koyar', () => {
+    const c = {
+      ...base,
+      websiteStatus: WebsiteStatus.ACTIVE_WEAK,
+      analysis: {
+        isResponsive: false,
+        sslValid: true,
+        httpsRedirect: true,
+        loadMs: 900,
+        ttfbMs: 200,
+        httpStatus: 200,
+        errorCode: null,
+        hasTitle: true,
+        hasMetaDesc: true,
+      },
+    };
+    expect(renderTemplate('Kontrol ettik: {{sorun}}. Konuşalım mı?', c)).toBe(
+      'Kontrol ettik: siteniz telefonda düzgün görünmüyor. Konuşalım mı?',
+    );
+  });
+
+  it('sorun OLCULMEDIYSE o cumleyi TAMAMEN siler', () => {
+    // Kritik davranis: "Kontrol ettik:." diye yarim bir cumle musteriye
+    // giderse mesaji bir robot yazmis gibi duruyor.
+    const c = { ...base, websiteStatus: WebsiteStatus.ACTIVE_GOOD, analysis: null };
+    expect(renderTemplate('Kontrol ettik: {{sorun}}. Konuşalım mı?', c)).toBe('Konuşalım mı?');
+  });
+
+  it('bos skor gerekcesinin cumlesini siler, digerlerini korur', () => {
+    const c = { ...base, scoreReasons: [] };
+    expect(
+      renderTemplate('Merhaba {{isim}}. Dikkatimizi çeken {{skorGerekce}} oldu. Görüşelim.', c),
+    ).toBe('Merhaba Meşhur Kavurmacı. Görüşelim.');
+  });
+
+  it('cumle silinince satir yapisi ve noktalama bozulmaz', () => {
+    const c = { ...base, websiteStatus: WebsiteStatus.ACTIVE_GOOD, analysis: null };
+    const out = renderTemplate(
+      'Merhaba {{isim}}.\nSitenizde {{sorun}} tespit ettik.\nGörüşmek isteriz.',
+      c,
+    );
+    expect(out).toBe('Merhaba Meşhur Kavurmacı.\nGörüşmek isteriz.');
+    expect(out).not.toMatch(/\n{2,}/);
+  });
+
+  it('tum yeni degiskenler bosken de ham etiket birakmaz', () => {
+    const bos = {
+      ...base,
+      name: 'Dükkan',
+      district: null,
+      city: null,
+      categoryRaw: null,
+      sector: null,
+      googleRating: null,
+      googleReviewsCount: null,
+      websiteStatus: WebsiteStatus.UNKNOWN,
+      analysis: null,
+      scoreReasons: null,
+    };
+    const out = renderTemplate(
+      '{{isim}} {{ilkAd}} {{sektorTekil}} {{sehir}} {{ilce}} {{puan}} {{yorum}} ' +
+        '{{sorun}} {{sorunDetay}} {{skorGerekce}}',
+      bos,
+    );
+    expect(out).not.toMatch(/\{\{|\}\}/);
+  });
+});
+
 describe('recommendedTemplateKey', () => {
   it('sitesi yok + cok yorum + yuksek puan -> sosyal kanit', () => {
     expect(recommendedTemplateKey(base)).toBe('sosyal_kanit');

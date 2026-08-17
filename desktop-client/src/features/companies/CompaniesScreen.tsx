@@ -33,7 +33,12 @@ const SORTS: Array<[string, string]> = [
   ['name:asc', 'İsme göre'],
 ];
 
-export function CompaniesScreen() {
+export function CompaniesScreen({
+  onBuildQueue,
+}: {
+  /** Secili filtreyle calisma kuyrugu kurar ve "Bugun" sekmesine gecer. */
+  onBuildQueue: (params: string) => void;
+}) {
   const [filters, setFilters] = useState<Filters>({ sort: 'googleReviewsCount:desc' });
   const [items, setItems] = useState<Company[]>([]);
   const [total, setTotal] = useState<number | null>(null);
@@ -58,6 +63,23 @@ export function CompaniesScreen() {
     },
     [filters],
   );
+
+  /**
+   * Kuyruk parametreleri.
+   *
+   * Liste sorgusundan AYRI: kuyruk `sort`/`cursor` bilmiyor, kendi
+   * siralamasi skora gore sabit. Ayni `query()`'yi gondermek sessizce
+   * yok sayilan alanlar demek olurdu.
+   */
+  const queueParams = useCallback(() => {
+    const p = new URLSearchParams({ limit: '20' });
+    if (filters.city) p.set('city', filters.city);
+    if (filters.sector) p.set('sector', filters.sector);
+    if (filters.q) p.set('q', filters.q);
+    if (filters.contacted) p.set('contacted', filters.contacted);
+    if (filters.mobileOnly) p.set('mobileOnly', filters.mobileOnly);
+    return p.toString();
+  }, [filters]);
 
   // Filtre degisince listeyi bastan yukle.
   useEffect(() => {
@@ -217,6 +239,16 @@ export function CompaniesScreen() {
             title="Daha önce yazdığım veya aradığım işletmeler"
           >
             Yazdıklarım
+          </button>
+
+          <button
+            className="btn secondary"
+            style={{ width: 'auto', padding: '0 14px' }}
+            onClick={() => onBuildQueue(queueParams())}
+            disabled={!total}
+            title="Bu filtreyle çalışma kuyruğu kur — mesajlar hazır gelir, tek tek onaylayıp açarsınız"
+          >
+            Bu filtreyle kuyruk kur
           </button>
 
           {filters.city && (

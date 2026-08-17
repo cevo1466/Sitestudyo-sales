@@ -46,7 +46,7 @@ export class ScoringService {
       },
     });
     if (!company) return null;
-    return this.scoreOne(company, rules);
+    return this.scoreCompany(company, rules);
   }
 
   /**
@@ -75,7 +75,7 @@ export class ScoringService {
       if (!companies.length) break;
 
       for (const company of companies) {
-        const result = this.scoreOne(company, rules);
+        const result = this.scoreCompany(company, rules);
         processed++;
         if (company.leadScore === result.score && company.leadGrade === result.grade) continue;
 
@@ -94,7 +94,8 @@ export class ScoringService {
     return { processed, changed };
   }
 
-  private scoreOne(
+  /** Yuklenmis bir isletme kaydini puanlar. Outreach da bunu kullaniyor. */
+  scoreCompany(
     company: {
       websiteStatus: Parameters<typeof scoreLead>[0]['websiteStatus'];
       googleRating: unknown;
@@ -132,7 +133,7 @@ export class ScoringService {
     );
   }
 
-  private async loadRules(): Promise<ScoreRule[]> {
+  async loadRules(): Promise<ScoreRule[]> {
     const rows = await this.prisma.leadScoreRule.findMany();
     return rows.map((r) => ({
       key: r.key,

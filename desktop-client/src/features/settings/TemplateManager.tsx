@@ -11,8 +11,29 @@ interface Row extends Template {
   uid: string;
 }
 
-/** Sablon metninde kullanilabilen degiskenler. */
-const VARIABLES = ['{{isim}}', '{{puan}}', '{{yorum}}', '{{ilce}}', '{{kategori}}'];
+interface TemplateVariable {
+  name: string;
+  label: string;
+  example: string;
+}
+
+/**
+ * Degisken listesi SUNUCUDAN geliyor (`GET /outreach/template-variables`).
+ *
+ * Onceden burada sabit bir dizi vardi ve motora yeni degisken eklendiginde
+ * arayuz bilmiyordu — kullaniciya var olmayan degiskenler onerilebiliyordu.
+ *
+ * Asagidaki liste bir ikinci tanim DEGIL, istek basarisiz olursa cipler
+ * tamamen kaybolmasin diye tutulan asgari bir yedek; her zaman calistigi
+ * bilinen bes degisken.
+ */
+const FALLBACK_VARIABLES: TemplateVariable[] = [
+  { name: 'isim', label: 'İşletmenin tam adı', example: '' },
+  { name: 'puan', label: 'Google puanı', example: '' },
+  { name: 'yorum', label: 'Google yorum sayısı', example: '' },
+  { name: 'ilce', label: 'İlçe (yoksa il)', example: '' },
+  { name: 'kategori', label: 'Google kategorisi', example: '' },
+];
 
 let counter = 0;
 const nextUid = (): string => `r${++counter}`;
@@ -53,6 +74,7 @@ function makeKey(label: string, taken: Set<string>): string {
 export function TemplateManager() {
   const [rows, setRows] = useState<Row[] | null>(null);
   const [saved, setSaved] = useState<Template[]>([]);
+  const [variables, setVariables] = useState<TemplateVariable[]>(FALLBACK_VARIABLES);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<{ kind: string; text: string } | null>(null);
   // Degisken eklerken hangi kutuya yazacagimizi bilmek icin son odagi
@@ -66,6 +88,12 @@ export function TemplateManager() {
         setRows(list.map((t) => ({ ...t, uid: nextUid() })));
       })
       .catch((e: Error) => setMessage({ kind: 'error', text: e.message }));
+
+    // Cipler kritik degil: gelmezse yedek liste kaliyor, kullaniciya hata
+    // gostermeye gerek yok — sablonlari yine duzenleyebiliyor.
+    api<TemplateVariable[]>('/outreach/template-variables')
+      .then((list) => list.length && setVariables(list))
+      .catch(() => undefined);
   }, []);
 
   if (message?.kind === 'fatal') {
@@ -172,12 +200,26 @@ export function TemplateManager() {
       )}
 
       <div className="var-row">
-        {VARIABLES.map((v) => (
-          <button key={v} className="chip" onClick={() => insertVariable(v)} type="button">
-            {v}
+        {variables.map((v) => (
+          <button
+            key={v.name}
+            className="chip"
+            onClick={() => insertVariable(`{{${v.name}}}`)}
+            type="button"
+            title={v.example ? `${v.label} — örnek: ${v.example}` : v.label}
+          >
+            {`{{${v.name}}}`}
           </button>
         ))}
       </div>
+
+      <p className="panel-lede">
+        <strong>{'{{sorun}}'}</strong>, <strong>{'{{sorunDetay}}'}</strong> ve{' '}
+        <strong>{'{{skorGerekce}}'}</strong> ölçülmüş veriye dayanır. O işletme
+        için veri yoksa bu değişkenin bulunduğu <em>cümle tamamen düşer</em> —
+        yarım kalmış bir cümle müşteriye gitmez. Bu yüzden onları ayrı
+        cümlelere koyun.
+      </p>
 
       {rows.map((r) => (
         <div className="tpl" key={r.uid}>

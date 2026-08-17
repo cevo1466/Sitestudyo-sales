@@ -39,6 +39,13 @@ describe('Degismez: liste sayisi == sayim sayisi (e2e)', () => {
     { sector: 'guzellik' },
     { city: 'Ankara', websiteStatus: ['NO_WEBSITE'], minScore: 50 },
     { city: 'Izmir', sector: 'spor_saglik' },
+    // notContactedSince calisma kuyrugu icin eklendi ve `contacted` ile
+    // AYNI kolona bakiyor. Ayni yere iki kez yazilirsa biri digerini
+    // sessizce ezer — tam olarak bu testin var olma sebebi olan hata.
+    { notContactedSince: '2026-08-17T00:00:00.000Z' },
+    { notContactedSince: '2026-08-17T00:00:00.000Z', city: 'Ankara' },
+    { notContactedSince: '2026-08-17T00:00:00.000Z', contacted: 'false' },
+    { notContactedSince: '2026-08-17T00:00:00.000Z', tags: ['yok-boyle-etiket'] },
   ];
 
   beforeAll(async () => {
@@ -61,6 +68,7 @@ describe('Degismez: liste sayisi == sayim sayisi (e2e)', () => {
       .post('/api/v1/auth/login')
       .send({ email: EMAIL, password: PASSWORD });
     token = login.body.accessToken;
+    tokenIssuedAt = Date.now();
 
     await cleanupCompanies(prisma);
     const cities = ['Istanbul', 'Ankara', 'Izmir'];
@@ -92,6 +100,28 @@ describe('Degismez: liste sayisi == sayim sayisi (e2e)', () => {
     await app.close();
   });
 
+  /**
+   * Gerektiginde yeniden giris yapan token.
+   *
+   * `JWT_ACCESS_TTL` 15 dakika ve bu paket 200 isletme uretip her filtre
+   * icin listeyi bastan sona geziyor. Yuklu bir makinede sure 15 dakikayi
+   * asinca kalan TUM istekler 401 aliyor ve test "filtre bozuldu" gibi
+   * gorunuyor — oysa kirilan sey oturum. Bir kez tam olarak boyle bir
+   * yanlis alarm verdi.
+   */
+  let tokenIssuedAt = 0;
+  const TOKEN_MAX_AGE_MS = 10 * 60 * 1000;
+
+  async function auth(): Promise<string> {
+    if (Date.now() - tokenIssuedAt < TOKEN_MAX_AGE_MS) return `Bearer ${token}`;
+    const login = await request(app.getHttpServer())
+      .post('/api/v1/auth/login')
+      .send({ email: EMAIL, password: PASSWORD });
+    token = login.body.accessToken;
+    tokenIssuedAt = Date.now();
+    return `Bearer ${token}`;
+  }
+
   /** Listeyi imlecle sonuna kadar gezip benzersiz id sayisini doner. */
   async function walkList(filter: Record<string, unknown>): Promise<number> {
     const seen = new Set<string>();
@@ -100,7 +130,7 @@ describe('Degismez: liste sayisi == sayim sayisi (e2e)', () => {
     do {
       const res: request.Response = await request(app.getHttpServer())
         .get('/api/v1/companies')
-        .set('Authorization', `Bearer ${token}`)
+        .set('Authorization', await auth())
         .query({ ...filter, limit: 13, ...(cursor ? { cursor } : {}) })
         .expect(200);
       for (const c of res.body.items) seen.add(c.id);
@@ -117,7 +147,7 @@ describe('Degismez: liste sayisi == sayim sayisi (e2e)', () => {
 
       const counted = await request(app.getHttpServer())
         .post('/api/v1/companies/count')
-        .set('Authorization', `Bearer ${token}`)
+        .set('Authorization', await auth())
         .send({ filter })
         .expect(200);
 
@@ -129,13 +159,13 @@ describe('Degismez: liste sayisi == sayim sayisi (e2e)', () => {
   it('sayim, listenin bildirdigi approxTotal ile de tutar', async () => {
     const res = await request(app.getHttpServer())
       .get('/api/v1/companies')
-      .set('Authorization', `Bearer ${token}`)
+      .set('Authorization', await auth())
       .query({ city: 'Ankara' })
       .expect(200);
 
     const counted = await request(app.getHttpServer())
       .post('/api/v1/companies/count')
-      .set('Authorization', `Bearer ${token}`)
+      .set('Authorization', await auth())
       .send({ filter: { city: 'Ankara' } })
       .expect(200);
 

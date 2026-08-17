@@ -1,4 +1,11 @@
 import { WebsiteStatus } from '@prisma/client';
+import type { ScoreReason } from '../scoring/lead-scorer';
+import {
+  buildVariables,
+  problemOf,
+  SENTENCE_CRITICAL_VARIABLES,
+  type AnalysisForMessage,
+} from './personalize';
 
 /**
  * WhatsApp mesaji uretimi ve telefon siniflandirmasi.
@@ -14,7 +21,7 @@ export type PhoneKind = 'mobile' | 'landline' | 'none';
 export interface MessageTemplate {
   key: string;
   label: string;
-  /** {{isim}} {{puan}} {{yorum}} {{ilce}} {{kategori}} degiskenlerini kullanir. */
+  /** Kullanilabilir degiskenlerin listesi: personalize.ts TEMPLATE_VARIABLES. */
   body: string;
 }
 
@@ -27,6 +34,14 @@ export interface CompanyForMessage {
   websiteStatus: WebsiteStatus;
   googleRating: number | null;
   googleReviewsCount: number | null;
+  /**
+   * Asagidaki ucu ISTEGE BAGLI. Verilmediginde ilgili degiskenler bos
+   * kalir ve onlari kullanan cumleler mesajdan dusuyor — yani eski
+   * cagiranlar bozulmadan calismaya devam ediyor.
+   */
+  sector?: string | null;
+  analysis?: AnalysisForMessage | null;
+  scoreReasons?: ScoreReason[] | null;
 }
 
 export interface RenderedMessage {
@@ -65,17 +80,57 @@ export function whatsappUrl(phoneE164: string, message: string): string {
   return `https://wa.me/${digits}?text=${encodeURIComponent(message)}`;
 }
 
-/** Sablondaki degiskenleri doldurur. Karsiligi olmayan degisken BOS birakilir. */
+/**
+ * Icinde verilen etiketi barindiran CUMLELERI atar.
+ *
+ * Kozmetik bosluk temizligi burada yetmiyor: tasiyici degiskeni bos kalan
+ * bir cumle ("Sitenizde tespit ettigimiz sorun:.") dilbilgisel olarak
+ * onarilamaz, silinmesi gerekiyor. Satir yapisi korunuyor ki sablonun
+ * paragraflari bozulmasin.
+ */
+function dropSentencesWith(body: string, placeholder: string): string {
+  return body
+    .split('\n')
+    .map((line) => {
+      const parts = line.match(/[^.!?]+[.!?]*\s*/g);
+      if (!parts) return line;
+      return parts.filter((p) => !p.includes(placeholder)).join('');
+    })
+    .join('\n');
+}
+
+/**
+ * Sablondaki degiskenleri doldurur.
+ *
+ * Iki farkli bosluk davranisi var ve ayrimi bilinerek yapildi:
+ * - Sıradan degisken (isim, ilce, puan) bos kalirsa yalnizca kendisi
+ *   silinir; cumle ayakta kalir.
+ * - Tasiyici degisken (sorun, sorunDetay, skorGerekce) bos kalirsa
+ *   CUMLENIN TAMAMI dusuyor. Bu degiskenler olculmus veriye dayaniyor ve
+ *   veri yoksa o cumlenin soyleyecegi bir sey de yok.
+ */
 export function renderTemplate(body: string, c: CompanyForMessage): string {
-  const values: Record<string, string> = {
-    isim: c.name,
-    puan: c.googleRating !== null ? c.googleRating.toFixed(1) : '',
-    yorum: c.googleReviewsCount !== null ? c.googleReviewsCount.toLocaleString('tr') : '',
-    ilce: c.district ?? c.city ?? '',
-    kategori: (c.categoryRaw ?? '').toLocaleLowerCase('tr'),
-  };
+  const values = buildVariables({
+    name: c.name,
+    district: c.district,
+    city: c.city,
+    categoryRaw: c.categoryRaw,
+    sector: c.sector ?? null,
+    websiteStatus: c.websiteStatus,
+    googleRating: c.googleRating,
+    googleReviewsCount: c.googleReviewsCount,
+    analysis: c.analysis ?? null,
+    scoreReasons: c.scoreReasons ?? null,
+  });
+
+  let text = body;
+  for (const key of SENTENCE_CRITICAL_VARIABLES) {
+    if (values[key]) continue;
+    text = dropSentencesWith(text, `{{${key}}}`);
+  }
+
   return (
-    body
+    text
       .replace(/\{\{(\w+)\}\}/g, (_, k: string) => values[k] ?? '')
       // Degisken bos kalinca olusan cift bosluklari ve bosluk-noktalama
       // birlesimlerini temizliyoruz; aksi halde musteriye "Merhaba ,
@@ -83,6 +138,10 @@ export function renderTemplate(body: string, c: CompanyForMessage): string {
       .replace(/ {2,}/g, ' ')
       .replace(/\s+([,.!?])/g, '$1')
       .replace(/\(\s*\)/g, '')
+      .replace(/,\s*,/g, ',')
+      // Cumle dusurulunce satir basinda sarkan noktalama kalabiliyor.
+      .replace(/^[,;:\s]+/gm, '')
+      .replace(/\n{3,}/g, '\n\n')
       .trim()
   );
 }
@@ -93,23 +152,29 @@ export function renderTemplate(body: string, c: CompanyForMessage): string {
  * Sosyal kanit en guclu argumandir ama ancak gercekten kanit varsa:
  * 20'den az yorumu olan bir isletmeye "yorumlariniz harika" demek
  * inandiriciligi bitirir.
+ *
+ * SOZLESME: donen deger her zaman su UC SABIT anahtardan biri —
+ * 'sosyal_kanit' | 'site_sorunlu' | 'sade'. Yeni bir anahtar eklenemez,
+ * cunku kullanicinin kayitli sablon listesinde karsiligi olmaz ve
+ * buildMessages sessizce ilk sablona duser (uc test bunu koruyor).
+ *
+ * "Sitesi yok" olan isletme site_sorunlu ALMIYOR: olmayan bir sitenin
+ * teknik sorunlarindan bahsetmek anlamsiz olur.
  */
 export function recommendedTemplateKey(c: CompanyForMessage): string {
   const reviews = c.googleReviewsCount ?? 0;
   const rating = c.googleRating ?? 0;
+  const socialProof = reviews >= 20 && rating >= 4.0;
+  const siteless =
+    c.websiteStatus === WebsiteStatus.NO_WEBSITE ||
+    c.websiteStatus === WebsiteStatus.SOCIAL_ONLY;
 
-  if (
-    c.websiteStatus === WebsiteStatus.NO_WEBSITE &&
-    reviews >= 20 &&
-    rating >= 4.0
-  ) {
-    return 'sosyal_kanit';
-  }
-  if (
-    c.websiteStatus === WebsiteStatus.BROKEN ||
-    c.websiteStatus === WebsiteStatus.OUTDATED ||
-    c.websiteStatus === WebsiteStatus.ACTIVE_WEAK
-  ) {
+  if (siteless) return socialProof ? 'sosyal_kanit' : 'sade';
+
+  // Sitesi olan isletmede OLCULMUS bir sorun varsa site_sorunlu. Bu, eski
+  // haline gore su durumu da yakaliyor: durumu ACTIVE_GOOD gorunen ama
+  // analizde mobil uyumsuz / sertifikasi bozuk cikan siteler.
+  if (problemOf({ websiteStatus: c.websiteStatus, analysis: c.analysis ?? null })) {
     return 'site_sorunlu';
   }
   return 'sade';

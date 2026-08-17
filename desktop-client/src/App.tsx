@@ -9,15 +9,18 @@ import {
 import { ConnectionScreen } from './features/connection/ConnectionScreen';
 import { LoginScreen } from './features/auth/LoginScreen';
 import { CompaniesScreen } from './features/companies/CompaniesScreen';
+import { QueueScreen } from './features/queue/QueueScreen';
 import { PipelineScreen } from './features/pipeline/PipelineScreen';
 import { SettingsScreen } from './features/settings/SettingsScreen';
 import { ThemeToggle } from './components/ThemeToggle';
 import { UpdateButton } from './components/UpdateButton';
 
 type Stage = 'connect' | 'login' | 'app';
-type Tab = 'companies' | 'pipeline' | 'settings';
+type Tab = 'today' | 'companies' | 'pipeline' | 'settings';
 
+// "Bugun" en basta: acilista sorulan ilk soru "kiminle konusacagim".
 const TABS: Array<[Tab, string]> = [
+  ['today', 'Bugün'],
   ['companies', 'İşletmeler'],
   ['pipeline', 'Huni'],
   ['settings', 'Ayarlar'],
@@ -30,7 +33,14 @@ export function App() {
     getConnection() ? (hasToken() ? 'app' : 'login') : 'connect',
   );
   const [user, setUser] = useState<string>('');
-  const [tab, setTab] = useState<Tab>('companies');
+  const [tab, setTab] = useState<Tab>('today');
+  /**
+   * Isletmeler ekranindan gelen kuyruk filtresi.
+   *
+   * Bos ise kuyruk kendi varsayilanini kuruyor (sicak + cep telefonlu +
+   * bugun temas edilmemis).
+   */
+  const [queueParams, setQueueParams] = useState('');
   // Kayitli oturum varsa acilista sessizce geri getiriyoruz; her acilista
   // sifre sormak gunde bes kez acilan bir araci kullanilmaz yapardi.
   const [restoring, setRestoring] = useState(() => Boolean(getConnection()) && hasSession());
@@ -95,7 +105,15 @@ export function App() {
         </div>
       </header>
 
-      {tab === 'companies' && <CompaniesScreen />}
+      {tab === 'today' && <QueueScreen initialParams={queueParams} />}
+      {tab === 'companies' && (
+        <CompaniesScreen
+          onBuildQueue={(params) => {
+            setQueueParams(params);
+            setTab('today');
+          }}
+        />
+      )}
       {tab === 'pipeline' && <PipelineScreen onGoToCompanies={() => setTab('companies')} />}
       {tab === 'settings' && <SettingsScreen />}
     </div>

@@ -37,6 +37,15 @@ export const companyFilterSchema = z
     contacted: boolFromString.optional(),
     /** Yalnizca cep telefonu olanlar (WhatsApp ihtimali yuksek) */
     mobileOnly: boolFromString.optional(),
+    /**
+     * Bu tarihten BERI temas edilmemis kayitlar (hic temas edilmeyenler
+     * dahil). Gunluk calisma kuyrugu icin: bugun zaten yazdigim isletme
+     * ayni gun tekrar karsima cikmasin.
+     *
+     * `contacted` ile ayni alana bakiyor ama farkli soru soruyor: o "hic
+     * temas edildi mi", bu "SON temas ne zaman".
+     */
+    notContactedSince: z.coerce.date().optional(),
   })
   .refine((f) => f.minScore === undefined || f.maxScore === undefined || f.minScore <= f.maxScore, {
     message: 'minScore, maxScore degerinden buyuk olamaz',
