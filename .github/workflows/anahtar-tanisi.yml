@@ -1,0 +1,30 @@
+# Imza anahtari sirrinin DOGRU yazilip yazilmadigini soyleyen gecici tani.
+#
+# Anahtarin kendisini yazdirmiyor: GitHub sirlari loglarda maskeler zaten,
+# ama maskeleme etrafinda dolasmak da istemiyoruz. Yazdirilan iki sey
+# guvenli ve teshis icin yeterli: kac karakter oldugu ve SHA-256 ozeti.
+# Beklenen deger 348 karakter; ozet yerelde hesaplananla ayni olmali.
+name: Anahtar tanisi
+
+on:
+  push:
+    paths: ['.github/workflows/anahtar-tanisi.yml']
+
+jobs:
+  tani:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Sirri olc
+        env:
+          KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+        run: |
+          if [ -z "$KEY" ]; then echo "SONUC: sir BOS veya tanimsiz"; exit 0; fi
+          echo "uzunluk : $(printf '%s' "$KEY" | wc -c)"
+          echo "ozet    : $(printf '%s' "$KEY" | sha256sum | cut -c1-64)"
+          echo "satirsay: $(printf '%s' "$KEY" | wc -l)"
+          # Cozulup gecerli UTF-8 mi? Tauri'nin yaptigi tam olarak bu.
+          if printf '%s' "$KEY" | base64 -d 2>/dev/null | head -c 45 | grep -q "untrusted comment"; then
+            echo "SONUC  : DOGRU bicim (base64 cozuldu, imza anahtari basligi var)"
+          else
+            echo "SONUC  : YANLIS bicim"
+          fi
