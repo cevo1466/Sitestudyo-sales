@@ -35,4 +35,4 @@ COPY prisma ./prisma
 USER app
 
 EXPOSE 5080
-CMD ["node", "dist/main.js"]
+CMD ["node", "dist/src/main.js"]
