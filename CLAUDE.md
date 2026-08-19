@@ -37,4 +37,13 @@
 - Mevcut `desktop-v0.2.7` tek-seferlik Actions onarımıyla public yayımlandı. Anonim Release sayfası ve Windows `.exe`, macOS `.dmg`, Linux `.AppImage`/`.deb` linkleri ayrı ayrı HTTP 200 doğrulandı; Release toplam 8 varlık içeriyor.
 - Release: `https://github.com/cevo1466/Sitestudyo-sales/releases/tag/desktop-v0.2.7`. Sunucudaki imzalı otomatik güncelleme kanalı (`https://api.sitestudyo.com/updates/latest.json`) değişmedi ve 200 dönüyor.
 - Kullanıcının son kontrolünde Debian paketi doğrudan `https://github.com/cevo1466/Sitestudyo-sales/releases/download/desktop-v0.2.7/SiteStudyo.Sales.OS_0.2.7_amd64.deb` üzerinden anonim HTTP 200 ile tekrar doğrulandı.
+
+## 2026-08-19 — Sunucu disk kullanım denetimi
+
+- Kök disk 77 GB; 60 GB kullanılıyor, 14 GB boş (yaklaşık %82 doluluk).
+- En büyük tek Docker imajı kullanılmayan `ghcr.io/usestrix/strix-sandbox:1.3.0` (5.9 GB). Docker toplamında 6.85 GB imaj alanı ve 3.955 GB build cache geri kazanılabilir görünüyor; toplam potansiyel Docker temizliği yaklaşık 10.8 GB.
+- `/home/melih/.cache` 3.9 GB: Playwright 2.4 GB, Camoufox 1.3 GB. Bunlar geliştirme/otomasyon önbellekleri.
+- Aktif servis imajları: hosting frontend 1.16 GB, hosting backend 1.08 GB, Sales OS backend/worker ortak 846 MB, MariaDB 458 MB.
+- Journal 224 MB; `/var/www` içerikleri içinde en büyüğü ayd.sitestudyo.com 740 MB ve gparty.sitestudyo.com 467 MB.
+- Bu denetimde hiçbir dosya, Docker imajı veya cache silinmedi. Temizlik ayrı bir onaylı işlem olmalıdır; özellikle Strix imajının gerçekten kullanılmadığı tekrar doğrulanmadan kaldırılmamalıdır.
 - Yerel PAT yalnız okuma yetkili bırakıldı; kalıcı yazma izni verilmedi. Release yayınlama, workflow'un dar kapsamlı `contents: write` yetkisiyle yapılır.
