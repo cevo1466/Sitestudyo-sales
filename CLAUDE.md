@@ -49,4 +49,11 @@
 - Ek tüketiciler: `/root/.cache` 3.1 GB (Playwright 1.9 GB, uv 538 MB, pip 234 MB), `/root/.codex` 952 MB (packages 350 MB, sessions 294 MB), `/root/.agent-browser` 759 MB, `/home/claude/.cache` 909 MB (Playwright 641 MB), `/root/.local` 434 MB, `/var/log` 424 MB (journal 225 MB), `hostpanel-release` 737 MB ve eski recovery klasörü 158 MB.
 - `/var/www` yaklaşık 1.4 GB; başlıca `ayd.sitestudyo.com` 740 MB, `gparty.sitestudyo.com` 467 MB ve `updates` 170 MB. `/var/lib` Docker hariç yaklaşık 393 MB (apt 311 MB, PostgreSQL 82 MB).
 - `df` ile `docker system df` arasında kalan büyük farkın containerd overlay snapshot katmanlarından gelmesi muhtemel; `/var/lib/containerd` elle silinmemeli. Kontrollü Docker/ctr snapshot incelemesi ve prune planı gerekir.
+
+## 2026-08-19 — Gpartysus alias ve Docker temizlik işlemi
+
+- Kullanıcı onayıyla eski `gpartysus.melihcevirim.com.tr` alias'ına ait `/var/www/gpartysus.melihcevirim.com.tr` klasörü (362 MB), nginx vhost dosyası, Let's Encrypt renewal/archive/live kayıtları kaldırıldı. Ortak canlı kök `/var/www/gparty.sitestudyo.com` korunmuştur; iki siteyi birlikte bozacak silme yapılmadı.
+- Tüm Docker JSON logları sıfırlandı; temizleme sonrası loglar yalnızca yeni çalışma çıktısı olarak yaklaşık 913 byte seviyesindeydi.
+- Docker build cache `docker builder prune -af` ile temizlendi; build cache 3.955 GB'dan 0'a indi. Image'lar ve database/Redis volume'ları silinmedi.
+- Nginx `-t` başarılı ve reload tamamlandı. Kök disk kullanımı 60 GB (%82) → 57 GB (%77), boş alan 14 GB → 18 GB oldu.
 - Yerel PAT yalnız okuma yetkili bırakıldı; kalıcı yazma izni verilmedi. Release yayınlama, workflow'un dar kapsamlı `contents: write` yetkisiyle yapılır.
