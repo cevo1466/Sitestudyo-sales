@@ -46,4 +46,7 @@
 - Aktif servis imajları: hosting frontend 1.16 GB, hosting backend 1.08 GB, Sales OS backend/worker ortak 846 MB, MariaDB 458 MB.
 - Journal 224 MB; `/var/www` içerikleri içinde en büyüğü ayd.sitestudyo.com 740 MB ve gparty.sitestudyo.com 467 MB.
 - Bu denetimde hiçbir dosya, Docker imajı veya cache silinmedi. Temizlik ayrı bir onaylı işlem olmalıdır; özellikle Strix imajının gerçekten kullanılmadığı tekrar doğrulanmadan kaldırılmamalıdır.
+- Ek tüketiciler: `/root/.cache` 3.1 GB (Playwright 1.9 GB, uv 538 MB, pip 234 MB), `/root/.codex` 952 MB (packages 350 MB, sessions 294 MB), `/root/.agent-browser` 759 MB, `/home/claude/.cache` 909 MB (Playwright 641 MB), `/root/.local` 434 MB, `/var/log` 424 MB (journal 225 MB), `hostpanel-release` 737 MB ve eski recovery klasörü 158 MB.
+- `/var/www` yaklaşık 1.4 GB; başlıca `ayd.sitestudyo.com` 740 MB, `gparty.sitestudyo.com` 467 MB ve `updates` 170 MB. `/var/lib` Docker hariç yaklaşık 393 MB (apt 311 MB, PostgreSQL 82 MB).
+- `df` ile `docker system df` arasında kalan büyük farkın containerd overlay snapshot katmanlarından gelmesi muhtemel; `/var/lib/containerd` elle silinmemeli. Kontrollü Docker/ctr snapshot incelemesi ve prune planı gerekir.
 - Yerel PAT yalnız okuma yetkili bırakıldı; kalıcı yazma izni verilmedi. Release yayınlama, workflow'un dar kapsamlı `contents: write` yetkisiyle yapılır.
