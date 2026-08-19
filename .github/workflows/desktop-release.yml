@@ -119,3 +119,40 @@ jobs:
             desktop-client/src-tauri/target/release/bundle/**/*-setup.exe
             desktop-client/src-tauri/target/universal-apple-darwin/release/bundle/**/*.dmg
             desktop-client/src-tauri/target/universal-apple-darwin/release/bundle/**/*.app.tar.gz
+
+  # Actions artifact baglantilari GitHub oturumu ister ve gecicidir. Tum
+  # platformlar basariyla derlendikten sonra kurulum dosyalarini gercek bir
+  # public Release'e yukle; dis kullanicilar boylece oturumsuz indirebilir.
+  publish:
+    if: startsWith(github.ref, 'refs/tags/desktop-v')
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Tum platform paketlerini indir
+        uses: actions/download-artifact@v4
+        with:
+          path: release-files
+          merge-multiple: true
+
+      - name: GitHub Release'i yayinla
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release edit "$TAG" --draft=true
+          else
+            gh release create "$TAG" --draft \
+              --title "SiteStudyo Sales OS ${TAG#desktop-v}" \
+              --notes 'Windows, macOS ve Linux kurulum dosyalari.'
+          fi
+
+          while IFS= read -r -d '' file; do
+            gh release upload "$TAG" "$file" --clobber
+          done < <(find release-files -type f -print0)
+
+          gh release edit "$TAG" --draft=false --latest
