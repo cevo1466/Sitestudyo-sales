@@ -28,3 +28,12 @@
 - `admin@sitestudyo.com` hesabıyla kullanıcının istediği parola üzerinden canlı HTTPS giriş `200`, `/auth/me` `200`, test oturumu kapatma `204` döndü. Parola/token hafızaya veya loga yazılmadı.
 - Birim testleri: `11/11` suite, `192/192` test geçti.
 - Worker aynı imajla açılınca `ROLE=worker` modunda başarıyla başlatılıp `0` koduyla hemen çıktığı için restart döngüsüne girdi; kaynak tüketmemesi için durduruldu. Giriş/API işlevini etkilemez, ayrı bir worker yaşam döngüsü bug'ı olarak kalır.
+
+## 2026-08-19 — Public masaüstü indirme linkleri
+
+- Kök neden: `desktop-v0.2.7` paketleri yalnız GitHub Actions artifact'i olarak kalmıştı. Artifact linkleri oturum ister ve geçicidir; GitHub'da yayınlanmış bir Release olmadığı için linki alan dış kullanıcı dosyaları göremiyor/indiremiyordu.
+- `.github/workflows/desktop-release.yml` artık üç platformun build'i bittikten sonra artifact'leri birleştirip gerçek GitHub Release'e yükleyen `publish` job'ına sahiptir. Release önce draft hazırlanır, tüm dosyalar yüklendikten sonra public/latest yapılır.
+- `GH_REPO=${{ github.repository }}` zorunludur: publish job'ında checkout yoktur; bu değişken olmazsa `gh` "not a git repository" ile çıkar. `deploy/test-desktop-release-workflow.sh` bu davranışları regresyon testi olarak denetler.
+- Mevcut `desktop-v0.2.7` tek-seferlik Actions onarımıyla public yayımlandı. Anonim Release sayfası ve Windows `.exe`, macOS `.dmg`, Linux `.AppImage`/`.deb` linkleri ayrı ayrı HTTP 200 doğrulandı; Release toplam 8 varlık içeriyor.
+- Release: `https://github.com/cevo1466/Sitestudyo-sales/releases/tag/desktop-v0.2.7`. Sunucudaki imzalı otomatik güncelleme kanalı (`https://api.sitestudyo.com/updates/latest.json`) değişmedi ve 200 dönüyor.
+- Yerel PAT yalnız okuma yetkili bırakıldı; kalıcı yazma izni verilmedi. Release yayınlama, workflow'un dar kapsamlı `contents: write` yetkisiyle yapılır.
