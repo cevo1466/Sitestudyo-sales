@@ -138,6 +138,7 @@ jobs:
       - name: GitHub Release'i yayinla
         env:
           GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
           TAG: ${{ github.ref_name }}
         shell: bash
         run: |

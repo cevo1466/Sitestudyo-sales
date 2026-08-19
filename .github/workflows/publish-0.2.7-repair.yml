@@ -25,6 +25,7 @@ jobs:
       - name: Public Release'i yayinla
         env:
           GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
           TAG: desktop-v0.2.7
         shell: bash
         run: |
