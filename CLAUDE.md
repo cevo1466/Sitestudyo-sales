@@ -36,4 +36,5 @@
 - `GH_REPO=${{ github.repository }}` zorunludur: publish job'ında checkout yoktur; bu değişken olmazsa `gh` "not a git repository" ile çıkar. `deploy/test-desktop-release-workflow.sh` bu davranışları regresyon testi olarak denetler.
 - Mevcut `desktop-v0.2.7` tek-seferlik Actions onarımıyla public yayımlandı. Anonim Release sayfası ve Windows `.exe`, macOS `.dmg`, Linux `.AppImage`/`.deb` linkleri ayrı ayrı HTTP 200 doğrulandı; Release toplam 8 varlık içeriyor.
 - Release: `https://github.com/cevo1466/Sitestudyo-sales/releases/tag/desktop-v0.2.7`. Sunucudaki imzalı otomatik güncelleme kanalı (`https://api.sitestudyo.com/updates/latest.json`) değişmedi ve 200 dönüyor.
+- Kullanıcının son kontrolünde Debian paketi doğrudan `https://github.com/cevo1466/Sitestudyo-sales/releases/download/desktop-v0.2.7/SiteStudyo.Sales.OS_0.2.7_amd64.deb` üzerinden anonim HTTP 200 ile tekrar doğrulandı.
 - Yerel PAT yalnız okuma yetkili bırakıldı; kalıcı yazma izni verilmedi. Release yayınlama, workflow'un dar kapsamlı `contents: write` yetkisiyle yapılır.
